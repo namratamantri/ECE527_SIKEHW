@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="fp.c" path="C:\Users\namra\Documents\Documents\ece527\project\sikehls\fp.c"/>
+    <originFiles name="constants434.h" path="C:\Users\namra\Documents\Documents\ece527\project\sikehls\constants434.h"/>
+    <originFiles name="fpx.c" path="C:\Users\namra\Documents\Documents\ece527\project\sikehls\fpx.c"/>
+  </source>
+  <testbench/>
+</autopilotfilemapping:AutoPilotFileMapping>
