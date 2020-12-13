@@ -1,0 +1,527 @@
+
+
+================================================================
+== Vivado HLS Report for 'bc_mult_448'
+================================================================
+* Date:           Sun Dec 13 17:30:16 2020
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        sikehls
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     6.978|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   31|   31|   31|   31|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------+-----+-----+----------+-----------+-----------+------+----------+
+        |           |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------+-----+-----+----------+-----------+-----------+------+----------+
+        |- loopb22  |   11|   11|         6|          1|          1|     7|    yes   |
+        |- loop3    |   14|   14|         2|          -|          -|     7|    no    |
+        +-----------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 6
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 13
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 6, States = { 2 3 4 5 6 7 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 8 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 2 
+8 --> 9 
+9 --> 10 11 
+10 --> 9 
+11 --> 12 
+12 --> 13 
+13 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.76>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%partial_products_6_s = alloca i448"   --->   Operation 14 'alloca' 'partial_products_6_s' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%partial_products_0_5 = alloca i448"   --->   Operation 15 'alloca' 'partial_products_0_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%partial_products_0_4 = alloca i448"   --->   Operation 16 'alloca' 'partial_products_0_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%partial_products_0_3 = alloca i448"   --->   Operation 17 'alloca' 'partial_products_0_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%partial_products_0_2 = alloca i448"   --->   Operation 18 'alloca' 'partial_products_0_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%partial_products_6_1 = alloca i448"   --->   Operation 19 'alloca' 'partial_products_6_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%partial_products_6_6 = alloca i448"   --->   Operation 20 'alloca' 'partial_products_6_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%partial_products_6_7 = alloca i448"   --->   Operation 21 'alloca' 'partial_products_6_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%partial_products_1_5 = alloca i448"   --->   Operation 22 'alloca' 'partial_products_1_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%partial_products_1_4 = alloca i448"   --->   Operation 23 'alloca' 'partial_products_1_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%partial_products_1_3 = alloca i448"   --->   Operation 24 'alloca' 'partial_products_1_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%partial_products_1_2 = alloca i448"   --->   Operation 25 'alloca' 'partial_products_1_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%partial_products_6_8 = alloca i448"   --->   Operation 26 'alloca' 'partial_products_6_8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%partial_products_6_9 = alloca i448"   --->   Operation 27 'alloca' 'partial_products_6_9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%partial_products_6_10 = alloca i448"   --->   Operation 28 'alloca' 'partial_products_6_10' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%partial_products_2_5 = alloca i448"   --->   Operation 29 'alloca' 'partial_products_2_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%partial_products_2_4 = alloca i448"   --->   Operation 30 'alloca' 'partial_products_2_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%partial_products_2_3 = alloca i448"   --->   Operation 31 'alloca' 'partial_products_2_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%partial_products_2_2 = alloca i448"   --->   Operation 32 'alloca' 'partial_products_2_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%partial_products_6_11 = alloca i448"   --->   Operation 33 'alloca' 'partial_products_6_11' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%partial_products_6_12 = alloca i448"   --->   Operation 34 'alloca' 'partial_products_6_12' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%partial_products_6_13 = alloca i448"   --->   Operation 35 'alloca' 'partial_products_6_13' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%partial_products_3_5 = alloca i448"   --->   Operation 36 'alloca' 'partial_products_3_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%partial_products_3_4 = alloca i448"   --->   Operation 37 'alloca' 'partial_products_3_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%partial_products_3_3 = alloca i448"   --->   Operation 38 'alloca' 'partial_products_3_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%partial_products_3_2 = alloca i448"   --->   Operation 39 'alloca' 'partial_products_3_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%partial_products_6_14 = alloca i448"   --->   Operation 40 'alloca' 'partial_products_6_14' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%partial_products_6_15 = alloca i448"   --->   Operation 41 'alloca' 'partial_products_6_15' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%partial_products_6_16 = alloca i448"   --->   Operation 42 'alloca' 'partial_products_6_16' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%partial_products_4_5 = alloca i448"   --->   Operation 43 'alloca' 'partial_products_4_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%partial_products_4_4 = alloca i448"   --->   Operation 44 'alloca' 'partial_products_4_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%partial_products_4_3 = alloca i448"   --->   Operation 45 'alloca' 'partial_products_4_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%partial_products_4_2 = alloca i448"   --->   Operation 46 'alloca' 'partial_products_4_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%partial_products_6_17 = alloca i448"   --->   Operation 47 'alloca' 'partial_products_6_17' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%partial_products_6_18 = alloca i448"   --->   Operation 48 'alloca' 'partial_products_6_18' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%partial_products_6_19 = alloca i448"   --->   Operation 49 'alloca' 'partial_products_6_19' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%partial_products_5_5 = alloca i448"   --->   Operation 50 'alloca' 'partial_products_5_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%partial_products_5_4 = alloca i448"   --->   Operation 51 'alloca' 'partial_products_5_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%partial_products_5_3 = alloca i448"   --->   Operation 52 'alloca' 'partial_products_5_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%partial_products_5_2 = alloca i448"   --->   Operation 53 'alloca' 'partial_products_5_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%partial_products_6_20 = alloca i448"   --->   Operation 54 'alloca' 'partial_products_6_20' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%partial_products_6_21 = alloca i448"   --->   Operation 55 'alloca' 'partial_products_6_21' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%partial_products_6_22 = alloca i448"   --->   Operation 56 'alloca' 'partial_products_6_22' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%partial_products_6_5 = alloca i448"   --->   Operation 57 'alloca' 'partial_products_6_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%partial_products_6_4 = alloca i448"   --->   Operation 58 'alloca' 'partial_products_6_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%partial_products_6_3 = alloca i448"   --->   Operation 59 'alloca' 'partial_products_6_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%partial_products_6_2 = alloca i448"   --->   Operation 60 'alloca' 'partial_products_6_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%partial_products_6_23 = alloca i448"   --->   Operation 61 'alloca' 'partial_products_6_23' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%partial_products_6_24 = alloca i448"   --->   Operation 62 'alloca' 'partial_products_6_24' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%b_V_read = call i435 @_ssdm_op_Read.ap_auto.i435(i435 %b_V)" [sikehls/mult.cpp:23]   --->   Operation 63 'read' 'b_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 64 [1/1] (0.00ns)   --->   "%a_V_read = call i448 @_ssdm_op_Read.ap_auto.i448(i448 %a_V)" [sikehls/mult.cpp:23]   --->   Operation 64 'read' 'a_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "%ai_0_V = trunc i448 %a_V_read to i64" [sikehls/mult.cpp:23]   --->   Operation 65 'trunc' 'ai_0_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "%bi_0_V = trunc i435 %b_V_read to i64" [sikehls/mult.cpp:24]   --->   Operation 66 'trunc' 'bi_0_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "%ai_1_V = call i64 @_ssdm_op_PartSelect.i64.i448.i32.i32(i448 %a_V_read, i32 64, i32 127)" [sikehls/mult.cpp:23]   --->   Operation 67 'partselect' 'ai_1_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%bi_1_V = call i64 @_ssdm_op_PartSelect.i64.i435.i32.i32(i435 %b_V_read, i32 64, i32 127)" [sikehls/mult.cpp:24]   --->   Operation 68 'partselect' 'bi_1_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 69 [1/1] (0.00ns)   --->   "%ai_2_V = call i64 @_ssdm_op_PartSelect.i64.i448.i32.i32(i448 %a_V_read, i32 128, i32 191)" [sikehls/mult.cpp:23]   --->   Operation 69 'partselect' 'ai_2_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 70 [1/1] (0.00ns)   --->   "%bi_2_V = call i64 @_ssdm_op_PartSelect.i64.i435.i32.i32(i435 %b_V_read, i32 128, i32 191)" [sikehls/mult.cpp:24]   --->   Operation 70 'partselect' 'bi_2_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%ai_3_V = call i64 @_ssdm_op_PartSelect.i64.i448.i32.i32(i448 %a_V_read, i32 192, i32 255)" [sikehls/mult.cpp:23]   --->   Operation 71 'partselect' 'ai_3_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 72 [1/1] (0.00ns)   --->   "%bi_3_V = call i64 @_ssdm_op_PartSelect.i64.i435.i32.i32(i435 %b_V_read, i32 192, i32 255)" [sikehls/mult.cpp:24]   --->   Operation 72 'partselect' 'bi_3_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 73 [1/1] (0.00ns)   --->   "%ai_4_V = call i64 @_ssdm_op_PartSelect.i64.i448.i32.i32(i448 %a_V_read, i32 256, i32 319)" [sikehls/mult.cpp:23]   --->   Operation 73 'partselect' 'ai_4_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 74 [1/1] (0.00ns)   --->   "%bi_4_V = call i64 @_ssdm_op_PartSelect.i64.i435.i32.i32(i435 %b_V_read, i32 256, i32 319)" [sikehls/mult.cpp:24]   --->   Operation 74 'partselect' 'bi_4_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 75 [1/1] (0.00ns)   --->   "%ai_5_V = call i64 @_ssdm_op_PartSelect.i64.i448.i32.i32(i448 %a_V_read, i32 320, i32 383)" [sikehls/mult.cpp:23]   --->   Operation 75 'partselect' 'ai_5_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 76 [1/1] (0.00ns)   --->   "%bi_5_V = call i64 @_ssdm_op_PartSelect.i64.i435.i32.i32(i435 %b_V_read, i32 320, i32 383)" [sikehls/mult.cpp:24]   --->   Operation 76 'partselect' 'bi_5_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 77 [1/1] (0.00ns)   --->   "%ai_6_V = call i64 @_ssdm_op_PartSelect.i64.i448.i32.i32(i448 %a_V_read, i32 384, i32 447)" [sikehls/mult.cpp:23]   --->   Operation 77 'partselect' 'ai_6_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 78 [1/1] (0.00ns)   --->   "%tmp_1 = call i51 @_ssdm_op_PartSelect.i51.i435.i32.i32(i435 %b_V_read, i32 384, i32 434)" [sikehls/mult.cpp:24]   --->   Operation 78 'partselect' 'tmp_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 79 [1/1] (0.00ns)   --->   "%bi_6_V = sext i51 %tmp_1 to i64" [sikehls/mult.cpp:24]   --->   Operation 79 'sext' 'bi_6_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 80 [1/1] (0.00ns)   --->   "%zext_ln215 = zext i64 %ai_0_V to i128" [sikehls/mult.cpp:32]   --->   Operation 80 'zext' 'zext_ln215' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 81 [1/1] (0.00ns)   --->   "%zext_ln215_2 = zext i64 %ai_1_V to i128" [sikehls/mult.cpp:32]   --->   Operation 81 'zext' 'zext_ln215_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 82 [1/1] (0.00ns)   --->   "%zext_ln215_3 = zext i64 %ai_2_V to i128" [sikehls/mult.cpp:32]   --->   Operation 82 'zext' 'zext_ln215_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 83 [1/1] (0.00ns)   --->   "%zext_ln215_4 = zext i64 %ai_3_V to i128" [sikehls/mult.cpp:32]   --->   Operation 83 'zext' 'zext_ln215_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 84 [1/1] (0.00ns)   --->   "%zext_ln215_5 = zext i64 %ai_4_V to i128" [sikehls/mult.cpp:32]   --->   Operation 84 'zext' 'zext_ln215_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 85 [1/1] (0.00ns)   --->   "%zext_ln215_6 = zext i64 %ai_5_V to i128" [sikehls/mult.cpp:32]   --->   Operation 85 'zext' 'zext_ln215_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 86 [1/1] (1.76ns)   --->   "br label %.preheader397" [sikehls/mult.cpp:28]   --->   Operation 86 'br' <Predicate = true> <Delay = 1.76>
+
+State 2 <SV = 1> <Delay = 2.40>
+ST_2 : Operation 87 [1/1] (0.00ns)   --->   "%i7_0 = phi i3 [ 0, %arrayctor.loop4.preheader ], [ %i_1, %loopb22_end ]"   --->   Operation 87 'phi' 'i7_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 88 [1/1] (1.13ns)   --->   "%icmp_ln28 = icmp eq i3 %i7_0, -1" [sikehls/mult.cpp:28]   --->   Operation 88 'icmp' 'icmp_ln28' <Predicate = true> <Delay = 1.13> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 89 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 7, i64 7, i64 7)"   --->   Operation 89 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 90 [1/1] (1.65ns)   --->   "%i_1 = add i3 %i7_0, 1" [sikehls/mult.cpp:28]   --->   Operation 90 'add' 'i_1' <Predicate = true> <Delay = 1.65> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 91 [1/1] (0.00ns)   --->   "br i1 %icmp_ln28, label %.preheader.preheader, label %loopb22_begin" [sikehls/mult.cpp:28]   --->   Operation 91 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 92 [1/1] (0.00ns)   --->   "%tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([8 x i8]* @p_str12)" [sikehls/mult.cpp:28]   --->   Operation 92 'specregionbegin' 'tmp' <Predicate = (!icmp_ln28)> <Delay = 0.00>
+ST_2 : Operation 93 [1/1] (2.40ns)   --->   "%tmp_2 = call i64 @_ssdm_op_Mux.ap_auto.7i64.i3(i64 %bi_0_V, i64 %bi_1_V, i64 %bi_2_V, i64 %bi_3_V, i64 %bi_4_V, i64 %bi_5_V, i64 %bi_6_V, i3 %i7_0)" [sikehls/mult.cpp:32]   --->   Operation 93 'mux' 'tmp_2' <Predicate = (!icmp_ln28)> <Delay = 2.40> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 2.40> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 94 [1/1] (1.30ns)   --->   "switch i3 %i7_0, label %branch48 [
+    i3 0, label %loopb22_begin.loopb22_end_crit_edge
+    i3 1, label %branch43
+    i3 2, label %branch44
+    i3 3, label %branch45
+    i3 -4, label %branch46
+    i3 -3, label %branch47
+  ]" [sikehls/mult.cpp:33]   --->   Operation 94 'switch' <Predicate = (!icmp_ln28)> <Delay = 1.30>
+ST_2 : Operation 95 [1/1] (0.00ns)   --->   "%empty_9 = call i32 (...)* @_ssdm_op_SpecRegionEnd([8 x i8]* @p_str12, i32 %tmp)" [sikehls/mult.cpp:38]   --->   Operation 95 'specregionend' 'empty_9' <Predicate = (!icmp_ln28)> <Delay = 0.00>
+ST_2 : Operation 96 [1/1] (0.00ns)   --->   "br label %.preheader397" [sikehls/mult.cpp:28]   --->   Operation 96 'br' <Predicate = (!icmp_ln28)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 6.97>
+ST_3 : Operation 97 [1/1] (0.00ns)   --->   "%zext_ln215_1 = zext i64 %tmp_2 to i128" [sikehls/mult.cpp:32]   --->   Operation 97 'zext' 'zext_ln215_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 98 [5/5] (6.97ns)   --->   "%mul_ln1352 = mul i128 %zext_ln215, %zext_ln215_1" [sikehls/mult.cpp:32]   --->   Operation 98 'mul' 'mul_ln1352' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 99 [5/5] (6.97ns)   --->   "%mul_ln1352_1 = mul i128 %zext_ln215_2, %zext_ln215_1" [sikehls/mult.cpp:32]   --->   Operation 99 'mul' 'mul_ln1352_1' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 100 [5/5] (6.97ns)   --->   "%mul_ln1352_2 = mul i128 %zext_ln215_3, %zext_ln215_1" [sikehls/mult.cpp:32]   --->   Operation 100 'mul' 'mul_ln1352_2' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 101 [5/5] (6.97ns)   --->   "%mul_ln1352_3 = mul i128 %zext_ln215_4, %zext_ln215_1" [sikehls/mult.cpp:32]   --->   Operation 101 'mul' 'mul_ln1352_3' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 102 [5/5] (6.97ns)   --->   "%mul_ln1352_4 = mul i128 %zext_ln215_5, %zext_ln215_1" [sikehls/mult.cpp:32]   --->   Operation 102 'mul' 'mul_ln1352_4' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 103 [5/5] (6.97ns)   --->   "%mul_ln1352_5 = mul i128 %zext_ln215_6, %zext_ln215_1" [sikehls/mult.cpp:32]   --->   Operation 103 'mul' 'mul_ln1352_5' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 104 [5/5] (6.97ns)   --->   "%mul_ln1503 = mul i64 %ai_6_V, %tmp_2" [sikehls/mult.cpp:33]   --->   Operation 104 'mul' 'mul_ln1503' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 6.97>
+ST_4 : Operation 105 [4/5] (6.97ns)   --->   "%mul_ln1352 = mul i128 %zext_ln215, %zext_ln215_1" [sikehls/mult.cpp:32]   --->   Operation 105 'mul' 'mul_ln1352' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 106 [4/5] (6.97ns)   --->   "%mul_ln1352_1 = mul i128 %zext_ln215_2, %zext_ln215_1" [sikehls/mult.cpp:32]   --->   Operation 106 'mul' 'mul_ln1352_1' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 107 [4/5] (6.97ns)   --->   "%mul_ln1352_2 = mul i128 %zext_ln215_3, %zext_ln215_1" [sikehls/mult.cpp:32]   --->   Operation 107 'mul' 'mul_ln1352_2' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 108 [4/5] (6.97ns)   --->   "%mul_ln1352_3 = mul i128 %zext_ln215_4, %zext_ln215_1" [sikehls/mult.cpp:32]   --->   Operation 108 'mul' 'mul_ln1352_3' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 109 [4/5] (6.97ns)   --->   "%mul_ln1352_4 = mul i128 %zext_ln215_5, %zext_ln215_1" [sikehls/mult.cpp:32]   --->   Operation 109 'mul' 'mul_ln1352_4' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 110 [4/5] (6.97ns)   --->   "%mul_ln1352_5 = mul i128 %zext_ln215_6, %zext_ln215_1" [sikehls/mult.cpp:32]   --->   Operation 110 'mul' 'mul_ln1352_5' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 111 [4/5] (6.97ns)   --->   "%mul_ln1503 = mul i64 %ai_6_V, %tmp_2" [sikehls/mult.cpp:33]   --->   Operation 111 'mul' 'mul_ln1503' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 6.97>
+ST_5 : Operation 112 [3/5] (6.97ns)   --->   "%mul_ln1352 = mul i128 %zext_ln215, %zext_ln215_1" [sikehls/mult.cpp:32]   --->   Operation 112 'mul' 'mul_ln1352' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 113 [3/5] (6.97ns)   --->   "%mul_ln1352_1 = mul i128 %zext_ln215_2, %zext_ln215_1" [sikehls/mult.cpp:32]   --->   Operation 113 'mul' 'mul_ln1352_1' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 114 [3/5] (6.97ns)   --->   "%mul_ln1352_2 = mul i128 %zext_ln215_3, %zext_ln215_1" [sikehls/mult.cpp:32]   --->   Operation 114 'mul' 'mul_ln1352_2' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 115 [3/5] (6.97ns)   --->   "%mul_ln1352_3 = mul i128 %zext_ln215_4, %zext_ln215_1" [sikehls/mult.cpp:32]   --->   Operation 115 'mul' 'mul_ln1352_3' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 116 [3/5] (6.97ns)   --->   "%mul_ln1352_4 = mul i128 %zext_ln215_5, %zext_ln215_1" [sikehls/mult.cpp:32]   --->   Operation 116 'mul' 'mul_ln1352_4' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 117 [3/5] (6.97ns)   --->   "%mul_ln1352_5 = mul i128 %zext_ln215_6, %zext_ln215_1" [sikehls/mult.cpp:32]   --->   Operation 117 'mul' 'mul_ln1352_5' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 118 [3/5] (6.97ns)   --->   "%mul_ln1503 = mul i64 %ai_6_V, %tmp_2" [sikehls/mult.cpp:33]   --->   Operation 118 'mul' 'mul_ln1503' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 6.97>
+ST_6 : Operation 119 [2/5] (6.97ns)   --->   "%mul_ln1352 = mul i128 %zext_ln215, %zext_ln215_1" [sikehls/mult.cpp:32]   --->   Operation 119 'mul' 'mul_ln1352' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 120 [2/5] (6.97ns)   --->   "%mul_ln1352_1 = mul i128 %zext_ln215_2, %zext_ln215_1" [sikehls/mult.cpp:32]   --->   Operation 120 'mul' 'mul_ln1352_1' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 121 [2/5] (6.97ns)   --->   "%mul_ln1352_2 = mul i128 %zext_ln215_3, %zext_ln215_1" [sikehls/mult.cpp:32]   --->   Operation 121 'mul' 'mul_ln1352_2' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 122 [2/5] (6.97ns)   --->   "%mul_ln1352_3 = mul i128 %zext_ln215_4, %zext_ln215_1" [sikehls/mult.cpp:32]   --->   Operation 122 'mul' 'mul_ln1352_3' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 123 [2/5] (6.97ns)   --->   "%mul_ln1352_4 = mul i128 %zext_ln215_5, %zext_ln215_1" [sikehls/mult.cpp:32]   --->   Operation 123 'mul' 'mul_ln1352_4' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 124 [2/5] (6.97ns)   --->   "%mul_ln1352_5 = mul i128 %zext_ln215_6, %zext_ln215_1" [sikehls/mult.cpp:32]   --->   Operation 124 'mul' 'mul_ln1352_5' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 125 [2/5] (6.97ns)   --->   "%mul_ln1503 = mul i64 %ai_6_V, %tmp_2" [sikehls/mult.cpp:33]   --->   Operation 125 'mul' 'mul_ln1503' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 6.97>
+ST_7 : Operation 126 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([8 x i8]* @p_str12) nounwind" [sikehls/mult.cpp:28]   --->   Operation 126 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 127 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str9) nounwind" [sikehls/mult.cpp:29]   --->   Operation 127 'specpipeline' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 128 [1/5] (6.97ns)   --->   "%mul_ln1352 = mul i128 %zext_ln215, %zext_ln215_1" [sikehls/mult.cpp:32]   --->   Operation 128 'mul' 'mul_ln1352' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 129 [1/1] (0.00ns)   --->   "%partial_products_0_s = zext i128 %mul_ln1352 to i448" [sikehls/mult.cpp:32]   --->   Operation 129 'zext' 'partial_products_0_s' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 130 [1/5] (6.97ns)   --->   "%mul_ln1352_1 = mul i128 %zext_ln215_2, %zext_ln215_1" [sikehls/mult.cpp:32]   --->   Operation 130 'mul' 'mul_ln1352_1' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 131 [1/1] (0.00ns)   --->   "%partial_products_0_1 = call i192 @_ssdm_op_BitConcatenate.i192.i128.i64(i128 %mul_ln1352_1, i64 0)" [sikehls/mult.cpp:33]   --->   Operation 131 'bitconcatenate' 'partial_products_0_1' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 132 [1/1] (0.00ns)   --->   "%zext_ln1503 = zext i192 %partial_products_0_1 to i448" [sikehls/mult.cpp:33]   --->   Operation 132 'zext' 'zext_ln1503' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 133 [1/5] (6.97ns)   --->   "%mul_ln1352_2 = mul i128 %zext_ln215_3, %zext_ln215_1" [sikehls/mult.cpp:32]   --->   Operation 133 'mul' 'mul_ln1352_2' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 134 [1/1] (0.00ns)   --->   "%partial_products_0_6 = call i256 @_ssdm_op_BitConcatenate.i256.i128.i128(i128 %mul_ln1352_2, i128 0)" [sikehls/mult.cpp:33]   --->   Operation 134 'bitconcatenate' 'partial_products_0_6' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 135 [1/1] (0.00ns)   --->   "%zext_ln1503_1 = zext i256 %partial_products_0_6 to i448" [sikehls/mult.cpp:33]   --->   Operation 135 'zext' 'zext_ln1503_1' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 136 [1/5] (6.97ns)   --->   "%mul_ln1352_3 = mul i128 %zext_ln215_4, %zext_ln215_1" [sikehls/mult.cpp:32]   --->   Operation 136 'mul' 'mul_ln1352_3' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 137 [1/1] (0.00ns)   --->   "%partial_products_0_7 = call i320 @_ssdm_op_BitConcatenate.i320.i128.i192(i128 %mul_ln1352_3, i192 0)" [sikehls/mult.cpp:33]   --->   Operation 137 'bitconcatenate' 'partial_products_0_7' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 138 [1/1] (0.00ns)   --->   "%zext_ln1503_2 = zext i320 %partial_products_0_7 to i448" [sikehls/mult.cpp:33]   --->   Operation 138 'zext' 'zext_ln1503_2' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 139 [1/5] (6.97ns)   --->   "%mul_ln1352_4 = mul i128 %zext_ln215_5, %zext_ln215_1" [sikehls/mult.cpp:32]   --->   Operation 139 'mul' 'mul_ln1352_4' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 140 [1/1] (0.00ns)   --->   "%partial_products_0_8 = call i384 @_ssdm_op_BitConcatenate.i384.i128.i256(i128 %mul_ln1352_4, i256 0)" [sikehls/mult.cpp:33]   --->   Operation 140 'bitconcatenate' 'partial_products_0_8' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 141 [1/1] (0.00ns)   --->   "%zext_ln1503_3 = zext i384 %partial_products_0_8 to i448" [sikehls/mult.cpp:33]   --->   Operation 141 'zext' 'zext_ln1503_3' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 142 [1/5] (6.97ns)   --->   "%mul_ln1352_5 = mul i128 %zext_ln215_6, %zext_ln215_1" [sikehls/mult.cpp:32]   --->   Operation 142 'mul' 'mul_ln1352_5' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 143 [1/1] (0.00ns)   --->   "%partial_products_0_9 = call i448 @_ssdm_op_BitConcatenate.i448.i128.i320(i128 %mul_ln1352_5, i320 0)" [sikehls/mult.cpp:33]   --->   Operation 143 'bitconcatenate' 'partial_products_0_9' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 144 [1/5] (6.97ns)   --->   "%mul_ln1503 = mul i64 %ai_6_V, %tmp_2" [sikehls/mult.cpp:33]   --->   Operation 144 'mul' 'mul_ln1503' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 145 [1/1] (0.00ns)   --->   "%partial_products_0_10 = call i448 @_ssdm_op_BitConcatenate.i448.i64.i384(i64 %mul_ln1503, i384 0)" [sikehls/mult.cpp:33]   --->   Operation 145 'bitconcatenate' 'partial_products_0_10' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 146 [1/1] (0.00ns)   --->   "store i448 %partial_products_0_10, i448* %partial_products_6_21" [sikehls/mult.cpp:33]   --->   Operation 146 'store' <Predicate = (i7_0 == 5)> <Delay = 0.00>
+ST_7 : Operation 147 [1/1] (0.00ns)   --->   "store i448 %partial_products_0_9, i448* %partial_products_6_20" [sikehls/mult.cpp:33]   --->   Operation 147 'store' <Predicate = (i7_0 == 5)> <Delay = 0.00>
+ST_7 : Operation 148 [1/1] (0.00ns)   --->   "store i448 %zext_ln1503_3, i448* %partial_products_5_2" [sikehls/mult.cpp:33]   --->   Operation 148 'store' <Predicate = (i7_0 == 5)> <Delay = 0.00>
+ST_7 : Operation 149 [1/1] (0.00ns)   --->   "store i448 %zext_ln1503_2, i448* %partial_products_5_3" [sikehls/mult.cpp:33]   --->   Operation 149 'store' <Predicate = (i7_0 == 5)> <Delay = 0.00>
+ST_7 : Operation 150 [1/1] (0.00ns)   --->   "store i448 %zext_ln1503_1, i448* %partial_products_5_4" [sikehls/mult.cpp:33]   --->   Operation 150 'store' <Predicate = (i7_0 == 5)> <Delay = 0.00>
+ST_7 : Operation 151 [1/1] (0.00ns)   --->   "store i448 %zext_ln1503, i448* %partial_products_5_5" [sikehls/mult.cpp:33]   --->   Operation 151 'store' <Predicate = (i7_0 == 5)> <Delay = 0.00>
+ST_7 : Operation 152 [1/1] (0.00ns)   --->   "store i448 %partial_products_0_s, i448* %partial_products_6_19" [sikehls/mult.cpp:32]   --->   Operation 152 'store' <Predicate = (i7_0 == 5)> <Delay = 0.00>
+ST_7 : Operation 153 [1/1] (0.00ns)   --->   "br label %loopb22_end"   --->   Operation 153 'br' <Predicate = (i7_0 == 5)> <Delay = 0.00>
+ST_7 : Operation 154 [1/1] (0.00ns)   --->   "store i448 %partial_products_0_10, i448* %partial_products_6_18" [sikehls/mult.cpp:33]   --->   Operation 154 'store' <Predicate = (i7_0 == 4)> <Delay = 0.00>
+ST_7 : Operation 155 [1/1] (0.00ns)   --->   "store i448 %partial_products_0_9, i448* %partial_products_6_17" [sikehls/mult.cpp:33]   --->   Operation 155 'store' <Predicate = (i7_0 == 4)> <Delay = 0.00>
+ST_7 : Operation 156 [1/1] (0.00ns)   --->   "store i448 %zext_ln1503_3, i448* %partial_products_4_2" [sikehls/mult.cpp:33]   --->   Operation 156 'store' <Predicate = (i7_0 == 4)> <Delay = 0.00>
+ST_7 : Operation 157 [1/1] (0.00ns)   --->   "store i448 %zext_ln1503_2, i448* %partial_products_4_3" [sikehls/mult.cpp:33]   --->   Operation 157 'store' <Predicate = (i7_0 == 4)> <Delay = 0.00>
+ST_7 : Operation 158 [1/1] (0.00ns)   --->   "store i448 %zext_ln1503_1, i448* %partial_products_4_4" [sikehls/mult.cpp:33]   --->   Operation 158 'store' <Predicate = (i7_0 == 4)> <Delay = 0.00>
+ST_7 : Operation 159 [1/1] (0.00ns)   --->   "store i448 %zext_ln1503, i448* %partial_products_4_5" [sikehls/mult.cpp:33]   --->   Operation 159 'store' <Predicate = (i7_0 == 4)> <Delay = 0.00>
+ST_7 : Operation 160 [1/1] (0.00ns)   --->   "store i448 %partial_products_0_s, i448* %partial_products_6_16" [sikehls/mult.cpp:32]   --->   Operation 160 'store' <Predicate = (i7_0 == 4)> <Delay = 0.00>
+ST_7 : Operation 161 [1/1] (0.00ns)   --->   "br label %loopb22_end"   --->   Operation 161 'br' <Predicate = (i7_0 == 4)> <Delay = 0.00>
+ST_7 : Operation 162 [1/1] (0.00ns)   --->   "store i448 %partial_products_0_10, i448* %partial_products_6_15" [sikehls/mult.cpp:33]   --->   Operation 162 'store' <Predicate = (i7_0 == 3)> <Delay = 0.00>
+ST_7 : Operation 163 [1/1] (0.00ns)   --->   "store i448 %partial_products_0_9, i448* %partial_products_6_14" [sikehls/mult.cpp:33]   --->   Operation 163 'store' <Predicate = (i7_0 == 3)> <Delay = 0.00>
+ST_7 : Operation 164 [1/1] (0.00ns)   --->   "store i448 %zext_ln1503_3, i448* %partial_products_3_2" [sikehls/mult.cpp:33]   --->   Operation 164 'store' <Predicate = (i7_0 == 3)> <Delay = 0.00>
+ST_7 : Operation 165 [1/1] (0.00ns)   --->   "store i448 %zext_ln1503_2, i448* %partial_products_3_3" [sikehls/mult.cpp:33]   --->   Operation 165 'store' <Predicate = (i7_0 == 3)> <Delay = 0.00>
+ST_7 : Operation 166 [1/1] (0.00ns)   --->   "store i448 %zext_ln1503_1, i448* %partial_products_3_4" [sikehls/mult.cpp:33]   --->   Operation 166 'store' <Predicate = (i7_0 == 3)> <Delay = 0.00>
+ST_7 : Operation 167 [1/1] (0.00ns)   --->   "store i448 %zext_ln1503, i448* %partial_products_3_5" [sikehls/mult.cpp:33]   --->   Operation 167 'store' <Predicate = (i7_0 == 3)> <Delay = 0.00>
+ST_7 : Operation 168 [1/1] (0.00ns)   --->   "store i448 %partial_products_0_s, i448* %partial_products_6_13" [sikehls/mult.cpp:32]   --->   Operation 168 'store' <Predicate = (i7_0 == 3)> <Delay = 0.00>
+ST_7 : Operation 169 [1/1] (0.00ns)   --->   "br label %loopb22_end"   --->   Operation 169 'br' <Predicate = (i7_0 == 3)> <Delay = 0.00>
+ST_7 : Operation 170 [1/1] (0.00ns)   --->   "store i448 %partial_products_0_10, i448* %partial_products_6_12" [sikehls/mult.cpp:33]   --->   Operation 170 'store' <Predicate = (i7_0 == 2)> <Delay = 0.00>
+ST_7 : Operation 171 [1/1] (0.00ns)   --->   "store i448 %partial_products_0_9, i448* %partial_products_6_11" [sikehls/mult.cpp:33]   --->   Operation 171 'store' <Predicate = (i7_0 == 2)> <Delay = 0.00>
+ST_7 : Operation 172 [1/1] (0.00ns)   --->   "store i448 %zext_ln1503_3, i448* %partial_products_2_2" [sikehls/mult.cpp:33]   --->   Operation 172 'store' <Predicate = (i7_0 == 2)> <Delay = 0.00>
+ST_7 : Operation 173 [1/1] (0.00ns)   --->   "store i448 %zext_ln1503_2, i448* %partial_products_2_3" [sikehls/mult.cpp:33]   --->   Operation 173 'store' <Predicate = (i7_0 == 2)> <Delay = 0.00>
+ST_7 : Operation 174 [1/1] (0.00ns)   --->   "store i448 %zext_ln1503_1, i448* %partial_products_2_4" [sikehls/mult.cpp:33]   --->   Operation 174 'store' <Predicate = (i7_0 == 2)> <Delay = 0.00>
+ST_7 : Operation 175 [1/1] (0.00ns)   --->   "store i448 %zext_ln1503, i448* %partial_products_2_5" [sikehls/mult.cpp:33]   --->   Operation 175 'store' <Predicate = (i7_0 == 2)> <Delay = 0.00>
+ST_7 : Operation 176 [1/1] (0.00ns)   --->   "store i448 %partial_products_0_s, i448* %partial_products_6_10" [sikehls/mult.cpp:32]   --->   Operation 176 'store' <Predicate = (i7_0 == 2)> <Delay = 0.00>
+ST_7 : Operation 177 [1/1] (0.00ns)   --->   "br label %loopb22_end"   --->   Operation 177 'br' <Predicate = (i7_0 == 2)> <Delay = 0.00>
+ST_7 : Operation 178 [1/1] (0.00ns)   --->   "store i448 %partial_products_0_10, i448* %partial_products_6_9" [sikehls/mult.cpp:33]   --->   Operation 178 'store' <Predicate = (i7_0 == 1)> <Delay = 0.00>
+ST_7 : Operation 179 [1/1] (0.00ns)   --->   "store i448 %partial_products_0_9, i448* %partial_products_6_8" [sikehls/mult.cpp:33]   --->   Operation 179 'store' <Predicate = (i7_0 == 1)> <Delay = 0.00>
+ST_7 : Operation 180 [1/1] (0.00ns)   --->   "store i448 %zext_ln1503_3, i448* %partial_products_1_2" [sikehls/mult.cpp:33]   --->   Operation 180 'store' <Predicate = (i7_0 == 1)> <Delay = 0.00>
+ST_7 : Operation 181 [1/1] (0.00ns)   --->   "store i448 %zext_ln1503_2, i448* %partial_products_1_3" [sikehls/mult.cpp:33]   --->   Operation 181 'store' <Predicate = (i7_0 == 1)> <Delay = 0.00>
+ST_7 : Operation 182 [1/1] (0.00ns)   --->   "store i448 %zext_ln1503_1, i448* %partial_products_1_4" [sikehls/mult.cpp:33]   --->   Operation 182 'store' <Predicate = (i7_0 == 1)> <Delay = 0.00>
+ST_7 : Operation 183 [1/1] (0.00ns)   --->   "store i448 %zext_ln1503, i448* %partial_products_1_5" [sikehls/mult.cpp:33]   --->   Operation 183 'store' <Predicate = (i7_0 == 1)> <Delay = 0.00>
+ST_7 : Operation 184 [1/1] (0.00ns)   --->   "store i448 %partial_products_0_s, i448* %partial_products_6_7" [sikehls/mult.cpp:32]   --->   Operation 184 'store' <Predicate = (i7_0 == 1)> <Delay = 0.00>
+ST_7 : Operation 185 [1/1] (0.00ns)   --->   "br label %loopb22_end"   --->   Operation 185 'br' <Predicate = (i7_0 == 1)> <Delay = 0.00>
+ST_7 : Operation 186 [1/1] (0.00ns)   --->   "store i448 %partial_products_0_10, i448* %partial_products_6_6" [sikehls/mult.cpp:33]   --->   Operation 186 'store' <Predicate = (i7_0 == 0)> <Delay = 0.00>
+ST_7 : Operation 187 [1/1] (0.00ns)   --->   "store i448 %partial_products_0_9, i448* %partial_products_6_1" [sikehls/mult.cpp:33]   --->   Operation 187 'store' <Predicate = (i7_0 == 0)> <Delay = 0.00>
+ST_7 : Operation 188 [1/1] (0.00ns)   --->   "store i448 %zext_ln1503_3, i448* %partial_products_0_2" [sikehls/mult.cpp:33]   --->   Operation 188 'store' <Predicate = (i7_0 == 0)> <Delay = 0.00>
+ST_7 : Operation 189 [1/1] (0.00ns)   --->   "store i448 %zext_ln1503_2, i448* %partial_products_0_3" [sikehls/mult.cpp:33]   --->   Operation 189 'store' <Predicate = (i7_0 == 0)> <Delay = 0.00>
+ST_7 : Operation 190 [1/1] (0.00ns)   --->   "store i448 %zext_ln1503_1, i448* %partial_products_0_4" [sikehls/mult.cpp:33]   --->   Operation 190 'store' <Predicate = (i7_0 == 0)> <Delay = 0.00>
+ST_7 : Operation 191 [1/1] (0.00ns)   --->   "store i448 %zext_ln1503, i448* %partial_products_0_5" [sikehls/mult.cpp:33]   --->   Operation 191 'store' <Predicate = (i7_0 == 0)> <Delay = 0.00>
+ST_7 : Operation 192 [1/1] (0.00ns)   --->   "store i448 %partial_products_0_s, i448* %partial_products_6_s" [sikehls/mult.cpp:33]   --->   Operation 192 'store' <Predicate = (i7_0 == 0)> <Delay = 0.00>
+ST_7 : Operation 193 [1/1] (0.00ns)   --->   "br label %loopb22_end" [sikehls/mult.cpp:33]   --->   Operation 193 'br' <Predicate = (i7_0 == 0)> <Delay = 0.00>
+ST_7 : Operation 194 [1/1] (0.00ns)   --->   "store i448 %partial_products_0_10, i448* %partial_products_6_24" [sikehls/mult.cpp:33]   --->   Operation 194 'store' <Predicate = (i7_0 == 7) | (i7_0 == 6)> <Delay = 0.00>
+ST_7 : Operation 195 [1/1] (0.00ns)   --->   "store i448 %partial_products_0_9, i448* %partial_products_6_23" [sikehls/mult.cpp:33]   --->   Operation 195 'store' <Predicate = (i7_0 == 7) | (i7_0 == 6)> <Delay = 0.00>
+ST_7 : Operation 196 [1/1] (0.00ns)   --->   "store i448 %zext_ln1503_3, i448* %partial_products_6_2" [sikehls/mult.cpp:33]   --->   Operation 196 'store' <Predicate = (i7_0 == 7) | (i7_0 == 6)> <Delay = 0.00>
+ST_7 : Operation 197 [1/1] (0.00ns)   --->   "store i448 %zext_ln1503_2, i448* %partial_products_6_3" [sikehls/mult.cpp:33]   --->   Operation 197 'store' <Predicate = (i7_0 == 7) | (i7_0 == 6)> <Delay = 0.00>
+ST_7 : Operation 198 [1/1] (0.00ns)   --->   "store i448 %zext_ln1503_1, i448* %partial_products_6_4" [sikehls/mult.cpp:33]   --->   Operation 198 'store' <Predicate = (i7_0 == 7) | (i7_0 == 6)> <Delay = 0.00>
+ST_7 : Operation 199 [1/1] (0.00ns)   --->   "store i448 %zext_ln1503, i448* %partial_products_6_5" [sikehls/mult.cpp:33]   --->   Operation 199 'store' <Predicate = (i7_0 == 7) | (i7_0 == 6)> <Delay = 0.00>
+ST_7 : Operation 200 [1/1] (0.00ns)   --->   "store i448 %partial_products_0_s, i448* %partial_products_6_22" [sikehls/mult.cpp:32]   --->   Operation 200 'store' <Predicate = (i7_0 == 7) | (i7_0 == 6)> <Delay = 0.00>
+ST_7 : Operation 201 [1/1] (0.00ns)   --->   "br label %loopb22_end"   --->   Operation 201 'br' <Predicate = (i7_0 == 7) | (i7_0 == 6)> <Delay = 0.00>
+
+State 8 <SV = 2> <Delay = 1.76>
+ST_8 : Operation 202 [1/1] (1.76ns)   --->   "br label %.preheader" [sikehls/mult.cpp:41]   --->   Operation 202 'br' <Predicate = true> <Delay = 1.76>
+
+State 9 <SV = 3> <Delay = 5.84>
+ST_9 : Operation 203 [1/1] (0.00ns)   --->   "%sum_V_0_0 = phi i451 [ %sum_0_V, %_ZlsILi896ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit.0 ], [ 0, %.preheader.preheader ]"   --->   Operation 203 'phi' 'sum_V_0_0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 204 [1/1] (0.00ns)   --->   "%sum_V_1_0 = phi i515 [ %sum_1_V, %_ZlsILi896ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit.0 ], [ 0, %.preheader.preheader ]"   --->   Operation 204 'phi' 'sum_V_1_0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 205 [1/1] (0.00ns)   --->   "%sum_V_2_0 = phi i579 [ %sum_2_V, %_ZlsILi896ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit.0 ], [ 0, %.preheader.preheader ]"   --->   Operation 205 'phi' 'sum_V_2_0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 206 [1/1] (0.00ns)   --->   "%sum_V_3_0 = phi i643 [ %sum_3_V, %_ZlsILi896ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit.0 ], [ 0, %.preheader.preheader ]"   --->   Operation 206 'phi' 'sum_V_3_0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 207 [1/1] (0.00ns)   --->   "%sum_V_4_0 = phi i707 [ %sum_4_V, %_ZlsILi896ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit.0 ], [ 0, %.preheader.preheader ]"   --->   Operation 207 'phi' 'sum_V_4_0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 208 [1/1] (0.00ns)   --->   "%sum_V_5_0 = phi i771 [ %sum_5_V, %_ZlsILi896ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit.0 ], [ 0, %.preheader.preheader ]"   --->   Operation 208 'phi' 'sum_V_5_0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 209 [1/1] (0.00ns)   --->   "%sum_V_6_0 = phi i835 [ %sum_6_V, %_ZlsILi896ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit.0 ], [ 0, %.preheader.preheader ]"   --->   Operation 209 'phi' 'sum_V_6_0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 210 [1/1] (0.00ns)   --->   "%i8_0 = phi i3 [ %i, %_ZlsILi896ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit.0 ], [ 0, %.preheader.preheader ]"   --->   Operation 210 'phi' 'i8_0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 211 [1/1] (1.13ns)   --->   "%icmp_ln41 = icmp eq i3 %i8_0, -1" [sikehls/mult.cpp:41]   --->   Operation 211 'icmp' 'icmp_ln41' <Predicate = true> <Delay = 1.13> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 212 [1/1] (0.00ns)   --->   "%empty_10 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 7, i64 7, i64 7)"   --->   Operation 212 'speclooptripcount' 'empty_10' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 213 [1/1] (1.65ns)   --->   "%i = add i3 %i8_0, 1" [sikehls/mult.cpp:41]   --->   Operation 213 'add' 'i' <Predicate = true> <Delay = 1.65> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 214 [1/1] (0.00ns)   --->   "br i1 %icmp_ln41, label %0, label %_ZlsILi896ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit.0" [sikehls/mult.cpp:41]   --->   Operation 214 'br' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 215 [1/1] (0.00ns)   --->   "%partial_products_6_25 = load i448* %partial_products_6_s" [sikehls/mult.cpp:44]   --->   Operation 215 'load' 'partial_products_6_25' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 216 [1/1] (0.00ns)   --->   "%partial_products_0_11 = load i448* %partial_products_0_5" [sikehls/mult.cpp:44]   --->   Operation 216 'load' 'partial_products_0_11' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 217 [1/1] (0.00ns)   --->   "%partial_products_0_12 = load i448* %partial_products_0_4" [sikehls/mult.cpp:44]   --->   Operation 217 'load' 'partial_products_0_12' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 218 [1/1] (0.00ns)   --->   "%partial_products_0_13 = load i448* %partial_products_0_3" [sikehls/mult.cpp:44]   --->   Operation 218 'load' 'partial_products_0_13' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 219 [1/1] (0.00ns)   --->   "%partial_products_0_14 = load i448* %partial_products_0_2" [sikehls/mult.cpp:44]   --->   Operation 219 'load' 'partial_products_0_14' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 220 [1/1] (0.00ns)   --->   "%partial_products_6_26 = load i448* %partial_products_6_1" [sikehls/mult.cpp:44]   --->   Operation 220 'load' 'partial_products_6_26' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 221 [1/1] (0.00ns)   --->   "%partial_products_6_27 = load i448* %partial_products_6_6" [sikehls/mult.cpp:44]   --->   Operation 221 'load' 'partial_products_6_27' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 222 [1/1] (0.00ns)   --->   "%partial_products_6_28 = load i448* %partial_products_6_7" [sikehls/mult.cpp:44]   --->   Operation 222 'load' 'partial_products_6_28' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 223 [1/1] (0.00ns)   --->   "%partial_products_1_s = load i448* %partial_products_1_5" [sikehls/mult.cpp:44]   --->   Operation 223 'load' 'partial_products_1_s' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 224 [1/1] (0.00ns)   --->   "%partial_products_1_1 = load i448* %partial_products_1_4" [sikehls/mult.cpp:44]   --->   Operation 224 'load' 'partial_products_1_1' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 225 [1/1] (0.00ns)   --->   "%partial_products_1_6 = load i448* %partial_products_1_3" [sikehls/mult.cpp:44]   --->   Operation 225 'load' 'partial_products_1_6' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 226 [1/1] (0.00ns)   --->   "%partial_products_1_7 = load i448* %partial_products_1_2" [sikehls/mult.cpp:44]   --->   Operation 226 'load' 'partial_products_1_7' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 227 [1/1] (0.00ns)   --->   "%partial_products_6_29 = load i448* %partial_products_6_8" [sikehls/mult.cpp:44]   --->   Operation 227 'load' 'partial_products_6_29' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 228 [1/1] (0.00ns)   --->   "%partial_products_6_30 = load i448* %partial_products_6_9" [sikehls/mult.cpp:44]   --->   Operation 228 'load' 'partial_products_6_30' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 229 [1/1] (0.00ns)   --->   "%partial_products_6_31 = load i448* %partial_products_6_10" [sikehls/mult.cpp:44]   --->   Operation 229 'load' 'partial_products_6_31' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 230 [1/1] (0.00ns)   --->   "%partial_products_2_s = load i448* %partial_products_2_5" [sikehls/mult.cpp:44]   --->   Operation 230 'load' 'partial_products_2_s' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 231 [1/1] (0.00ns)   --->   "%partial_products_2_1 = load i448* %partial_products_2_4" [sikehls/mult.cpp:44]   --->   Operation 231 'load' 'partial_products_2_1' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 232 [1/1] (0.00ns)   --->   "%partial_products_2_6 = load i448* %partial_products_2_3" [sikehls/mult.cpp:44]   --->   Operation 232 'load' 'partial_products_2_6' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 233 [1/1] (0.00ns)   --->   "%partial_products_2_7 = load i448* %partial_products_2_2" [sikehls/mult.cpp:44]   --->   Operation 233 'load' 'partial_products_2_7' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 234 [1/1] (0.00ns)   --->   "%partial_products_6_32 = load i448* %partial_products_6_11" [sikehls/mult.cpp:44]   --->   Operation 234 'load' 'partial_products_6_32' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 235 [1/1] (0.00ns)   --->   "%partial_products_6_33 = load i448* %partial_products_6_12" [sikehls/mult.cpp:44]   --->   Operation 235 'load' 'partial_products_6_33' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 236 [1/1] (0.00ns)   --->   "%partial_products_6_34 = load i448* %partial_products_6_13" [sikehls/mult.cpp:44]   --->   Operation 236 'load' 'partial_products_6_34' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 237 [1/1] (0.00ns)   --->   "%partial_products_3_s = load i448* %partial_products_3_5" [sikehls/mult.cpp:44]   --->   Operation 237 'load' 'partial_products_3_s' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 238 [1/1] (0.00ns)   --->   "%partial_products_3_1 = load i448* %partial_products_3_4" [sikehls/mult.cpp:44]   --->   Operation 238 'load' 'partial_products_3_1' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 239 [1/1] (0.00ns)   --->   "%partial_products_3_6 = load i448* %partial_products_3_3" [sikehls/mult.cpp:44]   --->   Operation 239 'load' 'partial_products_3_6' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 240 [1/1] (0.00ns)   --->   "%partial_products_3_7 = load i448* %partial_products_3_2" [sikehls/mult.cpp:44]   --->   Operation 240 'load' 'partial_products_3_7' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 241 [1/1] (0.00ns)   --->   "%partial_products_6_35 = load i448* %partial_products_6_14" [sikehls/mult.cpp:44]   --->   Operation 241 'load' 'partial_products_6_35' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 242 [1/1] (0.00ns)   --->   "%partial_products_6_36 = load i448* %partial_products_6_15" [sikehls/mult.cpp:44]   --->   Operation 242 'load' 'partial_products_6_36' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 243 [1/1] (0.00ns)   --->   "%partial_products_6_37 = load i448* %partial_products_6_16" [sikehls/mult.cpp:44]   --->   Operation 243 'load' 'partial_products_6_37' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 244 [1/1] (0.00ns)   --->   "%partial_products_4_s = load i448* %partial_products_4_5" [sikehls/mult.cpp:44]   --->   Operation 244 'load' 'partial_products_4_s' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 245 [1/1] (0.00ns)   --->   "%partial_products_4_1 = load i448* %partial_products_4_4" [sikehls/mult.cpp:44]   --->   Operation 245 'load' 'partial_products_4_1' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 246 [1/1] (0.00ns)   --->   "%partial_products_4_6 = load i448* %partial_products_4_3" [sikehls/mult.cpp:44]   --->   Operation 246 'load' 'partial_products_4_6' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 247 [1/1] (0.00ns)   --->   "%partial_products_4_7 = load i448* %partial_products_4_2" [sikehls/mult.cpp:44]   --->   Operation 247 'load' 'partial_products_4_7' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 248 [1/1] (0.00ns)   --->   "%partial_products_6_38 = load i448* %partial_products_6_17" [sikehls/mult.cpp:44]   --->   Operation 248 'load' 'partial_products_6_38' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 249 [1/1] (0.00ns)   --->   "%partial_products_6_39 = load i448* %partial_products_6_18" [sikehls/mult.cpp:44]   --->   Operation 249 'load' 'partial_products_6_39' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 250 [1/1] (0.00ns)   --->   "%partial_products_6_40 = load i448* %partial_products_6_19" [sikehls/mult.cpp:44]   --->   Operation 250 'load' 'partial_products_6_40' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 251 [1/1] (0.00ns)   --->   "%partial_products_5_s = load i448* %partial_products_5_5" [sikehls/mult.cpp:44]   --->   Operation 251 'load' 'partial_products_5_s' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 252 [1/1] (0.00ns)   --->   "%partial_products_5_1 = load i448* %partial_products_5_4" [sikehls/mult.cpp:44]   --->   Operation 252 'load' 'partial_products_5_1' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 253 [1/1] (0.00ns)   --->   "%partial_products_5_6 = load i448* %partial_products_5_3" [sikehls/mult.cpp:44]   --->   Operation 253 'load' 'partial_products_5_6' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 254 [1/1] (0.00ns)   --->   "%partial_products_5_7 = load i448* %partial_products_5_2" [sikehls/mult.cpp:44]   --->   Operation 254 'load' 'partial_products_5_7' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 255 [1/1] (0.00ns)   --->   "%partial_products_6_41 = load i448* %partial_products_6_20" [sikehls/mult.cpp:44]   --->   Operation 255 'load' 'partial_products_6_41' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 256 [1/1] (0.00ns)   --->   "%partial_products_6_42 = load i448* %partial_products_6_21" [sikehls/mult.cpp:44]   --->   Operation 256 'load' 'partial_products_6_42' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 257 [1/1] (0.00ns)   --->   "%partial_products_6_43 = load i448* %partial_products_6_22" [sikehls/mult.cpp:44]   --->   Operation 257 'load' 'partial_products_6_43' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 258 [1/1] (0.00ns)   --->   "%partial_products_6_44 = load i448* %partial_products_6_5" [sikehls/mult.cpp:44]   --->   Operation 258 'load' 'partial_products_6_44' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 259 [1/1] (0.00ns)   --->   "%partial_products_6_45 = load i448* %partial_products_6_4" [sikehls/mult.cpp:44]   --->   Operation 259 'load' 'partial_products_6_45' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 260 [1/1] (0.00ns)   --->   "%partial_products_6_46 = load i448* %partial_products_6_3" [sikehls/mult.cpp:44]   --->   Operation 260 'load' 'partial_products_6_46' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 261 [1/1] (0.00ns)   --->   "%partial_products_6_47 = load i448* %partial_products_6_2" [sikehls/mult.cpp:44]   --->   Operation 261 'load' 'partial_products_6_47' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 262 [1/1] (0.00ns)   --->   "%partial_products_6_48 = load i448* %partial_products_6_23" [sikehls/mult.cpp:44]   --->   Operation 262 'load' 'partial_products_6_48' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 263 [1/1] (0.00ns)   --->   "%partial_products_6_49 = load i448* %partial_products_6_24" [sikehls/mult.cpp:44]   --->   Operation 263 'load' 'partial_products_6_49' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 264 [1/1] (2.40ns)   --->   "%tmp_3 = call i448 @_ssdm_op_Mux.ap_auto.7i448.i3(i448 %partial_products_6_25, i448 %partial_products_0_11, i448 %partial_products_0_12, i448 %partial_products_0_13, i448 %partial_products_0_14, i448 %partial_products_6_26, i448 %partial_products_6_27, i3 %i8_0)" [sikehls/mult.cpp:44]   --->   Operation 264 'mux' 'tmp_3' <Predicate = (!icmp_ln41)> <Delay = 2.40> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 2.40> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 265 [1/1] (0.00ns)   --->   "%zext_ln700 = zext i448 %tmp_3 to i451" [sikehls/mult.cpp:44]   --->   Operation 265 'zext' 'zext_ln700' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 266 [2/2] (3.44ns)   --->   "%sum_0_V = add i451 %sum_V_0_0, %zext_ln700" [sikehls/mult.cpp:44]   --->   Operation 266 'add' 'sum_0_V' <Predicate = (!icmp_ln41)> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 267 [1/1] (2.40ns)   --->   "%tmp_4 = call i448 @_ssdm_op_Mux.ap_auto.7i448.i3(i448 %partial_products_6_28, i448 %partial_products_1_s, i448 %partial_products_1_1, i448 %partial_products_1_6, i448 %partial_products_1_7, i448 %partial_products_6_29, i448 %partial_products_6_30, i3 %i8_0)" [sikehls/mult.cpp:44]   --->   Operation 267 'mux' 'tmp_4' <Predicate = (!icmp_ln41)> <Delay = 2.40> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 2.40> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 268 [1/1] (0.00ns)   --->   "%shl_ln = call i512 @_ssdm_op_BitConcatenate.i512.i448.i64(i448 %tmp_4, i64 0)" [sikehls/mult.cpp:44]   --->   Operation 268 'bitconcatenate' 'shl_ln' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 269 [1/1] (0.00ns)   --->   "%zext_ln1503_4 = zext i512 %shl_ln to i515" [sikehls/mult.cpp:44]   --->   Operation 269 'zext' 'zext_ln1503_4' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 270 [2/2] (3.44ns)   --->   "%sum_1_V = add i515 %sum_V_1_0, %zext_ln1503_4" [sikehls/mult.cpp:44]   --->   Operation 270 'add' 'sum_1_V' <Predicate = (!icmp_ln41)> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 271 [1/1] (2.40ns)   --->   "%tmp_5 = call i448 @_ssdm_op_Mux.ap_auto.7i448.i3(i448 %partial_products_6_31, i448 %partial_products_2_s, i448 %partial_products_2_1, i448 %partial_products_2_6, i448 %partial_products_2_7, i448 %partial_products_6_32, i448 %partial_products_6_33, i3 %i8_0)" [sikehls/mult.cpp:44]   --->   Operation 271 'mux' 'tmp_5' <Predicate = (!icmp_ln41)> <Delay = 2.40> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 2.40> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 272 [1/1] (0.00ns)   --->   "%shl_ln1503_1 = call i576 @_ssdm_op_BitConcatenate.i576.i448.i128(i448 %tmp_5, i128 0)" [sikehls/mult.cpp:44]   --->   Operation 272 'bitconcatenate' 'shl_ln1503_1' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 273 [1/1] (0.00ns)   --->   "%zext_ln1503_5 = zext i576 %shl_ln1503_1 to i579" [sikehls/mult.cpp:44]   --->   Operation 273 'zext' 'zext_ln1503_5' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 274 [2/2] (3.44ns)   --->   "%sum_2_V = add i579 %sum_V_2_0, %zext_ln1503_5" [sikehls/mult.cpp:44]   --->   Operation 274 'add' 'sum_2_V' <Predicate = (!icmp_ln41)> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 275 [1/1] (2.40ns)   --->   "%tmp_6 = call i448 @_ssdm_op_Mux.ap_auto.7i448.i3(i448 %partial_products_6_34, i448 %partial_products_3_s, i448 %partial_products_3_1, i448 %partial_products_3_6, i448 %partial_products_3_7, i448 %partial_products_6_35, i448 %partial_products_6_36, i3 %i8_0)" [sikehls/mult.cpp:44]   --->   Operation 275 'mux' 'tmp_6' <Predicate = (!icmp_ln41)> <Delay = 2.40> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 2.40> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 276 [1/1] (0.00ns)   --->   "%shl_ln1503_7 = call i640 @_ssdm_op_BitConcatenate.i640.i448.i192(i448 %tmp_6, i192 0)" [sikehls/mult.cpp:44]   --->   Operation 276 'bitconcatenate' 'shl_ln1503_7' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 277 [1/1] (0.00ns)   --->   "%zext_ln1503_6 = zext i640 %shl_ln1503_7 to i643" [sikehls/mult.cpp:44]   --->   Operation 277 'zext' 'zext_ln1503_6' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 278 [2/2] (3.44ns)   --->   "%sum_3_V = add i643 %sum_V_3_0, %zext_ln1503_6" [sikehls/mult.cpp:44]   --->   Operation 278 'add' 'sum_3_V' <Predicate = (!icmp_ln41)> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 279 [1/1] (2.40ns)   --->   "%tmp_7 = call i448 @_ssdm_op_Mux.ap_auto.7i448.i3(i448 %partial_products_6_37, i448 %partial_products_4_s, i448 %partial_products_4_1, i448 %partial_products_4_6, i448 %partial_products_4_7, i448 %partial_products_6_38, i448 %partial_products_6_39, i3 %i8_0)" [sikehls/mult.cpp:44]   --->   Operation 279 'mux' 'tmp_7' <Predicate = (!icmp_ln41)> <Delay = 2.40> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 2.40> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 280 [1/1] (0.00ns)   --->   "%shl_ln1503_8 = call i704 @_ssdm_op_BitConcatenate.i704.i448.i256(i448 %tmp_7, i256 0)" [sikehls/mult.cpp:44]   --->   Operation 280 'bitconcatenate' 'shl_ln1503_8' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 281 [1/1] (0.00ns)   --->   "%zext_ln1503_7 = zext i704 %shl_ln1503_8 to i707" [sikehls/mult.cpp:44]   --->   Operation 281 'zext' 'zext_ln1503_7' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 282 [2/2] (3.44ns)   --->   "%sum_4_V = add i707 %sum_V_4_0, %zext_ln1503_7" [sikehls/mult.cpp:44]   --->   Operation 282 'add' 'sum_4_V' <Predicate = (!icmp_ln41)> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 283 [1/1] (2.40ns)   --->   "%tmp_8 = call i448 @_ssdm_op_Mux.ap_auto.7i448.i3(i448 %partial_products_6_40, i448 %partial_products_5_s, i448 %partial_products_5_1, i448 %partial_products_5_6, i448 %partial_products_5_7, i448 %partial_products_6_41, i448 %partial_products_6_42, i3 %i8_0)" [sikehls/mult.cpp:44]   --->   Operation 283 'mux' 'tmp_8' <Predicate = (!icmp_ln41)> <Delay = 2.40> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 2.40> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 284 [1/1] (0.00ns)   --->   "%shl_ln1503_9 = call i768 @_ssdm_op_BitConcatenate.i768.i448.i320(i448 %tmp_8, i320 0)" [sikehls/mult.cpp:44]   --->   Operation 284 'bitconcatenate' 'shl_ln1503_9' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 285 [1/1] (0.00ns)   --->   "%zext_ln1503_8 = zext i768 %shl_ln1503_9 to i771" [sikehls/mult.cpp:44]   --->   Operation 285 'zext' 'zext_ln1503_8' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 286 [2/2] (3.44ns)   --->   "%sum_5_V = add i771 %sum_V_5_0, %zext_ln1503_8" [sikehls/mult.cpp:44]   --->   Operation 286 'add' 'sum_5_V' <Predicate = (!icmp_ln41)> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 287 [1/1] (2.40ns)   --->   "%tmp_9 = call i448 @_ssdm_op_Mux.ap_auto.7i448.i3(i448 %partial_products_6_43, i448 %partial_products_6_44, i448 %partial_products_6_45, i448 %partial_products_6_46, i448 %partial_products_6_47, i448 %partial_products_6_48, i448 %partial_products_6_49, i3 %i8_0)" [sikehls/mult.cpp:44]   --->   Operation 287 'mux' 'tmp_9' <Predicate = (!icmp_ln41)> <Delay = 2.40> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 2.40> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 288 [1/1] (0.00ns)   --->   "%shl_ln1503_s = call i832 @_ssdm_op_BitConcatenate.i832.i448.i384(i448 %tmp_9, i384 0)" [sikehls/mult.cpp:44]   --->   Operation 288 'bitconcatenate' 'shl_ln1503_s' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 289 [1/1] (0.00ns)   --->   "%zext_ln1503_9 = zext i832 %shl_ln1503_s to i835" [sikehls/mult.cpp:44]   --->   Operation 289 'zext' 'zext_ln1503_9' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 290 [2/2] (3.44ns)   --->   "%sum_6_V = add i835 %sum_V_6_0, %zext_ln1503_9" [sikehls/mult.cpp:44]   --->   Operation 290 'add' 'sum_6_V' <Predicate = (!icmp_ln41)> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 291 [1/1] (0.00ns)   --->   "%zext_ln41 = zext i451 %sum_V_0_0 to i579" [sikehls/mult.cpp:41]   --->   Operation 291 'zext' 'zext_ln41' <Predicate = (icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 292 [1/1] (0.00ns)   --->   "%zext_ln41_2 = zext i643 %sum_V_3_0 to i707" [sikehls/mult.cpp:41]   --->   Operation 292 'zext' 'zext_ln41_2' <Predicate = (icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 293 [1/1] (0.00ns)   --->   "%zext_ln41_3 = zext i771 %sum_V_5_0 to i835" [sikehls/mult.cpp:41]   --->   Operation 293 'zext' 'zext_ln41_3' <Predicate = (icmp_ln41)> <Delay = 0.00>
+ST_9 : Operation 294 [2/2] (3.44ns)   --->   "%add_ln209 = add i579 %zext_ln41, %sum_V_2_0" [sikehls/mult.cpp:51]   --->   Operation 294 'add' 'add_ln209' <Predicate = (icmp_ln41)> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 295 [2/2] (3.44ns)   --->   "%add_ln209_2 = add i707 %zext_ln41_2, %sum_V_4_0" [sikehls/mult.cpp:51]   --->   Operation 295 'add' 'add_ln209_2' <Predicate = (icmp_ln41)> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 296 [2/2] (3.44ns)   --->   "%add_ln209_3 = add i835 %zext_ln41_3, %sum_V_6_0" [sikehls/mult.cpp:51]   --->   Operation 296 'add' 'add_ln209_3' <Predicate = (icmp_ln41)> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 4> <Delay = 3.44>
+ST_10 : Operation 297 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([6 x i8]* @p_str14) nounwind" [sikehls/mult.cpp:41]   --->   Operation 297 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 298 [1/2] (3.44ns)   --->   "%sum_0_V = add i451 %sum_V_0_0, %zext_ln700" [sikehls/mult.cpp:44]   --->   Operation 298 'add' 'sum_0_V' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 299 [1/2] (3.44ns)   --->   "%sum_1_V = add i515 %sum_V_1_0, %zext_ln1503_4" [sikehls/mult.cpp:44]   --->   Operation 299 'add' 'sum_1_V' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 300 [1/2] (3.44ns)   --->   "%sum_2_V = add i579 %sum_V_2_0, %zext_ln1503_5" [sikehls/mult.cpp:44]   --->   Operation 300 'add' 'sum_2_V' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 301 [1/2] (3.44ns)   --->   "%sum_3_V = add i643 %sum_V_3_0, %zext_ln1503_6" [sikehls/mult.cpp:44]   --->   Operation 301 'add' 'sum_3_V' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 302 [1/2] (3.44ns)   --->   "%sum_4_V = add i707 %sum_V_4_0, %zext_ln1503_7" [sikehls/mult.cpp:44]   --->   Operation 302 'add' 'sum_4_V' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 303 [1/2] (3.44ns)   --->   "%sum_5_V = add i771 %sum_V_5_0, %zext_ln1503_8" [sikehls/mult.cpp:44]   --->   Operation 303 'add' 'sum_5_V' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 304 [1/2] (3.44ns)   --->   "%sum_6_V = add i835 %sum_V_6_0, %zext_ln1503_9" [sikehls/mult.cpp:44]   --->   Operation 304 'add' 'sum_6_V' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 305 [1/1] (0.00ns)   --->   "br label %.preheader" [sikehls/mult.cpp:41]   --->   Operation 305 'br' <Predicate = true> <Delay = 0.00>
+
+State 11 <SV = 4> <Delay = 6.88>
+ST_11 : Operation 306 [1/1] (0.00ns)   --->   "%zext_ln41_1 = zext i515 %sum_V_1_0 to i579" [sikehls/mult.cpp:41]   --->   Operation 306 'zext' 'zext_ln41_1' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 307 [1/2] (3.44ns)   --->   "%add_ln209 = add i579 %zext_ln41, %sum_V_2_0" [sikehls/mult.cpp:51]   --->   Operation 307 'add' 'add_ln209' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 308 [2/2] (3.44ns)   --->   "%add_ln209_1 = add i579 %add_ln209, %zext_ln41_1" [sikehls/mult.cpp:51]   --->   Operation 308 'add' 'add_ln209_1' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 309 [1/2] (3.44ns)   --->   "%add_ln209_2 = add i707 %zext_ln41_2, %sum_V_4_0" [sikehls/mult.cpp:51]   --->   Operation 309 'add' 'add_ln209_2' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 310 [1/1] (0.00ns)   --->   "%zext_ln209_1 = zext i707 %add_ln209_2 to i835" [sikehls/mult.cpp:51]   --->   Operation 310 'zext' 'zext_ln209_1' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 311 [1/2] (3.44ns)   --->   "%add_ln209_3 = add i835 %zext_ln41_3, %sum_V_6_0" [sikehls/mult.cpp:51]   --->   Operation 311 'add' 'add_ln209_3' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 312 [2/2] (3.44ns)   --->   "%add_ln209_4 = add i835 %add_ln209_3, %zext_ln209_1" [sikehls/mult.cpp:51]   --->   Operation 312 'add' 'add_ln209_4' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 5> <Delay = 6.88>
+ST_12 : Operation 313 [1/2] (3.44ns)   --->   "%add_ln209_1 = add i579 %add_ln209, %zext_ln41_1" [sikehls/mult.cpp:51]   --->   Operation 313 'add' 'add_ln209_1' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 314 [1/1] (0.00ns)   --->   "%zext_ln209 = zext i579 %add_ln209_1 to i835" [sikehls/mult.cpp:51]   --->   Operation 314 'zext' 'zext_ln209' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 315 [1/2] (3.44ns)   --->   "%add_ln209_4 = add i835 %add_ln209_3, %zext_ln209_1" [sikehls/mult.cpp:51]   --->   Operation 315 'add' 'add_ln209_4' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 316 [2/2] (3.44ns)   --->   "%mult_V = add i835 %add_ln209_4, %zext_ln209" [sikehls/mult.cpp:51]   --->   Operation 316 'add' 'mult_V' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 13 <SV = 6> <Delay = 3.44>
+ST_13 : Operation 317 [1/2] (3.44ns)   --->   "%mult_V = add i835 %add_ln209_4, %zext_ln209" [sikehls/mult.cpp:51]   --->   Operation 317 'add' 'mult_V' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 318 [1/1] (0.00ns)   --->   "ret i835 %mult_V" [sikehls/mult.cpp:55]   --->   Operation 318 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', sikehls/mult.cpp:28) [77]  (1.77 ns)
+
+ <State 2>: 2.4ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', sikehls/mult.cpp:28) [77]  (0 ns)
+	'mux' operation ('tmp_2', sikehls/mult.cpp:32) [86]  (2.4 ns)
+
+ <State 3>: 6.98ns
+The critical path consists of the following:
+	'mul' operation ('mul_ln1352', sikehls/mult.cpp:32) [88]  (6.98 ns)
+
+ <State 4>: 6.98ns
+The critical path consists of the following:
+	'mul' operation ('mul_ln1352', sikehls/mult.cpp:32) [88]  (6.98 ns)
+
+ <State 5>: 6.98ns
+The critical path consists of the following:
+	'mul' operation ('mul_ln1352', sikehls/mult.cpp:32) [88]  (6.98 ns)
+
+ <State 6>: 6.98ns
+The critical path consists of the following:
+	'mul' operation ('mul_ln1352', sikehls/mult.cpp:32) [88]  (6.98 ns)
+
+ <State 7>: 6.98ns
+The critical path consists of the following:
+	'mul' operation ('mul_ln1352', sikehls/mult.cpp:32) [88]  (6.98 ns)
+
+ <State 8>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('sum[0].V') with incoming values : ('sum[0].V', sikehls/mult.cpp:44) [176]  (1.77 ns)
+
+ <State 9>: 5.84ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', sikehls/mult.cpp:41) [183]  (0 ns)
+	'mux' operation ('tmp_3', sikehls/mult.cpp:44) [239]  (2.4 ns)
+	'add' operation ('sum[0].V', sikehls/mult.cpp:44) [241]  (3.44 ns)
+
+ <State 10>: 3.44ns
+The critical path consists of the following:
+	'add' operation ('sum[0].V', sikehls/mult.cpp:44) [241]  (3.44 ns)
+
+ <State 11>: 6.88ns
+The critical path consists of the following:
+	'add' operation ('add_ln209', sikehls/mult.cpp:51) [272]  (3.44 ns)
+	'add' operation ('add_ln209_1', sikehls/mult.cpp:51) [273]  (3.44 ns)
+
+ <State 12>: 6.88ns
+The critical path consists of the following:
+	'add' operation ('add_ln209_1', sikehls/mult.cpp:51) [273]  (3.44 ns)
+	'add' operation ('mult.V', sikehls/mult.cpp:51) [279]  (3.44 ns)
+
+ <State 13>: 3.44ns
+The critical path consists of the following:
+	'add' operation ('mult.V', sikehls/mult.cpp:51) [279]  (3.44 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

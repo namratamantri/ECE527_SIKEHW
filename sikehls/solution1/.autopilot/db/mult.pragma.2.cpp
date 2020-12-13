@@ -6362,16 +6362,16 @@ inline bool operator!=(
 # 368 "C:/Xilinx/Vivado/2019.1/common/technology/autopilot\\ap_int.h" 2
 # 2 "sikehls/constants434.h" 2
 
-const ap_uint<448> p434 = 0x0002341F271773446CFC5FD681C520567BC65C783158AEA3FDC1767AE2FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF;
+const ap_uint<448> p434("2341F271773446CFC5FD681C520567BC65C783158AEA3FDC1767AE2FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",16);
 
-const ap_uint<448> p434x2 = 0x0004683E4E2EE688D9F8BFAD038A40ACF78CB8F062B15D47FB82ECF5C5FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE;
+const ap_uint<448> p434x2("4683E4E2EE688D9F8BFAD038A40ACF78CB8F062B15D47FB82ECF5C5FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE",16);
 
-const ap_uint<448> p434x4 = 0x0008D07C9C5DCD11B3F17F5A07148159EF1971E0C562BA8FF705D9EB8BFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFC;
+const ap_uint<448> p434x4("8D07C9C5DCD11B3F17F5A07148159EF1971E0C562BA8FF705D9EB8BFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFC",16);
 
-const ap_uint<448> p434p1 = 0x0002341F271773446CFC5FD681C520567BC65C783158AEA3FDC1767AE3000000000000000000000000000000000000000000000000000000;
+const ap_uint<448> p434p1("2341F271773446CFC5FD681C520567BC65C783158AEA3FDC1767AE3000000000000000000000000000000000000000000000000000000",16);
 
 
-const ap_uint<448> Montgomery_R2 = 0x000025A89BCDD12A69E16A61C7686D9AABCD92BF2DDE347E175CC6AF8D6C7C0BAB27973F8311688DACEC7367768798C228E55B65DCD69B30;
+const ap_uint<448> Montgomery_R2("25A89BCDD12A69E16A61C7686D9AABCD92BF2DDE347E175CC6AF8D6C7C0BAB27973F8311688DACEC7367768798C228E55B65DCD69B30",16);
 
 
 typedef ap_uint<448> digit_t;
@@ -6419,7 +6419,63 @@ void from_fp2mont(const f2elm_t ma, f2elm_t c);
 void fpinv_chain_mont(digit_t* a);
 void fpinv_mont(digit_t* a);
 void koa_mult(digit_t a,digit_t b, digit_d* c);
+void bc_mult_448(digit_t a,digit_t b, digit_d* c);
 # 2 "sikehls/mult.cpp" 2
+
+
+
+
+void bc_mult_448(digit_t a,digit_t b, digit_d* c){
+_ssdm_InlineSelf(2, "");
+ digit_t partial_products[7][7];
+ ap_uint<64> ai[7];
+ ap_uint<64> bi[7];
+ digit_d sum[7];
+_ssdm_SpecArrayPartition( ai, 1, "COMPLETE", 0, "");
+_ssdm_SpecArrayPartition( bi, 1, "COMPLETE", 0, "");
+_ssdm_SpecArrayPartition( sum, 1, "COMPLETE", 0, "");
+_ssdm_SpecArrayPartition( partial_products, 0, "COMPLETE", 0, "");
+
+
+
+
+
+ loopb21: for(int i = 0; i<7; i++){
+_ssdm_Unroll(0,0,0, "");
+ ai[i] = a.range(i*64 +64 -1,i*64);
+  bi[i] = b.range(i*64 +64 -1,i*64);
+  sum[i] = 0;
+ }
+
+ loopb22: for(int i = 0;i<7;i++){
+_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
+ loopb23: for(int j =0; j<7;j++){
+_ssdm_Unroll(0,0,0, "");
+ digit_t temp = (ai[j]*bi[i]);
+   partial_products[i][j] = (digit_t)temp << (64*j);
+
+
+
+  }
+ }
+
+
+ loop3: for(int i=0;i<7;i++){
+  loop3_1:for(int j=0;j<7;j++){
+_ssdm_Unroll(0,0,0, "");
+ sum[j] += (digit_d)partial_products[j][i]<<(j*64);
+  }
+ }
+
+
+
+ digit_d mult=0;
+ mult = sum[0] + sum[1] + sum[2] + sum[3] + sum[4] + sum[5] + sum[6];
+
+
+ *c = mult;
+}
+
 
 
 void bc_mult_2(digit_q2 ta,digit_q2 tb, ap_int<228>* c){

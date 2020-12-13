@@ -60,7 +60,7 @@ void mp_mul(const digit_t a, const digit_t b, digit_d* c)
 {
 //#pragma HLS ALLOCATION instances=Mul limit=20 core
 	//*c = a * b;
-	koa_mult(a,b,c);
+	bc_mult_448(a,b,c);
 }
 
 void rdc_mont(digit_d ma, digit_t* mc)
@@ -68,8 +68,12 @@ void rdc_mont(digit_d ma, digit_t* mc)
 	digit_d one = 1;
 	digit_d mask = one<<448 - 1;
 	digit_t ma_trunc = (digit_t) ma;
-	digit_t m = (digit_t)(ma_trunc*(p434p1) & mask) ; //m=ma*P^-1 % R, R=2^448
-	*mc = ((ma+m*p434) >> 448); // mc = (ma+m*p)/R
+	digit_d mult;
+	bc_mult_448(ma_trunc,p434p1,&mult);
+	digit_t m = (digit_t)(mult & mask) ; //m=ma*P^-1 % R, R=2^448
+	bc_mult_448(m,p434,&mult);
+	digit_d sum = (digit_d)ma + mult;
+	*mc = (digit_t)(sum >> 448); // mc = (ma+m*p)/R
 }
 
 

@@ -4,7 +4,7 @@
 ## Copyright (C) 1986-2019 Xilinx, Inc. All Rights Reserved.
 ############################################################
 open_project sikehls
-set_top fpadd434
+set_top rdc_mont
 add_files sikehls/constants434.h
 add_files sikehls/ec_isogeny.cpp
 add_files sikehls/fp.h

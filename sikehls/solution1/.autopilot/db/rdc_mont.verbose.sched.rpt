@@ -1,0 +1,148 @@
+
+
+================================================================
+== Vivado HLS Report for 'rdc_mont'
+================================================================
+* Date:           Sun Dec 13 17:30:16 2020
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        sikehls
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     6.978|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   67|   67|   67|   67|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.76>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%ma_V_read = call i896 @_ssdm_op_Read.ap_auto.i896(i896 %ma_V)" [sikehls/fpx.cpp:66]   --->   Operation 5 'read' 'ma_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%ma_trunc_V = trunc i896 %ma_V_read to i448" [sikehls/fpx.cpp:70]   --->   Operation 6 'trunc' 'ma_trunc_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [2/2] (1.76ns)   --->   "%mult_V_2 = call fastcc i835 @bc_mult_448(i448 %ma_trunc_V, i435 24439423661345221551909145011457493619085780243761596511325807336205221239331976725970216671828618445898719026692884939342314733568)" [sikehls/fpx.cpp:72]   --->   Operation 7 'call' 'mult_V_2' <Predicate = true> <Delay = 1.76> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 5.21>
+ST_2 : Operation 8 [1/2] (3.44ns)   --->   "%mult_V_2 = call fastcc i835 @bc_mult_448(i448 %ma_trunc_V, i435 24439423661345221551909145011457493619085780243761596511325807336205221239331976725970216671828618445898719026692884939342314733568)" [sikehls/fpx.cpp:72]   --->   Operation 8 'call' 'mult_V_2' <Predicate = true> <Delay = 3.44> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "%tmp = call i1 @_ssdm_op_BitSelect.i1.i835.i32(i835 %mult_V_2, i32 447)" [sikehls/fpx.cpp:73]   --->   Operation 9 'bitselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "%m_V = call i448 @_ssdm_op_BitConcatenate.i448.i1.i447(i1 %tmp, i447 0)" [sikehls/fpx.cpp:73]   --->   Operation 10 'bitconcatenate' 'm_V' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 11 [2/2] (1.76ns)   --->   "%mult_V = call fastcc i835 @bc_mult_448(i448 %m_V, i435 24439423661345221551909145011457493619085780243761596511325807336205221239331976725970216671828618445898719026692884939342314733567)" [sikehls/fpx.cpp:74]   --->   Operation 11 'call' 'mult_V' <Predicate = true> <Delay = 1.76> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 6.88>
+ST_3 : Operation 12 [1/2] (3.44ns)   --->   "%mult_V = call fastcc i835 @bc_mult_448(i448 %m_V, i435 24439423661345221551909145011457493619085780243761596511325807336205221239331976725970216671828618445898719026692884939342314733567)" [sikehls/fpx.cpp:74]   --->   Operation 12 'call' 'mult_V' <Predicate = true> <Delay = 3.44> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 13 [1/1] (0.00ns)   --->   "%zext_ln209 = zext i835 %mult_V to i896" [sikehls/fpx.cpp:75]   --->   Operation 13 'zext' 'zext_ln209' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 14 [2/2] (3.44ns)   --->   "%sum_V = add i896 %ma_V_read, %zext_ln209" [sikehls/fpx.cpp:75]   --->   Operation 14 'add' 'sum_V' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 3.44>
+ST_4 : Operation 15 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i896 %ma_V), !map !336"   --->   Operation 15 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 16 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i448* %mc_V), !map !342"   --->   Operation 16 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 17 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([9 x i8]* @rdc_mont_str) nounwind"   --->   Operation 17 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 18 [1/2] (3.44ns)   --->   "%sum_V = add i896 %ma_V_read, %zext_ln209" [sikehls/fpx.cpp:75]   --->   Operation 18 'add' 'sum_V' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 19 [1/1] (0.00ns)   --->   "%trunc_ln = call i448 @_ssdm_op_PartSelect.i448.i896.i32.i32(i896 %sum_V, i32 448, i32 895)" [sikehls/fpx.cpp:76]   --->   Operation 19 'partselect' 'trunc_ln' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 20 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i448P(i448* %mc_V, i448 %trunc_ln)" [sikehls/fpx.cpp:76]   --->   Operation 20 'write' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 21 [1/1] (0.00ns)   --->   "ret void" [sikehls/fpx.cpp:77]   --->   Operation 21 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.77ns
+The critical path consists of the following:
+	wire read on port 'ma_V' (sikehls/fpx.cpp:66) [6]  (0 ns)
+	'call' operation ('mult_V_2', sikehls/fpx.cpp:72) to 'bc_mult_448' [8]  (1.77 ns)
+
+ <State 2>: 5.21ns
+The critical path consists of the following:
+	'call' operation ('mult_V_2', sikehls/fpx.cpp:72) to 'bc_mult_448' [8]  (3.44 ns)
+	'call' operation ('mult_V', sikehls/fpx.cpp:74) to 'bc_mult_448' [11]  (1.77 ns)
+
+ <State 3>: 6.88ns
+The critical path consists of the following:
+	'call' operation ('mult_V', sikehls/fpx.cpp:74) to 'bc_mult_448' [11]  (3.44 ns)
+	'add' operation ('sum.V', sikehls/fpx.cpp:75) [13]  (3.44 ns)
+
+ <State 4>: 3.44ns
+The critical path consists of the following:
+	'add' operation ('sum.V', sikehls/fpx.cpp:75) [13]  (3.44 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -16,8 +16,8 @@ typedef ap_uint<34> digit_34; //16bits
 typedef ap_uint<64> digit_64; //16bits
 
 //file has 2 types of 448 bit multipliers : koa_mult_h1 and bc_mult_448.
-//bc_mult_448 is purely broadcast multiplier
-//koa_mult_h1 is a hybrid multiplier with 1st stage as koa and 2nd as broadcast.
+//bc_mult_448 is purely broadcast multiplier <= 31 cycles, <40% resources
+//koa_mult_h1 is a hybrid multiplier with 1st stage as koa and 2nd as broadcast. <= 25 cycles, 88% DSPs
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 

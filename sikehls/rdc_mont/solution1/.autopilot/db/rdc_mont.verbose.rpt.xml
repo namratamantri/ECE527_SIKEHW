@@ -1,0 +1,119 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'rdc_mont'" level="0">
+<item name = "Date">Sun Dec 13 17:26:09 2020
+</item>
+<item name = "Version">2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)</item>
+<item name = "Project">rdc_mont</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 6.978, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">67, 67, 67, 67, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_bc_mult_448_fu_47">bc_mult_448, 32, 32, 32, 32, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, -, -, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">0, 70, 24253, 4199, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 57, -</column>
+<column name="Register">-, -, 454, -, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 31, 23, 8, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<column name="grp_bc_mult_448_fu_47">bc_mult_448, 0, 70, 23673, 4067, 0</column>
+<column name="rdc_mont_add_896nmb6_U42">rdc_mont_add_896nmb6, 0, 0, 580, 132, 0</column>
+</table>
+</item>
+<item name = "DSP48E"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">27, 5, 1, 5</column>
+<column name="grp_bc_mult_448_fu_47_a_V">15, 3, 448, 1344</column>
+<column name="grp_bc_mult_448_fu_47_b_V">15, 3, 435, 1305</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">4, 0, 4, 0</column>
+<column name="grp_bc_mult_448_fu_47_ap_start_reg">1, 0, 1, 0</column>
+<column name="m_V_reg_107">1, 0, 448, 447</column>
+<column name="ma_trunc_V_reg_102">448, 0, 448, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, rdc_mont, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, rdc_mont, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, rdc_mont, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, rdc_mont, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, rdc_mont, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, rdc_mont, return value</column>
+<column name="ma_V">in, 896, ap_none, ma_V, scalar</column>
+<column name="mc_V">out, 448, ap_vld, mc_V, pointer</column>
+<column name="mc_V_ap_vld">out, 1, ap_vld, mc_V, pointer</column>
+</table>
+</item>
+</section>
+</profile>

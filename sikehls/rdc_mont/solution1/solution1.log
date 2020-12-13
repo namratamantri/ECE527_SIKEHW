@@ -1,0 +1,954 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'rdc_mont/rdc_mont.cpp' ... 
+WARNING: [HLS 200-40] In file included from rdc_mont/rdc_mont.cpp:1:
+rdc_mont/rdc_mont.cpp:5:29: warning: integer constant is too large for its type
+const ap_uint<448> p434p1 = 0x0002341F271773446CFC5FD681C520567BC65C783158AEA3FDC1767AE3000000000000000000000000000000000000000000000000000000;
+                            ^
+rdc_mont/rdc_mont.cpp:6:27: warning: integer constant is too large for its type
+const ap_uint<448> p434 = 0x0002341F271773446CFC5FD681C520567BC65C783158AEA3FDC1767AE2FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF;
+                          ^
+2 warnings generated.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:00 ; elapsed = 00:00:11 . Memory (MB): peak = 170.227 ; gain = 78.891
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:00 ; elapsed = 00:00:11 . Memory (MB): peak = 170.227 ; gain = 78.891
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 170.227 ; gain = 78.891
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-23] rdc_mont/rdc_mont.cpp:45: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 170.227 ; gain = 78.891
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loopb22' (rdc_mont/rdc_mont.cpp:50) in function 'bc_mult_448' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'loopb21' (rdc_mont/rdc_mont.cpp:43) in function 'bc_mult_448' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'loopb23' (rdc_mont/rdc_mont.cpp:52) in function 'bc_mult_448' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'loop3_1' (rdc_mont/rdc_mont.cpp:64) in function 'bc_mult_448' completely with a factor of 7.
+INFO: [XFORM 203-101] Partitioning array 'ai.V' (rdc_mont/rdc_mont.cpp:31) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'bi.V' (rdc_mont/rdc_mont.cpp:32) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'sum.V' (rdc_mont/rdc_mont.cpp:33) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'partial_products.V' (rdc_mont/rdc_mont.cpp:30) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'partial_products.V' (rdc_mont/rdc_mont.cpp:30) in dimension 2 completely.
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.7i64P.i3' into 'bc_mult_448' (rdc_mont/rdc_mont.cpp:54).
+INFO: [XFORM 203-11] Balancing expressions in function 'bc_mult_448' (rdc_mont/rdc_mont.cpp:46:29)...6 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 170.227 ; gain = 78.891
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 170.227 ; gain = 78.891
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'rdc_mont' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bc_mult_448' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loopb22'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 13.037 seconds; current allocated memory: 116.456 MB.
+INFO: [HLS 200-434] Only 1 loops out of a total 2 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.114 seconds; current allocated memory: 117.160 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'rdc_mont' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.151 seconds; current allocated memory: 117.391 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.052 seconds; current allocated memory: 117.504 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bc_mult_448' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_mux_73_448_1_1' to 'rdc_mont_mux_73_4bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_451ns_451ns_451_2_1' to 'rdc_mont_add_451ncud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_515ns_515ns_515_2_1' to 'rdc_mont_add_515ndEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_579ns_579ns_579_2_1' to 'rdc_mont_add_579neOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_643ns_643ns_643_2_1' to 'rdc_mont_add_643nfYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_707ns_707ns_707_2_1' to 'rdc_mont_add_707ng8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_771ns_771ns_771_2_1' to 'rdc_mont_add_771nhbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_835ns_835ns_835_2_1' to 'rdc_mont_add_835nibs' due to the length limit 20
+INFO: [RTGEN 206-104] Estimated max fanout for 'bc_mult_448' is 6626 from HDL expression: (1'b1 == ap_CS_fsm_state4)
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_451ncud': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_515ndEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_579neOg': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_643nfYi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_707ng8j': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_771nhbi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_835nibs': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_mux_73_4bkb': 7 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bc_mult_448'.
+INFO: [HLS 200-111]  Elapsed time: 0.231 seconds; current allocated memory: 118.692 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'rdc_mont' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'rdc_mont/ma_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'rdc_mont/mc_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'rdc_mont' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_mul_448ns_65ns_512_5_1' to 'rdc_mont_mul_448njbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_896ns_896ns_896_2_1' to 'rdc_mont_add_896nkbM' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_896nkbM': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_mul_448njbC': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'rdc_mont'.
+INFO: [HLS 200-111]  Elapsed time: 0.446 seconds; current allocated memory: 119.127 MB.
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_451ncud_AddSubnS_0'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_515ndEe_AddSubnS_1'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_579neOg_AddSubnS_2'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_643nfYi_AddSubnS_3'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_707ng8j_AddSubnS_4'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_771nhbi_AddSubnS_5'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_835nibs_AddSubnS_6'
+INFO: [RTMG 210-282] Generating pipelined core: 'rdc_mont_mul_448njbC_MulnS_0'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_896nkbM_AddSubnS_7'
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:15 . Memory (MB): peak = 179.043 ; gain = 87.707
+INFO: [VHDL 208-304] Generating VHDL RTL for rdc_mont.
+INFO: [VLOG 209-307] Generating Verilog RTL for rdc_mont.
+INFO: [HLS 200-112] Total elapsed time: 15.393 seconds; peak allocated memory: 119.127 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'rdc_mont/rdc_mont.cpp' ... 
+ERROR: [HLS 200-70] Compilation errors found: In file included from rdc_mont/rdc_mont.cpp:1:
+rdc_mont/rdc_mont.cpp:22:15: error: use of undeclared identifier 'p434'; did you mean 'p434p'?
+ *mc = ((ma+m*p434) >> 448);
+              ^~~~
+              p434p
+rdc_mont/rdc_mont.cpp:9:15: note: 'p434p' declared here
+const digit_t p434p = 0x1534;
+              ^
+1 error generated.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'rdc_mont/rdc_mont.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:00 ; elapsed = 00:00:11 . Memory (MB): peak = 171.363 ; gain = 80.035
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:00 ; elapsed = 00:00:11 . Memory (MB): peak = 171.363 ; gain = 80.035
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 171.363 ; gain = 80.035
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-23] rdc_mont/rdc_mont.cpp:47: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 171.363 ; gain = 80.035
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loopb22' (rdc_mont/rdc_mont.cpp:52) in function 'bc_mult_448' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'loopb21' (rdc_mont/rdc_mont.cpp:45) in function 'bc_mult_448' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'loopb23' (rdc_mont/rdc_mont.cpp:54) in function 'bc_mult_448' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'loop3_1' (rdc_mont/rdc_mont.cpp:66) in function 'bc_mult_448' completely with a factor of 7.
+INFO: [XFORM 203-101] Partitioning array 'ai.V' (rdc_mont/rdc_mont.cpp:33) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'bi.V' (rdc_mont/rdc_mont.cpp:34) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'sum.V' (rdc_mont/rdc_mont.cpp:35) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'partial_products.V' (rdc_mont/rdc_mont.cpp:32) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'partial_products.V' (rdc_mont/rdc_mont.cpp:32) in dimension 2 completely.
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.7i64P.i3' into 'bc_mult_448' (rdc_mont/rdc_mont.cpp:56).
+INFO: [XFORM 203-11] Balancing expressions in function 'bc_mult_448' (rdc_mont/rdc_mont.cpp:47:29)...6 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 171.363 ; gain = 80.035
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 171.363 ; gain = 80.035
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'rdc_mont' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bc_mult_448' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loopb22'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 6.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 13.686 seconds; current allocated memory: 116.581 MB.
+INFO: [HLS 200-434] Only 1 loops out of a total 2 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.153 seconds; current allocated memory: 117.442 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'rdc_mont' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.192 seconds; current allocated memory: 117.586 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.055 seconds; current allocated memory: 117.704 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bc_mult_448' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_mux_83_64_1_1' to 'rdc_mont_mux_83_6bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_mul_64ns_64ns_128_5_1' to 'rdc_mont_mul_64nscud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_mul_64s_64s_64_5_1' to 'rdc_mont_mul_64s_dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_mux_73_448_1_1' to 'rdc_mont_mux_73_4eOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_451ns_451ns_451_2_1' to 'rdc_mont_add_451nfYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_515ns_515ns_515_2_1' to 'rdc_mont_add_515ng8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_579ns_579ns_579_2_1' to 'rdc_mont_add_579nhbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_643ns_643ns_643_2_1' to 'rdc_mont_add_643nibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_707ns_707ns_707_2_1' to 'rdc_mont_add_707njbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_771ns_771ns_771_2_1' to 'rdc_mont_add_771nkbM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_835ns_835ns_835_2_1' to 'rdc_mont_add_835nlbW' due to the length limit 20
+INFO: [RTGEN 206-104] Estimated max fanout for 'bc_mult_448' is 6626 from HDL expression: (1'b1 == ap_CS_fsm_state9)
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_451nfYi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_515ng8j': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_579nhbi': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_643nibs': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_707njbC': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_771nkbM': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_835nlbW': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_mul_64nscud': 6 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_mul_64s_dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_mux_73_4eOg': 7 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_mux_83_6bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bc_mult_448'.
+INFO: [HLS 200-111]  Elapsed time: 0.428 seconds; current allocated memory: 119.329 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'rdc_mont' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'rdc_mont/ma_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'rdc_mont/mc_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'rdc_mont' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_mul_14ns_448ns_461_5_1' to 'rdc_mont_mul_14nsmb6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_896ns_896ns_896_2_1' to 'rdc_mont_add_896nncg' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_896nncg': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_mul_14nsmb6': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'rdc_mont'.
+INFO: [HLS 200-111]  Elapsed time: 0.904 seconds; current allocated memory: 119.930 MB.
+INFO: [RTMG 210-282] Generating pipelined core: 'rdc_mont_mul_64nscud_MulnS_0'
+INFO: [RTMG 210-282] Generating pipelined core: 'rdc_mont_mul_64s_dEe_MulnS_1'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_451nfYi_AddSubnS_0'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_515ng8j_AddSubnS_1'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_579nhbi_AddSubnS_2'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_643nibs_AddSubnS_3'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_707njbC_AddSubnS_4'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_771nkbM_AddSubnS_5'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_835nlbW_AddSubnS_6'
+INFO: [RTMG 210-282] Generating pipelined core: 'rdc_mont_mul_14nsmb6_MulnS_2'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_896nncg_AddSubnS_7'
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:03 ; elapsed = 00:00:17 . Memory (MB): peak = 180.695 ; gain = 89.367
+INFO: [VHDL 208-304] Generating VHDL RTL for rdc_mont.
+INFO: [VLOG 209-307] Generating Verilog RTL for rdc_mont.
+INFO: [HLS 200-112] Total elapsed time: 17.09 seconds; peak allocated memory: 119.930 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'rdc_mont/rdc_mont.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 170.785 ; gain = 79.457
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 170.785 ; gain = 79.457
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 170.785 ; gain = 79.457
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-23] rdc_mont/rdc_mont.cpp:49: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 170.785 ; gain = 79.457
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loopb22' (rdc_mont/rdc_mont.cpp:54) in function 'bc_mult_448' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'loopb21' (rdc_mont/rdc_mont.cpp:47) in function 'bc_mult_448' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'loopb23' (rdc_mont/rdc_mont.cpp:56) in function 'bc_mult_448' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'loop3_1' (rdc_mont/rdc_mont.cpp:68) in function 'bc_mult_448' completely with a factor of 7.
+INFO: [XFORM 203-101] Partitioning array 'ai.V' (rdc_mont/rdc_mont.cpp:35) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'bi.V' (rdc_mont/rdc_mont.cpp:36) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'sum.V' (rdc_mont/rdc_mont.cpp:37) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'partial_products.V' (rdc_mont/rdc_mont.cpp:34) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'partial_products.V' (rdc_mont/rdc_mont.cpp:34) in dimension 2 completely.
+INFO: [XFORM 203-11] Balancing expressions in function 'bc_mult_448' (rdc_mont/rdc_mont.cpp:49:29)...6 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 170.785 ; gain = 79.457
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 170.785 ; gain = 79.457
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'rdc_mont' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bc_mult_448' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loopb22'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 6.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 13.516 seconds; current allocated memory: 116.547 MB.
+INFO: [HLS 200-434] Only 1 loops out of a total 2 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.142 seconds; current allocated memory: 117.424 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'rdc_mont' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.166 seconds; current allocated memory: 117.544 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.049 seconds; current allocated memory: 117.616 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bc_mult_448' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_mux_73_64_1_1' to 'rdc_mont_mux_73_6bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_mul_64ns_64ns_128_5_1' to 'rdc_mont_mul_64nscud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_mul_64s_64s_64_5_1' to 'rdc_mont_mul_64s_dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_mux_73_448_1_1' to 'rdc_mont_mux_73_4eOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_451ns_451ns_451_2_1' to 'rdc_mont_add_451nfYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_515ns_515ns_515_2_1' to 'rdc_mont_add_515ng8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_579ns_579ns_579_2_1' to 'rdc_mont_add_579nhbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_643ns_643ns_643_2_1' to 'rdc_mont_add_643nibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_707ns_707ns_707_2_1' to 'rdc_mont_add_707njbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_771ns_771ns_771_2_1' to 'rdc_mont_add_771nkbM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_835ns_835ns_835_2_1' to 'rdc_mont_add_835nlbW' due to the length limit 20
+INFO: [RTGEN 206-104] Estimated max fanout for 'bc_mult_448' is 6626 from HDL expression: (1'b1 == ap_CS_fsm_state9)
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_451nfYi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_515ng8j': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_579nhbi': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_643nibs': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_707njbC': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_771nkbM': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_835nlbW': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_mul_64nscud': 6 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_mul_64s_dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_mux_73_4eOg': 7 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_mux_73_6bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bc_mult_448'.
+INFO: [HLS 200-111]  Elapsed time: 0.291 seconds; current allocated memory: 119.295 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'rdc_mont' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'rdc_mont/ma_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'rdc_mont/mc_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'rdc_mont' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_896ns_896ns_896_2_1' to 'rdc_mont_add_896nmb6' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_896nmb6': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'rdc_mont'.
+INFO: [HLS 200-111]  Elapsed time: 0.78 seconds; current allocated memory: 119.859 MB.
+INFO: [RTMG 210-282] Generating pipelined core: 'rdc_mont_mul_64nscud_MulnS_0'
+INFO: [RTMG 210-282] Generating pipelined core: 'rdc_mont_mul_64s_dEe_MulnS_1'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_451nfYi_AddSubnS_0'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_515ng8j_AddSubnS_1'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_579nhbi_AddSubnS_2'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_643nibs_AddSubnS_3'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_707njbC_AddSubnS_4'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_771nkbM_AddSubnS_5'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_835nlbW_AddSubnS_6'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_896nmb6_AddSubnS_7'
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:03 ; elapsed = 00:00:16 . Memory (MB): peak = 181.133 ; gain = 89.805
+INFO: [VHDL 208-304] Generating VHDL RTL for rdc_mont.
+INFO: [VLOG 209-307] Generating Verilog RTL for rdc_mont.
+INFO: [HLS 200-112] Total elapsed time: 16.418 seconds; peak allocated memory: 119.859 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'rdc_mont/rdc_mont.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:00 ; elapsed = 00:00:12 . Memory (MB): peak = 170.488 ; gain = 79.168
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:00 ; elapsed = 00:00:12 . Memory (MB): peak = 170.488 ; gain = 79.168
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 170.488 ; gain = 79.168
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-23] rdc_mont/rdc_mont.cpp:49: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 170.488 ; gain = 79.168
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loopb22' (rdc_mont/rdc_mont.cpp:54) in function 'bc_mult_448' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'loopb21' (rdc_mont/rdc_mont.cpp:47) in function 'bc_mult_448' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'loopb23' (rdc_mont/rdc_mont.cpp:56) in function 'bc_mult_448' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'loop3_1' (rdc_mont/rdc_mont.cpp:68) in function 'bc_mult_448' completely with a factor of 7.
+INFO: [XFORM 203-101] Partitioning array 'ai.V' (rdc_mont/rdc_mont.cpp:35) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'bi.V' (rdc_mont/rdc_mont.cpp:36) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'sum.V' (rdc_mont/rdc_mont.cpp:37) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'partial_products.V' (rdc_mont/rdc_mont.cpp:34) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'partial_products.V' (rdc_mont/rdc_mont.cpp:34) in dimension 2 completely.
+INFO: [XFORM 203-11] Balancing expressions in function 'bc_mult_448' (rdc_mont/rdc_mont.cpp:49:29)...6 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 170.488 ; gain = 79.168
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 170.488 ; gain = 79.168
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'rdc_mont' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bc_mult_448' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loopb22'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 6.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 14.091 seconds; current allocated memory: 116.558 MB.
+INFO: [HLS 200-434] Only 1 loops out of a total 2 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.162 seconds; current allocated memory: 117.435 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'rdc_mont' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.239 seconds; current allocated memory: 117.555 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.052 seconds; current allocated memory: 117.627 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bc_mult_448' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_mux_73_64_1_1' to 'rdc_mont_mux_73_6bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_mul_64ns_64ns_128_5_1' to 'rdc_mont_mul_64nscud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_mul_64s_64s_64_5_1' to 'rdc_mont_mul_64s_dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_mux_73_448_1_1' to 'rdc_mont_mux_73_4eOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_451ns_451ns_451_2_1' to 'rdc_mont_add_451nfYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_515ns_515ns_515_2_1' to 'rdc_mont_add_515ng8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_579ns_579ns_579_2_1' to 'rdc_mont_add_579nhbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_643ns_643ns_643_2_1' to 'rdc_mont_add_643nibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_707ns_707ns_707_2_1' to 'rdc_mont_add_707njbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_771ns_771ns_771_2_1' to 'rdc_mont_add_771nkbM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_835ns_835ns_835_2_1' to 'rdc_mont_add_835nlbW' due to the length limit 20
+INFO: [RTGEN 206-104] Estimated max fanout for 'bc_mult_448' is 6626 from HDL expression: (1'b1 == ap_CS_fsm_state9)
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_451nfYi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_515ng8j': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_579nhbi': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_643nibs': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_707njbC': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_771nkbM': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_835nlbW': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_mul_64nscud': 6 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_mul_64s_dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_mux_73_4eOg': 7 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_mux_73_6bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bc_mult_448'.
+INFO: [HLS 200-111]  Elapsed time: 0.333 seconds; current allocated memory: 119.306 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'rdc_mont' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'rdc_mont/ma_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'rdc_mont/mc_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'rdc_mont' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_896ns_896ns_896_2_1' to 'rdc_mont_add_896nmb6' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_896nmb6': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'rdc_mont'.
+INFO: [HLS 200-111]  Elapsed time: 0.716 seconds; current allocated memory: 119.870 MB.
+INFO: [RTMG 210-282] Generating pipelined core: 'rdc_mont_mul_64nscud_MulnS_0'
+INFO: [RTMG 210-282] Generating pipelined core: 'rdc_mont_mul_64s_dEe_MulnS_1'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_451nfYi_AddSubnS_0'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_515ng8j_AddSubnS_1'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_579nhbi_AddSubnS_2'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_643nibs_AddSubnS_3'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_707njbC_AddSubnS_4'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_771nkbM_AddSubnS_5'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_835nlbW_AddSubnS_6'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_896nmb6_AddSubnS_7'
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:03 ; elapsed = 00:00:17 . Memory (MB): peak = 180.418 ; gain = 89.098
+INFO: [VHDL 208-304] Generating VHDL RTL for rdc_mont.
+INFO: [VLOG 209-307] Generating Verilog RTL for rdc_mont.
+INFO: [HLS 200-112] Total elapsed time: 17.152 seconds; peak allocated memory: 119.870 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'rdc_mont/rdc_mont.cpp' ... 
+ERROR: [HLS 200-70] Compilation errors found: In file included from rdc_mont/rdc_mont.cpp:1:
+rdc_mont/rdc_mont.cpp:5:29: warning: integer constant is too large for its type
+const ap_uint<448> p434p1 = 0x2341F271773446CFC5FD681C520567BC65C783158AEA3FDC1767AE3000000000000000000000000000000000000000000000000000000;
+                            ^
+rdc_mont/rdc_mont.cpp:6:27: warning: integer constant is too large for its type
+const ap_uint<448> p434 = 0x2341F271773446CFC5FD681C520567BC65C783158AEA3FDC1767AE2FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF;
+                          ^
+rdc_mont/rdc_mont.cpp:8:15: error: redefinition of 'p434p1'
+const digit_t p434p1 = 0x12345678A;
+              ^
+rdc_mont/rdc_mont.cpp:5:20: note: previous definition is here
+const ap_uint<448> p434p1 = 0x2341F271773446CFC5FD681C520567BC65C783158AEA3FDC1767AE3000000000000000000000000000000000000000000000000000000;
+                   ^
+rdc_mont/rdc_mont.cpp:9:15: error: redefinition of 'p434'
+const digit_t p434 = 0x1534;
+              ^
+rdc_mont/rdc_mont.cpp:6:20: note: previous definition is here
+const ap_uint<448> p434 = 0x2341F271773446CFC5FD681C520567BC65C783158AEA3FDC1767AE2FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF;
+                   ^
+2 warnings and 2 errors generated.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'rdc_mont/rdc_mont.cpp' ... 
+WARNING: [HLS 200-40] In file included from rdc_mont/rdc_mont.cpp:1:
+rdc_mont/rdc_mont.cpp:5:29: warning: integer constant is too large for its type
+const ap_uint<448> p434p1 = 0x2341F271773446CFC5FD681C520567BC65C783158AEA3FDC1767AE3000000000000000000000000000000000000000000000000000000;
+                            ^
+rdc_mont/rdc_mont.cpp:6:27: warning: integer constant is too large for its type
+const ap_uint<448> p434 = 0x2341F271773446CFC5FD681C520567BC65C783158AEA3FDC1767AE2FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF;
+                          ^
+2 warnings generated.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 171.453 ; gain = 75.270
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 171.453 ; gain = 75.270
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:00 ; elapsed = 00:00:11 . Memory (MB): peak = 171.453 ; gain = 75.270
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-23] rdc_mont/rdc_mont.cpp:49: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 171.453 ; gain = 75.270
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loopb22' (rdc_mont/rdc_mont.cpp:54) in function 'bc_mult_448' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'loopb21' (rdc_mont/rdc_mont.cpp:47) in function 'bc_mult_448' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'loopb23' (rdc_mont/rdc_mont.cpp:56) in function 'bc_mult_448' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'loop3_1' (rdc_mont/rdc_mont.cpp:68) in function 'bc_mult_448' completely with a factor of 7.
+INFO: [XFORM 203-101] Partitioning array 'ai.V' (rdc_mont/rdc_mont.cpp:35) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'bi.V' (rdc_mont/rdc_mont.cpp:36) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'sum.V' (rdc_mont/rdc_mont.cpp:37) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'partial_products.V' (rdc_mont/rdc_mont.cpp:34) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'partial_products.V' (rdc_mont/rdc_mont.cpp:34) in dimension 2 completely.
+INFO: [XFORM 203-11] Balancing expressions in function 'bc_mult_448' (rdc_mont/rdc_mont.cpp:49:29)...6 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 171.453 ; gain = 75.270
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 171.453 ; gain = 75.270
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'rdc_mont' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bc_mult_448' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loopb22'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 6.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 12.293 seconds; current allocated memory: 117.422 MB.
+INFO: [HLS 200-434] Only 1 loops out of a total 2 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 118.343 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'rdc_mont' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.178 seconds; current allocated memory: 118.447 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 118.519 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bc_mult_448' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_mux_73_64_1_1' to 'rdc_mont_mux_73_6bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_mul_64ns_64ns_128_5_1' to 'rdc_mont_mul_64nscud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_mul_64s_64s_64_5_1' to 'rdc_mont_mul_64s_dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_mux_73_448_1_1' to 'rdc_mont_mux_73_4eOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_451ns_451ns_451_2_1' to 'rdc_mont_add_451nfYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_515ns_515ns_515_2_1' to 'rdc_mont_add_515ng8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_579ns_579ns_579_2_1' to 'rdc_mont_add_579nhbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_643ns_643ns_643_2_1' to 'rdc_mont_add_643nibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_707ns_707ns_707_2_1' to 'rdc_mont_add_707njbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_771ns_771ns_771_2_1' to 'rdc_mont_add_771nkbM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_835ns_835ns_835_2_1' to 'rdc_mont_add_835nlbW' due to the length limit 20
+INFO: [RTGEN 206-104] Estimated max fanout for 'bc_mult_448' is 6626 from HDL expression: (1'b1 == ap_CS_fsm_state9)
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_451nfYi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_515ng8j': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_579nhbi': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_643nibs': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_707njbC': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_771nkbM': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_835nlbW': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_mul_64nscud': 6 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_mul_64s_dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_mux_73_4eOg': 7 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_mux_73_6bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bc_mult_448'.
+INFO: [HLS 200-111]  Elapsed time: 0.283 seconds; current allocated memory: 120.172 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'rdc_mont' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'rdc_mont/ma_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'rdc_mont/mc_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'rdc_mont' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_896ns_896ns_896_2_1' to 'rdc_mont_add_896nmb6' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_896nmb6': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'rdc_mont'.
+INFO: [HLS 200-111]  Elapsed time: 0.713 seconds; current allocated memory: 120.758 MB.
+INFO: [RTMG 210-282] Generating pipelined core: 'rdc_mont_mul_64nscud_MulnS_0'
+INFO: [RTMG 210-282] Generating pipelined core: 'rdc_mont_mul_64s_dEe_MulnS_1'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_451nfYi_AddSubnS_0'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_515ng8j_AddSubnS_1'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_579nhbi_AddSubnS_2'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_643nibs_AddSubnS_3'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_707njbC_AddSubnS_4'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_771nkbM_AddSubnS_5'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_835nlbW_AddSubnS_6'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_896nmb6_AddSubnS_7'
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:03 ; elapsed = 00:00:15 . Memory (MB): peak = 181.844 ; gain = 85.660
+INFO: [VHDL 208-304] Generating VHDL RTL for rdc_mont.
+INFO: [VLOG 209-307] Generating Verilog RTL for rdc_mont.
+INFO: [HLS 200-112] Total elapsed time: 15.098 seconds; peak allocated memory: 120.758 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'rdc_mont/rdc_mont.cpp' ... 
+WARNING: [HLS 200-40] In file included from rdc_mont/rdc_mont.cpp:1:
+rdc_mont/rdc_mont.cpp:5:29: warning: integer constant is too large for its type
+const ap_uint<500> p434p1 = 0x2341F271773446CFC5FD681C520567BC65C783158AEA3FDC1767AE3000000000000000000000000000000000000000000000000000000;
+                            ^
+rdc_mont/rdc_mont.cpp:6:27: warning: integer constant is too large for its type
+const ap_uint<448> p434 = 0x2341F271773446CFC5FD681C520567BC65C783158AEA3FDC1767AE2FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF;
+                          ^
+2 warnings generated.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:22 . Memory (MB): peak = 170.742 ; gain = 79.410
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:22 . Memory (MB): peak = 170.742 ; gain = 79.410
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:24 . Memory (MB): peak = 170.742 ; gain = 79.410
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-23] rdc_mont/rdc_mont.cpp:49: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:24 . Memory (MB): peak = 170.742 ; gain = 79.410
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loopb22' (rdc_mont/rdc_mont.cpp:54) in function 'bc_mult_448' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'loopb21' (rdc_mont/rdc_mont.cpp:47) in function 'bc_mult_448' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'loopb23' (rdc_mont/rdc_mont.cpp:56) in function 'bc_mult_448' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'loop3_1' (rdc_mont/rdc_mont.cpp:68) in function 'bc_mult_448' completely with a factor of 7.
+INFO: [XFORM 203-101] Partitioning array 'ai.V' (rdc_mont/rdc_mont.cpp:35) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'bi.V' (rdc_mont/rdc_mont.cpp:36) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'sum.V' (rdc_mont/rdc_mont.cpp:37) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'partial_products.V' (rdc_mont/rdc_mont.cpp:34) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'partial_products.V' (rdc_mont/rdc_mont.cpp:34) in dimension 2 completely.
+INFO: [XFORM 203-11] Balancing expressions in function 'bc_mult_448' (rdc_mont/rdc_mont.cpp:49:29)...6 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:25 . Memory (MB): peak = 170.742 ; gain = 79.410
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:26 . Memory (MB): peak = 170.742 ; gain = 79.410
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'rdc_mont' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bc_mult_448' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loopb22'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 6.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 26.844 seconds; current allocated memory: 118.726 MB.
+INFO: [HLS 200-434] Only 1 loops out of a total 2 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.463 seconds; current allocated memory: 119.647 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'rdc_mont' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.504 seconds; current allocated memory: 119.752 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.18 seconds; current allocated memory: 119.824 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bc_mult_448' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_mux_73_64_1_1' to 'rdc_mont_mux_73_6bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_mul_64ns_64ns_128_5_1' to 'rdc_mont_mul_64nscud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_mul_64s_64s_64_5_1' to 'rdc_mont_mul_64s_dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_mux_73_448_1_1' to 'rdc_mont_mux_73_4eOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_451ns_451ns_451_2_1' to 'rdc_mont_add_451nfYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_515ns_515ns_515_2_1' to 'rdc_mont_add_515ng8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_579ns_579ns_579_2_1' to 'rdc_mont_add_579nhbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_643ns_643ns_643_2_1' to 'rdc_mont_add_643nibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_707ns_707ns_707_2_1' to 'rdc_mont_add_707njbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_771ns_771ns_771_2_1' to 'rdc_mont_add_771nkbM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_835ns_835ns_835_2_1' to 'rdc_mont_add_835nlbW' due to the length limit 20
+INFO: [RTGEN 206-104] Estimated max fanout for 'bc_mult_448' is 6626 from HDL expression: (1'b1 == ap_CS_fsm_state9)
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_451nfYi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_515ng8j': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_579nhbi': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_643nibs': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_707njbC': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_771nkbM': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_835nlbW': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_mul_64nscud': 6 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_mul_64s_dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_mux_73_4eOg': 7 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_mux_73_6bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bc_mult_448'.
+INFO: [HLS 200-111]  Elapsed time: 0.783 seconds; current allocated memory: 121.477 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'rdc_mont' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'rdc_mont/ma_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'rdc_mont/mc_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'rdc_mont' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_896ns_896ns_896_2_1' to 'rdc_mont_add_896nmb6' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_896nmb6': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'rdc_mont'.
+INFO: [HLS 200-111]  Elapsed time: 2.06 seconds; current allocated memory: 122.062 MB.
+INFO: [RTMG 210-282] Generating pipelined core: 'rdc_mont_mul_64nscud_MulnS_0'
+INFO: [RTMG 210-282] Generating pipelined core: 'rdc_mont_mul_64s_dEe_MulnS_1'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_451nfYi_AddSubnS_0'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_515ng8j_AddSubnS_1'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_579nhbi_AddSubnS_2'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_643nibs_AddSubnS_3'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_707njbC_AddSubnS_4'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_771nkbM_AddSubnS_5'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_835nlbW_AddSubnS_6'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_896nmb6_AddSubnS_7'
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:09 ; elapsed = 00:00:35 . Memory (MB): peak = 183.102 ; gain = 91.770
+INFO: [VHDL 208-304] Generating VHDL RTL for rdc_mont.
+INFO: [VLOG 209-307] Generating Verilog RTL for rdc_mont.
+INFO: [HLS 200-112] Total elapsed time: 35.509 seconds; peak allocated memory: 122.062 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'rdc_mont/rdc_mont.cpp' ... 
+WARNING: [HLS 200-40] In file included from rdc_mont/rdc_mont.cpp:1:
+rdc_mont/rdc_mont.cpp:5:30: warning: integer constant is too large for its type
+const ap_uint<1024> p434p1 = 0x2341F271773446CFC5FD681C520567BC65C783158AEA3FDC1767AE3000000000000000000000000000000000000000000000000000000;
+                             ^
+rdc_mont/rdc_mont.cpp:6:27: warning: integer constant is too large for its type
+const ap_uint<448> p434 = 0x2341F271773446CFC5FD681C520567BC65C783158AEA3FDC1767AE2FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF;
+                          ^
+2 warnings generated.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:03 ; elapsed = 00:00:28 . Memory (MB): peak = 170.770 ; gain = 79.457
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:03 ; elapsed = 00:00:28 . Memory (MB): peak = 170.770 ; gain = 79.457
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:03 ; elapsed = 00:00:30 . Memory (MB): peak = 170.770 ; gain = 79.457
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-23] rdc_mont/rdc_mont.cpp:49: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:03 ; elapsed = 00:00:31 . Memory (MB): peak = 170.770 ; gain = 79.457
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loopb22' (rdc_mont/rdc_mont.cpp:54) in function 'bc_mult_448' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'loopb21' (rdc_mont/rdc_mont.cpp:47) in function 'bc_mult_448' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'loopb23' (rdc_mont/rdc_mont.cpp:56) in function 'bc_mult_448' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'loop3_1' (rdc_mont/rdc_mont.cpp:68) in function 'bc_mult_448' completely with a factor of 7.
+INFO: [XFORM 203-101] Partitioning array 'ai.V' (rdc_mont/rdc_mont.cpp:35) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'bi.V' (rdc_mont/rdc_mont.cpp:36) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'sum.V' (rdc_mont/rdc_mont.cpp:37) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'partial_products.V' (rdc_mont/rdc_mont.cpp:34) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'partial_products.V' (rdc_mont/rdc_mont.cpp:34) in dimension 2 completely.
+INFO: [XFORM 203-11] Balancing expressions in function 'bc_mult_448' (rdc_mont/rdc_mont.cpp:49:29)...6 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:32 . Memory (MB): peak = 170.770 ; gain = 79.457
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:06 ; elapsed = 00:00:33 . Memory (MB): peak = 170.770 ; gain = 79.457
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'rdc_mont' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bc_mult_448' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loopb22'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 6.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 33.711 seconds; current allocated memory: 118.726 MB.
+INFO: [HLS 200-434] Only 1 loops out of a total 2 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.457 seconds; current allocated memory: 119.647 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'rdc_mont' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.522 seconds; current allocated memory: 119.751 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.146 seconds; current allocated memory: 119.823 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bc_mult_448' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_mux_73_64_1_1' to 'rdc_mont_mux_73_6bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_mul_64ns_64ns_128_5_1' to 'rdc_mont_mul_64nscud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_mul_64s_64s_64_5_1' to 'rdc_mont_mul_64s_dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_mux_73_448_1_1' to 'rdc_mont_mux_73_4eOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_451ns_451ns_451_2_1' to 'rdc_mont_add_451nfYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_515ns_515ns_515_2_1' to 'rdc_mont_add_515ng8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_579ns_579ns_579_2_1' to 'rdc_mont_add_579nhbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_643ns_643ns_643_2_1' to 'rdc_mont_add_643nibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_707ns_707ns_707_2_1' to 'rdc_mont_add_707njbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_771ns_771ns_771_2_1' to 'rdc_mont_add_771nkbM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_835ns_835ns_835_2_1' to 'rdc_mont_add_835nlbW' due to the length limit 20
+INFO: [RTGEN 206-104] Estimated max fanout for 'bc_mult_448' is 6626 from HDL expression: (1'b1 == ap_CS_fsm_state9)
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_451nfYi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_515ng8j': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_579nhbi': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_643nibs': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_707njbC': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_771nkbM': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_835nlbW': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_mul_64nscud': 6 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_mul_64s_dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_mux_73_4eOg': 7 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_mux_73_6bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bc_mult_448'.
+INFO: [HLS 200-111]  Elapsed time: 0.989 seconds; current allocated memory: 121.476 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'rdc_mont' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'rdc_mont/ma_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'rdc_mont/mc_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'rdc_mont' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_896ns_896ns_896_2_1' to 'rdc_mont_add_896nmb6' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_896nmb6': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'rdc_mont'.
+INFO: [HLS 200-111]  Elapsed time: 2.23 seconds; current allocated memory: 122.062 MB.
+INFO: [RTMG 210-282] Generating pipelined core: 'rdc_mont_mul_64nscud_MulnS_0'
+INFO: [RTMG 210-282] Generating pipelined core: 'rdc_mont_mul_64s_dEe_MulnS_1'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_451nfYi_AddSubnS_0'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_515ng8j_AddSubnS_1'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_579nhbi_AddSubnS_2'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_643nibs_AddSubnS_3'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_707njbC_AddSubnS_4'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_771nkbM_AddSubnS_5'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_835nlbW_AddSubnS_6'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_896nmb6_AddSubnS_7'
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:11 ; elapsed = 00:00:44 . Memory (MB): peak = 183.145 ; gain = 91.832
+INFO: [VHDL 208-304] Generating VHDL RTL for rdc_mont.
+INFO: [VLOG 209-307] Generating Verilog RTL for rdc_mont.
+INFO: [HLS 200-112] Total elapsed time: 43.706 seconds; peak allocated memory: 122.062 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'rdc_mont/rdc_mont.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:20 . Memory (MB): peak = 170.668 ; gain = 79.332
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:20 . Memory (MB): peak = 170.668 ; gain = 79.332
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:03 ; elapsed = 00:00:22 . Memory (MB): peak = 170.668 ; gain = 79.332
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-23] rdc_mont/rdc_mont.cpp:49: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:03 ; elapsed = 00:00:22 . Memory (MB): peak = 170.668 ; gain = 79.332
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loopb22' (rdc_mont/rdc_mont.cpp:54) in function 'bc_mult_448' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'loopb21' (rdc_mont/rdc_mont.cpp:47) in function 'bc_mult_448' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'loopb23' (rdc_mont/rdc_mont.cpp:56) in function 'bc_mult_448' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'loop3_1' (rdc_mont/rdc_mont.cpp:68) in function 'bc_mult_448' completely with a factor of 7.
+INFO: [XFORM 203-101] Partitioning array 'ai.V' (rdc_mont/rdc_mont.cpp:35) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'bi.V' (rdc_mont/rdc_mont.cpp:36) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'sum.V' (rdc_mont/rdc_mont.cpp:37) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'partial_products.V' (rdc_mont/rdc_mont.cpp:34) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'partial_products.V' (rdc_mont/rdc_mont.cpp:34) in dimension 2 completely.
+INFO: [XFORM 203-11] Balancing expressions in function 'bc_mult_448' (rdc_mont/rdc_mont.cpp:49:29)...6 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:23 . Memory (MB): peak = 170.668 ; gain = 79.332
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:24 . Memory (MB): peak = 170.668 ; gain = 79.332
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'rdc_mont' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bc_mult_448' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loopb22'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 6.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 24.156 seconds; current allocated memory: 116.584 MB.
+INFO: [HLS 200-434] Only 1 loops out of a total 2 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.264 seconds; current allocated memory: 117.482 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'rdc_mont' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.323 seconds; current allocated memory: 117.587 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.103 seconds; current allocated memory: 117.659 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bc_mult_448' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_mux_73_64_1_1' to 'rdc_mont_mux_73_6bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_mul_64ns_64ns_128_5_1' to 'rdc_mont_mul_64nscud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_mul_64s_64s_64_5_1' to 'rdc_mont_mul_64s_dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_mux_73_448_1_1' to 'rdc_mont_mux_73_4eOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_451ns_451ns_451_2_1' to 'rdc_mont_add_451nfYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_515ns_515ns_515_2_1' to 'rdc_mont_add_515ng8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_579ns_579ns_579_2_1' to 'rdc_mont_add_579nhbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_643ns_643ns_643_2_1' to 'rdc_mont_add_643nibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_707ns_707ns_707_2_1' to 'rdc_mont_add_707njbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_771ns_771ns_771_2_1' to 'rdc_mont_add_771nkbM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_835ns_835ns_835_2_1' to 'rdc_mont_add_835nlbW' due to the length limit 20
+INFO: [RTGEN 206-104] Estimated max fanout for 'bc_mult_448' is 6626 from HDL expression: (1'b1 == ap_CS_fsm_state9)
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_451nfYi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_515ng8j': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_579nhbi': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_643nibs': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_707njbC': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_771nkbM': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_835nlbW': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_mul_64nscud': 6 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_mul_64s_dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_mux_73_4eOg': 7 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_mux_73_6bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bc_mult_448'.
+INFO: [HLS 200-111]  Elapsed time: 0.652 seconds; current allocated memory: 119.394 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'rdc_mont' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'rdc_mont/ma_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'rdc_mont/mc_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'rdc_mont' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_896ns_896ns_896_2_1' to 'rdc_mont_add_896nmb6' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_896nmb6': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'rdc_mont'.
+INFO: [HLS 200-111]  Elapsed time: 1.824 seconds; current allocated memory: 119.944 MB.
+INFO: [RTMG 210-282] Generating pipelined core: 'rdc_mont_mul_64nscud_MulnS_0'
+INFO: [RTMG 210-282] Generating pipelined core: 'rdc_mont_mul_64s_dEe_MulnS_1'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_451nfYi_AddSubnS_0'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_515ng8j_AddSubnS_1'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_579nhbi_AddSubnS_2'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_643nibs_AddSubnS_3'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_707njbC_AddSubnS_4'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_771nkbM_AddSubnS_5'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_835nlbW_AddSubnS_6'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_896nmb6_AddSubnS_7'
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:08 ; elapsed = 00:00:31 . Memory (MB): peak = 180.914 ; gain = 89.578
+INFO: [VHDL 208-304] Generating VHDL RTL for rdc_mont.
+INFO: [VLOG 209-307] Generating Verilog RTL for rdc_mont.
+INFO: [HLS 200-112] Total elapsed time: 30.975 seconds; peak allocated memory: 119.944 MB.
