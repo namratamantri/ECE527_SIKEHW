@@ -1,0 +1,265 @@
+
+
+================================================================
+== Vivado HLS Report for 'mp_mul'
+================================================================
+* Date:           Sat Dec 12 17:18:18 2020
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        sikehls
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.316|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   88|   88|   88|   88|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 11
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 8.10>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%a_V_read = call i448 @_ssdm_op_Read.ap_auto.i448(i448 %a_V)" [sikehls/fpx.cpp:59]   --->   Operation 12 'read' 'a_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%ah_V = call i224 @_ssdm_op_PartSelect.i224.i448.i32.i32(i448 %a_V_read, i32 224, i32 447)" [sikehls/mult.cpp:406->sikehls/fpx.cpp:63]   --->   Operation 13 'partselect' 'ah_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%al_V = trunc i448 %a_V_read to i224" [sikehls/mult.cpp:407->sikehls/fpx.cpp:63]   --->   Operation 14 'trunc' 'al_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%sext_ln68 = sext i224 %ah_V to i225" [sikehls/mult.cpp:410->sikehls/fpx.cpp:63]   --->   Operation 15 'sext' 'sext_ln68' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%sext_ln68_1 = sext i224 %al_V to i225" [sikehls/mult.cpp:410->sikehls/fpx.cpp:63]   --->   Operation 16 'sext' 'sext_ln68_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%tmp = call i113 @_ssdm_op_PartSelect.i113.i448.i32.i32(i448 %a_V_read, i32 224, i32 336)" [sikehls/mult.cpp:410->sikehls/fpx.cpp:63]   --->   Operation 17 'partselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%trunc_ln68 = trunc i448 %a_V_read to i113" [sikehls/mult.cpp:410->sikehls/fpx.cpp:63]   --->   Operation 18 'trunc' 'trunc_ln68' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (8.10ns)   --->   "%ahl_V = add i225 %sext_ln68, %sext_ln68_1" [sikehls/mult.cpp:410->sikehls/fpx.cpp:63]   --->   Operation 19 'add' 'ahl_V' <Predicate = true> <Delay = 8.10> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 8.24> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%ah_V_1 = call i112 @_ssdm_op_PartSelect.i112.i448.i32.i32(i448 %a_V_read, i32 336, i32 447)" [sikehls/mult.cpp:366->sikehls/mult.cpp:415->sikehls/fpx.cpp:63]   --->   Operation 20 'partselect' 'ah_V_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%al_V_3 = call i112 @_ssdm_op_PartSelect.i112.i448.i32.i32(i448 %a_V_read, i32 224, i32 335)" [sikehls/mult.cpp:367->sikehls/mult.cpp:415->sikehls/fpx.cpp:63]   --->   Operation 21 'partselect' 'al_V_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%ah_V_2 = call i112 @_ssdm_op_PartSelect.i112.i225.i32.i32(i225 %ahl_V, i32 113, i32 224)" [sikehls/mult.cpp:343->sikehls/mult.cpp:417->sikehls/fpx.cpp:63]   --->   Operation 22 'partselect' 'ah_V_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (4.92ns)   --->   "%al_V_4 = add i113 %trunc_ln68, %tmp" [sikehls/mult.cpp:344->sikehls/mult.cpp:417->sikehls/fpx.cpp:63]   --->   Operation 23 'add' 'al_V_4' <Predicate = true> <Delay = 4.92> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 8.24> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 4.92>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%sext_ln68_2 = sext i112 %ah_V_1 to i113" [sikehls/mult.cpp:370->sikehls/mult.cpp:415->sikehls/fpx.cpp:63]   --->   Operation 24 'sext' 'sext_ln68_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%sext_ln68_3 = sext i112 %al_V_3 to i113" [sikehls/mult.cpp:370->sikehls/mult.cpp:415->sikehls/fpx.cpp:63]   --->   Operation 25 'sext' 'sext_ln68_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (4.89ns)   --->   "%ahl_V_2 = add i113 %sext_ln68_2, %sext_ln68_3" [sikehls/mult.cpp:370->sikehls/mult.cpp:415->sikehls/fpx.cpp:63]   --->   Operation 26 'add' 'ahl_V_2' <Predicate = true> <Delay = 4.89> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 8.24> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 27 [2/2] (0.00ns)   --->   "%a0_V = call fastcc i224 @bc_mult(i112 %ah_V_1)" [sikehls/mult.cpp:376->sikehls/mult.cpp:415->sikehls/fpx.cpp:63]   --->   Operation 27 'call' 'a0_V' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 28 [2/2] (0.00ns)   --->   "%a2_V = call fastcc i224 @bc_mult1(i112 %al_V_3)" [sikehls/mult.cpp:377->sikehls/mult.cpp:415->sikehls/fpx.cpp:63]   --->   Operation 28 'call' 'a2_V' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 29 [2/2] (0.00ns)   --->   "%a1_V = call fastcc i226 @bc_mult_1(i113 %ahl_V_2)" [sikehls/mult.cpp:378->sikehls/mult.cpp:415->sikehls/fpx.cpp:63]   --->   Operation 29 'call' 'a1_V' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 30 [2/2] (4.89ns)   --->   "%a2_V_1 = call fastcc i448 @koa_mult_h_1(i224 %al_V)" [sikehls/mult.cpp:416->sikehls/fpx.cpp:63]   --->   Operation 30 'call' 'a2_V_1' <Predicate = true> <Delay = 4.89> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%sext_ln68_4 = sext i112 %ah_V_2 to i114" [sikehls/mult.cpp:347->sikehls/mult.cpp:417->sikehls/fpx.cpp:63]   --->   Operation 31 'sext' 'sext_ln68_4' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%sext_ln68_5 = sext i113 %al_V_4 to i114" [sikehls/mult.cpp:347->sikehls/mult.cpp:417->sikehls/fpx.cpp:63]   --->   Operation 32 'sext' 'sext_ln68_5' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 33 [1/1] (4.92ns)   --->   "%ahl_V_3 = add i114 %sext_ln68_5, %sext_ln68_4" [sikehls/mult.cpp:347->sikehls/mult.cpp:417->sikehls/fpx.cpp:63]   --->   Operation 33 'add' 'ahl_V_3' <Predicate = true> <Delay = 4.92> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 8.24> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 34 [2/2] (0.00ns)   --->   "%a0_V_2 = call fastcc i224 @bc2_mult(i112 %ah_V_2)" [sikehls/mult.cpp:354->sikehls/mult.cpp:417->sikehls/fpx.cpp:63]   --->   Operation 34 'call' 'a0_V_2' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 35 [2/2] (0.00ns)   --->   "%a2_V_2 = call fastcc i226 @bc2_mult_1(i113 %al_V_4)" [sikehls/mult.cpp:355->sikehls/mult.cpp:417->sikehls/fpx.cpp:63]   --->   Operation 35 'call' 'a2_V_2' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 36 [2/2] (0.00ns)   --->   "%a1_V_1 = call fastcc i228 @bc_mult_2(i114 %ahl_V_3)" [sikehls/mult.cpp:356->sikehls/mult.cpp:417->sikehls/fpx.cpp:63]   --->   Operation 36 'call' 'a1_V_1' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 8.21>
+ST_3 : Operation 37 [1/2] (8.10ns)   --->   "%a0_V = call fastcc i224 @bc_mult(i112 %ah_V_1)" [sikehls/mult.cpp:376->sikehls/mult.cpp:415->sikehls/fpx.cpp:63]   --->   Operation 37 'call' 'a0_V' <Predicate = true> <Delay = 8.10> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 38 [1/2] (8.10ns)   --->   "%a2_V = call fastcc i224 @bc_mult1(i112 %al_V_3)" [sikehls/mult.cpp:377->sikehls/mult.cpp:415->sikehls/fpx.cpp:63]   --->   Operation 38 'call' 'a2_V' <Predicate = true> <Delay = 8.10> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 39 [1/2] (8.15ns)   --->   "%a1_V = call fastcc i226 @bc_mult_1(i113 %ahl_V_2)" [sikehls/mult.cpp:378->sikehls/mult.cpp:415->sikehls/fpx.cpp:63]   --->   Operation 39 'call' 'a1_V' <Predicate = true> <Delay = 8.15> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 40 [1/2] (3.44ns)   --->   "%a2_V_1 = call fastcc i448 @koa_mult_h_1(i224 %al_V)" [sikehls/mult.cpp:416->sikehls/fpx.cpp:63]   --->   Operation 40 'call' 'a2_V_1' <Predicate = true> <Delay = 3.44> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 41 [1/2] (8.10ns)   --->   "%a0_V_2 = call fastcc i224 @bc2_mult(i112 %ah_V_2)" [sikehls/mult.cpp:354->sikehls/mult.cpp:417->sikehls/fpx.cpp:63]   --->   Operation 41 'call' 'a0_V_2' <Predicate = true> <Delay = 8.10> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 42 [1/2] (8.15ns)   --->   "%a2_V_2 = call fastcc i226 @bc2_mult_1(i113 %al_V_4)" [sikehls/mult.cpp:355->sikehls/mult.cpp:417->sikehls/fpx.cpp:63]   --->   Operation 42 'call' 'a2_V_2' <Predicate = true> <Delay = 8.15> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 43 [1/2] (8.21ns)   --->   "%a1_V_1 = call fastcc i228 @bc_mult_2(i114 %ahl_V_3)" [sikehls/mult.cpp:356->sikehls/mult.cpp:417->sikehls/fpx.cpp:63]   --->   Operation 43 'call' 'a1_V_1' <Predicate = true> <Delay = 8.21> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 8.21>
+ST_4 : Operation 44 [1/1] (0.00ns)   --->   "%lhs_V = sext i226 %a1_V to i227" [sikehls/mult.cpp:381->sikehls/mult.cpp:415->sikehls/fpx.cpp:63]   --->   Operation 44 'sext' 'lhs_V' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 45 [1/1] (0.00ns)   --->   "%rhs_V = sext i224 %a0_V to i227" [sikehls/mult.cpp:381->sikehls/mult.cpp:415->sikehls/fpx.cpp:63]   --->   Operation 45 'sext' 'rhs_V' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 46 [1/1] (8.15ns)   --->   "%ret_V = sub nsw i227 %lhs_V, %rhs_V" [sikehls/mult.cpp:381->sikehls/mult.cpp:415->sikehls/fpx.cpp:63]   --->   Operation 46 'sub' 'ret_V' <Predicate = true> <Delay = 8.15> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 8.24> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 47 [1/1] (0.00ns)   --->   "%lhs_V_1 = sext i228 %a1_V_1 to i229" [sikehls/mult.cpp:359->sikehls/mult.cpp:417->sikehls/fpx.cpp:63]   --->   Operation 47 'sext' 'lhs_V_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 48 [1/1] (0.00ns)   --->   "%rhs_V_1 = sext i224 %a0_V_2 to i229" [sikehls/mult.cpp:359->sikehls/mult.cpp:417->sikehls/fpx.cpp:63]   --->   Operation 48 'sext' 'rhs_V_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 49 [1/1] (8.21ns)   --->   "%ret_V_2 = sub nsw i229 %lhs_V_1, %rhs_V_1" [sikehls/mult.cpp:359->sikehls/mult.cpp:417->sikehls/fpx.cpp:63]   --->   Operation 49 'sub' 'ret_V_2' <Predicate = true> <Delay = 8.21> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 8.24> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 8.24>
+ST_5 : Operation 50 [1/1] (0.00ns)   --->   "%sext_ln215 = sext i224 %a2_V to i227" [sikehls/mult.cpp:381->sikehls/mult.cpp:415->sikehls/fpx.cpp:63]   --->   Operation 50 'sext' 'sext_ln215' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 51 [1/1] (8.18ns)   --->   "%ret_V_1 = sub i227 %ret_V, %sext_ln215" [sikehls/mult.cpp:381->sikehls/mult.cpp:415->sikehls/fpx.cpp:63]   --->   Operation 51 'sub' 'ret_V_1' <Predicate = true> <Delay = 8.18> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 8.24> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 52 [1/1] (0.00ns)   --->   "%sext_ln215_3 = sext i226 %a2_V_2 to i229" [sikehls/mult.cpp:359->sikehls/mult.cpp:417->sikehls/fpx.cpp:63]   --->   Operation 52 'sext' 'sext_ln215_3' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 53 [1/1] (8.24ns)   --->   "%ret_V_3 = sub i229 %ret_V_2, %sext_ln215_3" [sikehls/mult.cpp:359->sikehls/mult.cpp:417->sikehls/fpx.cpp:63]   --->   Operation 53 'sub' 'ret_V_3' <Predicate = true> <Delay = 8.24> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 8.24> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 3.44>
+ST_6 : Operation 54 [1/1] (0.00ns)   --->   "%r_V_1 = call i339 @_ssdm_op_BitConcatenate.i339.i227.i112(i227 %ret_V_1, i112 0)" [sikehls/mult.cpp:381->sikehls/mult.cpp:415->sikehls/fpx.cpp:63]   --->   Operation 54 'bitconcatenate' 'r_V_1' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 55 [1/1] (0.00ns)   --->   "%sext_ln214 = sext i224 %a2_V to i339" [sikehls/mult.cpp:382->sikehls/mult.cpp:415->sikehls/fpx.cpp:63]   --->   Operation 55 'sext' 'sext_ln214' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 56 [2/2] (3.44ns)   --->   "%add_ln214 = add i339 %r_V_1, %sext_ln214" [sikehls/mult.cpp:382->sikehls/mult.cpp:415->sikehls/fpx.cpp:63]   --->   Operation 56 'add' 'add_ln214' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 57 [1/1] (0.00ns)   --->   "%r_V_3 = call i342 @_ssdm_op_BitConcatenate.i342.i229.i113(i229 %ret_V_3, i113 0)" [sikehls/mult.cpp:359->sikehls/mult.cpp:417->sikehls/fpx.cpp:63]   --->   Operation 57 'bitconcatenate' 'r_V_3' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 58 [1/1] (0.00ns)   --->   "%sext_ln214_2 = sext i226 %a2_V_2 to i342" [sikehls/mult.cpp:360->sikehls/mult.cpp:417->sikehls/fpx.cpp:63]   --->   Operation 58 'sext' 'sext_ln214_2' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 59 [2/2] (3.44ns)   --->   "%add_ln214_2 = add i342 %r_V_3, %sext_ln214_2" [sikehls/mult.cpp:360->sikehls/mult.cpp:417->sikehls/fpx.cpp:63]   --->   Operation 59 'add' 'add_ln214_2' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 6.88>
+ST_7 : Operation 60 [1/1] (0.00ns)   --->   "%r_V = call i448 @_ssdm_op_BitConcatenate.i448.i224.i224(i224 %a0_V, i224 0)" [sikehls/mult.cpp:380->sikehls/mult.cpp:415->sikehls/fpx.cpp:63]   --->   Operation 60 'bitconcatenate' 'r_V' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 61 [1/2] (3.44ns)   --->   "%add_ln214 = add i339 %r_V_1, %sext_ln214" [sikehls/mult.cpp:382->sikehls/mult.cpp:415->sikehls/fpx.cpp:63]   --->   Operation 61 'add' 'add_ln214' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 62 [1/1] (0.00ns)   --->   "%sext_ln214_1 = sext i339 %add_ln214 to i448" [sikehls/mult.cpp:382->sikehls/mult.cpp:415->sikehls/fpx.cpp:63]   --->   Operation 62 'sext' 'sext_ln214_1' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 63 [2/2] (3.44ns)   --->   "%a0_V_1 = add i448 %sext_ln214_1, %r_V" [sikehls/mult.cpp:382->sikehls/mult.cpp:415->sikehls/fpx.cpp:63]   --->   Operation 63 'add' 'a0_V_1' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 64 [1/1] (0.00ns)   --->   "%r_V_2 = call i450 @_ssdm_op_BitConcatenate.i450.i224.i226(i224 %a0_V_2, i226 0)" [sikehls/mult.cpp:358->sikehls/mult.cpp:417->sikehls/fpx.cpp:63]   --->   Operation 64 'bitconcatenate' 'r_V_2' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 65 [1/2] (3.44ns)   --->   "%add_ln214_2 = add i342 %r_V_3, %sext_ln214_2" [sikehls/mult.cpp:360->sikehls/mult.cpp:417->sikehls/fpx.cpp:63]   --->   Operation 65 'add' 'add_ln214_2' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 66 [1/1] (0.00ns)   --->   "%sext_ln214_3 = sext i342 %add_ln214_2 to i450" [sikehls/mult.cpp:360->sikehls/mult.cpp:417->sikehls/fpx.cpp:63]   --->   Operation 66 'sext' 'sext_ln214_3' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 67 [2/2] (3.44ns)   --->   "%add_ln214_3 = add i450 %sext_ln214_3, %r_V_2" [sikehls/mult.cpp:360->sikehls/mult.cpp:417->sikehls/fpx.cpp:63]   --->   Operation 67 'add' 'add_ln214_3' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 6.88>
+ST_8 : Operation 68 [1/2] (3.44ns)   --->   "%a0_V_1 = add i448 %sext_ln214_1, %r_V" [sikehls/mult.cpp:382->sikehls/mult.cpp:415->sikehls/fpx.cpp:63]   --->   Operation 68 'add' 'a0_V_1' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 69 [1/2] (3.44ns)   --->   "%add_ln214_3 = add i450 %sext_ln214_3, %r_V_2" [sikehls/mult.cpp:360->sikehls/mult.cpp:417->sikehls/fpx.cpp:63]   --->   Operation 69 'add' 'add_ln214_3' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 70 [1/1] (0.00ns)   --->   "%lhs_V_2 = zext i450 %add_ln214_3 to i451" [sikehls/mult.cpp:420->sikehls/fpx.cpp:63]   --->   Operation 70 'zext' 'lhs_V_2' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 71 [1/1] (0.00ns)   --->   "%rhs_V_2 = zext i448 %a0_V_1 to i451" [sikehls/mult.cpp:420->sikehls/fpx.cpp:63]   --->   Operation 71 'zext' 'rhs_V_2' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 72 [2/2] (3.44ns)   --->   "%ret_V_4 = sub nsw i451 %lhs_V_2, %rhs_V_2" [sikehls/mult.cpp:420->sikehls/fpx.cpp:63]   --->   Operation 72 'sub' 'ret_V_4' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 6.88>
+ST_9 : Operation 73 [1/2] (3.44ns)   --->   "%ret_V_4 = sub nsw i451 %lhs_V_2, %rhs_V_2" [sikehls/mult.cpp:420->sikehls/fpx.cpp:63]   --->   Operation 73 'sub' 'ret_V_4' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 74 [1/1] (0.00ns)   --->   "%zext_ln215 = zext i448 %a2_V_1 to i451" [sikehls/mult.cpp:420->sikehls/fpx.cpp:63]   --->   Operation 74 'zext' 'zext_ln215' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 75 [2/2] (3.44ns)   --->   "%ret_V_5 = sub i451 %ret_V_4, %zext_ln215" [sikehls/mult.cpp:420->sikehls/fpx.cpp:63]   --->   Operation 75 'sub' 'ret_V_5' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 6.88>
+ST_10 : Operation 76 [1/2] (3.44ns)   --->   "%ret_V_5 = sub i451 %ret_V_4, %zext_ln215" [sikehls/mult.cpp:420->sikehls/fpx.cpp:63]   --->   Operation 76 'sub' 'ret_V_5' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 77 [1/1] (0.00ns)   --->   "%r_V_4 = call i675 @_ssdm_op_BitConcatenate.i675.i451.i224(i451 %ret_V_5, i224 0)" [sikehls/mult.cpp:420->sikehls/fpx.cpp:63]   --->   Operation 77 'bitconcatenate' 'r_V_4' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 78 [1/1] (0.00ns)   --->   "%sext_ln1503 = sext i675 %r_V_4 to i896" [sikehls/mult.cpp:420->sikehls/fpx.cpp:63]   --->   Operation 78 'sext' 'sext_ln1503' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 79 [1/1] (0.00ns)   --->   "%or_ln_i = call i896 @_ssdm_op_BitConcatenate.i896.i448.i448(i448 %a0_V_1, i448 %a2_V_1)" [sikehls/mult.cpp:421->sikehls/fpx.cpp:63]   --->   Operation 79 'bitconcatenate' 'or_ln_i' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 80 [2/2] (3.44ns)   --->   "%add_ln209 = add i896 %or_ln_i, %sext_ln1503" [sikehls/mult.cpp:421->sikehls/fpx.cpp:63]   --->   Operation 80 'add' 'add_ln209' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 3.44>
+ST_11 : Operation 81 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i448 %a_V), !map !305"   --->   Operation 81 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 82 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i448 %b_V), !map !311"   --->   Operation 82 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 83 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i896* %c_V), !map !315"   --->   Operation 83 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 84 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([7 x i8]* @mp_mul_str) nounwind"   --->   Operation 84 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 85 [1/2] (3.44ns)   --->   "%add_ln209 = add i896 %or_ln_i, %sext_ln1503" [sikehls/mult.cpp:421->sikehls/fpx.cpp:63]   --->   Operation 85 'add' 'add_ln209' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 86 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i896P(i896* %c_V, i896 %add_ln209)" [sikehls/fpx.cpp:63]   --->   Operation 86 'write' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 87 [1/1] (0.00ns)   --->   "ret void" [sikehls/fpx.cpp:64]   --->   Operation 87 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 8.1ns
+The critical path consists of the following:
+	wire read on port 'a_V' (sikehls/fpx.cpp:59) [8]  (0 ns)
+	'add' operation ('ahl.V', sikehls/mult.cpp:410->sikehls/fpx.cpp:63) [15]  (8.1 ns)
+
+ <State 2>: 4.92ns
+The critical path consists of the following:
+	'add' operation ('ahl.V', sikehls/mult.cpp:347->sikehls/mult.cpp:417->sikehls/fpx.cpp:63) [40]  (4.92 ns)
+
+ <State 3>: 8.21ns
+The critical path consists of the following:
+	'call' operation ('a1.V', sikehls/mult.cpp:356->sikehls/mult.cpp:417->sikehls/fpx.cpp:63) to 'bc_mult_2' [43]  (8.21 ns)
+
+ <State 4>: 8.21ns
+The critical path consists of the following:
+	'sub' operation ('ret.V', sikehls/mult.cpp:359->sikehls/mult.cpp:417->sikehls/fpx.cpp:63) [47]  (8.21 ns)
+
+ <State 5>: 8.24ns
+The critical path consists of the following:
+	'sub' operation ('ret.V', sikehls/mult.cpp:359->sikehls/mult.cpp:417->sikehls/fpx.cpp:63) [49]  (8.24 ns)
+
+ <State 6>: 3.44ns
+The critical path consists of the following:
+	'add' operation ('add_ln214', sikehls/mult.cpp:382->sikehls/mult.cpp:415->sikehls/fpx.cpp:63) [32]  (3.44 ns)
+
+ <State 7>: 6.88ns
+The critical path consists of the following:
+	'add' operation ('add_ln214', sikehls/mult.cpp:382->sikehls/mult.cpp:415->sikehls/fpx.cpp:63) [32]  (3.44 ns)
+	'add' operation ('ssdm_int<448 + 1024 * 0, false>.V', sikehls/mult.cpp:382->sikehls/mult.cpp:415->sikehls/fpx.cpp:63) [34]  (3.44 ns)
+
+ <State 8>: 6.88ns
+The critical path consists of the following:
+	'add' operation ('ssdm_int<448 + 1024 * 0, false>.V', sikehls/mult.cpp:382->sikehls/mult.cpp:415->sikehls/fpx.cpp:63) [34]  (3.44 ns)
+	'sub' operation ('ret.V', sikehls/mult.cpp:420->sikehls/fpx.cpp:63) [57]  (3.44 ns)
+
+ <State 9>: 6.88ns
+The critical path consists of the following:
+	'sub' operation ('ret.V', sikehls/mult.cpp:420->sikehls/fpx.cpp:63) [57]  (3.44 ns)
+	'sub' operation ('ret.V', sikehls/mult.cpp:420->sikehls/fpx.cpp:63) [59]  (3.44 ns)
+
+ <State 10>: 6.88ns
+The critical path consists of the following:
+	'sub' operation ('ret.V', sikehls/mult.cpp:420->sikehls/fpx.cpp:63) [59]  (3.44 ns)
+	'add' operation ('ssdm_int<896 + 1024 * 0, false>.V', sikehls/mult.cpp:421->sikehls/fpx.cpp:63) [63]  (3.44 ns)
+
+ <State 11>: 3.44ns
+The critical path consists of the following:
+	'add' operation ('ssdm_int<896 + 1024 * 0, false>.V', sikehls/mult.cpp:421->sikehls/fpx.cpp:63) [63]  (3.44 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

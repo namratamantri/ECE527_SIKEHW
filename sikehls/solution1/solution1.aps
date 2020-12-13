@@ -21,9 +21,13 @@
   <clockList>
     <clock name="default" period="10"/>
   </clockList>
-  <config/>
+  <config>
+            
+    <schedule model="mp_mul"/>
+        
+  </config>
   <UIConfigurations>
-    <UIAutosynConf boardInfo="pynq-z2 (xc7z020clg400-1) " hideTrivialOp="true" isBasedOnBoard="true" isSolutionDirty="false" isStopAskAgain="false" showDetailDesignViewer="false">
+    <UIAutosynConf boardInfo="pynq-z2 (xc7z020clg400-1) " hideTrivialOp="true" isBasedOnBoard="true" isSolutionDirty="true" isStopAskAgain="false" showDetailDesignViewer="false">
       <Platform>xilinx/zynq/zynq</Platform>
       <customLibs/>
     </UIAutosynConf>

@@ -1,0 +1,357 @@
+
+
+================================================================
+== Vivado HLS Report for 'bc_mult_1'
+================================================================
+* Date:           Sun Dec 13 12:46:23 2020
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        koa_mult
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     6.978|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   21|   21|   21|   21|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |          |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name| min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |- loopb2  |    8|    8|         6|          1|          1|     4|    yes   |
+        |- loop3   |    8|    8|         2|          -|          -|     4|    no    |
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 6
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 12
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 6, States = { 2 3 4 5 6 7 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 8 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 2 
+8 --> 9 
+9 --> 10 11 
+10 --> 9 
+11 --> 12 
+12 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.76>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%partial_products_3_14 = alloca i321"   --->   Operation 13 'alloca' 'partial_products_3_14' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%partial_products_0_13 = alloca i321"   --->   Operation 14 'alloca' 'partial_products_0_13' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%partial_products_0_12 = alloca i321"   --->   Operation 15 'alloca' 'partial_products_0_12' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%partial_products_0_s = alloca i321"   --->   Operation 16 'alloca' 'partial_products_0_s' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%partial_products_3_15 = alloca i321"   --->   Operation 17 'alloca' 'partial_products_3_15' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%partial_products_1_9 = alloca i321"   --->   Operation 18 'alloca' 'partial_products_1_9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%partial_products_1_8 = alloca i321"   --->   Operation 19 'alloca' 'partial_products_1_8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%partial_products_1_s = alloca i321"   --->   Operation 20 'alloca' 'partial_products_1_s' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%partial_products_3_16 = alloca i321"   --->   Operation 21 'alloca' 'partial_products_3_16' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%partial_products_2_9 = alloca i321"   --->   Operation 22 'alloca' 'partial_products_2_9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%partial_products_2_8 = alloca i321"   --->   Operation 23 'alloca' 'partial_products_2_8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%partial_products_2_s = alloca i321"   --->   Operation 24 'alloca' 'partial_products_2_s' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%partial_products_3_17 = alloca i321"   --->   Operation 25 'alloca' 'partial_products_3_17' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%partial_products_3_9 = alloca i321"   --->   Operation 26 'alloca' 'partial_products_3_9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%partial_products_3_8 = alloca i321"   --->   Operation 27 'alloca' 'partial_products_3_8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%partial_products_3_s = alloca i321"   --->   Operation 28 'alloca' 'partial_products_3_s' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%ta_V_read = call i224 @_ssdm_op_Read.ap_auto.i224(i224 %ta_V)" [koa_mult/koa.cpp:233]   --->   Operation 29 'read' 'ta_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%ai_0_V = trunc i224 %ta_V_read to i64" [koa_mult/koa.cpp:247]   --->   Operation 30 'trunc' 'ai_0_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%ai_1_V = call i64 @_ssdm_op_PartSelect.i64.i224.i32.i32(i224 %ta_V_read, i32 64, i32 127)" [koa_mult/koa.cpp:247]   --->   Operation 31 'partselect' 'ai_1_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%ai_2_V = call i64 @_ssdm_op_PartSelect.i64.i224.i32.i32(i224 %ta_V_read, i32 128, i32 191)" [koa_mult/koa.cpp:247]   --->   Operation 32 'partselect' 'ai_2_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%tmp = call i32 @_ssdm_op_PartSelect.i32.i224.i32.i32(i224 %ta_V_read, i32 192, i32 223)" [koa_mult/koa.cpp:247]   --->   Operation 33 'partselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%ai_3_V = sext i32 %tmp to i64" [koa_mult/koa.cpp:247]   --->   Operation 34 'sext' 'ai_3_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%zext_ln215 = zext i64 %ai_0_V to i128" [koa_mult/koa.cpp:256]   --->   Operation 35 'zext' 'zext_ln215' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%zext_ln215_6 = zext i64 %ai_1_V to i128" [koa_mult/koa.cpp:256]   --->   Operation 36 'zext' 'zext_ln215_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%zext_ln215_7 = zext i64 %ai_2_V to i128" [koa_mult/koa.cpp:256]   --->   Operation 37 'zext' 'zext_ln215_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%zext_ln215_8 = zext i64 %ai_3_V to i128" [koa_mult/koa.cpp:256]   --->   Operation 38 'zext' 'zext_ln215_8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (1.76ns)   --->   "br label %.preheader315" [koa_mult/koa.cpp:252]   --->   Operation 39 'br' <Predicate = true> <Delay = 1.76>
+
+State 2 <SV = 1> <Delay = 1.95>
+ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%i7_0 = phi i3 [ 0, %arrayctor.loop5.preheader ], [ %i_2, %loopb2_end ]"   --->   Operation 40 'phi' 'i7_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 41 [1/1] (1.13ns)   --->   "%icmp_ln252 = icmp eq i3 %i7_0, -4" [koa_mult/koa.cpp:252]   --->   Operation 41 'icmp' 'icmp_ln252' <Predicate = true> <Delay = 1.13> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4)"   --->   Operation 42 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 43 [1/1] (1.65ns)   --->   "%i_2 = add i3 %i7_0, 1" [koa_mult/koa.cpp:252]   --->   Operation 43 'add' 'i_2' <Predicate = true> <Delay = 1.65> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 44 [1/1] (0.00ns)   --->   "br i1 %icmp_ln252, label %.preheader.preheader, label %loopb2_begin" [koa_mult/koa.cpp:252]   --->   Operation 44 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 45 [1/1] (0.00ns)   --->   "%trunc_ln215 = trunc i3 %i7_0 to i2" [koa_mult/koa.cpp:256]   --->   Operation 45 'trunc' 'trunc_ln215' <Predicate = (!icmp_ln252)> <Delay = 0.00>
+ST_2 : Operation 46 [1/1] (1.95ns)   --->   "%tmp_8 = call i64 @_ssdm_op_Mux.ap_auto.4i64.i2(i64 %ai_0_V, i64 %ai_1_V, i64 %ai_2_V, i64 %ai_3_V, i2 %trunc_ln215)" [koa_mult/koa.cpp:256]   --->   Operation 46 'mux' 'tmp_8' <Predicate = (!icmp_ln252)> <Delay = 1.95> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 47 [1/1] (1.30ns)   --->   "switch i2 %trunc_ln215, label %branch15 [
+    i2 0, label %loopb2_begin.loopb2_end_crit_edge
+    i2 1, label %branch13
+    i2 -2, label %branch14
+  ]" [koa_mult/koa.cpp:257]   --->   Operation 47 'switch' <Predicate = (!icmp_ln252)> <Delay = 1.30>
+
+State 3 <SV = 2> <Delay = 6.97>
+ST_3 : Operation 48 [1/1] (0.00ns)   --->   "%zext_ln215_5 = zext i64 %tmp_8 to i128" [koa_mult/koa.cpp:256]   --->   Operation 48 'zext' 'zext_ln215_5' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 49 [5/5] (6.97ns)   --->   "%mul_ln1352 = mul i128 %zext_ln215, %zext_ln215_5" [koa_mult/koa.cpp:256]   --->   Operation 49 'mul' 'mul_ln1352' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 50 [5/5] (6.97ns)   --->   "%mul_ln1352_4 = mul i128 %zext_ln215_6, %zext_ln215_5" [koa_mult/koa.cpp:256]   --->   Operation 50 'mul' 'mul_ln1352_4' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 51 [5/5] (6.97ns)   --->   "%mul_ln1352_5 = mul i128 %zext_ln215_7, %zext_ln215_5" [koa_mult/koa.cpp:256]   --->   Operation 51 'mul' 'mul_ln1352_5' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 52 [5/5] (6.97ns)   --->   "%mul_ln1352_6 = mul i128 %zext_ln215_8, %zext_ln215_5" [koa_mult/koa.cpp:256]   --->   Operation 52 'mul' 'mul_ln1352_6' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 6.97>
+ST_4 : Operation 53 [4/5] (6.97ns)   --->   "%mul_ln1352 = mul i128 %zext_ln215, %zext_ln215_5" [koa_mult/koa.cpp:256]   --->   Operation 53 'mul' 'mul_ln1352' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 54 [4/5] (6.97ns)   --->   "%mul_ln1352_4 = mul i128 %zext_ln215_6, %zext_ln215_5" [koa_mult/koa.cpp:256]   --->   Operation 54 'mul' 'mul_ln1352_4' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 55 [4/5] (6.97ns)   --->   "%mul_ln1352_5 = mul i128 %zext_ln215_7, %zext_ln215_5" [koa_mult/koa.cpp:256]   --->   Operation 55 'mul' 'mul_ln1352_5' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 56 [4/5] (6.97ns)   --->   "%mul_ln1352_6 = mul i128 %zext_ln215_8, %zext_ln215_5" [koa_mult/koa.cpp:256]   --->   Operation 56 'mul' 'mul_ln1352_6' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 6.97>
+ST_5 : Operation 57 [3/5] (6.97ns)   --->   "%mul_ln1352 = mul i128 %zext_ln215, %zext_ln215_5" [koa_mult/koa.cpp:256]   --->   Operation 57 'mul' 'mul_ln1352' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 58 [3/5] (6.97ns)   --->   "%mul_ln1352_4 = mul i128 %zext_ln215_6, %zext_ln215_5" [koa_mult/koa.cpp:256]   --->   Operation 58 'mul' 'mul_ln1352_4' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 59 [3/5] (6.97ns)   --->   "%mul_ln1352_5 = mul i128 %zext_ln215_7, %zext_ln215_5" [koa_mult/koa.cpp:256]   --->   Operation 59 'mul' 'mul_ln1352_5' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 60 [3/5] (6.97ns)   --->   "%mul_ln1352_6 = mul i128 %zext_ln215_8, %zext_ln215_5" [koa_mult/koa.cpp:256]   --->   Operation 60 'mul' 'mul_ln1352_6' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 6.97>
+ST_6 : Operation 61 [2/5] (6.97ns)   --->   "%mul_ln1352 = mul i128 %zext_ln215, %zext_ln215_5" [koa_mult/koa.cpp:256]   --->   Operation 61 'mul' 'mul_ln1352' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 62 [2/5] (6.97ns)   --->   "%mul_ln1352_4 = mul i128 %zext_ln215_6, %zext_ln215_5" [koa_mult/koa.cpp:256]   --->   Operation 62 'mul' 'mul_ln1352_4' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 63 [2/5] (6.97ns)   --->   "%mul_ln1352_5 = mul i128 %zext_ln215_7, %zext_ln215_5" [koa_mult/koa.cpp:256]   --->   Operation 63 'mul' 'mul_ln1352_5' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 64 [2/5] (6.97ns)   --->   "%mul_ln1352_6 = mul i128 %zext_ln215_8, %zext_ln215_5" [koa_mult/koa.cpp:256]   --->   Operation 64 'mul' 'mul_ln1352_6' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 6.97>
+ST_7 : Operation 65 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([7 x i8]* @p_str9) nounwind" [koa_mult/koa.cpp:252]   --->   Operation 65 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 66 [1/1] (0.00ns)   --->   "%tmp_7 = call i32 (...)* @_ssdm_op_SpecRegionBegin([7 x i8]* @p_str9)" [koa_mult/koa.cpp:252]   --->   Operation 66 'specregionbegin' 'tmp_7' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 67 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind" [koa_mult/koa.cpp:253]   --->   Operation 67 'specpipeline' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 68 [1/5] (6.97ns)   --->   "%mul_ln1352 = mul i128 %zext_ln215, %zext_ln215_5" [koa_mult/koa.cpp:256]   --->   Operation 68 'mul' 'mul_ln1352' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 69 [1/1] (0.00ns)   --->   "%partial_products_0_10 = zext i128 %mul_ln1352 to i321" [koa_mult/koa.cpp:257]   --->   Operation 69 'zext' 'partial_products_0_10' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 70 [1/5] (6.97ns)   --->   "%mul_ln1352_4 = mul i128 %zext_ln215_6, %zext_ln215_5" [koa_mult/koa.cpp:256]   --->   Operation 70 'mul' 'mul_ln1352_4' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 71 [1/1] (0.00ns)   --->   "%partial_products_0_11 = call i192 @_ssdm_op_BitConcatenate.i192.i128.i64(i128 %mul_ln1352_4, i64 0)" [koa_mult/koa.cpp:257]   --->   Operation 71 'bitconcatenate' 'partial_products_0_11' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 72 [1/1] (0.00ns)   --->   "%zext_ln1503 = zext i192 %partial_products_0_11 to i321" [koa_mult/koa.cpp:257]   --->   Operation 72 'zext' 'zext_ln1503' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 73 [1/5] (6.97ns)   --->   "%mul_ln1352_5 = mul i128 %zext_ln215_7, %zext_ln215_5" [koa_mult/koa.cpp:256]   --->   Operation 73 'mul' 'mul_ln1352_5' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 74 [1/1] (0.00ns)   --->   "%partial_products_0_14 = call i256 @_ssdm_op_BitConcatenate.i256.i128.i128(i128 %mul_ln1352_5, i128 0)" [koa_mult/koa.cpp:257]   --->   Operation 74 'bitconcatenate' 'partial_products_0_14' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 75 [1/1] (0.00ns)   --->   "%zext_ln1503_5 = zext i256 %partial_products_0_14 to i321" [koa_mult/koa.cpp:257]   --->   Operation 75 'zext' 'zext_ln1503_5' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 76 [1/5] (6.97ns)   --->   "%mul_ln1352_6 = mul i128 %zext_ln215_8, %zext_ln215_5" [koa_mult/koa.cpp:256]   --->   Operation 76 'mul' 'mul_ln1352_6' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 77 [1/1] (0.00ns)   --->   "%partial_products_0_15 = call i320 @_ssdm_op_BitConcatenate.i320.i128.i192(i128 %mul_ln1352_6, i192 0)" [koa_mult/koa.cpp:257]   --->   Operation 77 'bitconcatenate' 'partial_products_0_15' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 78 [1/1] (0.00ns)   --->   "%zext_ln1503_6 = zext i320 %partial_products_0_15 to i321" [koa_mult/koa.cpp:257]   --->   Operation 78 'zext' 'zext_ln1503_6' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 79 [1/1] (0.00ns)   --->   "store i321 %zext_ln1503_6, i321* %partial_products_2_s" [koa_mult/koa.cpp:257]   --->   Operation 79 'store' <Predicate = (trunc_ln215 == 2)> <Delay = 0.00>
+ST_7 : Operation 80 [1/1] (0.00ns)   --->   "store i321 %zext_ln1503_5, i321* %partial_products_2_8" [koa_mult/koa.cpp:257]   --->   Operation 80 'store' <Predicate = (trunc_ln215 == 2)> <Delay = 0.00>
+ST_7 : Operation 81 [1/1] (0.00ns)   --->   "store i321 %zext_ln1503, i321* %partial_products_2_9" [koa_mult/koa.cpp:257]   --->   Operation 81 'store' <Predicate = (trunc_ln215 == 2)> <Delay = 0.00>
+ST_7 : Operation 82 [1/1] (0.00ns)   --->   "store i321 %partial_products_0_10, i321* %partial_products_3_16" [koa_mult/koa.cpp:257]   --->   Operation 82 'store' <Predicate = (trunc_ln215 == 2)> <Delay = 0.00>
+ST_7 : Operation 83 [1/1] (0.00ns)   --->   "br label %loopb2_end"   --->   Operation 83 'br' <Predicate = (trunc_ln215 == 2)> <Delay = 0.00>
+ST_7 : Operation 84 [1/1] (0.00ns)   --->   "store i321 %zext_ln1503_6, i321* %partial_products_1_s" [koa_mult/koa.cpp:257]   --->   Operation 84 'store' <Predicate = (trunc_ln215 == 1)> <Delay = 0.00>
+ST_7 : Operation 85 [1/1] (0.00ns)   --->   "store i321 %zext_ln1503_5, i321* %partial_products_1_8" [koa_mult/koa.cpp:257]   --->   Operation 85 'store' <Predicate = (trunc_ln215 == 1)> <Delay = 0.00>
+ST_7 : Operation 86 [1/1] (0.00ns)   --->   "store i321 %zext_ln1503, i321* %partial_products_1_9" [koa_mult/koa.cpp:257]   --->   Operation 86 'store' <Predicate = (trunc_ln215 == 1)> <Delay = 0.00>
+ST_7 : Operation 87 [1/1] (0.00ns)   --->   "store i321 %partial_products_0_10, i321* %partial_products_3_15" [koa_mult/koa.cpp:257]   --->   Operation 87 'store' <Predicate = (trunc_ln215 == 1)> <Delay = 0.00>
+ST_7 : Operation 88 [1/1] (0.00ns)   --->   "br label %loopb2_end"   --->   Operation 88 'br' <Predicate = (trunc_ln215 == 1)> <Delay = 0.00>
+ST_7 : Operation 89 [1/1] (0.00ns)   --->   "store i321 %zext_ln1503_6, i321* %partial_products_0_s" [koa_mult/koa.cpp:257]   --->   Operation 89 'store' <Predicate = (trunc_ln215 == 0)> <Delay = 0.00>
+ST_7 : Operation 90 [1/1] (0.00ns)   --->   "store i321 %zext_ln1503_5, i321* %partial_products_0_12" [koa_mult/koa.cpp:257]   --->   Operation 90 'store' <Predicate = (trunc_ln215 == 0)> <Delay = 0.00>
+ST_7 : Operation 91 [1/1] (0.00ns)   --->   "store i321 %zext_ln1503, i321* %partial_products_0_13" [koa_mult/koa.cpp:257]   --->   Operation 91 'store' <Predicate = (trunc_ln215 == 0)> <Delay = 0.00>
+ST_7 : Operation 92 [1/1] (0.00ns)   --->   "store i321 %partial_products_0_10, i321* %partial_products_3_14" [koa_mult/koa.cpp:257]   --->   Operation 92 'store' <Predicate = (trunc_ln215 == 0)> <Delay = 0.00>
+ST_7 : Operation 93 [1/1] (0.00ns)   --->   "br label %loopb2_end" [koa_mult/koa.cpp:257]   --->   Operation 93 'br' <Predicate = (trunc_ln215 == 0)> <Delay = 0.00>
+ST_7 : Operation 94 [1/1] (0.00ns)   --->   "store i321 %zext_ln1503_6, i321* %partial_products_3_s" [koa_mult/koa.cpp:257]   --->   Operation 94 'store' <Predicate = (trunc_ln215 == 3)> <Delay = 0.00>
+ST_7 : Operation 95 [1/1] (0.00ns)   --->   "store i321 %zext_ln1503_5, i321* %partial_products_3_8" [koa_mult/koa.cpp:257]   --->   Operation 95 'store' <Predicate = (trunc_ln215 == 3)> <Delay = 0.00>
+ST_7 : Operation 96 [1/1] (0.00ns)   --->   "store i321 %zext_ln1503, i321* %partial_products_3_9" [koa_mult/koa.cpp:257]   --->   Operation 96 'store' <Predicate = (trunc_ln215 == 3)> <Delay = 0.00>
+ST_7 : Operation 97 [1/1] (0.00ns)   --->   "store i321 %partial_products_0_10, i321* %partial_products_3_17" [koa_mult/koa.cpp:257]   --->   Operation 97 'store' <Predicate = (trunc_ln215 == 3)> <Delay = 0.00>
+ST_7 : Operation 98 [1/1] (0.00ns)   --->   "br label %loopb2_end"   --->   Operation 98 'br' <Predicate = (trunc_ln215 == 3)> <Delay = 0.00>
+ST_7 : Operation 99 [1/1] (0.00ns)   --->   "%empty_11 = call i32 (...)* @_ssdm_op_SpecRegionEnd([7 x i8]* @p_str9, i32 %tmp_7)" [koa_mult/koa.cpp:261]   --->   Operation 99 'specregionend' 'empty_11' <Predicate = (!icmp_ln252)> <Delay = 0.00>
+ST_7 : Operation 100 [1/1] (0.00ns)   --->   "br label %.preheader315" [koa_mult/koa.cpp:252]   --->   Operation 100 'br' <Predicate = (!icmp_ln252)> <Delay = 0.00>
+
+State 8 <SV = 2> <Delay = 1.76>
+ST_8 : Operation 101 [1/1] (1.76ns)   --->   "br label %.preheader" [koa_mult/koa.cpp:263]   --->   Operation 101 'br' <Predicate = true> <Delay = 1.76>
+
+State 9 <SV = 3> <Delay = 5.39>
+ST_9 : Operation 102 [1/1] (0.00ns)   --->   "%sum_V_0_0 = phi i323 [ %sum_0_V, %_ZlsILi448ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit.0 ], [ 0, %.preheader.preheader ]"   --->   Operation 102 'phi' 'sum_V_0_0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 103 [1/1] (0.00ns)   --->   "%sum_V_1_0 = phi i387 [ %sum_1_V, %_ZlsILi448ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit.0 ], [ 0, %.preheader.preheader ]"   --->   Operation 103 'phi' 'sum_V_1_0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 104 [1/1] (0.00ns)   --->   "%sum_V_2_0 = phi i448 [ %sum_2_V, %_ZlsILi448ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit.0 ], [ 0, %.preheader.preheader ]"   --->   Operation 104 'phi' 'sum_V_2_0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 105 [1/1] (0.00ns)   --->   "%sum_V_3_0 = phi i448 [ %sum_3_V, %_ZlsILi448ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit.0 ], [ 0, %.preheader.preheader ]"   --->   Operation 105 'phi' 'sum_V_3_0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 106 [1/1] (0.00ns)   --->   "%i8_0 = phi i3 [ %i, %_ZlsILi448ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit.0 ], [ 0, %.preheader.preheader ]"   --->   Operation 106 'phi' 'i8_0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 107 [1/1] (1.13ns)   --->   "%icmp_ln263 = icmp eq i3 %i8_0, -4" [koa_mult/koa.cpp:263]   --->   Operation 107 'icmp' 'icmp_ln263' <Predicate = true> <Delay = 1.13> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 108 [1/1] (0.00ns)   --->   "%empty_12 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4)"   --->   Operation 108 'speclooptripcount' 'empty_12' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 109 [1/1] (1.65ns)   --->   "%i = add i3 %i8_0, 1" [koa_mult/koa.cpp:263]   --->   Operation 109 'add' 'i' <Predicate = true> <Delay = 1.65> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 110 [1/1] (0.00ns)   --->   "br i1 %icmp_ln263, label %0, label %_ZlsILi448ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit.0" [koa_mult/koa.cpp:263]   --->   Operation 110 'br' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 111 [1/1] (0.00ns)   --->   "%partial_products_3_18 = load i321* %partial_products_3_14" [koa_mult/koa.cpp:266]   --->   Operation 111 'load' 'partial_products_3_18' <Predicate = (!icmp_ln263)> <Delay = 0.00>
+ST_9 : Operation 112 [1/1] (0.00ns)   --->   "%partial_products_0_16 = load i321* %partial_products_0_13" [koa_mult/koa.cpp:266]   --->   Operation 112 'load' 'partial_products_0_16' <Predicate = (!icmp_ln263)> <Delay = 0.00>
+ST_9 : Operation 113 [1/1] (0.00ns)   --->   "%partial_products_0_17 = load i321* %partial_products_0_12" [koa_mult/koa.cpp:266]   --->   Operation 113 'load' 'partial_products_0_17' <Predicate = (!icmp_ln263)> <Delay = 0.00>
+ST_9 : Operation 114 [1/1] (0.00ns)   --->   "%partial_products_0_18 = load i321* %partial_products_0_s" [koa_mult/koa.cpp:266]   --->   Operation 114 'load' 'partial_products_0_18' <Predicate = (!icmp_ln263)> <Delay = 0.00>
+ST_9 : Operation 115 [1/1] (0.00ns)   --->   "%partial_products_3_19 = load i321* %partial_products_3_15" [koa_mult/koa.cpp:266]   --->   Operation 115 'load' 'partial_products_3_19' <Predicate = (!icmp_ln263)> <Delay = 0.00>
+ST_9 : Operation 116 [1/1] (0.00ns)   --->   "%partial_products_1_6 = load i321* %partial_products_1_9" [koa_mult/koa.cpp:266]   --->   Operation 116 'load' 'partial_products_1_6' <Predicate = (!icmp_ln263)> <Delay = 0.00>
+ST_9 : Operation 117 [1/1] (0.00ns)   --->   "%partial_products_1_7 = load i321* %partial_products_1_8" [koa_mult/koa.cpp:266]   --->   Operation 117 'load' 'partial_products_1_7' <Predicate = (!icmp_ln263)> <Delay = 0.00>
+ST_9 : Operation 118 [1/1] (0.00ns)   --->   "%partial_products_1_10 = load i321* %partial_products_1_s" [koa_mult/koa.cpp:266]   --->   Operation 118 'load' 'partial_products_1_10' <Predicate = (!icmp_ln263)> <Delay = 0.00>
+ST_9 : Operation 119 [1/1] (0.00ns)   --->   "%partial_products_3_20 = load i321* %partial_products_3_16" [koa_mult/koa.cpp:266]   --->   Operation 119 'load' 'partial_products_3_20' <Predicate = (!icmp_ln263)> <Delay = 0.00>
+ST_9 : Operation 120 [1/1] (0.00ns)   --->   "%partial_products_2_6 = load i321* %partial_products_2_9" [koa_mult/koa.cpp:266]   --->   Operation 120 'load' 'partial_products_2_6' <Predicate = (!icmp_ln263)> <Delay = 0.00>
+ST_9 : Operation 121 [1/1] (0.00ns)   --->   "%partial_products_2_7 = load i321* %partial_products_2_8" [koa_mult/koa.cpp:266]   --->   Operation 121 'load' 'partial_products_2_7' <Predicate = (!icmp_ln263)> <Delay = 0.00>
+ST_9 : Operation 122 [1/1] (0.00ns)   --->   "%partial_products_2_10 = load i321* %partial_products_2_s" [koa_mult/koa.cpp:266]   --->   Operation 122 'load' 'partial_products_2_10' <Predicate = (!icmp_ln263)> <Delay = 0.00>
+ST_9 : Operation 123 [1/1] (0.00ns)   --->   "%partial_products_3_21 = load i321* %partial_products_3_17" [koa_mult/koa.cpp:266]   --->   Operation 123 'load' 'partial_products_3_21' <Predicate = (!icmp_ln263)> <Delay = 0.00>
+ST_9 : Operation 124 [1/1] (0.00ns)   --->   "%partial_products_3_22 = load i321* %partial_products_3_9" [koa_mult/koa.cpp:266]   --->   Operation 124 'load' 'partial_products_3_22' <Predicate = (!icmp_ln263)> <Delay = 0.00>
+ST_9 : Operation 125 [1/1] (0.00ns)   --->   "%partial_products_3_23 = load i321* %partial_products_3_8" [koa_mult/koa.cpp:266]   --->   Operation 125 'load' 'partial_products_3_23' <Predicate = (!icmp_ln263)> <Delay = 0.00>
+ST_9 : Operation 126 [1/1] (0.00ns)   --->   "%partial_products_3_24 = load i321* %partial_products_3_s" [koa_mult/koa.cpp:266]   --->   Operation 126 'load' 'partial_products_3_24' <Predicate = (!icmp_ln263)> <Delay = 0.00>
+ST_9 : Operation 127 [1/1] (0.00ns)   --->   "%trunc_ln209 = trunc i3 %i8_0 to i2" [koa_mult/koa.cpp:266]   --->   Operation 127 'trunc' 'trunc_ln209' <Predicate = (!icmp_ln263)> <Delay = 0.00>
+ST_9 : Operation 128 [1/1] (1.95ns)   --->   "%tmp_9 = call i321 @_ssdm_op_Mux.ap_auto.4i321.i2(i321 %partial_products_3_18, i321 %partial_products_0_16, i321 %partial_products_0_17, i321 %partial_products_0_18, i2 %trunc_ln209)" [koa_mult/koa.cpp:266]   --->   Operation 128 'mux' 'tmp_9' <Predicate = (!icmp_ln263)> <Delay = 1.95> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 129 [1/1] (0.00ns)   --->   "%zext_ln700 = zext i321 %tmp_9 to i323" [koa_mult/koa.cpp:266]   --->   Operation 129 'zext' 'zext_ln700' <Predicate = (!icmp_ln263)> <Delay = 0.00>
+ST_9 : Operation 130 [2/2] (3.44ns)   --->   "%sum_0_V = add i323 %zext_ln700, %sum_V_0_0" [koa_mult/koa.cpp:266]   --->   Operation 130 'add' 'sum_0_V' <Predicate = (!icmp_ln263)> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 131 [1/1] (1.95ns)   --->   "%tmp_s = call i321 @_ssdm_op_Mux.ap_auto.4i321.i2(i321 %partial_products_3_19, i321 %partial_products_1_6, i321 %partial_products_1_7, i321 %partial_products_1_10, i2 %trunc_ln209)" [koa_mult/koa.cpp:266]   --->   Operation 131 'mux' 'tmp_s' <Predicate = (!icmp_ln263)> <Delay = 1.95> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 132 [1/1] (0.00ns)   --->   "%shl_ln = call i385 @_ssdm_op_BitConcatenate.i385.i321.i64(i321 %tmp_s, i64 0)" [koa_mult/koa.cpp:266]   --->   Operation 132 'bitconcatenate' 'shl_ln' <Predicate = (!icmp_ln263)> <Delay = 0.00>
+ST_9 : Operation 133 [1/1] (0.00ns)   --->   "%zext_ln1503_7 = zext i385 %shl_ln to i387" [koa_mult/koa.cpp:266]   --->   Operation 133 'zext' 'zext_ln1503_7' <Predicate = (!icmp_ln263)> <Delay = 0.00>
+ST_9 : Operation 134 [2/2] (3.44ns)   --->   "%sum_1_V = add i387 %zext_ln1503_7, %sum_V_1_0" [koa_mult/koa.cpp:266]   --->   Operation 134 'add' 'sum_1_V' <Predicate = (!icmp_ln263)> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 135 [1/1] (1.95ns)   --->   "%tmp_1 = call i321 @_ssdm_op_Mux.ap_auto.4i321.i2(i321 %partial_products_3_20, i321 %partial_products_2_6, i321 %partial_products_2_7, i321 %partial_products_2_10, i2 %trunc_ln209)" [koa_mult/koa.cpp:266]   --->   Operation 135 'mux' 'tmp_1' <Predicate = (!icmp_ln263)> <Delay = 1.95> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 136 [1/1] (0.00ns)   --->   "%trunc_ln1503 = trunc i321 %tmp_1 to i320" [koa_mult/koa.cpp:266]   --->   Operation 136 'trunc' 'trunc_ln1503' <Predicate = (!icmp_ln263)> <Delay = 0.00>
+ST_9 : Operation 137 [1/1] (0.00ns)   --->   "%shl_ln1503_6 = call i448 @_ssdm_op_BitConcatenate.i448.i320.i128(i320 %trunc_ln1503, i128 0)" [koa_mult/koa.cpp:266]   --->   Operation 137 'bitconcatenate' 'shl_ln1503_6' <Predicate = (!icmp_ln263)> <Delay = 0.00>
+ST_9 : Operation 138 [2/2] (3.44ns)   --->   "%sum_2_V = add i448 %shl_ln1503_6, %sum_V_2_0" [koa_mult/koa.cpp:266]   --->   Operation 138 'add' 'sum_2_V' <Predicate = (!icmp_ln263)> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 139 [1/1] (1.95ns)   --->   "%tmp_2 = call i321 @_ssdm_op_Mux.ap_auto.4i321.i2(i321 %partial_products_3_21, i321 %partial_products_3_22, i321 %partial_products_3_23, i321 %partial_products_3_24, i2 %trunc_ln209)" [koa_mult/koa.cpp:266]   --->   Operation 139 'mux' 'tmp_2' <Predicate = (!icmp_ln263)> <Delay = 1.95> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 140 [1/1] (0.00ns)   --->   "%trunc_ln1503_1 = trunc i321 %tmp_2 to i256" [koa_mult/koa.cpp:266]   --->   Operation 140 'trunc' 'trunc_ln1503_1' <Predicate = (!icmp_ln263)> <Delay = 0.00>
+ST_9 : Operation 141 [1/1] (0.00ns)   --->   "%shl_ln1503_7 = call i448 @_ssdm_op_BitConcatenate.i448.i256.i192(i256 %trunc_ln1503_1, i192 0)" [koa_mult/koa.cpp:266]   --->   Operation 141 'bitconcatenate' 'shl_ln1503_7' <Predicate = (!icmp_ln263)> <Delay = 0.00>
+ST_9 : Operation 142 [2/2] (3.44ns)   --->   "%sum_3_V = add i448 %shl_ln1503_7, %sum_V_3_0" [koa_mult/koa.cpp:266]   --->   Operation 142 'add' 'sum_3_V' <Predicate = (!icmp_ln263)> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 143 [1/1] (0.00ns)   --->   "%zext_ln263 = zext i323 %sum_V_0_0 to i388" [koa_mult/koa.cpp:263]   --->   Operation 143 'zext' 'zext_ln263' <Predicate = (icmp_ln263)> <Delay = 0.00>
+ST_9 : Operation 144 [1/1] (0.00ns)   --->   "%zext_ln263_1 = zext i387 %sum_V_1_0 to i388" [koa_mult/koa.cpp:263]   --->   Operation 144 'zext' 'zext_ln263_1' <Predicate = (icmp_ln263)> <Delay = 0.00>
+ST_9 : Operation 145 [2/2] (3.44ns)   --->   "%add_ln209 = add i388 %zext_ln263_1, %zext_ln263" [koa_mult/koa.cpp:273]   --->   Operation 145 'add' 'add_ln209' <Predicate = (icmp_ln263)> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 146 [2/2] (3.44ns)   --->   "%add_ln209_3 = add i448 %sum_V_2_0, %sum_V_3_0" [koa_mult/koa.cpp:273]   --->   Operation 146 'add' 'add_ln209_3' <Predicate = (icmp_ln263)> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 4> <Delay = 3.44>
+ST_10 : Operation 147 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([6 x i8]* @p_str6) nounwind" [koa_mult/koa.cpp:263]   --->   Operation 147 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 148 [1/2] (3.44ns)   --->   "%sum_0_V = add i323 %zext_ln700, %sum_V_0_0" [koa_mult/koa.cpp:266]   --->   Operation 148 'add' 'sum_0_V' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 149 [1/2] (3.44ns)   --->   "%sum_1_V = add i387 %zext_ln1503_7, %sum_V_1_0" [koa_mult/koa.cpp:266]   --->   Operation 149 'add' 'sum_1_V' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 150 [1/2] (3.44ns)   --->   "%sum_2_V = add i448 %shl_ln1503_6, %sum_V_2_0" [koa_mult/koa.cpp:266]   --->   Operation 150 'add' 'sum_2_V' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 151 [1/2] (3.44ns)   --->   "%sum_3_V = add i448 %shl_ln1503_7, %sum_V_3_0" [koa_mult/koa.cpp:266]   --->   Operation 151 'add' 'sum_3_V' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 152 [1/1] (0.00ns)   --->   "br label %.preheader" [koa_mult/koa.cpp:263]   --->   Operation 152 'br' <Predicate = true> <Delay = 0.00>
+
+State 11 <SV = 4> <Delay = 6.88>
+ST_11 : Operation 153 [1/2] (3.44ns)   --->   "%add_ln209 = add i388 %zext_ln263_1, %zext_ln263" [koa_mult/koa.cpp:273]   --->   Operation 153 'add' 'add_ln209' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 154 [1/1] (0.00ns)   --->   "%zext_ln209 = zext i388 %add_ln209 to i448" [koa_mult/koa.cpp:273]   --->   Operation 154 'zext' 'zext_ln209' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 155 [1/2] (3.44ns)   --->   "%add_ln209_3 = add i448 %sum_V_2_0, %sum_V_3_0" [koa_mult/koa.cpp:273]   --->   Operation 155 'add' 'add_ln209_3' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 156 [2/2] (3.44ns)   --->   "%mult_V = add i448 %add_ln209_3, %zext_ln209" [koa_mult/koa.cpp:273]   --->   Operation 156 'add' 'mult_V' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 5> <Delay = 3.44>
+ST_12 : Operation 157 [1/2] (3.44ns)   --->   "%mult_V = add i448 %add_ln209_3, %zext_ln209" [koa_mult/koa.cpp:273]   --->   Operation 157 'add' 'mult_V' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 158 [1/1] (0.00ns)   --->   "ret i448 %mult_V" [koa_mult/koa.cpp:278]   --->   Operation 158 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', koa_mult/koa.cpp:252) [30]  (1.77 ns)
+
+ <State 2>: 1.96ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', koa_mult/koa.cpp:252) [30]  (0 ns)
+	'mux' operation ('tmp_8', koa_mult/koa.cpp:256) [40]  (1.96 ns)
+
+ <State 3>: 6.98ns
+The critical path consists of the following:
+	'mul' operation ('mul_ln1352', koa_mult/koa.cpp:256) [42]  (6.98 ns)
+
+ <State 4>: 6.98ns
+The critical path consists of the following:
+	'mul' operation ('mul_ln1352', koa_mult/koa.cpp:256) [42]  (6.98 ns)
+
+ <State 5>: 6.98ns
+The critical path consists of the following:
+	'mul' operation ('mul_ln1352', koa_mult/koa.cpp:256) [42]  (6.98 ns)
+
+ <State 6>: 6.98ns
+The critical path consists of the following:
+	'mul' operation ('mul_ln1352', koa_mult/koa.cpp:256) [42]  (6.98 ns)
+
+ <State 7>: 6.98ns
+The critical path consists of the following:
+	'mul' operation ('mul_ln1352', koa_mult/koa.cpp:256) [42]  (6.98 ns)
+	'store' operation ('store_ln257', koa_mult/koa.cpp:257) of variable 'partial_products[0][0].V', koa_mult/koa.cpp:257 on local variable 'partial_products[3][0].V' [58]  (0 ns)
+
+ <State 8>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('sum[0].V') with incoming values : ('sum[0].V', koa_mult/koa.cpp:266) [84]  (1.77 ns)
+
+ <State 9>: 5.4ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', koa_mult/koa.cpp:263) [88]  (0 ns)
+	'mux' operation ('tmp_9', koa_mult/koa.cpp:266) [112]  (1.96 ns)
+	'add' operation ('sum[0].V', koa_mult/koa.cpp:266) [114]  (3.44 ns)
+
+ <State 10>: 3.44ns
+The critical path consists of the following:
+	'add' operation ('sum[0].V', koa_mult/koa.cpp:266) [114]  (3.44 ns)
+
+ <State 11>: 6.88ns
+The critical path consists of the following:
+	'add' operation ('add_ln209', koa_mult/koa.cpp:273) [131]  (3.44 ns)
+	'add' operation ('mult.V', koa_mult/koa.cpp:273) [134]  (3.44 ns)
+
+ <State 12>: 3.44ns
+The critical path consists of the following:
+	'add' operation ('mult.V', koa_mult/koa.cpp:273) [134]  (3.44 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -4,9 +4,12 @@
 ## Copyright (C) 1986-2019 Xilinx, Inc. All Rights Reserved.
 ############################################################
 open_project sikehls
+set_top fpadd434
 add_files sikehls/constants434.h
-add_files sikehls/fp.c
-add_files sikehls/fpx.c
+add_files sikehls/ec_isogeny.cpp
+add_files sikehls/fp.h
+add_files sikehls/fpx.cpp
+add_files sikehls/mult.cpp
 open_solution "solution1"
 set_part {xc7z020clg400-1} -tool vivado
 create_clock -period 10 -name default

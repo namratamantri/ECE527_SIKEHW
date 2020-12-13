@@ -47,14 +47,24 @@
 			<location>C:/Users/namra/Documents/Documents/ece527/project/sikehls/constants434.h</location>
 		</link>
 		<link>
-			<name>source/fp.c</name>
+			<name>source/ec_isogeny.cpp</name>
 			<type>1</type>
-			<location>C:/Users/namra/Documents/Documents/ece527/project/sikehls/fp.c</location>
+			<location>C:/Users/namra/Documents/Documents/ece527/project/sikehls/ec_isogeny.cpp</location>
 		</link>
 		<link>
-			<name>source/fpx.c</name>
+			<name>source/fp.h</name>
 			<type>1</type>
-			<location>C:/Users/namra/Documents/Documents/ece527/project/sikehls/fpx.c</location>
+			<location>C:/Users/namra/Documents/Documents/ece527/project/sikehls/fp.h</location>
+		</link>
+		<link>
+			<name>source/fpx.cpp</name>
+			<type>1</type>
+			<location>C:/Users/namra/Documents/Documents/ece527/project/sikehls/fpx.cpp</location>
+		</link>
+		<link>
+			<name>source/mult.cpp</name>
+			<type>1</type>
+			<location>C:/Users/namra/Documents/Documents/ece527/project/sikehls/mult.cpp</location>
 		</link>
 		<link>
 			<name>solution1/constraints/.xml.directive</name>

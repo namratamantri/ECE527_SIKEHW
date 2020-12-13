@@ -1,0 +1,170 @@
+
+
+================================================================
+== Vivado HLS Report for 'koa_mult_h1'
+================================================================
+* Date:           Sun Dec 13 12:46:24 2020
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        koa_mult
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.103|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   25|   25|   25|   25|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 5
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 8.10>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%a_V_read = call i448 @_ssdm_op_Read.ap_auto.i448(i448 %a_V)" [koa_mult/koa.cpp:332]   --->   Operation 6 'read' 'a_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%ah_V = call i224 @_ssdm_op_PartSelect.i224.i448.i32.i32(i448 %a_V_read, i32 224, i32 447)" [koa_mult/koa.cpp:334]   --->   Operation 7 'partselect' 'ah_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%al_V = trunc i448 %a_V_read to i224" [koa_mult/koa.cpp:335]   --->   Operation 8 'trunc' 'al_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%sext_ln68 = sext i224 %ah_V to i225" [koa_mult/koa.cpp:338]   --->   Operation 9 'sext' 'sext_ln68' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%sext_ln68_1 = sext i224 %al_V to i225" [koa_mult/koa.cpp:338]   --->   Operation 10 'sext' 'sext_ln68_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (8.10ns)   --->   "%ahl_V = add i225 %sext_ln68_1, %sext_ln68" [koa_mult/koa.cpp:338]   --->   Operation 11 'add' 'ahl_V' <Predicate = true> <Delay = 8.10> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 8.10> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 12 [2/2] (0.00ns)   --->   "%a0_V = call fastcc i448 @bc_mult(i224 %ah_V)" [koa_mult/koa.cpp:345]   --->   Operation 12 'call' 'a0_V' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 13 [2/2] (0.00ns)   --->   "%a2_V = call fastcc i448 @bc_mult_1(i224 %al_V)" [koa_mult/koa.cpp:346]   --->   Operation 13 'call' 'a2_V' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 14 [2/2] (0.00ns)   --->   "%a1_V = call fastcc i450 @bc_mult_2(i225 %ahl_V)" [koa_mult/koa.cpp:347]   --->   Operation 14 'call' 'a1_V' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 6.88>
+ST_2 : Operation 15 [1/2] (3.44ns)   --->   "%a0_V = call fastcc i448 @bc_mult(i224 %ah_V)" [koa_mult/koa.cpp:345]   --->   Operation 15 'call' 'a0_V' <Predicate = true> <Delay = 3.44> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 16 [1/2] (3.44ns)   --->   "%a2_V = call fastcc i448 @bc_mult_1(i224 %al_V)" [koa_mult/koa.cpp:346]   --->   Operation 16 'call' 'a2_V' <Predicate = true> <Delay = 3.44> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 17 [1/2] (3.44ns)   --->   "%a1_V = call fastcc i450 @bc_mult_2(i225 %ahl_V)" [koa_mult/koa.cpp:347]   --->   Operation 17 'call' 'a1_V' <Predicate = true> <Delay = 3.44> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%lhs_V = zext i450 %a1_V to i451" [koa_mult/koa.cpp:350]   --->   Operation 18 'zext' 'lhs_V' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%rhs_V = zext i448 %a0_V to i451" [koa_mult/koa.cpp:350]   --->   Operation 19 'zext' 'rhs_V' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 20 [2/2] (3.44ns)   --->   "%ret_V = sub nsw i451 %lhs_V, %rhs_V" [koa_mult/koa.cpp:350]   --->   Operation 20 'sub' 'ret_V' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 6.88>
+ST_3 : Operation 21 [1/2] (3.44ns)   --->   "%ret_V = sub nsw i451 %lhs_V, %rhs_V" [koa_mult/koa.cpp:350]   --->   Operation 21 'sub' 'ret_V' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 22 [1/1] (0.00ns)   --->   "%zext_ln215 = zext i448 %a2_V to i451" [koa_mult/koa.cpp:350]   --->   Operation 22 'zext' 'zext_ln215' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 23 [2/2] (3.44ns)   --->   "%ret_V_1 = sub i451 %ret_V, %zext_ln215" [koa_mult/koa.cpp:350]   --->   Operation 23 'sub' 'ret_V_1' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 6.88>
+ST_4 : Operation 24 [1/2] (3.44ns)   --->   "%ret_V_1 = sub i451 %ret_V, %zext_ln215" [koa_mult/koa.cpp:350]   --->   Operation 24 'sub' 'ret_V_1' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 25 [1/1] (0.00ns)   --->   "%r_V = call i675 @_ssdm_op_BitConcatenate.i675.i451.i224(i451 %ret_V_1, i224 0)" [koa_mult/koa.cpp:350]   --->   Operation 25 'bitconcatenate' 'r_V' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 26 [1/1] (0.00ns)   --->   "%sext_ln1503 = sext i675 %r_V to i896" [koa_mult/koa.cpp:350]   --->   Operation 26 'sext' 'sext_ln1503' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 27 [1/1] (0.00ns)   --->   "%or_ln = call i896 @_ssdm_op_BitConcatenate.i896.i448.i448(i448 %a0_V, i448 %a2_V)" [koa_mult/koa.cpp:351]   --->   Operation 27 'bitconcatenate' 'or_ln' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 28 [2/2] (3.44ns)   --->   "%add_ln209 = add i896 %sext_ln1503, %or_ln" [koa_mult/koa.cpp:351]   --->   Operation 28 'add' 'add_ln209' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 3.44>
+ST_5 : Operation 29 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i448 %a_V), !map !161"   --->   Operation 29 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 30 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i448 %b_V), !map !167"   --->   Operation 30 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 31 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i896* %c_V), !map !171"   --->   Operation 31 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 32 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([12 x i8]* @koa_mult_h1_str) nounwind"   --->   Operation 32 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 33 [1/2] (3.44ns)   --->   "%add_ln209 = add i896 %sext_ln1503, %or_ln" [koa_mult/koa.cpp:351]   --->   Operation 33 'add' 'add_ln209' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 34 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i896P(i896* %c_V, i896 %add_ln209)" [koa_mult/koa.cpp:351]   --->   Operation 34 'write' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 35 [1/1] (0.00ns)   --->   "ret void" [koa_mult/koa.cpp:354]   --->   Operation 35 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 8.1ns
+The critical path consists of the following:
+	wire read on port 'a_V' (koa_mult/koa.cpp:332) [8]  (0 ns)
+	'add' operation ('ahl.V', koa_mult/koa.cpp:338) [13]  (8.1 ns)
+
+ <State 2>: 6.88ns
+The critical path consists of the following:
+	'call' operation ('a0.V', koa_mult/koa.cpp:345) to 'bc_mult' [14]  (3.44 ns)
+	'sub' operation ('ret.V', koa_mult/koa.cpp:350) [19]  (3.44 ns)
+
+ <State 3>: 6.88ns
+The critical path consists of the following:
+	'sub' operation ('ret.V', koa_mult/koa.cpp:350) [19]  (3.44 ns)
+	'sub' operation ('ret.V', koa_mult/koa.cpp:350) [21]  (3.44 ns)
+
+ <State 4>: 6.88ns
+The critical path consists of the following:
+	'sub' operation ('ret.V', koa_mult/koa.cpp:350) [21]  (3.44 ns)
+	'add' operation ('add_ln209', koa_mult/koa.cpp:351) [25]  (3.44 ns)
+
+ <State 5>: 3.44ns
+The critical path consists of the following:
+	'add' operation ('add_ln209', koa_mult/koa.cpp:351) [25]  (3.44 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,168 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'mp_mul'" level="0">
+<item name = "Date">Sat Dec 12 17:18:34 2020
+</item>
+<item name = "Version">2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)</item>
+<item name = "Project">sikehls</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 8.316, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">88, 88, 88, 88, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_koa_mult_h_1_fu_81">koa_mult_h_1, 78, 78, 78, 78, none</column>
+<column name="grp_bc_mult_2_fu_86">bc_mult_2, 73, 73, 73, 73, none</column>
+<column name="grp_bc_mult_1_fu_91">bc_mult_1, 73, 73, 73, 73, none</column>
+<column name="grp_bc2_mult_1_fu_96">bc2_mult_1, 73, 73, 73, 73, none</column>
+<column name="grp_bc_mult_fu_101">bc_mult, 73, 73, 73, 73, none</column>
+<column name="grp_bc_mult1_fu_106">bc_mult1, 73, 73, 73, 73, none</column>
+<column name="grp_bc2_mult_fu_111">bc2_mult, 73, 73, 73, 73, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 1535, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, 36, 66930, 73148, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 53, -</column>
+<column name="Register">-, -, 4078, -, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 16, 66, 140, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<column name="grp_bc2_mult_fu_111">bc2_mult, 0, 4, 6604, 7881, 0</column>
+<column name="grp_bc2_mult_1_fu_96">bc2_mult_1, 0, 4, 6678, 7970, 0</column>
+<column name="grp_bc_mult_fu_101">bc_mult, 0, 4, 6604, 7881, 0</column>
+<column name="grp_bc_mult1_fu_106">bc_mult1, 0, 4, 6604, 7881, 0</column>
+<column name="grp_bc_mult_1_fu_91">bc_mult_1, 0, 4, 6678, 7970, 0</column>
+<column name="grp_bc_mult_2_fu_86">bc_mult_2, 0, 4, 6734, 8008, 0</column>
+<column name="grp_koa_mult_h_1_fu_81">koa_mult_h_1, 0, 12, 22968, 24633, 0</column>
+<column name="mp_mul_add_339ns_g8j_U63">mp_mul_add_339ns_g8j, 0, 0, 580, 132, 0</column>
+<column name="mp_mul_add_342ns_hbi_U64">mp_mul_add_342ns_hbi, 0, 0, 580, 132, 0</column>
+<column name="mp_mul_add_448s_4ibs_U65">mp_mul_add_448s_4ibs, 0, 0, 580, 132, 0</column>
+<column name="mp_mul_add_450s_4jbC_U66">mp_mul_add_450s_4jbC, 0, 0, 580, 132, 0</column>
+<column name="mp_mul_add_896ns_lbW_U69">mp_mul_add_896ns_lbW, 0, 0, 580, 132, 0</column>
+<column name="mp_mul_sub_451ns_kbM_U67">mp_mul_sub_451ns_kbM, 0, 0, 580, 132, 0</column>
+<column name="mp_mul_sub_451ns_kbM_U68">mp_mul_sub_451ns_kbM, 0, 0, 580, 132, 0</column>
+</table>
+</item>
+<item name = "DSP48E"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="ahl_V_2_fu_200_p2">+, 0, 0, 120, 113, 113</column>
+<column name="ahl_V_3_fu_213_p2">+, 0, 0, 121, 114, 114</column>
+<column name="ahl_V_fu_152_p2">+, 0, 0, 232, 225, 225</column>
+<column name="al_V_4_fu_188_p2">+, 0, 0, 120, 113, 113</column>
+<column name="ret_V_1_fu_247_p2">-, 0, 0, 234, 227, 227</column>
+<column name="ret_V_2_fu_238_p2">-, 0, 0, 236, 229, 229</column>
+<column name="ret_V_3_fu_255_p2">-, 0, 0, 236, 229, 229</column>
+<column name="ret_V_fu_226_p2">-, 0, 0, 234, 227, 227</column>
+<column name="ap_block_state3_on_subcall_done">or, 0, 0, 2, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">53, 12, 1, 12</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="a0_V_1_reg_513">448, 0, 448, 0</column>
+<column name="a0_V_2_reg_436">224, 0, 224, 0</column>
+<column name="a0_V_reg_413">224, 0, 224, 0</column>
+<column name="a1_V_1_reg_448">228, 0, 228, 0</column>
+<column name="a1_V_reg_425">226, 0, 226, 0</column>
+<column name="a2_V_1_reg_430">448, 0, 448, 0</column>
+<column name="a2_V_2_reg_442">226, 0, 226, 0</column>
+<column name="a2_V_reg_419">224, 0, 224, 0</column>
+<column name="ah_V_1_reg_379">112, 0, 112, 0</column>
+<column name="ah_V_2_reg_391">112, 0, 112, 0</column>
+<column name="ahl_V_2_reg_403">113, 0, 113, 0</column>
+<column name="ahl_V_3_reg_408">114, 0, 114, 0</column>
+<column name="al_V_3_reg_385">112, 0, 112, 0</column>
+<column name="al_V_4_reg_397">113, 0, 113, 0</column>
+<column name="al_V_reg_374">224, 0, 224, 0</column>
+<column name="ap_CS_fsm">11, 0, 11, 0</column>
+<column name="grp_bc2_mult_1_fu_96_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_bc2_mult_fu_111_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_bc_mult1_fu_106_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_bc_mult_1_fu_91_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_bc_mult_2_fu_86_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_bc_mult_fu_101_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_koa_mult_h_1_fu_81_ap_start_reg">1, 0, 1, 0</column>
+<column name="ret_V_1_reg_463">227, 0, 227, 0</column>
+<column name="ret_V_2_reg_458">229, 0, 229, 0</column>
+<column name="ret_V_3_reg_468">229, 0, 229, 0</column>
+<column name="ret_V_reg_453">227, 0, 227, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, mp_mul, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, mp_mul, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, mp_mul, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, mp_mul, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, mp_mul, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, mp_mul, return value</column>
+<column name="a_V">in, 448, ap_none, a_V, scalar</column>
+<column name="b_V">in, 448, ap_none, b_V, scalar</column>
+<column name="c_V">out, 896, ap_vld, c_V, pointer</column>
+<column name="c_V_ap_vld">out, 1, ap_vld, c_V, pointer</column>
+</table>
+</item>
+</section>
+</profile>
