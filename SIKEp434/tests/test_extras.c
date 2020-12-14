@@ -6,6 +6,7 @@
 
 #include "test_extras.h"
 #include <time.h>
+#include <stdlib.h>
 
 
 static uint64_t p434[7]  = { 0xFFFFFFFFFFFFFFFF, 0xFFFFFFFFFFFFFFFF, 0xFFFFFFFFFFFFFFFF, 0xFDC1767AE2FFFFFF, 

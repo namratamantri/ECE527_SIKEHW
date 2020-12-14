@@ -11,9 +11,7 @@
 
 #define PASSED    0
 #define FAILED    1
-
-    #define print_unit printf("nsec");
-    #define print_unit printf("cycles");
+#define print_unit printf("nsec");
 
     
 // Access system counter for benchmarking

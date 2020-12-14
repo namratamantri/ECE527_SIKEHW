@@ -48,7 +48,7 @@
 
 
 // Extended datatype support                       
-    typedef uint64_t uint128_t[2];
+typedef uint64_t uint128_t[2];
 
 // Macro definitions
 

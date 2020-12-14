@@ -6,14 +6,9 @@
 
 #include "random.h"
 #include <stdlib.h>
-#if defined(__WINDOWS__)
-    #include <windows.h>
-    #include <bcrypt.h>
-#elif defined(__NIX__)
-    #include <unistd.h>
-    #include <fcntl.h>
-    static int lock = -1;
-#endif
+#include <unistd.h>
+#include <fcntl.h>
+static int lock = -1;
 
 #define passed 0 
 #define failed 1
@@ -27,13 +22,6 @@ static __inline void delay(unsigned int count)
 
 int randombytes(unsigned char* random_array, unsigned long long nbytes)
 { // Generation of "nbytes" of random values
-    
-#if defined(__WINDOWS__)   
-    if (!BCRYPT_SUCCESS(BCryptGenRandom(NULL, random_array, (unsigned long)nbytes, BCRYPT_USE_SYSTEM_PREFERRED_RNG))) {
-        return failed;
-    }
-
-#elif defined(__NIX__)
     int r, n = (int)nbytes, count = 0;
     
     if (lock == -1) {
@@ -55,7 +43,6 @@ int randombytes(unsigned char* random_array, unsigned long long nbytes)
         count += r;
         n -= r;
     }
-#endif
 
     return passed;
 }
