@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'rdc_mont'" level="0">
-<item name = "Date">Mon Dec 14 20:27:09 2020
+<item name = "Date">Tue Dec 15 15:56:14 2020
 </item>
 <item name = "Version">2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)</item>
 <item name = "Project">sikehls</item>
@@ -53,7 +53,7 @@
 <column name="Instance">0, 70, 24253, 4199, -</column>
 <column name="Memory">-, -, -, -, -</column>
 <column name="Multiplexer">-, -, -, 66, -</column>
-<column name="Register">-, -, 2187, -, -</column>
+<column name="Register">-, -, 2186, -, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
 <specialColumn name="Utilization (%)">0, 31, 24, 8, 0</specialColumn>
 </table>
@@ -63,7 +63,7 @@
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
 <column name="grp_bc_mult_448_fu_30">bc_mult_448, 0, 70, 23673, 4067, 0</column>
-<column name="xDBL_add_837ns_83kbM_U44">xDBL_add_837ns_83kbM, 0, 0, 580, 132, 0</column>
+<column name="eval_4_isog_add_8mb6_U44">eval_4_isog_add_8mb6, 0, 0, 580, 132, 0</column>
 </table>
 </item>
 <item name = "DSP48E"><table name="" hasTotal="0">
@@ -96,9 +96,9 @@
 <column name="ap_return">448, 0, 448, 0</column>
 <column name="ap_return_preg">448, 0, 448, 0</column>
 <column name="grp_bc_mult_448_fu_30_ap_start_reg">1, 0, 1, 0</column>
-<column name="m_V_reg_93">1, 0, 448, 447</column>
-<column name="ma_V_read_reg_83">837, 0, 837, 0</column>
-<column name="ma_trunc_V_reg_88">448, 0, 448, 0</column>
+<column name="m_V_reg_97">1, 0, 448, 447</column>
+<column name="ma_V_read_reg_87">836, 0, 836, 0</column>
+<column name="ma_trunc_V_reg_92">448, 0, 448, 0</column>
 </table>
 </item>
 </section>
@@ -115,7 +115,7 @@
 <column name="ap_idle">out, 1, ap_ctrl_hs, rdc_mont, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, rdc_mont, return value</column>
 <column name="ap_return">out, 448, ap_ctrl_hs, rdc_mont, return value</column>
-<column name="ma_V">in, 837, ap_none, ma_V, scalar</column>
+<column name="ma_V">in, 836, ap_none, ma_V, scalar</column>
 </table>
 </item>
 </section>

@@ -33,7 +33,7 @@
 <Resources>
 <BRAM_18K>0</BRAM_18K>
 <DSP48E>70</DSP48E>
-<FF>26440</FF>
+<FF>26439</FF>
 <LUT>4265</LUT>
 <URAM>0</URAM>
 </Resources>
@@ -132,7 +132,7 @@
 <IOProtocol>ap_none</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>837</Bits>
+<Bits>836</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 </InterfaceSummary>

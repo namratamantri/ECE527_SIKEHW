@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="constants434.h" path="C:\Users\bmand\Desktop\ECE_527\ECE527_SIKEHW\sikehls\constants434.h"/>
-    <originFiles name="ec_isogeny.cpp" path="C:\Users\bmand\Desktop\ECE_527\ECE527_SIKEHW\sikehls\ec_isogeny.cpp"/>
-    <originFiles name="fp.h" path="C:\Users\bmand\Desktop\ECE_527\ECE527_SIKEHW\sikehls\fp.h"/>
-    <originFiles name="fpx.cpp" path="C:\Users\bmand\Desktop\ECE_527\ECE527_SIKEHW\sikehls\fpx.cpp"/>
-    <originFiles name="mult.cpp" path="C:\Users\bmand\Desktop\ECE_527\ECE527_SIKEHW\sikehls\mult.cpp"/>
+    <originFiles name="mult.cpp" path="C:\Users\namra\Documents\Documents\ece527\project\sikehls\mult.cpp"/>
+    <originFiles name="fpx.cpp" path="C:\Users\namra\Documents\Documents\ece527\project\sikehls\fpx.cpp"/>
+    <originFiles name="fp.h" path="C:\Users\namra\Documents\Documents\ece527\project\sikehls\fp.h"/>
+    <originFiles name="ec_isogeny.cpp" path="C:\Users\namra\Documents\Documents\ece527\project\sikehls\ec_isogeny.cpp"/>
+    <originFiles name="constants434.h" path="C:\Users\namra\Documents\Documents\ece527\project\sikehls\constants434.h"/>
   </source>
   <testbench/>
 </autopilotfilemapping:AutoPilotFileMapping>

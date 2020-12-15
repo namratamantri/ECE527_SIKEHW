@@ -77,14 +77,14 @@
 						<id>3</id>
 						<name>b_V_read</name>
 						<fileName>sikehls/fpx.cpp</fileName>
-						<fileDirectory>C:\Users\bmand\Desktop\ECE_527\ECE527_SIKEHW</fileDirectory>
+						<fileDirectory>C:\Users\namra\Documents\Documents\ece527\project</fileDirectory>
 						<lineNumber>64</lineNumber>
 						<contextFuncName>mp_mul</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item class_id="10" tracking_level="0" version="0">
-								<first>C:\Users\bmand\Desktop\ECE_527\ECE527_SIKEHW</first>
+								<first>C:\Users\namra\Documents\Documents\ece527\project</first>
 								<second class_id="11" tracking_level="0" version="0">
 									<count>1</count>
 									<item_version>0</item_version>
@@ -126,14 +126,14 @@
 						<id>4</id>
 						<name>a_V_read</name>
 						<fileName>sikehls/fpx.cpp</fileName>
-						<fileDirectory>C:\Users\bmand\Desktop\ECE_527\ECE527_SIKEHW</fileDirectory>
+						<fileDirectory>C:\Users\namra\Documents\Documents\ece527\project</fileDirectory>
 						<lineNumber>64</lineNumber>
 						<contextFuncName>mp_mul</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\bmand\Desktop\ECE_527\ECE527_SIKEHW</first>
+								<first>C:\Users\namra\Documents\Documents\ece527\project</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -175,14 +175,14 @@
 						<id>5</id>
 						<name>c_V_write_assign</name>
 						<fileName>sikehls/fpx.cpp</fileName>
-						<fileDirectory>C:\Users\bmand\Desktop\ECE_527\ECE527_SIKEHW</fileDirectory>
+						<fileDirectory>C:\Users\namra\Documents\Documents\ece527\project</fileDirectory>
 						<lineNumber>64</lineNumber>
 						<contextFuncName>mp_mul</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\bmand\Desktop\ECE_527\ECE527_SIKEHW</first>
+								<first>C:\Users\namra\Documents\Documents\ece527\project</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -225,14 +225,14 @@
 						<id>6</id>
 						<name>_ln65</name>
 						<fileName>sikehls/fpx.cpp</fileName>
-						<fileDirectory>C:\Users\bmand\Desktop\ECE_527\ECE527_SIKEHW</fileDirectory>
+						<fileDirectory>C:\Users\namra\Documents\Documents\ece527\project</fileDirectory>
 						<lineNumber>65</lineNumber>
 						<contextFuncName>mp_mul</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\bmand\Desktop\ECE_527\ECE527_SIKEHW</first>
+								<first>C:\Users\namra\Documents\Documents\ece527\project</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>

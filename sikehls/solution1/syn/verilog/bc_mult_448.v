@@ -254,7 +254,7 @@ initial begin
 #0 ap_return_preg = 835'd0;
 end
 
-xDBL_mux_73_64_1_1 #(
+eval_4_isog_mux_7bkb #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 64 ),
@@ -266,7 +266,7 @@ xDBL_mux_73_64_1_1 #(
     .din6_WIDTH( 64 ),
     .din7_WIDTH( 3 ),
     .dout_WIDTH( 64 ))
-xDBL_mux_73_64_1_1_U1(
+eval_4_isog_mux_7bkb_U1(
     .din0(bi_0_V_reg_1737),
     .din1(bi_1_V_reg_1742),
     .din2(bi_2_V_reg_1747),
@@ -278,13 +278,13 @@ xDBL_mux_73_64_1_1_U1(
     .dout(tmp_1_fu_603_p9)
 );
 
-xDBL_mul_64ns_64nbkb #(
+eval_4_isog_mul_6cud #(
     .ID( 1 ),
     .NUM_STAGE( 5 ),
     .din0_WIDTH( 64 ),
     .din1_WIDTH( 64 ),
     .dout_WIDTH( 128 ))
-xDBL_mul_64ns_64nbkb_U2(
+eval_4_isog_mul_6cud_U2(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_619_p0),
@@ -293,13 +293,13 @@ xDBL_mul_64ns_64nbkb_U2(
     .dout(grp_fu_619_p2)
 );
 
-xDBL_mul_64ns_64nbkb #(
+eval_4_isog_mul_6cud #(
     .ID( 1 ),
     .NUM_STAGE( 5 ),
     .din0_WIDTH( 64 ),
     .din1_WIDTH( 64 ),
     .dout_WIDTH( 128 ))
-xDBL_mul_64ns_64nbkb_U3(
+eval_4_isog_mul_6cud_U3(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_624_p0),
@@ -308,13 +308,13 @@ xDBL_mul_64ns_64nbkb_U3(
     .dout(grp_fu_624_p2)
 );
 
-xDBL_mul_64ns_64nbkb #(
+eval_4_isog_mul_6cud #(
     .ID( 1 ),
     .NUM_STAGE( 5 ),
     .din0_WIDTH( 64 ),
     .din1_WIDTH( 64 ),
     .dout_WIDTH( 128 ))
-xDBL_mul_64ns_64nbkb_U4(
+eval_4_isog_mul_6cud_U4(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_629_p0),
@@ -323,13 +323,13 @@ xDBL_mul_64ns_64nbkb_U4(
     .dout(grp_fu_629_p2)
 );
 
-xDBL_mul_64ns_64nbkb #(
+eval_4_isog_mul_6cud #(
     .ID( 1 ),
     .NUM_STAGE( 5 ),
     .din0_WIDTH( 64 ),
     .din1_WIDTH( 64 ),
     .dout_WIDTH( 128 ))
-xDBL_mul_64ns_64nbkb_U5(
+eval_4_isog_mul_6cud_U5(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_634_p0),
@@ -338,13 +338,13 @@ xDBL_mul_64ns_64nbkb_U5(
     .dout(grp_fu_634_p2)
 );
 
-xDBL_mul_64ns_64nbkb #(
+eval_4_isog_mul_6cud #(
     .ID( 1 ),
     .NUM_STAGE( 5 ),
     .din0_WIDTH( 64 ),
     .din1_WIDTH( 64 ),
     .dout_WIDTH( 128 ))
-xDBL_mul_64ns_64nbkb_U6(
+eval_4_isog_mul_6cud_U6(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_639_p0),
@@ -353,13 +353,13 @@ xDBL_mul_64ns_64nbkb_U6(
     .dout(grp_fu_639_p2)
 );
 
-xDBL_mul_64ns_64nbkb #(
+eval_4_isog_mul_6cud #(
     .ID( 1 ),
     .NUM_STAGE( 5 ),
     .din0_WIDTH( 64 ),
     .din1_WIDTH( 64 ),
     .dout_WIDTH( 128 ))
-xDBL_mul_64ns_64nbkb_U7(
+eval_4_isog_mul_6cud_U7(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_644_p0),
@@ -368,13 +368,13 @@ xDBL_mul_64ns_64nbkb_U7(
     .dout(grp_fu_644_p2)
 );
 
-xDBL_mul_64s_64s_cud #(
+eval_4_isog_mul_6dEe #(
     .ID( 1 ),
     .NUM_STAGE( 5 ),
     .din0_WIDTH( 64 ),
     .din1_WIDTH( 64 ),
     .dout_WIDTH( 64 ))
-xDBL_mul_64s_64s_cud_U8(
+eval_4_isog_mul_6dEe_U8(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(ai_6_V_reg_1767),
@@ -383,7 +383,7 @@ xDBL_mul_64s_64s_cud_U8(
     .dout(grp_fu_649_p2)
 );
 
-xDBL_mux_73_448_1_1 #(
+eval_4_isog_mux_7eOg #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 448 ),
@@ -395,7 +395,7 @@ xDBL_mux_73_448_1_1 #(
     .din6_WIDTH( 448 ),
     .din7_WIDTH( 3 ),
     .dout_WIDTH( 448 ))
-xDBL_mux_73_448_1_1_U9(
+eval_4_isog_mux_7eOg_U9(
     .din0(partial_products_6_s_fu_124),
     .din1(partial_products_0_5_fu_128),
     .din2(partial_products_0_4_fu_132),
@@ -407,13 +407,13 @@ xDBL_mux_73_448_1_1_U9(
     .dout(tmp_2_fu_1125_p9)
 );
 
-xDBL_add_451ns_45dEe #(
+eval_4_isog_add_4fYi #(
     .ID( 1 ),
     .NUM_STAGE( 2 ),
     .din0_WIDTH( 451 ),
     .din1_WIDTH( 451 ),
     .dout_WIDTH( 451 ))
-xDBL_add_451ns_45dEe_U10(
+eval_4_isog_add_4fYi_U10(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(sum_V_0_0_reg_344),
@@ -422,7 +422,7 @@ xDBL_add_451ns_45dEe_U10(
     .dout(grp_fu_1149_p2)
 );
 
-xDBL_mux_73_448_1_1 #(
+eval_4_isog_mux_7eOg #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 448 ),
@@ -434,7 +434,7 @@ xDBL_mux_73_448_1_1 #(
     .din6_WIDTH( 448 ),
     .din7_WIDTH( 3 ),
     .dout_WIDTH( 448 ))
-xDBL_mux_73_448_1_1_U11(
+eval_4_isog_mux_7eOg_U11(
     .din0(partial_products_6_7_fu_152),
     .din1(partial_products_1_5_fu_156),
     .din2(partial_products_1_4_fu_160),
@@ -446,13 +446,13 @@ xDBL_mux_73_448_1_1_U11(
     .dout(tmp_3_fu_1155_p9)
 );
 
-xDBL_add_515ns_51eOg #(
+eval_4_isog_add_5g8j #(
     .ID( 1 ),
     .NUM_STAGE( 2 ),
     .din0_WIDTH( 515 ),
     .din1_WIDTH( 515 ),
     .dout_WIDTH( 515 ))
-xDBL_add_515ns_51eOg_U12(
+eval_4_isog_add_5g8j_U12(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(sum_V_1_0_reg_356),
@@ -461,7 +461,7 @@ xDBL_add_515ns_51eOg_U12(
     .dout(grp_fu_1187_p2)
 );
 
-xDBL_mux_73_448_1_1 #(
+eval_4_isog_mux_7eOg #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 448 ),
@@ -473,7 +473,7 @@ xDBL_mux_73_448_1_1 #(
     .din6_WIDTH( 448 ),
     .din7_WIDTH( 3 ),
     .dout_WIDTH( 448 ))
-xDBL_mux_73_448_1_1_U13(
+eval_4_isog_mux_7eOg_U13(
     .din0(partial_products_6_10_fu_180),
     .din1(partial_products_2_5_fu_184),
     .din2(partial_products_2_4_fu_188),
@@ -485,13 +485,13 @@ xDBL_mux_73_448_1_1_U13(
     .dout(tmp_4_fu_1193_p9)
 );
 
-xDBL_add_579ns_57fYi #(
+eval_4_isog_add_5hbi #(
     .ID( 1 ),
     .NUM_STAGE( 2 ),
     .din0_WIDTH( 579 ),
     .din1_WIDTH( 579 ),
     .dout_WIDTH( 579 ))
-xDBL_add_579ns_57fYi_U14(
+eval_4_isog_add_5hbi_U14(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(sum_V_2_0_reg_368),
@@ -500,7 +500,7 @@ xDBL_add_579ns_57fYi_U14(
     .dout(grp_fu_1225_p2)
 );
 
-xDBL_mux_73_448_1_1 #(
+eval_4_isog_mux_7eOg #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 448 ),
@@ -512,7 +512,7 @@ xDBL_mux_73_448_1_1 #(
     .din6_WIDTH( 448 ),
     .din7_WIDTH( 3 ),
     .dout_WIDTH( 448 ))
-xDBL_mux_73_448_1_1_U15(
+eval_4_isog_mux_7eOg_U15(
     .din0(partial_products_6_13_fu_208),
     .din1(partial_products_3_5_fu_212),
     .din2(partial_products_3_4_fu_216),
@@ -524,13 +524,13 @@ xDBL_mux_73_448_1_1_U15(
     .dout(tmp_5_fu_1231_p9)
 );
 
-xDBL_add_643ns_64g8j #(
+eval_4_isog_add_6ibs #(
     .ID( 1 ),
     .NUM_STAGE( 2 ),
     .din0_WIDTH( 643 ),
     .din1_WIDTH( 643 ),
     .dout_WIDTH( 643 ))
-xDBL_add_643ns_64g8j_U16(
+eval_4_isog_add_6ibs_U16(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(sum_V_3_0_reg_380),
@@ -539,7 +539,7 @@ xDBL_add_643ns_64g8j_U16(
     .dout(grp_fu_1263_p2)
 );
 
-xDBL_mux_73_448_1_1 #(
+eval_4_isog_mux_7eOg #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 448 ),
@@ -551,7 +551,7 @@ xDBL_mux_73_448_1_1 #(
     .din6_WIDTH( 448 ),
     .din7_WIDTH( 3 ),
     .dout_WIDTH( 448 ))
-xDBL_mux_73_448_1_1_U17(
+eval_4_isog_mux_7eOg_U17(
     .din0(partial_products_6_16_fu_236),
     .din1(partial_products_4_5_fu_240),
     .din2(partial_products_4_4_fu_244),
@@ -563,13 +563,13 @@ xDBL_mux_73_448_1_1_U17(
     .dout(tmp_6_fu_1269_p9)
 );
 
-xDBL_add_707ns_70hbi #(
+eval_4_isog_add_7jbC #(
     .ID( 1 ),
     .NUM_STAGE( 2 ),
     .din0_WIDTH( 707 ),
     .din1_WIDTH( 707 ),
     .dout_WIDTH( 707 ))
-xDBL_add_707ns_70hbi_U18(
+eval_4_isog_add_7jbC_U18(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(sum_V_4_0_reg_392),
@@ -578,7 +578,7 @@ xDBL_add_707ns_70hbi_U18(
     .dout(grp_fu_1301_p2)
 );
 
-xDBL_mux_73_448_1_1 #(
+eval_4_isog_mux_7eOg #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 448 ),
@@ -590,7 +590,7 @@ xDBL_mux_73_448_1_1 #(
     .din6_WIDTH( 448 ),
     .din7_WIDTH( 3 ),
     .dout_WIDTH( 448 ))
-xDBL_mux_73_448_1_1_U19(
+eval_4_isog_mux_7eOg_U19(
     .din0(partial_products_6_19_fu_264),
     .din1(partial_products_5_5_fu_268),
     .din2(partial_products_5_4_fu_272),
@@ -602,13 +602,13 @@ xDBL_mux_73_448_1_1_U19(
     .dout(tmp_7_fu_1307_p9)
 );
 
-xDBL_add_771ns_77ibs #(
+eval_4_isog_add_7kbM #(
     .ID( 1 ),
     .NUM_STAGE( 2 ),
     .din0_WIDTH( 771 ),
     .din1_WIDTH( 771 ),
     .dout_WIDTH( 771 ))
-xDBL_add_771ns_77ibs_U20(
+eval_4_isog_add_7kbM_U20(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(sum_V_5_0_reg_404),
@@ -617,7 +617,7 @@ xDBL_add_771ns_77ibs_U20(
     .dout(grp_fu_1339_p2)
 );
 
-xDBL_mux_73_448_1_1 #(
+eval_4_isog_mux_7eOg #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 448 ),
@@ -629,7 +629,7 @@ xDBL_mux_73_448_1_1 #(
     .din6_WIDTH( 448 ),
     .din7_WIDTH( 3 ),
     .dout_WIDTH( 448 ))
-xDBL_mux_73_448_1_1_U21(
+eval_4_isog_mux_7eOg_U21(
     .din0(partial_products_6_22_fu_292),
     .din1(partial_products_6_5_fu_296),
     .din2(partial_products_6_4_fu_300),
@@ -641,13 +641,13 @@ xDBL_mux_73_448_1_1_U21(
     .dout(tmp_8_fu_1345_p9)
 );
 
-xDBL_add_835ns_83jbC #(
+eval_4_isog_add_8lbW #(
     .ID( 1 ),
     .NUM_STAGE( 2 ),
     .din0_WIDTH( 835 ),
     .din1_WIDTH( 835 ),
     .dout_WIDTH( 835 ))
-xDBL_add_835ns_83jbC_U22(
+eval_4_isog_add_8lbW_U22(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(sum_V_6_0_reg_416),
@@ -656,13 +656,13 @@ xDBL_add_835ns_83jbC_U22(
     .dout(grp_fu_1377_p2)
 );
 
-xDBL_add_579ns_57fYi #(
+eval_4_isog_add_5hbi #(
     .ID( 1 ),
     .NUM_STAGE( 2 ),
     .din0_WIDTH( 579 ),
     .din1_WIDTH( 579 ),
     .dout_WIDTH( 579 ))
-xDBL_add_579ns_57fYi_U23(
+eval_4_isog_add_5hbi_U23(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_1395_p0),
@@ -671,13 +671,13 @@ xDBL_add_579ns_57fYi_U23(
     .dout(grp_fu_1395_p2)
 );
 
-xDBL_add_707ns_70hbi #(
+eval_4_isog_add_7jbC #(
     .ID( 1 ),
     .NUM_STAGE( 2 ),
     .din0_WIDTH( 707 ),
     .din1_WIDTH( 707 ),
     .dout_WIDTH( 707 ))
-xDBL_add_707ns_70hbi_U24(
+eval_4_isog_add_7jbC_U24(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_1401_p0),
@@ -686,13 +686,13 @@ xDBL_add_707ns_70hbi_U24(
     .dout(grp_fu_1401_p2)
 );
 
-xDBL_add_835ns_83jbC #(
+eval_4_isog_add_8lbW #(
     .ID( 1 ),
     .NUM_STAGE( 2 ),
     .din0_WIDTH( 835 ),
     .din1_WIDTH( 835 ),
     .dout_WIDTH( 835 ))
-xDBL_add_835ns_83jbC_U25(
+eval_4_isog_add_8lbW_U25(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_1407_p0),
@@ -701,13 +701,13 @@ xDBL_add_835ns_83jbC_U25(
     .dout(grp_fu_1407_p2)
 );
 
-xDBL_add_579ns_57fYi #(
+eval_4_isog_add_5hbi #(
     .ID( 1 ),
     .NUM_STAGE( 2 ),
     .din0_WIDTH( 579 ),
     .din1_WIDTH( 579 ),
     .dout_WIDTH( 579 ))
-xDBL_add_579ns_57fYi_U26(
+eval_4_isog_add_5hbi_U26(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_1395_p2),
@@ -716,13 +716,13 @@ xDBL_add_579ns_57fYi_U26(
     .dout(grp_fu_1417_p2)
 );
 
-xDBL_add_835ns_83jbC #(
+eval_4_isog_add_8lbW #(
     .ID( 1 ),
     .NUM_STAGE( 2 ),
     .din0_WIDTH( 835 ),
     .din1_WIDTH( 835 ),
     .dout_WIDTH( 835 ))
-xDBL_add_835ns_83jbC_U27(
+eval_4_isog_add_8lbW_U27(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_1407_p2),
@@ -731,13 +731,13 @@ xDBL_add_835ns_83jbC_U27(
     .dout(grp_fu_1427_p2)
 );
 
-xDBL_add_835ns_83jbC #(
+eval_4_isog_add_8lbW #(
     .ID( 1 ),
     .NUM_STAGE( 2 ),
     .din0_WIDTH( 835 ),
     .din1_WIDTH( 835 ),
     .dout_WIDTH( 835 ))
-xDBL_add_835ns_83jbC_U28(
+eval_4_isog_add_8lbW_U28(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_1427_p2),

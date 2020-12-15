@@ -1,7 +1,7 @@
 # This script segment is generated automatically by AutoPilot
 
 set id 44
-set name xDBL_add_837ns_83kbM
+set name eval_4_isog_add_8mb6
 set corename simcore_add
 set op add
 set stage_num 2
@@ -14,7 +14,7 @@ set reset_signed 0
 set in0_width 837
 set in0_signed 0
 set in1_width 837
-set in1_signed 0
+set in1_signed 1
 set ce_width 1
 set ce_signed 0
 set out_width 837
@@ -103,7 +103,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_ma_V \
     op interface \
-    ports { ma_V { I 837 vector } } \
+    ports { ma_V { I 836 vector } } \
 } "
 }
 

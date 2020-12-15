@@ -82,6 +82,7 @@ void rdc_mont(digit_d ma, digit_t* mc)
 ////////////////////////////////////////////////////////
 void fpmul_mont(const digit_t ma, const digit_t mb, digit_t* mc)
 { //  c = a*b mod p.
+#pragma HLS inline
     digit_d temp ;
     mp_mul(ma, mb, &temp);
     rdc_mont(temp, mc);
@@ -130,7 +131,7 @@ void fp2correction(f2elm_t a)
 
 void mp2_add(const f2elm_t a, const f2elm_t b, f2elm_t c)
 { // GF(p^2) addition without correction, c = a+b in GF(p^2).
-#pragma HLS inline
+//#pragma HLS inline
 	c[0] = a[0] + b[0];
 	c[1] = a[1] + b[1];
 }
@@ -138,7 +139,7 @@ void mp2_add(const f2elm_t a, const f2elm_t b, f2elm_t c)
 
 void mp2_sub_p2(const f2elm_t a, const f2elm_t b, f2elm_t c)
 { // GF(p^2) subtraction with correction with 2*p, c = a-b+2p in GF(p^2).
-#pragma HLS inline
+//#pragma HLS inline
     mp_sub434_p2(a[0], b[0], &c[0]);
     mp_sub434_p2(a[1], b[1], &c[1]);
 }
@@ -156,6 +157,7 @@ void fp2sqr_mont(const f2elm_t a, f2elm_t c)
 { // GF(p^2) squaring using Montgomery arithmetic, c = a^2 in GF(p^2).
   // Inputs: a = a0+a1*i, where a0, a1 are in [0, 2*p-1]
   // Output: c = c0+c1*i, where c0, c1 are in [0, 2*p-1]
+#pragma HLS ALLOCATION instances=fpmul_mont limit=1 function
     digit_t t1, t2, t3;
 
     t1 = a[0] + a[1];                      // t1 = a0+a1

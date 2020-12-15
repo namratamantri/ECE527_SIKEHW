@@ -12,7 +12,7 @@
 #include "AESL_pkg.h"
 
 #include "bc_mult_448.h"
-#include "xDBL_add_837ns_83kbM.h"
+#include "eval_4_isog_add_8mb6.h"
 
 namespace ap_rtl {
 
@@ -24,7 +24,7 @@ struct rdc_mont : public sc_module {
     sc_out< sc_logic > ap_done;
     sc_out< sc_logic > ap_idle;
     sc_out< sc_logic > ap_ready;
-    sc_in< sc_lv<837> > ma_V;
+    sc_in< sc_lv<836> > ma_V;
     sc_out< sc_lv<448> > ap_return;
 
 
@@ -37,14 +37,14 @@ struct rdc_mont : public sc_module {
     sc_trace_file* mVcdFile;
 
     bc_mult_448* grp_bc_mult_448_fu_30;
-    xDBL_add_837ns_83kbM<1,2,837,837,837>* xDBL_add_837ns_83kbM_U44;
+    eval_4_isog_add_8mb6<1,2,837,837,837>* eval_4_isog_add_8mb6_U44;
     sc_signal< sc_lv<4> > ap_CS_fsm;
     sc_signal< sc_logic > ap_CS_fsm_state1;
-    sc_signal< sc_lv<837> > ma_V_read_reg_83;
+    sc_signal< sc_lv<836> > ma_V_read_reg_87;
     sc_signal< sc_lv<448> > ma_trunc_V_fu_38_p1;
-    sc_signal< sc_lv<448> > ma_trunc_V_reg_88;
+    sc_signal< sc_lv<448> > ma_trunc_V_reg_92;
     sc_signal< sc_lv<448> > m_V_fu_51_p3;
-    sc_signal< sc_lv<448> > m_V_reg_93;
+    sc_signal< sc_lv<448> > m_V_reg_97;
     sc_signal< sc_logic > ap_CS_fsm_state2;
     sc_signal< sc_logic > grp_bc_mult_448_fu_30_ap_ready;
     sc_signal< sc_logic > grp_bc_mult_448_fu_30_ap_done;
@@ -55,13 +55,15 @@ struct rdc_mont : public sc_module {
     sc_signal< sc_lv<448> > grp_bc_mult_448_fu_30_b_V;
     sc_signal< sc_lv<835> > grp_bc_mult_448_fu_30_ap_return;
     sc_signal< sc_logic > grp_bc_mult_448_fu_30_ap_start_reg;
+    sc_signal< sc_lv<836> > ma_trunc_V_fu_38_p0;
     sc_signal< sc_lv<1> > tmp_fu_43_p3;
-    sc_signal< sc_lv<837> > grp_fu_64_p0;
-    sc_signal< sc_lv<837> > grp_fu_64_p2;
+    sc_signal< sc_lv<837> > grp_fu_67_p0;
+    sc_signal< sc_lv<837> > grp_fu_67_p1;
+    sc_signal< sc_lv<837> > grp_fu_67_p2;
     sc_signal< sc_logic > ap_CS_fsm_state4;
-    sc_signal< sc_lv<389> > tmp_1_fu_69_p4;
-    sc_signal< sc_logic > grp_fu_64_ce;
-    sc_signal< sc_lv<448> > sext_ln1503_fu_79_p1;
+    sc_signal< sc_lv<389> > tmp_1_fu_73_p4;
+    sc_signal< sc_logic > grp_fu_67_ce;
+    sc_signal< sc_lv<448> > sext_ln1503_fu_83_p1;
     sc_signal< sc_lv<448> > ap_return_preg;
     sc_signal< sc_lv<4> > ap_NS_fsm;
     static const sc_logic ap_const_logic_1;
@@ -94,12 +96,14 @@ struct rdc_mont : public sc_module {
     void thread_grp_bc_mult_448_fu_30_a_V();
     void thread_grp_bc_mult_448_fu_30_ap_start();
     void thread_grp_bc_mult_448_fu_30_b_V();
-    void thread_grp_fu_64_ce();
-    void thread_grp_fu_64_p0();
+    void thread_grp_fu_67_ce();
+    void thread_grp_fu_67_p0();
+    void thread_grp_fu_67_p1();
     void thread_m_V_fu_51_p3();
+    void thread_ma_trunc_V_fu_38_p0();
     void thread_ma_trunc_V_fu_38_p1();
-    void thread_sext_ln1503_fu_79_p1();
-    void thread_tmp_1_fu_69_p4();
+    void thread_sext_ln1503_fu_83_p1();
+    void thread_tmp_1_fu_73_p4();
     void thread_tmp_fu_43_p3();
     void thread_ap_NS_fsm();
 };

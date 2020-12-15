@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'bc_mult_448'
 ================================================================
-* Date:           Mon Dec 14 20:27:07 2020
+* Date:           Tue Dec 15 15:56:13 2020
 
 * Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
 * Project:        sikehls
@@ -74,34 +74,34 @@
     +--------------------------+----------------------+---------+-------+-----+-----+-----+
     |         Instance         |        Module        | BRAM_18K| DSP48E|  FF | LUT | URAM|
     +--------------------------+----------------------+---------+-------+-----+-----+-----+
-    |xDBL_add_451ns_45dEe_U10  |xDBL_add_451ns_45dEe  |        0|      0|  580|  132|    0|
-    |xDBL_add_515ns_51eOg_U12  |xDBL_add_515ns_51eOg  |        0|      0|  580|  132|    0|
-    |xDBL_add_579ns_57fYi_U14  |xDBL_add_579ns_57fYi  |        0|      0|  580|  132|    0|
-    |xDBL_add_579ns_57fYi_U23  |xDBL_add_579ns_57fYi  |        0|      0|  580|  132|    0|
-    |xDBL_add_579ns_57fYi_U26  |xDBL_add_579ns_57fYi  |        0|      0|  580|  132|    0|
-    |xDBL_add_643ns_64g8j_U16  |xDBL_add_643ns_64g8j  |        0|      0|  580|  132|    0|
-    |xDBL_add_707ns_70hbi_U18  |xDBL_add_707ns_70hbi  |        0|      0|  580|  132|    0|
-    |xDBL_add_707ns_70hbi_U24  |xDBL_add_707ns_70hbi  |        0|      0|  580|  132|    0|
-    |xDBL_add_771ns_77ibs_U20  |xDBL_add_771ns_77ibs  |        0|      0|  580|  132|    0|
-    |xDBL_add_835ns_83jbC_U22  |xDBL_add_835ns_83jbC  |        0|      0|  580|  132|    0|
-    |xDBL_add_835ns_83jbC_U25  |xDBL_add_835ns_83jbC  |        0|      0|  580|  132|    0|
-    |xDBL_add_835ns_83jbC_U27  |xDBL_add_835ns_83jbC  |        0|      0|  580|  132|    0|
-    |xDBL_add_835ns_83jbC_U28  |xDBL_add_835ns_83jbC  |        0|      0|  580|  132|    0|
-    |xDBL_mul_64ns_64nbkb_U2   |xDBL_mul_64ns_64nbkb  |        0|     10|  441|  256|    0|
-    |xDBL_mul_64ns_64nbkb_U3   |xDBL_mul_64ns_64nbkb  |        0|     10|  441|  256|    0|
-    |xDBL_mul_64ns_64nbkb_U4   |xDBL_mul_64ns_64nbkb  |        0|     10|  441|  256|    0|
-    |xDBL_mul_64ns_64nbkb_U5   |xDBL_mul_64ns_64nbkb  |        0|     10|  441|  256|    0|
-    |xDBL_mul_64ns_64nbkb_U6   |xDBL_mul_64ns_64nbkb  |        0|     10|  441|  256|    0|
-    |xDBL_mul_64ns_64nbkb_U7   |xDBL_mul_64ns_64nbkb  |        0|     10|  441|  256|    0|
-    |xDBL_mul_64s_64s_cud_U8   |xDBL_mul_64s_64s_cud  |        0|     10|  441|  256|    0|
-    |xDBL_mux_73_448_1_1_U9    |xDBL_mux_73_448_1_1   |        0|      0|    0|   40|    0|
-    |xDBL_mux_73_448_1_1_U11   |xDBL_mux_73_448_1_1   |        0|      0|    0|   40|    0|
-    |xDBL_mux_73_448_1_1_U13   |xDBL_mux_73_448_1_1   |        0|      0|    0|   40|    0|
-    |xDBL_mux_73_448_1_1_U15   |xDBL_mux_73_448_1_1   |        0|      0|    0|   40|    0|
-    |xDBL_mux_73_448_1_1_U17   |xDBL_mux_73_448_1_1   |        0|      0|    0|   40|    0|
-    |xDBL_mux_73_448_1_1_U19   |xDBL_mux_73_448_1_1   |        0|      0|    0|   40|    0|
-    |xDBL_mux_73_448_1_1_U21   |xDBL_mux_73_448_1_1   |        0|      0|    0|   40|    0|
-    |xDBL_mux_73_64_1_1_U1     |xDBL_mux_73_64_1_1    |        0|      0|    0|   40|    0|
+    |eval_4_isog_add_4fYi_U10  |eval_4_isog_add_4fYi  |        0|      0|  580|  132|    0|
+    |eval_4_isog_add_5g8j_U12  |eval_4_isog_add_5g8j  |        0|      0|  580|  132|    0|
+    |eval_4_isog_add_5hbi_U14  |eval_4_isog_add_5hbi  |        0|      0|  580|  132|    0|
+    |eval_4_isog_add_5hbi_U23  |eval_4_isog_add_5hbi  |        0|      0|  580|  132|    0|
+    |eval_4_isog_add_5hbi_U26  |eval_4_isog_add_5hbi  |        0|      0|  580|  132|    0|
+    |eval_4_isog_add_6ibs_U16  |eval_4_isog_add_6ibs  |        0|      0|  580|  132|    0|
+    |eval_4_isog_add_7jbC_U18  |eval_4_isog_add_7jbC  |        0|      0|  580|  132|    0|
+    |eval_4_isog_add_7jbC_U24  |eval_4_isog_add_7jbC  |        0|      0|  580|  132|    0|
+    |eval_4_isog_add_7kbM_U20  |eval_4_isog_add_7kbM  |        0|      0|  580|  132|    0|
+    |eval_4_isog_add_8lbW_U22  |eval_4_isog_add_8lbW  |        0|      0|  580|  132|    0|
+    |eval_4_isog_add_8lbW_U25  |eval_4_isog_add_8lbW  |        0|      0|  580|  132|    0|
+    |eval_4_isog_add_8lbW_U27  |eval_4_isog_add_8lbW  |        0|      0|  580|  132|    0|
+    |eval_4_isog_add_8lbW_U28  |eval_4_isog_add_8lbW  |        0|      0|  580|  132|    0|
+    |eval_4_isog_mul_6cud_U2   |eval_4_isog_mul_6cud  |        0|     10|  441|  256|    0|
+    |eval_4_isog_mul_6cud_U3   |eval_4_isog_mul_6cud  |        0|     10|  441|  256|    0|
+    |eval_4_isog_mul_6cud_U4   |eval_4_isog_mul_6cud  |        0|     10|  441|  256|    0|
+    |eval_4_isog_mul_6cud_U5   |eval_4_isog_mul_6cud  |        0|     10|  441|  256|    0|
+    |eval_4_isog_mul_6cud_U6   |eval_4_isog_mul_6cud  |        0|     10|  441|  256|    0|
+    |eval_4_isog_mul_6cud_U7   |eval_4_isog_mul_6cud  |        0|     10|  441|  256|    0|
+    |eval_4_isog_mul_6dEe_U8   |eval_4_isog_mul_6dEe  |        0|     10|  441|  256|    0|
+    |eval_4_isog_mux_7bkb_U1   |eval_4_isog_mux_7bkb  |        0|      0|    0|   40|    0|
+    |eval_4_isog_mux_7eOg_U9   |eval_4_isog_mux_7eOg  |        0|      0|    0|   40|    0|
+    |eval_4_isog_mux_7eOg_U11  |eval_4_isog_mux_7eOg  |        0|      0|    0|   40|    0|
+    |eval_4_isog_mux_7eOg_U13  |eval_4_isog_mux_7eOg  |        0|      0|    0|   40|    0|
+    |eval_4_isog_mux_7eOg_U15  |eval_4_isog_mux_7eOg  |        0|      0|    0|   40|    0|
+    |eval_4_isog_mux_7eOg_U17  |eval_4_isog_mux_7eOg  |        0|      0|    0|   40|    0|
+    |eval_4_isog_mux_7eOg_U19  |eval_4_isog_mux_7eOg  |        0|      0|    0|   40|    0|
+    |eval_4_isog_mux_7eOg_U21  |eval_4_isog_mux_7eOg  |        0|      0|    0|   40|    0|
     +--------------------------+----------------------+---------+-------+-----+-----+-----+
     |Total                     |                      |        0|     70|10627| 3828|    0|
     +--------------------------+----------------------+---------+-------+-----+-----+-----+
@@ -396,7 +396,7 @@ ST_2 : Operation 87 [1/1] (1.13ns)   --->   "%icmp_ln28 = icmp eq i3 %i7_0, -1" 
 ST_2 : Operation 88 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 7, i64 7, i64 7)"   --->   Operation 88 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 89 [1/1] (1.65ns)   --->   "%i_1 = add i3 %i7_0, 1" [sikehls/mult.cpp:28]   --->   Operation 89 'add' 'i_1' <Predicate = true> <Delay = 1.65> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 90 [1/1] (0.00ns)   --->   "br i1 %icmp_ln28, label %.preheader.preheader, label %loopb22_begin" [sikehls/mult.cpp:28]   --->   Operation 90 'br' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 91 [1/1] (0.00ns)   --->   "%tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([8 x i8]* @p_str12)" [sikehls/mult.cpp:28]   --->   Operation 91 'specregionbegin' 'tmp' <Predicate = (!icmp_ln28)> <Delay = 0.00>
+ST_2 : Operation 91 [1/1] (0.00ns)   --->   "%tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([8 x i8]* @p_str1242)" [sikehls/mult.cpp:28]   --->   Operation 91 'specregionbegin' 'tmp' <Predicate = (!icmp_ln28)> <Delay = 0.00>
 ST_2 : Operation 92 [1/1] (2.40ns)   --->   "%tmp_1 = call i64 @_ssdm_op_Mux.ap_auto.7i64.i3(i64 %bi_0_V, i64 %bi_1_V, i64 %bi_2_V, i64 %bi_3_V, i64 %bi_4_V, i64 %bi_5_V, i64 %bi_6_V, i3 %i7_0)" [sikehls/mult.cpp:32]   --->   Operation 92 'mux' 'tmp_1' <Predicate = (!icmp_ln28)> <Delay = 2.40> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 2.40> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 93 [1/1] (1.30ns)   --->   "switch i3 %i7_0, label %branch48 [
     i3 0, label %loopb22_begin.loopb22_end_crit_edge
@@ -406,7 +406,7 @@ ST_2 : Operation 93 [1/1] (1.30ns)   --->   "switch i3 %i7_0, label %branch48 [
     i3 -4, label %branch46
     i3 -3, label %branch47
   ]" [sikehls/mult.cpp:33]   --->   Operation 93 'switch' <Predicate = (!icmp_ln28)> <Delay = 1.30>
-ST_2 : Operation 94 [1/1] (0.00ns)   --->   "%empty_10 = call i32 (...)* @_ssdm_op_SpecRegionEnd([8 x i8]* @p_str12, i32 %tmp)" [sikehls/mult.cpp:38]   --->   Operation 94 'specregionend' 'empty_10' <Predicate = (!icmp_ln28)> <Delay = 0.00>
+ST_2 : Operation 94 [1/1] (0.00ns)   --->   "%empty_12 = call i32 (...)* @_ssdm_op_SpecRegionEnd([8 x i8]* @p_str1242, i32 %tmp)" [sikehls/mult.cpp:38]   --->   Operation 94 'specregionend' 'empty_12' <Predicate = (!icmp_ln28)> <Delay = 0.00>
 ST_2 : Operation 95 [1/1] (0.00ns)   --->   "br label %.preheader397" [sikehls/mult.cpp:28]   --->   Operation 95 'br' <Predicate = (!icmp_ln28)> <Delay = 0.00>
 
 State 3 <SV = 2> <Delay = 6.97>
@@ -447,8 +447,8 @@ ST_6 : Operation 123 [2/5] (6.97ns)   --->   "%mul_ln1352_5 = mul i128 %zext_ln2
 ST_6 : Operation 124 [2/5] (6.97ns)   --->   "%mul_ln1503 = mul i64 %ai_6_V, %tmp_1" [sikehls/mult.cpp:33]   --->   Operation 124 'mul' 'mul_ln1503' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
 
 State 7 <SV = 6> <Delay = 6.97>
-ST_7 : Operation 125 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([8 x i8]* @p_str12) nounwind" [sikehls/mult.cpp:28]   --->   Operation 125 'specloopname' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 126 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str9) nounwind" [sikehls/mult.cpp:29]   --->   Operation 126 'specpipeline' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 125 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([8 x i8]* @p_str1242) nounwind" [sikehls/mult.cpp:28]   --->   Operation 125 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 126 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str939) nounwind" [sikehls/mult.cpp:29]   --->   Operation 126 'specpipeline' <Predicate = true> <Delay = 0.00>
 ST_7 : Operation 127 [1/5] (6.97ns)   --->   "%mul_ln1352 = mul i128 %zext_ln215, %zext_ln215_1" [sikehls/mult.cpp:32]   --->   Operation 127 'mul' 'mul_ln1352' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
 ST_7 : Operation 128 [1/1] (0.00ns)   --->   "%partial_products_0_s = zext i128 %mul_ln1352 to i448" [sikehls/mult.cpp:32]   --->   Operation 128 'zext' 'partial_products_0_s' <Predicate = true> <Delay = 0.00>
 ST_7 : Operation 129 [1/5] (6.97ns)   --->   "%mul_ln1352_1 = mul i128 %zext_ln215_2, %zext_ln215_1" [sikehls/mult.cpp:32]   --->   Operation 129 'mul' 'mul_ln1352_1' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
@@ -537,7 +537,7 @@ ST_9 : Operation 207 [1/1] (0.00ns)   --->   "%sum_V_5_0 = phi i771 [ %sum_5_V, 
 ST_9 : Operation 208 [1/1] (0.00ns)   --->   "%sum_V_6_0 = phi i835 [ %sum_6_V, %_ZlsILi896ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit.0 ], [ 0, %.preheader.preheader ]"   --->   Operation 208 'phi' 'sum_V_6_0' <Predicate = true> <Delay = 0.00>
 ST_9 : Operation 209 [1/1] (0.00ns)   --->   "%i8_0 = phi i3 [ %i, %_ZlsILi896ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit.0 ], [ 0, %.preheader.preheader ]"   --->   Operation 209 'phi' 'i8_0' <Predicate = true> <Delay = 0.00>
 ST_9 : Operation 210 [1/1] (1.13ns)   --->   "%icmp_ln41 = icmp eq i3 %i8_0, -1" [sikehls/mult.cpp:41]   --->   Operation 210 'icmp' 'icmp_ln41' <Predicate = true> <Delay = 1.13> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_9 : Operation 211 [1/1] (0.00ns)   --->   "%empty_11 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 7, i64 7, i64 7)"   --->   Operation 211 'speclooptripcount' 'empty_11' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 211 [1/1] (0.00ns)   --->   "%empty_13 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 7, i64 7, i64 7)"   --->   Operation 211 'speclooptripcount' 'empty_13' <Predicate = true> <Delay = 0.00>
 ST_9 : Operation 212 [1/1] (1.65ns)   --->   "%i = add i3 %i8_0, 1" [sikehls/mult.cpp:41]   --->   Operation 212 'add' 'i' <Predicate = true> <Delay = 1.65> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_9 : Operation 213 [1/1] (0.00ns)   --->   "br i1 %icmp_ln41, label %0, label %_ZlsILi896ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit.0" [sikehls/mult.cpp:41]   --->   Operation 213 'br' <Predicate = true> <Delay = 0.00>
 ST_9 : Operation 214 [1/1] (0.00ns)   --->   "%partial_products_6_25 = load i448* %partial_products_6_s" [sikehls/mult.cpp:44]   --->   Operation 214 'load' 'partial_products_6_25' <Predicate = (!icmp_ln41)> <Delay = 0.00>
@@ -620,11 +620,11 @@ ST_9 : Operation 290 [1/1] (0.00ns)   --->   "%zext_ln41 = zext i451 %sum_V_0_0 
 ST_9 : Operation 291 [1/1] (0.00ns)   --->   "%zext_ln41_2 = zext i643 %sum_V_3_0 to i707" [sikehls/mult.cpp:41]   --->   Operation 291 'zext' 'zext_ln41_2' <Predicate = (icmp_ln41)> <Delay = 0.00>
 ST_9 : Operation 292 [1/1] (0.00ns)   --->   "%zext_ln41_3 = zext i771 %sum_V_5_0 to i835" [sikehls/mult.cpp:41]   --->   Operation 292 'zext' 'zext_ln41_3' <Predicate = (icmp_ln41)> <Delay = 0.00>
 ST_9 : Operation 293 [2/2] (3.44ns)   --->   "%add_ln209 = add i579 %zext_ln41, %sum_V_2_0" [sikehls/mult.cpp:51]   --->   Operation 293 'add' 'add_ln209' <Predicate = (icmp_ln41)> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_9 : Operation 294 [2/2] (3.44ns)   --->   "%add_ln209_14 = add i707 %zext_ln41_2, %sum_V_4_0" [sikehls/mult.cpp:51]   --->   Operation 294 'add' 'add_ln209_14' <Predicate = (icmp_ln41)> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_9 : Operation 295 [2/2] (3.44ns)   --->   "%add_ln209_15 = add i835 %zext_ln41_3, %sum_V_6_0" [sikehls/mult.cpp:51]   --->   Operation 295 'add' 'add_ln209_15' <Predicate = (icmp_ln41)> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 294 [2/2] (3.44ns)   --->   "%add_ln209_5 = add i707 %zext_ln41_2, %sum_V_4_0" [sikehls/mult.cpp:51]   --->   Operation 294 'add' 'add_ln209_5' <Predicate = (icmp_ln41)> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 295 [2/2] (3.44ns)   --->   "%add_ln209_6 = add i835 %zext_ln41_3, %sum_V_6_0" [sikehls/mult.cpp:51]   --->   Operation 295 'add' 'add_ln209_6' <Predicate = (icmp_ln41)> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 
 State 10 <SV = 4> <Delay = 3.44>
-ST_10 : Operation 296 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([6 x i8]* @p_str14) nounwind" [sikehls/mult.cpp:41]   --->   Operation 296 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 296 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([6 x i8]* @p_str1444) nounwind" [sikehls/mult.cpp:41]   --->   Operation 296 'specloopname' <Predicate = true> <Delay = 0.00>
 ST_10 : Operation 297 [1/2] (3.44ns)   --->   "%sum_0_V = add i451 %sum_V_0_0, %zext_ln700" [sikehls/mult.cpp:44]   --->   Operation 297 'add' 'sum_0_V' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_10 : Operation 298 [1/2] (3.44ns)   --->   "%sum_1_V = add i515 %sum_V_1_0, %zext_ln1503_4" [sikehls/mult.cpp:44]   --->   Operation 298 'add' 'sum_1_V' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_10 : Operation 299 [1/2] (3.44ns)   --->   "%sum_2_V = add i579 %sum_V_2_0, %zext_ln1503_5" [sikehls/mult.cpp:44]   --->   Operation 299 'add' 'sum_2_V' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
@@ -637,20 +637,20 @@ ST_10 : Operation 304 [1/1] (0.00ns)   --->   "br label %.preheader" [sikehls/mu
 State 11 <SV = 4> <Delay = 6.88>
 ST_11 : Operation 305 [1/1] (0.00ns)   --->   "%zext_ln41_1 = zext i515 %sum_V_1_0 to i579" [sikehls/mult.cpp:41]   --->   Operation 305 'zext' 'zext_ln41_1' <Predicate = true> <Delay = 0.00>
 ST_11 : Operation 306 [1/2] (3.44ns)   --->   "%add_ln209 = add i579 %zext_ln41, %sum_V_2_0" [sikehls/mult.cpp:51]   --->   Operation 306 'add' 'add_ln209' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_11 : Operation 307 [2/2] (3.44ns)   --->   "%add_ln209_13 = add i579 %add_ln209, %zext_ln41_1" [sikehls/mult.cpp:51]   --->   Operation 307 'add' 'add_ln209_13' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_11 : Operation 308 [1/2] (3.44ns)   --->   "%add_ln209_14 = add i707 %zext_ln41_2, %sum_V_4_0" [sikehls/mult.cpp:51]   --->   Operation 308 'add' 'add_ln209_14' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_11 : Operation 309 [1/1] (0.00ns)   --->   "%zext_ln209_1 = zext i707 %add_ln209_14 to i835" [sikehls/mult.cpp:51]   --->   Operation 309 'zext' 'zext_ln209_1' <Predicate = true> <Delay = 0.00>
-ST_11 : Operation 310 [1/2] (3.44ns)   --->   "%add_ln209_15 = add i835 %zext_ln41_3, %sum_V_6_0" [sikehls/mult.cpp:51]   --->   Operation 310 'add' 'add_ln209_15' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_11 : Operation 311 [2/2] (3.44ns)   --->   "%add_ln209_16 = add i835 %add_ln209_15, %zext_ln209_1" [sikehls/mult.cpp:51]   --->   Operation 311 'add' 'add_ln209_16' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 307 [2/2] (3.44ns)   --->   "%add_ln209_4 = add i579 %add_ln209, %zext_ln41_1" [sikehls/mult.cpp:51]   --->   Operation 307 'add' 'add_ln209_4' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 308 [1/2] (3.44ns)   --->   "%add_ln209_5 = add i707 %zext_ln41_2, %sum_V_4_0" [sikehls/mult.cpp:51]   --->   Operation 308 'add' 'add_ln209_5' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 309 [1/1] (0.00ns)   --->   "%zext_ln209_1 = zext i707 %add_ln209_5 to i835" [sikehls/mult.cpp:51]   --->   Operation 309 'zext' 'zext_ln209_1' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 310 [1/2] (3.44ns)   --->   "%add_ln209_6 = add i835 %zext_ln41_3, %sum_V_6_0" [sikehls/mult.cpp:51]   --->   Operation 310 'add' 'add_ln209_6' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 311 [2/2] (3.44ns)   --->   "%add_ln209_7 = add i835 %add_ln209_6, %zext_ln209_1" [sikehls/mult.cpp:51]   --->   Operation 311 'add' 'add_ln209_7' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 
 State 12 <SV = 5> <Delay = 6.88>
-ST_12 : Operation 312 [1/2] (3.44ns)   --->   "%add_ln209_13 = add i579 %add_ln209, %zext_ln41_1" [sikehls/mult.cpp:51]   --->   Operation 312 'add' 'add_ln209_13' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_12 : Operation 313 [1/1] (0.00ns)   --->   "%zext_ln209 = zext i579 %add_ln209_13 to i835" [sikehls/mult.cpp:51]   --->   Operation 313 'zext' 'zext_ln209' <Predicate = true> <Delay = 0.00>
-ST_12 : Operation 314 [1/2] (3.44ns)   --->   "%add_ln209_16 = add i835 %add_ln209_15, %zext_ln209_1" [sikehls/mult.cpp:51]   --->   Operation 314 'add' 'add_ln209_16' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_12 : Operation 315 [2/2] (3.44ns)   --->   "%mult_V = add i835 %add_ln209_16, %zext_ln209" [sikehls/mult.cpp:51]   --->   Operation 315 'add' 'mult_V' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 312 [1/2] (3.44ns)   --->   "%add_ln209_4 = add i579 %add_ln209, %zext_ln41_1" [sikehls/mult.cpp:51]   --->   Operation 312 'add' 'add_ln209_4' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 313 [1/1] (0.00ns)   --->   "%zext_ln209 = zext i579 %add_ln209_4 to i835" [sikehls/mult.cpp:51]   --->   Operation 313 'zext' 'zext_ln209' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 314 [1/2] (3.44ns)   --->   "%add_ln209_7 = add i835 %add_ln209_6, %zext_ln209_1" [sikehls/mult.cpp:51]   --->   Operation 314 'add' 'add_ln209_7' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 315 [2/2] (3.44ns)   --->   "%mult_V = add i835 %add_ln209_7, %zext_ln209" [sikehls/mult.cpp:51]   --->   Operation 315 'add' 'mult_V' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 
 State 13 <SV = 6> <Delay = 3.44>
-ST_13 : Operation 316 [1/2] (3.44ns)   --->   "%mult_V = add i835 %add_ln209_16, %zext_ln209" [sikehls/mult.cpp:51]   --->   Operation 316 'add' 'mult_V' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 316 [1/2] (3.44ns)   --->   "%mult_V = add i835 %add_ln209_7, %zext_ln209" [sikehls/mult.cpp:51]   --->   Operation 316 'add' 'mult_V' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_13 : Operation 317 [1/1] (0.00ns)   --->   "ret i835 %mult_V" [sikehls/mult.cpp:55]   --->   Operation 317 'ret' <Predicate = true> <Delay = 0.00>
 
 
@@ -753,7 +753,7 @@ br_ln28               (br               ) [ 00000000000000]
 tmp                   (specregionbegin  ) [ 00000000000000]
 tmp_1                 (mux              ) [ 00111111000000]
 switch_ln33           (switch           ) [ 00000000000000]
-empty_10              (specregionend    ) [ 00000000000000]
+empty_12              (specregionend    ) [ 00000000000000]
 br_ln28               (br               ) [ 01111111000000]
 zext_ln215_1          (zext             ) [ 00101111000000]
 specloopname_ln28     (specloopname     ) [ 00000000000000]
@@ -842,7 +842,7 @@ sum_V_5_0             (phi              ) [ 00000000011000]
 sum_V_6_0             (phi              ) [ 00000000011100]
 i8_0                  (phi              ) [ 00000000010000]
 icmp_ln41             (icmp             ) [ 00000000011000]
-empty_11              (speclooptripcount) [ 00000000000000]
+empty_13              (speclooptripcount) [ 00000000000000]
 i                     (add              ) [ 00000000111000]
 br_ln41               (br               ) [ 00000000000000]
 partial_products_6_25 (load             ) [ 00000000000000]
@@ -928,12 +928,12 @@ sum_6_V               (add              ) [ 00000000111000]
 br_ln41               (br               ) [ 00000000111000]
 zext_ln41_1           (zext             ) [ 00000000000010]
 add_ln209             (add              ) [ 00000000000010]
-add_ln209_14          (add              ) [ 00000000000000]
+add_ln209_5           (add              ) [ 00000000000000]
 zext_ln209_1          (zext             ) [ 00000000000010]
-add_ln209_15          (add              ) [ 00000000000010]
-add_ln209_13          (add              ) [ 00000000000000]
+add_ln209_6           (add              ) [ 00000000000010]
+add_ln209_4           (add              ) [ 00000000000000]
 zext_ln209            (zext             ) [ 00000000000001]
-add_ln209_16          (add              ) [ 00000000000001]
+add_ln209_7           (add              ) [ 00000000000001]
 mult_V                (add              ) [ 00000000000000]
 ret_ln55              (ret              ) [ 00000000000000]
 </LifeTime>
@@ -1153,7 +1153,7 @@ ret_ln55              (ret              ) [ 00000000000000]
 <pin id="47" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str12"/></StgValue>
+<StgValue><ssdm name="p_str1242"/></StgValue>
 </bind>
 </comp>
 
@@ -1252,7 +1252,7 @@ ret_ln55              (ret              ) [ 00000000000000]
 <pin id="69" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str9"/></StgValue>
+<StgValue><ssdm name="p_str939"/></StgValue>
 </bind>
 </comp>
 
@@ -1495,7 +1495,7 @@ ret_ln55              (ret              ) [ 00000000000000]
 <pin id="123" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str14"/></StgValue>
+<StgValue><ssdm name="p_str1444"/></StgValue>
 </bind>
 </comp>
 
@@ -4381,7 +4381,7 @@ ret_ln55              (ret              ) [ 00000000000000]
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="add_ln209_14/9 "/>
+<opset="add_ln209_5/9 "/>
 </bind>
 </comp>
 
@@ -4393,7 +4393,7 @@ ret_ln55              (ret              ) [ 00000000000000]
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="add_ln209_15/9 "/>
+<opset="add_ln209_6/9 "/>
 </bind>
 </comp>
 
@@ -4416,7 +4416,7 @@ ret_ln55              (ret              ) [ 00000000000000]
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="add_ln209_13/11 "/>
+<opset="add_ln209_4/11 "/>
 </bind>
 </comp>
 
@@ -4439,7 +4439,7 @@ ret_ln55              (ret              ) [ 00000000000000]
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="add_ln209_16/11 "/>
+<opset="add_ln209_7/11 "/>
 </bind>
 </comp>
 
@@ -5346,13 +5346,13 @@ ret_ln55              (ret              ) [ 00000000000000]
 </bind>
 </comp>
 
-<comp id="1940" class="1005" name="add_ln209_15_reg_1940">
+<comp id="1940" class="1005" name="add_ln209_6_reg_1940">
 <pin_list>
 <pin id="1941" dir="0" index="0" bw="835" slack="1"/>
 <pin id="1942" dir="1" index="1" bw="835" slack="1"/>
 </pin_list>
 <bind>
-<opset="add_ln209_15 "/>
+<opset="add_ln209_6 "/>
 </bind>
 </comp>
 
@@ -5366,13 +5366,13 @@ ret_ln55              (ret              ) [ 00000000000000]
 </bind>
 </comp>
 
-<comp id="1950" class="1005" name="add_ln209_16_reg_1950">
+<comp id="1950" class="1005" name="add_ln209_7_reg_1950">
 <pin_list>
 <pin id="1951" dir="0" index="0" bw="835" slack="1"/>
 <pin id="1952" dir="1" index="1" bw="835" slack="1"/>
 </pin_list>
 <bind>
-<opset="add_ln209_16 "/>
+<opset="add_ln209_7 "/>
 </bind>
 </comp>
 
@@ -6561,7 +6561,7 @@ ret_ln55              (ret              ) [ 00000000000000]
 		br_ln28 : 2
 		tmp_1 : 1
 		switch_ln33 : 1
-		empty_10 : 1
+		empty_12 : 1
 	State 3
 		mul_ln1352 : 1
 		mul_ln1352_1 : 1
@@ -6669,13 +6669,13 @@ ret_ln55              (ret              ) [ 00000000000000]
 		zext_ln41_2 : 1
 		zext_ln41_3 : 1
 		add_ln209 : 2
-		add_ln209_14 : 2
-		add_ln209_15 : 2
+		add_ln209_5 : 2
+		add_ln209_6 : 2
 	State 10
 	State 11
-		add_ln209_13 : 1
+		add_ln209_4 : 1
 		zext_ln209_1 : 1
-		add_ln209_16 : 2
+		add_ln209_7 : 2
 	State 12
 		zext_ln209 : 1
 		mult_V : 2
@@ -6795,8 +6795,8 @@ N/A
 +------------------------------+--------+
 |                              |   FF   |
 +------------------------------+--------+
-|     add_ln209_15_reg_1940    |   835  |
-|     add_ln209_16_reg_1950    |   835  |
+|     add_ln209_6_reg_1940     |   835  |
+|     add_ln209_7_reg_1950     |   835  |
 |      add_ln209_reg_1930      |   579  |
 |        ai_6_V_reg_1767       |   64   |
 |        bi_0_V_reg_1737       |   64   |

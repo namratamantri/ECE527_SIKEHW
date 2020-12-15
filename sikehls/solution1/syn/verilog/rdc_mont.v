@@ -29,7 +29,7 @@ input   ap_start;
 output   ap_done;
 output   ap_idle;
 output   ap_ready;
-input  [836:0] ma_V;
+input  [835:0] ma_V;
 output  [447:0] ap_return;
 
 reg ap_done;
@@ -39,11 +39,11 @@ reg[447:0] ap_return;
 
 (* fsm_encoding = "none" *) reg   [3:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
-reg   [836:0] ma_V_read_reg_83;
+reg  signed [835:0] ma_V_read_reg_87;
 wire   [447:0] ma_trunc_V_fu_38_p1;
-reg   [447:0] ma_trunc_V_reg_88;
+reg   [447:0] ma_trunc_V_reg_92;
 wire   [447:0] m_V_fu_51_p3;
-reg   [447:0] m_V_reg_93;
+reg   [447:0] m_V_reg_97;
 wire    ap_CS_fsm_state2;
 wire    grp_bc_mult_448_fu_30_ap_ready;
 wire    grp_bc_mult_448_fu_30_ap_done;
@@ -54,13 +54,15 @@ reg   [447:0] grp_bc_mult_448_fu_30_a_V;
 reg   [447:0] grp_bc_mult_448_fu_30_b_V;
 wire   [834:0] grp_bc_mult_448_fu_30_ap_return;
 reg    grp_bc_mult_448_fu_30_ap_start_reg;
+wire  signed [835:0] ma_trunc_V_fu_38_p0;
 wire   [0:0] tmp_fu_43_p3;
-wire   [836:0] grp_fu_64_p0;
-wire   [836:0] grp_fu_64_p2;
+wire   [836:0] grp_fu_67_p0;
+wire  signed [836:0] grp_fu_67_p1;
+wire   [836:0] grp_fu_67_p2;
 wire    ap_CS_fsm_state4;
-wire   [388:0] tmp_1_fu_69_p4;
-reg    grp_fu_64_ce;
-wire  signed [447:0] sext_ln1503_fu_79_p1;
+wire   [388:0] tmp_1_fu_73_p4;
+reg    grp_fu_67_ce;
+wire  signed [447:0] sext_ln1503_fu_83_p1;
 reg   [447:0] ap_return_preg;
 reg   [3:0] ap_NS_fsm;
 
@@ -83,19 +85,19 @@ bc_mult_448 grp_bc_mult_448_fu_30(
     .ap_return(grp_bc_mult_448_fu_30_ap_return)
 );
 
-xDBL_add_837ns_83kbM #(
+eval_4_isog_add_8mb6 #(
     .ID( 1 ),
     .NUM_STAGE( 2 ),
     .din0_WIDTH( 837 ),
     .din1_WIDTH( 837 ),
     .dout_WIDTH( 837 ))
-xDBL_add_837ns_83kbM_U44(
+eval_4_isog_add_8mb6_U44(
     .clk(ap_clk),
     .reset(ap_rst),
-    .din0(grp_fu_64_p0),
-    .din1(ma_V_read_reg_83),
-    .ce(grp_fu_64_ce),
-    .dout(grp_fu_64_p2)
+    .din0(grp_fu_67_p0),
+    .din1(grp_fu_67_p1),
+    .ce(grp_fu_67_ce),
+    .dout(grp_fu_67_p2)
 );
 
 always @ (posedge ap_clk) begin
@@ -111,7 +113,7 @@ always @ (posedge ap_clk) begin
         ap_return_preg <= 448'd0;
     end else begin
         if ((1'b1 == ap_CS_fsm_state4)) begin
-            ap_return_preg <= sext_ln1503_fu_79_p1;
+            ap_return_preg <= sext_ln1503_fu_83_p1;
         end
     end
 end
@@ -130,20 +132,20 @@ end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state4)) begin
-        ap_return <= sext_ln1503_fu_79_p1;
+        ap_return <= sext_ln1503_fu_83_p1;
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((grp_bc_mult_448_fu_30_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
-        m_V_reg_93[447] <= m_V_fu_51_p3[447];
+        m_V_reg_97[447] <= m_V_fu_51_p3[447];
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
-        ma_V_read_reg_83 <= ma_V;
-        ma_trunc_V_reg_88 <= ma_trunc_V_fu_38_p1;
+        ma_V_read_reg_87 <= ma_V;
+        ma_trunc_V_reg_92 <= ma_trunc_V_fu_38_p1;
     end
 end
 
@@ -173,9 +175,9 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state3)) begin
-        grp_bc_mult_448_fu_30_a_V = m_V_reg_93;
+        grp_bc_mult_448_fu_30_a_V = m_V_reg_97;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        grp_bc_mult_448_fu_30_a_V = ma_trunc_V_reg_88;
+        grp_bc_mult_448_fu_30_a_V = ma_trunc_V_reg_92;
     end else begin
         grp_bc_mult_448_fu_30_a_V = 'bx;
     end
@@ -193,9 +195,9 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state4) | ((grp_bc_mult_448_fu_30_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state3)))) begin
-        grp_fu_64_ce = 1'b1;
+        grp_fu_67_ce = 1'b1;
     end else begin
-        grp_fu_64_ce = 1'b0;
+        grp_fu_67_ce = 1'b0;
     end
 end
 
@@ -241,20 +243,24 @@ assign ap_CS_fsm_state4 = ap_CS_fsm[32'd3];
 
 assign grp_bc_mult_448_fu_30_ap_start = grp_bc_mult_448_fu_30_ap_start_reg;
 
-assign grp_fu_64_p0 = grp_bc_mult_448_fu_30_ap_return;
+assign grp_fu_67_p0 = grp_bc_mult_448_fu_30_ap_return;
+
+assign grp_fu_67_p1 = ma_V_read_reg_87;
 
 assign m_V_fu_51_p3 = {{tmp_fu_43_p3}, {447'd0}};
 
-assign ma_trunc_V_fu_38_p1 = ma_V[447:0];
+assign ma_trunc_V_fu_38_p0 = ma_V;
 
-assign sext_ln1503_fu_79_p1 = $signed(tmp_1_fu_69_p4);
+assign ma_trunc_V_fu_38_p1 = ma_trunc_V_fu_38_p0[447:0];
 
-assign tmp_1_fu_69_p4 = {{grp_fu_64_p2[836:448]}};
+assign sext_ln1503_fu_83_p1 = $signed(tmp_1_fu_73_p4);
+
+assign tmp_1_fu_73_p4 = {{grp_fu_67_p2[836:448]}};
 
 assign tmp_fu_43_p3 = grp_bc_mult_448_fu_30_ap_return[32'd447];
 
 always @ (posedge ap_clk) begin
-    m_V_reg_93[446:0] <= 447'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
+    m_V_reg_97[446:0] <= 447'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
 end
 
 endmodule //rdc_mont

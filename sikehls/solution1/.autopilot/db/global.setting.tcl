@@ -1,5 +1,5 @@
 
-set TopModule "xDBL"
+set TopModule "eval_4_isog"
 set ClockPeriod 10
 set ClockList ap_clk
 set HasVivadoClockPeriod 0
@@ -40,9 +40,9 @@ set SCTraceFileName mytrace
 set SCTraceFileFormat vcd
 set SCTraceOption all
 set TargetInfo xc7z020:-clg400:-1
-set SourceFiles {sc {} c {../mult.cpp ../fpx.cpp ../ec_isogeny.cpp}}
+set SourceFiles {sc {} c {../ec_isogeny.cpp ../fpx.cpp ../mult.cpp}}
 set SourceFlags {sc {} c {{} {} {}}}
-set DirectiveFile C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/solution1.directive
+set DirectiveFile C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/solution1.directive
 set TBFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
 set SpecLanguage C
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

@@ -49,46 +49,55 @@ void xDBL(const point_proj_t P, point_proj_t Q, const f2elm_t A24plus, const f2e
 
 
 
-//void get_4_isog(const point_proj_t P, f2elm_t A24plus, f2elm_t C24, f2elm_t* coeff)
-//{ // Computes the corresponding 4-isogeny of a projective Montgomery point (X4:Z4) of order 4.
-//  // Input:  projective point of order four P = (X4:Z4).
-//  // Output: the 4-isogenous Montgomery curve with projective coefficients A+2C/4C and the 3 coefficients
-//  //         that are used to evaluate the isogeny at a point in eval_4_isog().
+void get_4_isog(const point_proj_t P, f2elm_t A24plus, f2elm_t C24, f2elm_t coeff[3])
+{ // Computes the corresponding 4-isogeny of a projective Montgomery point (X4:Z4) of order 4.
+  // Input:  projective point of order four P = (X4:Z4).
+  // Output: the 4-isogenous Montgomery curve with projective coefficients A+2C/4C and the 3 coefficients
+  //         that are used to evaluate the isogeny at a point in eval_4_isog().
+#pragma HLS ALLOCATION instances=bc_mult_448 limit=2 function
+#pragma HLS ALLOCATION instances=mp_mul limit=1 function
+#pragma HLS ALLOCATION instances=rdc_mont limit=1 function
+#pragma HLS ALLOCATION instances=mp2_add limit=2 function
+#pragma HLS ALLOCATION instances=fp2sqr_mont limit=1 function
+    mp2_sub_p2(P->X, P->Z, coeff[1]);               // coeff[1] = X4-Z4
+    mp2_add(P->X, P->Z, coeff[2]);                  // coeff[2] = X4+Z4
+    fp2sqr_mont(P->Z, coeff[0]);                    // coeff[0] = Z4^2
+    mp2_add(coeff[0], coeff[0], coeff[0]);          // coeff[0] = 2*Z4^2
+    fp2sqr_mont(coeff[0], C24);                     // C24 = 4*Z4^4
+    mp2_add(coeff[0], coeff[0], coeff[0]);          // coeff[0] = 4*Z4^2
+    fp2sqr_mont(P->X, A24plus);                     // A24plus = X4^2
+    mp2_add(A24plus, A24plus, A24plus);             // A24plus = 2*X4^2
+    fp2sqr_mont(A24plus, A24plus);                  // A24plus = 4*X4^4
+}
 //
-//    mp2_sub_p2(P->X, P->Z, coeff[1]);               // coeff[1] = X4-Z4
-//    mp2_add(P->X, P->Z, coeff[2]);                  // coeff[2] = X4+Z4
-//    fp2sqr_mont(P->Z, coeff[0]);                    // coeff[0] = Z4^2
-//    mp2_add(coeff[0], coeff[0], coeff[0]);          // coeff[0] = 2*Z4^2
-//    fp2sqr_mont(coeff[0], C24);                     // C24 = 4*Z4^4
-//    mp2_add(coeff[0], coeff[0], coeff[0]);          // coeff[0] = 4*Z4^2
-//    fp2sqr_mont(P->X, A24plus);                     // A24plus = X4^2
-//    mp2_add(A24plus, A24plus, A24plus);             // A24plus = 2*X4^2
-//    fp2sqr_mont(A24plus, A24plus);                  // A24plus = 4*X4^4
-//}
 //
-//
-//void eval_4_isog(point_proj_t P, f2elm_t* coeff)
-//{ // Evaluates the isogeny at the point (X:Z) in the domain of the isogeny, given a 4-isogeny phi defined
-//  // by the 3 coefficients in coeff (computed in the function get_4_isog()).
-//  // Inputs: the coefficients defining the isogeny, and the projective point P = (X:Z).
-//  // Output: the projective point P = phi(P) = (X:Z) in the codomain.
-//    f2elm_t t0, t1;
-//
-//    mp2_add(P->X, P->Z, t0);                        // t0 = X+Z
-//    mp2_sub_p2(P->X, P->Z, t1);                     // t1 = X-Z
-//    fp2mul_mont(t0, coeff[1], P->X);                // X = (X+Z)*coeff[1]
-//    fp2mul_mont(t1, coeff[2], P->Z);                // Z = (X-Z)*coeff[2]
-//    fp2mul_mont(t0, t1, t0);                        // t0 = (X+Z)*(X-Z)
-//    fp2mul_mont(coeff[0], t0, t0);                  // t0 = coeff[0]*(X+Z)*(X-Z)
-//    mp2_add(P->X, P->Z, t1);                        // t1 = (X-Z)*coeff[2] + (X+Z)*coeff[1]
-//    mp2_sub_p2(P->X, P->Z, P->Z);                   // Z = (X-Z)*coeff[2] - (X+Z)*coeff[1]
-//    fp2sqr_mont(t1, t1);                            // t1 = [(X-Z)*coeff[2] + (X+Z)*coeff[1]]^2
-//    fp2sqr_mont(P->Z, P->Z);                        // Z = [(X-Z)*coeff[2] - (X+Z)*coeff[1]]^2
-//    mp2_add(t1, t0, P->X);                          // X = coeff[0]*(X+Z)*(X-Z) + [(X-Z)*coeff[2] + (X+Z)*coeff[1]]^2
-//    mp2_sub_p2(P->Z, t0, t0);                       // t0 = [(X-Z)*coeff[2] - (X+Z)*coeff[1]]^2 - coeff[0]*(X+Z)*(X-Z)
-//    fp2mul_mont(P->X, t1, P->X);                    // Xfinal
-//    fp2mul_mont(P->Z, t0, P->Z);                    // Zfinal
-//}
+void eval_4_isog(point_proj_t P, f2elm_t coeff[3])
+{ // Evaluates the isogeny at the point (X:Z) in the domain of the isogeny, given a 4-isogeny phi defined
+  // by the 3 coefficients in coeff (computed in the function get_4_isog()).
+  // Inputs: the coefficients defining the isogeny, and the projective point P = (X:Z).
+  // Output: the projective point P = phi(P) = (X:Z) in the codomain.
+#pragma HLS ALLOCATION instances=mp_mul limit=1 function
+#pragma HLS ALLOCATION instances=mp2_add limit=2 function
+#pragma HLS ALLOCATION instances=rdc_mont limit=1 function
+
+
+	f2elm_t t0, t1;
+
+    mp2_add(P->X, P->Z, t0);                        // t0 = X+Z
+    mp2_sub_p2(P->X, P->Z, t1);                     // t1 = X-Z
+    fp2mul_mont(t0, coeff[1], P->X);                // X = (X+Z)*coeff[1]
+    fp2mul_mont(t1, coeff[2], P->Z);                // Z = (X-Z)*coeff[2]
+    fp2mul_mont(t0, t1, t0);                        // t0 = (X+Z)*(X-Z)
+    fp2mul_mont(coeff[0], t0, t0);                  // t0 = coeff[0]*(X+Z)*(X-Z)
+    mp2_add(P->X, P->Z, t1);                        // t1 = (X-Z)*coeff[2] + (X+Z)*coeff[1]
+    mp2_sub_p2(P->X, P->Z, P->Z);                   // Z = (X-Z)*coeff[2] - (X+Z)*coeff[1]
+    fp2sqr_mont(t1, t1);                            // t1 = [(X-Z)*coeff[2] + (X+Z)*coeff[1]]^2
+    fp2sqr_mont(P->Z, P->Z);                        // Z = [(X-Z)*coeff[2] - (X+Z)*coeff[1]]^2
+    mp2_add(t1, t0, P->X);                          // X = coeff[0]*(X+Z)*(X-Z) + [(X-Z)*coeff[2] + (X+Z)*coeff[1]]^2
+    mp2_sub_p2(P->Z, t0, t0);                       // t0 = [(X-Z)*coeff[2] - (X+Z)*coeff[1]]^2 - coeff[0]*(X+Z)*(X-Z)
+    fp2mul_mont(P->X, t1, P->X);                    // Xfinal
+    fp2mul_mont(P->Z, t0, P->Z);                    // Zfinal
+}
 //
 //
 //void xTPL(const point_proj_t P, point_proj_t Q, const f2elm_t A24minus, const f2elm_t A24plus)

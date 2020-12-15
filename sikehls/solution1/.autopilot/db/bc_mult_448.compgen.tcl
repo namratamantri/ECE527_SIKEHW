@@ -1,7 +1,7 @@
 # This script segment is generated automatically by AutoPilot
 
 set id 1
-set name xDBL_mux_73_64_1_1
+set name eval_4_isog_mux_7bkb
 set corename simcore_mux
 set op mux
 set stage_num 1
@@ -104,7 +104,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_pipemux, check your
 
 
 set id 2
-set name xDBL_mul_64ns_64nbkb
+set name eval_4_isog_mul_6cud
 set corename simcore_mul
 set op mul
 set stage_num 5
@@ -189,7 +189,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_multicycle_mul, che
 
 
 set id 8
-set name xDBL_mul_64s_64s_cud
+set name eval_4_isog_mul_6dEe
 set corename simcore_mul
 set op mul
 set stage_num 5
@@ -274,7 +274,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_multicycle_mul, che
 
 
 set id 9
-set name xDBL_mux_73_448_1_1
+set name eval_4_isog_mux_7eOg
 set corename simcore_mux
 set op mux
 set stage_num 1
@@ -377,7 +377,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_pipemux, check your
 
 
 set id 10
-set name xDBL_add_451ns_45dEe
+set name eval_4_isog_add_4fYi
 set corename simcore_add
 set op add
 set stage_num 2
@@ -462,7 +462,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_pipeaddsub, check y
 
 
 set id 12
-set name xDBL_add_515ns_51eOg
+set name eval_4_isog_add_5g8j
 set corename simcore_add
 set op add
 set stage_num 2
@@ -547,7 +547,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_pipeaddsub, check y
 
 
 set id 14
-set name xDBL_add_579ns_57fYi
+set name eval_4_isog_add_5hbi
 set corename simcore_add
 set op add
 set stage_num 2
@@ -632,7 +632,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_pipeaddsub, check y
 
 
 set id 16
-set name xDBL_add_643ns_64g8j
+set name eval_4_isog_add_6ibs
 set corename simcore_add
 set op add
 set stage_num 2
@@ -717,7 +717,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_pipeaddsub, check y
 
 
 set id 18
-set name xDBL_add_707ns_70hbi
+set name eval_4_isog_add_7jbC
 set corename simcore_add
 set op add
 set stage_num 2
@@ -802,7 +802,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_pipeaddsub, check y
 
 
 set id 20
-set name xDBL_add_771ns_77ibs
+set name eval_4_isog_add_7kbM
 set corename simcore_add
 set op add
 set stage_num 2
@@ -887,7 +887,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_pipeaddsub, check y
 
 
 set id 22
-set name xDBL_add_835ns_83jbC
+set name eval_4_isog_add_8lbW
 set corename simcore_add
 set op add
 set stage_num 2

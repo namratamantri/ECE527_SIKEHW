@@ -289,7 +289,7 @@ architecture behav of bc_mult_448 is
     signal ap_idle_pp0 : STD_LOGIC;
     signal ap_enable_pp0 : STD_LOGIC;
 
-    component xDBL_mux_73_64_1_1 IS
+    component eval_4_isog_mux_7bkb IS
     generic (
         ID : INTEGER;
         NUM_STAGE : INTEGER;
@@ -315,7 +315,7 @@ architecture behav of bc_mult_448 is
     end component;
 
 
-    component xDBL_mul_64ns_64nbkb IS
+    component eval_4_isog_mul_6cud IS
     generic (
         ID : INTEGER;
         NUM_STAGE : INTEGER;
@@ -332,7 +332,7 @@ architecture behav of bc_mult_448 is
     end component;
 
 
-    component xDBL_mul_64s_64s_cud IS
+    component eval_4_isog_mul_6dEe IS
     generic (
         ID : INTEGER;
         NUM_STAGE : INTEGER;
@@ -349,7 +349,7 @@ architecture behav of bc_mult_448 is
     end component;
 
 
-    component xDBL_mux_73_448_1_1 IS
+    component eval_4_isog_mux_7eOg IS
     generic (
         ID : INTEGER;
         NUM_STAGE : INTEGER;
@@ -375,7 +375,7 @@ architecture behav of bc_mult_448 is
     end component;
 
 
-    component xDBL_add_451ns_45dEe IS
+    component eval_4_isog_add_4fYi IS
     generic (
         ID : INTEGER;
         NUM_STAGE : INTEGER;
@@ -392,7 +392,7 @@ architecture behav of bc_mult_448 is
     end component;
 
 
-    component xDBL_add_515ns_51eOg IS
+    component eval_4_isog_add_5g8j IS
     generic (
         ID : INTEGER;
         NUM_STAGE : INTEGER;
@@ -409,7 +409,7 @@ architecture behav of bc_mult_448 is
     end component;
 
 
-    component xDBL_add_579ns_57fYi IS
+    component eval_4_isog_add_5hbi IS
     generic (
         ID : INTEGER;
         NUM_STAGE : INTEGER;
@@ -426,7 +426,7 @@ architecture behav of bc_mult_448 is
     end component;
 
 
-    component xDBL_add_643ns_64g8j IS
+    component eval_4_isog_add_6ibs IS
     generic (
         ID : INTEGER;
         NUM_STAGE : INTEGER;
@@ -443,7 +443,7 @@ architecture behav of bc_mult_448 is
     end component;
 
 
-    component xDBL_add_707ns_70hbi IS
+    component eval_4_isog_add_7jbC IS
     generic (
         ID : INTEGER;
         NUM_STAGE : INTEGER;
@@ -460,7 +460,7 @@ architecture behav of bc_mult_448 is
     end component;
 
 
-    component xDBL_add_771ns_77ibs IS
+    component eval_4_isog_add_7kbM IS
     generic (
         ID : INTEGER;
         NUM_STAGE : INTEGER;
@@ -477,7 +477,7 @@ architecture behav of bc_mult_448 is
     end component;
 
 
-    component xDBL_add_835ns_83jbC IS
+    component eval_4_isog_add_8lbW IS
     generic (
         ID : INTEGER;
         NUM_STAGE : INTEGER;
@@ -496,7 +496,7 @@ architecture behav of bc_mult_448 is
 
 
 begin
-    xDBL_mux_73_64_1_1_U1 : component xDBL_mux_73_64_1_1
+    eval_4_isog_mux_7bkb_U1 : component eval_4_isog_mux_7bkb
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -520,7 +520,7 @@ begin
         din7 => ap_phi_mux_i7_0_phi_fu_336_p4,
         dout => tmp_1_fu_603_p9);
 
-    xDBL_mul_64ns_64nbkb_U2 : component xDBL_mul_64ns_64nbkb
+    eval_4_isog_mul_6cud_U2 : component eval_4_isog_mul_6cud
     generic map (
         ID => 1,
         NUM_STAGE => 5,
@@ -535,7 +535,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_619_p2);
 
-    xDBL_mul_64ns_64nbkb_U3 : component xDBL_mul_64ns_64nbkb
+    eval_4_isog_mul_6cud_U3 : component eval_4_isog_mul_6cud
     generic map (
         ID => 1,
         NUM_STAGE => 5,
@@ -550,7 +550,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_624_p2);
 
-    xDBL_mul_64ns_64nbkb_U4 : component xDBL_mul_64ns_64nbkb
+    eval_4_isog_mul_6cud_U4 : component eval_4_isog_mul_6cud
     generic map (
         ID => 1,
         NUM_STAGE => 5,
@@ -565,7 +565,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_629_p2);
 
-    xDBL_mul_64ns_64nbkb_U5 : component xDBL_mul_64ns_64nbkb
+    eval_4_isog_mul_6cud_U5 : component eval_4_isog_mul_6cud
     generic map (
         ID => 1,
         NUM_STAGE => 5,
@@ -580,7 +580,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_634_p2);
 
-    xDBL_mul_64ns_64nbkb_U6 : component xDBL_mul_64ns_64nbkb
+    eval_4_isog_mul_6cud_U6 : component eval_4_isog_mul_6cud
     generic map (
         ID => 1,
         NUM_STAGE => 5,
@@ -595,7 +595,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_639_p2);
 
-    xDBL_mul_64ns_64nbkb_U7 : component xDBL_mul_64ns_64nbkb
+    eval_4_isog_mul_6cud_U7 : component eval_4_isog_mul_6cud
     generic map (
         ID => 1,
         NUM_STAGE => 5,
@@ -610,7 +610,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_644_p2);
 
-    xDBL_mul_64s_64s_cud_U8 : component xDBL_mul_64s_64s_cud
+    eval_4_isog_mul_6dEe_U8 : component eval_4_isog_mul_6dEe
     generic map (
         ID => 1,
         NUM_STAGE => 5,
@@ -625,7 +625,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_649_p2);
 
-    xDBL_mux_73_448_1_1_U9 : component xDBL_mux_73_448_1_1
+    eval_4_isog_mux_7eOg_U9 : component eval_4_isog_mux_7eOg
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -649,7 +649,7 @@ begin
         din7 => i8_0_reg_428,
         dout => tmp_2_fu_1125_p9);
 
-    xDBL_add_451ns_45dEe_U10 : component xDBL_add_451ns_45dEe
+    eval_4_isog_add_4fYi_U10 : component eval_4_isog_add_4fYi
     generic map (
         ID => 1,
         NUM_STAGE => 2,
@@ -664,7 +664,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_1149_p2);
 
-    xDBL_mux_73_448_1_1_U11 : component xDBL_mux_73_448_1_1
+    eval_4_isog_mux_7eOg_U11 : component eval_4_isog_mux_7eOg
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -688,7 +688,7 @@ begin
         din7 => i8_0_reg_428,
         dout => tmp_3_fu_1155_p9);
 
-    xDBL_add_515ns_51eOg_U12 : component xDBL_add_515ns_51eOg
+    eval_4_isog_add_5g8j_U12 : component eval_4_isog_add_5g8j
     generic map (
         ID => 1,
         NUM_STAGE => 2,
@@ -703,7 +703,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_1187_p2);
 
-    xDBL_mux_73_448_1_1_U13 : component xDBL_mux_73_448_1_1
+    eval_4_isog_mux_7eOg_U13 : component eval_4_isog_mux_7eOg
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -727,7 +727,7 @@ begin
         din7 => i8_0_reg_428,
         dout => tmp_4_fu_1193_p9);
 
-    xDBL_add_579ns_57fYi_U14 : component xDBL_add_579ns_57fYi
+    eval_4_isog_add_5hbi_U14 : component eval_4_isog_add_5hbi
     generic map (
         ID => 1,
         NUM_STAGE => 2,
@@ -742,7 +742,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_1225_p2);
 
-    xDBL_mux_73_448_1_1_U15 : component xDBL_mux_73_448_1_1
+    eval_4_isog_mux_7eOg_U15 : component eval_4_isog_mux_7eOg
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -766,7 +766,7 @@ begin
         din7 => i8_0_reg_428,
         dout => tmp_5_fu_1231_p9);
 
-    xDBL_add_643ns_64g8j_U16 : component xDBL_add_643ns_64g8j
+    eval_4_isog_add_6ibs_U16 : component eval_4_isog_add_6ibs
     generic map (
         ID => 1,
         NUM_STAGE => 2,
@@ -781,7 +781,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_1263_p2);
 
-    xDBL_mux_73_448_1_1_U17 : component xDBL_mux_73_448_1_1
+    eval_4_isog_mux_7eOg_U17 : component eval_4_isog_mux_7eOg
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -805,7 +805,7 @@ begin
         din7 => i8_0_reg_428,
         dout => tmp_6_fu_1269_p9);
 
-    xDBL_add_707ns_70hbi_U18 : component xDBL_add_707ns_70hbi
+    eval_4_isog_add_7jbC_U18 : component eval_4_isog_add_7jbC
     generic map (
         ID => 1,
         NUM_STAGE => 2,
@@ -820,7 +820,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_1301_p2);
 
-    xDBL_mux_73_448_1_1_U19 : component xDBL_mux_73_448_1_1
+    eval_4_isog_mux_7eOg_U19 : component eval_4_isog_mux_7eOg
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -844,7 +844,7 @@ begin
         din7 => i8_0_reg_428,
         dout => tmp_7_fu_1307_p9);
 
-    xDBL_add_771ns_77ibs_U20 : component xDBL_add_771ns_77ibs
+    eval_4_isog_add_7kbM_U20 : component eval_4_isog_add_7kbM
     generic map (
         ID => 1,
         NUM_STAGE => 2,
@@ -859,7 +859,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_1339_p2);
 
-    xDBL_mux_73_448_1_1_U21 : component xDBL_mux_73_448_1_1
+    eval_4_isog_mux_7eOg_U21 : component eval_4_isog_mux_7eOg
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -883,7 +883,7 @@ begin
         din7 => i8_0_reg_428,
         dout => tmp_8_fu_1345_p9);
 
-    xDBL_add_835ns_83jbC_U22 : component xDBL_add_835ns_83jbC
+    eval_4_isog_add_8lbW_U22 : component eval_4_isog_add_8lbW
     generic map (
         ID => 1,
         NUM_STAGE => 2,
@@ -898,7 +898,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_1377_p2);
 
-    xDBL_add_579ns_57fYi_U23 : component xDBL_add_579ns_57fYi
+    eval_4_isog_add_5hbi_U23 : component eval_4_isog_add_5hbi
     generic map (
         ID => 1,
         NUM_STAGE => 2,
@@ -913,7 +913,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_1395_p2);
 
-    xDBL_add_707ns_70hbi_U24 : component xDBL_add_707ns_70hbi
+    eval_4_isog_add_7jbC_U24 : component eval_4_isog_add_7jbC
     generic map (
         ID => 1,
         NUM_STAGE => 2,
@@ -928,7 +928,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_1401_p2);
 
-    xDBL_add_835ns_83jbC_U25 : component xDBL_add_835ns_83jbC
+    eval_4_isog_add_8lbW_U25 : component eval_4_isog_add_8lbW
     generic map (
         ID => 1,
         NUM_STAGE => 2,
@@ -943,7 +943,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_1407_p2);
 
-    xDBL_add_579ns_57fYi_U26 : component xDBL_add_579ns_57fYi
+    eval_4_isog_add_5hbi_U26 : component eval_4_isog_add_5hbi
     generic map (
         ID => 1,
         NUM_STAGE => 2,
@@ -958,7 +958,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_1417_p2);
 
-    xDBL_add_835ns_83jbC_U27 : component xDBL_add_835ns_83jbC
+    eval_4_isog_add_8lbW_U27 : component eval_4_isog_add_8lbW
     generic map (
         ID => 1,
         NUM_STAGE => 2,
@@ -973,7 +973,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_1427_p2);
 
-    xDBL_add_835ns_83jbC_U28 : component xDBL_add_835ns_83jbC
+    eval_4_isog_add_8lbW_U28 : component eval_4_isog_add_8lbW
     generic map (
         ID => 1,
         NUM_STAGE => 2,

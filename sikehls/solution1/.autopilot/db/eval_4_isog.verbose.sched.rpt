@@ -1,0 +1,604 @@
+
+
+================================================================
+== Vivado HLS Report for 'eval_4_isog'
+================================================================
+* Date:           Tue Dec 15 15:56:12 2020
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        sikehls
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     7.360|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +------+------+------+------+---------+
+    |   Latency   |   Interval  | Pipeline|
+    |  min |  max |  min |  max |   Type  |
+    +------+------+------+------+---------+
+    |  1379|  1379|  1379|  1379|   none  |
+    +------+------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 32
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 26 
+26 --> 27 
+27 --> 28 
+28 --> 29 
+29 --> 30 
+30 --> 31 
+31 --> 32 
+32 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.32>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%P_X_V_addr = getelementptr [2 x i448]* %P_X_V, i64 0, i64 0" [sikehls/fpx.cpp:132->sikehls/ec_isogeny.cpp:86]   --->   Operation 33 'getelementptr' 'P_X_V_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%P_Z_V_addr = getelementptr [2 x i448]* %P_Z_V, i64 0, i64 0" [sikehls/fpx.cpp:132->sikehls/ec_isogeny.cpp:86]   --->   Operation 34 'getelementptr' 'P_Z_V_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [2/2] (2.32ns)   --->   "%P_X_V_load = load i448* %P_X_V_addr, align 8" [sikehls/fpx.cpp:135->sikehls/ec_isogeny.cpp:86]   --->   Operation 35 'load' 'P_X_V_load' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 448> <Depth = 2> <RAM>
+ST_1 : Operation 36 [2/2] (2.32ns)   --->   "%P_Z_V_load = load i448* %P_Z_V_addr, align 8" [sikehls/fpx.cpp:135->sikehls/ec_isogeny.cpp:86]   --->   Operation 36 'load' 'P_Z_V_load' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 448> <Depth = 2> <RAM>
+
+State 2 <SV = 1> <Delay = 5.76>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "%P_X_V_addr_1 = getelementptr [2 x i448]* %P_X_V, i64 0, i64 1" [sikehls/fpx.cpp:136->sikehls/ec_isogeny.cpp:86]   --->   Operation 37 'getelementptr' 'P_X_V_addr_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%P_Z_V_addr_1 = getelementptr [2 x i448]* %P_Z_V, i64 0, i64 1" [sikehls/fpx.cpp:136->sikehls/ec_isogeny.cpp:86]   --->   Operation 38 'getelementptr' 'P_Z_V_addr_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "%coeff_V_addr = getelementptr [6 x i448]* %coeff_V, i64 0, i64 2" [sikehls/fpx.cpp:171->sikehls/ec_isogeny.cpp:88]   --->   Operation 39 'getelementptr' 'coeff_V_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 40 [1/2] (2.32ns)   --->   "%P_X_V_load = load i448* %P_X_V_addr, align 8" [sikehls/fpx.cpp:135->sikehls/ec_isogeny.cpp:86]   --->   Operation 40 'load' 'P_X_V_load' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 448> <Depth = 2> <RAM>
+ST_2 : Operation 41 [1/2] (2.32ns)   --->   "%P_Z_V_load = load i448* %P_Z_V_addr, align 8" [sikehls/fpx.cpp:135->sikehls/ec_isogeny.cpp:86]   --->   Operation 41 'load' 'P_Z_V_load' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 448> <Depth = 2> <RAM>
+ST_2 : Operation 42 [2/2] (3.44ns)   --->   "%t0_0_V = add i448 %P_Z_V_load, %P_X_V_load" [sikehls/fpx.cpp:135->sikehls/ec_isogeny.cpp:86]   --->   Operation 42 'add' 't0_0_V' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 43 [2/2] (2.32ns)   --->   "%P_X_V_load_1 = load i448* %P_X_V_addr_1, align 8" [sikehls/fpx.cpp:136->sikehls/ec_isogeny.cpp:86]   --->   Operation 43 'load' 'P_X_V_load_1' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 448> <Depth = 2> <RAM>
+ST_2 : Operation 44 [2/2] (2.32ns)   --->   "%P_Z_V_load_1 = load i448* %P_Z_V_addr_1, align 8" [sikehls/fpx.cpp:136->sikehls/ec_isogeny.cpp:86]   --->   Operation 44 'load' 'P_Z_V_load_1' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 448> <Depth = 2> <RAM>
+ST_2 : Operation 45 [2/2] (3.44ns)   --->   "%add_ln214 = add i448 48878847322690443103818290022914987238171560487523193022651614672410442478663953451940433343657236891797438053385769878684629467134, %P_X_V_load" [sikehls/fpx.cpp:10->sikehls/fpx.cpp:143->sikehls/ec_isogeny.cpp:87]   --->   Operation 45 'add' 'add_ln214' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 46 [2/2] (3.25ns)   --->   "%coeff_V_load = load i448* %coeff_V_addr, align 8" [sikehls/fpx.cpp:179->sikehls/ec_isogeny.cpp:88]   --->   Operation 46 'load' 'coeff_V_load' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 448> <Depth = 2> <RAM>
+
+State 3 <SV = 2> <Delay = 6.88>
+ST_3 : Operation 47 [1/1] (0.00ns)   --->   "%coeff_V_addr_1 = getelementptr [6 x i448]* %coeff_V, i64 0, i64 3" [sikehls/fpx.cpp:179->sikehls/ec_isogeny.cpp:88]   --->   Operation 47 'getelementptr' 'coeff_V_addr_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 48 [1/2] (3.44ns)   --->   "%t0_0_V = add i448 %P_Z_V_load, %P_X_V_load" [sikehls/fpx.cpp:135->sikehls/ec_isogeny.cpp:86]   --->   Operation 48 'add' 't0_0_V' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 49 [1/2] (2.32ns)   --->   "%P_X_V_load_1 = load i448* %P_X_V_addr_1, align 8" [sikehls/fpx.cpp:136->sikehls/ec_isogeny.cpp:86]   --->   Operation 49 'load' 'P_X_V_load_1' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 448> <Depth = 2> <RAM>
+ST_3 : Operation 50 [1/2] (2.32ns)   --->   "%P_Z_V_load_1 = load i448* %P_Z_V_addr_1, align 8" [sikehls/fpx.cpp:136->sikehls/ec_isogeny.cpp:86]   --->   Operation 50 'load' 'P_Z_V_load_1' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 448> <Depth = 2> <RAM>
+ST_3 : Operation 51 [2/2] (3.44ns)   --->   "%t0_1_V = add i448 %P_Z_V_load_1, %P_X_V_load_1" [sikehls/fpx.cpp:136->sikehls/ec_isogeny.cpp:86]   --->   Operation 51 'add' 't0_1_V' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 52 [1/2] (3.44ns)   --->   "%add_ln214 = add i448 48878847322690443103818290022914987238171560487523193022651614672410442478663953451940433343657236891797438053385769878684629467134, %P_X_V_load" [sikehls/fpx.cpp:10->sikehls/fpx.cpp:143->sikehls/ec_isogeny.cpp:87]   --->   Operation 52 'add' 'add_ln214' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 53 [2/2] (3.44ns)   --->   "%t1_0_V = sub i448 %add_ln214, %P_Z_V_load" [sikehls/fpx.cpp:10->sikehls/fpx.cpp:143->sikehls/ec_isogeny.cpp:87]   --->   Operation 53 'sub' 't1_0_V' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 54 [2/2] (3.44ns)   --->   "%add_ln214_1 = add i448 48878847322690443103818290022914987238171560487523193022651614672410442478663953451940433343657236891797438053385769878684629467134, %P_X_V_load_1" [sikehls/fpx.cpp:10->sikehls/fpx.cpp:144->sikehls/ec_isogeny.cpp:87]   --->   Operation 54 'add' 'add_ln214_1' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 55 [1/2] (3.25ns)   --->   "%coeff_V_load = load i448* %coeff_V_addr, align 8" [sikehls/fpx.cpp:179->sikehls/ec_isogeny.cpp:88]   --->   Operation 55 'load' 'coeff_V_load' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 448> <Depth = 2> <RAM>
+ST_3 : Operation 56 [2/2] (3.25ns)   --->   "%coeff_V_load_1 = load i448* %coeff_V_addr_1, align 8" [sikehls/fpx.cpp:179->sikehls/ec_isogeny.cpp:88]   --->   Operation 56 'load' 'coeff_V_load_1' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 448> <Depth = 2> <RAM>
+ST_3 : Operation 57 [2/2] (2.40ns)   --->   "%tt1_V = call fastcc i835 @mp_mul(i448 %t0_0_V, i448 %coeff_V_load)" [sikehls/fpx.cpp:180->sikehls/ec_isogeny.cpp:88]   --->   Operation 57 'call' 'tt1_V' <Predicate = true> <Delay = 2.40> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 6.88>
+ST_4 : Operation 58 [1/2] (3.44ns)   --->   "%t0_1_V = add i448 %P_Z_V_load_1, %P_X_V_load_1" [sikehls/fpx.cpp:136->sikehls/ec_isogeny.cpp:86]   --->   Operation 58 'add' 't0_1_V' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 59 [1/2] (3.44ns)   --->   "%t1_0_V = sub i448 %add_ln214, %P_Z_V_load" [sikehls/fpx.cpp:10->sikehls/fpx.cpp:143->sikehls/ec_isogeny.cpp:87]   --->   Operation 59 'sub' 't1_0_V' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 60 [1/2] (3.44ns)   --->   "%add_ln214_1 = add i448 48878847322690443103818290022914987238171560487523193022651614672410442478663953451940433343657236891797438053385769878684629467134, %P_X_V_load_1" [sikehls/fpx.cpp:10->sikehls/fpx.cpp:144->sikehls/ec_isogeny.cpp:87]   --->   Operation 60 'add' 'add_ln214_1' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 61 [2/2] (3.44ns)   --->   "%t1_1_V = sub i448 %add_ln214_1, %P_Z_V_load_1" [sikehls/fpx.cpp:10->sikehls/fpx.cpp:144->sikehls/ec_isogeny.cpp:87]   --->   Operation 61 'sub' 't1_1_V' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 62 [1/2] (3.25ns)   --->   "%coeff_V_load_1 = load i448* %coeff_V_addr_1, align 8" [sikehls/fpx.cpp:179->sikehls/ec_isogeny.cpp:88]   --->   Operation 62 'load' 'coeff_V_load_1' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 448> <Depth = 2> <RAM>
+ST_4 : Operation 63 [2/2] (3.44ns)   --->   "%t2_V = add i448 %coeff_V_load_1, %coeff_V_load" [sikehls/fpx.cpp:179->sikehls/ec_isogeny.cpp:88]   --->   Operation 63 'add' 't2_V' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 64 [1/2] (3.44ns)   --->   "%tt1_V = call fastcc i835 @mp_mul(i448 %t0_0_V, i448 %coeff_V_load)" [sikehls/fpx.cpp:180->sikehls/ec_isogeny.cpp:88]   --->   Operation 64 'call' 'tt1_V' <Predicate = true> <Delay = 3.44> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 65 [2/2] (2.40ns)   --->   "%tt2_V = call fastcc i835 @mp_mul(i448 %t0_1_V, i448 %coeff_V_load_1)" [sikehls/fpx.cpp:181->sikehls/ec_isogeny.cpp:88]   --->   Operation 65 'call' 'tt2_V' <Predicate = true> <Delay = 2.40> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 6.88>
+ST_5 : Operation 66 [1/1] (0.00ns)   --->   "%coeff_V_addr_2 = getelementptr [6 x i448]* %coeff_V, i64 0, i64 4" [sikehls/fpx.cpp:171->sikehls/ec_isogeny.cpp:89]   --->   Operation 66 'getelementptr' 'coeff_V_addr_2' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 67 [1/2] (3.44ns)   --->   "%t1_1_V = sub i448 %add_ln214_1, %P_Z_V_load_1" [sikehls/fpx.cpp:10->sikehls/fpx.cpp:144->sikehls/ec_isogeny.cpp:87]   --->   Operation 67 'sub' 't1_1_V' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 68 [1/2] (3.44ns)   --->   "%t2_V = add i448 %coeff_V_load_1, %coeff_V_load" [sikehls/fpx.cpp:179->sikehls/ec_isogeny.cpp:88]   --->   Operation 68 'add' 't2_V' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 69 [1/1] (0.00ns)   --->   "%zext_ln180 = zext i835 %tt1_V to i836" [sikehls/fpx.cpp:180->sikehls/ec_isogeny.cpp:88]   --->   Operation 69 'zext' 'zext_ln180' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 70 [1/2] (3.44ns)   --->   "%tt2_V = call fastcc i835 @mp_mul(i448 %t0_1_V, i448 %coeff_V_load_1)" [sikehls/fpx.cpp:181->sikehls/ec_isogeny.cpp:88]   --->   Operation 70 'call' 'tt2_V' <Predicate = true> <Delay = 3.44> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 71 [1/1] (0.00ns)   --->   "%zext_ln181 = zext i835 %tt2_V to i836" [sikehls/fpx.cpp:181->sikehls/ec_isogeny.cpp:88]   --->   Operation 71 'zext' 'zext_ln181' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 72 [2/2] (3.44ns)   --->   "%tt3_V = sub i836 %zext_ln180, %zext_ln181" [sikehls/fpx.cpp:183->sikehls/ec_isogeny.cpp:88]   --->   Operation 72 'sub' 'tt3_V' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 73 [2/2] (3.25ns)   --->   "%coeff_V_load_2 = load i448* %coeff_V_addr_2, align 8" [sikehls/fpx.cpp:179->sikehls/ec_isogeny.cpp:89]   --->   Operation 73 'load' 'coeff_V_load_2' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 448> <Depth = 2> <RAM>
+
+State 6 <SV = 5> <Delay = 7.35>
+ST_6 : Operation 74 [1/1] (0.00ns)   --->   "%coeff_V_addr_3 = getelementptr [6 x i448]* %coeff_V, i64 0, i64 5" [sikehls/fpx.cpp:179->sikehls/ec_isogeny.cpp:89]   --->   Operation 74 'getelementptr' 'coeff_V_addr_3' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 75 [1/2] (3.44ns)   --->   "%tt3_V = sub i836 %zext_ln180, %zext_ln181" [sikehls/fpx.cpp:183->sikehls/ec_isogeny.cpp:88]   --->   Operation 75 'sub' 'tt3_V' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 76 [2/2] (3.91ns)   --->   "%call_ret2_i = call fastcc i448 @rdc_mont(i836 %tt3_V)" [sikehls/fpx.cpp:185->sikehls/ec_isogeny.cpp:88]   --->   Operation 76 'call' 'call_ret2_i' <Predicate = true> <Delay = 3.91> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 77 [1/2] (3.25ns)   --->   "%coeff_V_load_2 = load i448* %coeff_V_addr_2, align 8" [sikehls/fpx.cpp:179->sikehls/ec_isogeny.cpp:89]   --->   Operation 77 'load' 'coeff_V_load_2' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 448> <Depth = 2> <RAM>
+ST_6 : Operation 78 [2/2] (3.25ns)   --->   "%coeff_V_load_3 = load i448* %coeff_V_addr_3, align 8" [sikehls/fpx.cpp:179->sikehls/ec_isogeny.cpp:89]   --->   Operation 78 'load' 'coeff_V_load_3' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 448> <Depth = 2> <RAM>
+ST_6 : Operation 79 [2/2] (2.40ns)   --->   "%tt1_V_2 = call fastcc i835 @mp_mul(i448 %t1_0_V, i448 %coeff_V_load_2)" [sikehls/fpx.cpp:180->sikehls/ec_isogeny.cpp:89]   --->   Operation 79 'call' 'tt1_V_2' <Predicate = true> <Delay = 2.40> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 6.69>
+ST_7 : Operation 80 [1/2] (3.44ns)   --->   "%call_ret2_i = call fastcc i448 @rdc_mont(i836 %tt3_V)" [sikehls/fpx.cpp:185->sikehls/ec_isogeny.cpp:88]   --->   Operation 80 'call' 'call_ret2_i' <Predicate = true> <Delay = 3.44> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_7 : Operation 81 [1/2] (3.25ns)   --->   "%coeff_V_load_3 = load i448* %coeff_V_addr_3, align 8" [sikehls/fpx.cpp:179->sikehls/ec_isogeny.cpp:89]   --->   Operation 81 'load' 'coeff_V_load_3' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 448> <Depth = 2> <RAM>
+ST_7 : Operation 82 [2/2] (3.44ns)   --->   "%t2_V_1 = add i448 %coeff_V_load_3, %coeff_V_load_2" [sikehls/fpx.cpp:179->sikehls/ec_isogeny.cpp:89]   --->   Operation 82 'add' 't2_V_1' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 83 [1/2] (3.44ns)   --->   "%tt1_V_2 = call fastcc i835 @mp_mul(i448 %t1_0_V, i448 %coeff_V_load_2)" [sikehls/fpx.cpp:180->sikehls/ec_isogeny.cpp:89]   --->   Operation 83 'call' 'tt1_V_2' <Predicate = true> <Delay = 3.44> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_7 : Operation 84 [2/2] (2.40ns)   --->   "%tt2_V_1 = call fastcc i835 @mp_mul(i448 %t1_1_V, i448 %coeff_V_load_3)" [sikehls/fpx.cpp:181->sikehls/ec_isogeny.cpp:89]   --->   Operation 84 'call' 'tt2_V_1' <Predicate = true> <Delay = 2.40> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 8 <SV = 7> <Delay = 6.88>
+ST_8 : Operation 85 [1/2] (3.44ns)   --->   "%t2_V_1 = add i448 %coeff_V_load_3, %coeff_V_load_2" [sikehls/fpx.cpp:179->sikehls/ec_isogeny.cpp:89]   --->   Operation 85 'add' 't2_V_1' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 86 [1/1] (0.00ns)   --->   "%zext_ln180_1 = zext i835 %tt1_V_2 to i836" [sikehls/fpx.cpp:180->sikehls/ec_isogeny.cpp:89]   --->   Operation 86 'zext' 'zext_ln180_1' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 87 [1/2] (3.44ns)   --->   "%tt2_V_1 = call fastcc i835 @mp_mul(i448 %t1_1_V, i448 %coeff_V_load_3)" [sikehls/fpx.cpp:181->sikehls/ec_isogeny.cpp:89]   --->   Operation 87 'call' 'tt2_V_1' <Predicate = true> <Delay = 3.44> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_8 : Operation 88 [1/1] (0.00ns)   --->   "%zext_ln181_1 = zext i835 %tt2_V_1 to i836" [sikehls/fpx.cpp:181->sikehls/ec_isogeny.cpp:89]   --->   Operation 88 'zext' 'zext_ln181_1' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 89 [2/2] (3.44ns)   --->   "%tt3_V_1 = sub i836 %zext_ln180_1, %zext_ln181_1" [sikehls/fpx.cpp:183->sikehls/ec_isogeny.cpp:89]   --->   Operation 89 'sub' 'tt3_V_1' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 90 [2/2] (2.40ns)   --->   "%tt1_V_4 = call fastcc i835 @mp_mul(i448 %t0_0_V, i448 %t1_0_V)" [sikehls/fpx.cpp:180->sikehls/ec_isogeny.cpp:90]   --->   Operation 90 'call' 'tt1_V_4' <Predicate = true> <Delay = 2.40> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 9 <SV = 8> <Delay = 3.44>
+ST_9 : Operation 91 [2/2] (3.44ns)   --->   "%t1_V = add i448 %t0_1_V, %t0_0_V" [sikehls/fpx.cpp:178->sikehls/ec_isogeny.cpp:88]   --->   Operation 91 'add' 't1_V' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 92 [2/2] (3.44ns)   --->   "%t1_V_7 = add i448 %t1_1_V, %t1_0_V" [sikehls/fpx.cpp:178->sikehls/ec_isogeny.cpp:89]   --->   Operation 92 'add' 't1_V_7' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 93 [1/2] (3.44ns)   --->   "%tt3_V_1 = sub i836 %zext_ln180_1, %zext_ln181_1" [sikehls/fpx.cpp:183->sikehls/ec_isogeny.cpp:89]   --->   Operation 93 'sub' 'tt3_V_1' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 94 [1/2] (3.44ns)   --->   "%tt1_V_4 = call fastcc i835 @mp_mul(i448 %t0_0_V, i448 %t1_0_V)" [sikehls/fpx.cpp:180->sikehls/ec_isogeny.cpp:90]   --->   Operation 94 'call' 'tt1_V_4' <Predicate = true> <Delay = 3.44> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_9 : Operation 95 [2/2] (2.40ns)   --->   "%tt2_V_2 = call fastcc i835 @mp_mul(i448 %t0_1_V, i448 %t1_1_V)" [sikehls/fpx.cpp:181->sikehls/ec_isogeny.cpp:90]   --->   Operation 95 'call' 'tt2_V_2' <Predicate = true> <Delay = 2.40> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 10 <SV = 9> <Delay = 6.88>
+ST_10 : Operation 96 [1/2] (3.44ns)   --->   "%t1_V = add i448 %t0_1_V, %t0_0_V" [sikehls/fpx.cpp:178->sikehls/ec_isogeny.cpp:88]   --->   Operation 96 'add' 't1_V' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 97 [2/2] (2.40ns)   --->   "%empty = call fastcc i835 @mp_mul(i448 %t1_V, i448 %t2_V)" [sikehls/fpx.cpp:182->sikehls/ec_isogeny.cpp:88]   --->   Operation 97 'call' 'empty' <Predicate = true> <Delay = 2.40> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_10 : Operation 98 [2/2] (3.91ns)   --->   "%call_ret_i = call fastcc i448 @rdc_mont(i836 %tt3_V)" [sikehls/fpx.cpp:186->sikehls/ec_isogeny.cpp:88]   --->   Operation 98 'call' 'call_ret_i' <Predicate = true> <Delay = 3.91> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_10 : Operation 99 [1/2] (3.44ns)   --->   "%t1_V_7 = add i448 %t1_1_V, %t1_0_V" [sikehls/fpx.cpp:178->sikehls/ec_isogeny.cpp:89]   --->   Operation 99 'add' 't1_V_7' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 100 [1/1] (0.00ns)   --->   "%zext_ln180_2 = zext i835 %tt1_V_4 to i836" [sikehls/fpx.cpp:180->sikehls/ec_isogeny.cpp:90]   --->   Operation 100 'zext' 'zext_ln180_2' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 101 [1/2] (3.44ns)   --->   "%tt2_V_2 = call fastcc i835 @mp_mul(i448 %t0_1_V, i448 %t1_1_V)" [sikehls/fpx.cpp:181->sikehls/ec_isogeny.cpp:90]   --->   Operation 101 'call' 'tt2_V_2' <Predicate = true> <Delay = 3.44> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_10 : Operation 102 [1/1] (0.00ns)   --->   "%zext_ln181_2 = zext i835 %tt2_V_2 to i836" [sikehls/fpx.cpp:181->sikehls/ec_isogeny.cpp:90]   --->   Operation 102 'zext' 'zext_ln181_2' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 103 [2/2] (3.44ns)   --->   "%tt3_V_2 = sub i836 %zext_ln180_2, %zext_ln181_2" [sikehls/fpx.cpp:183->sikehls/ec_isogeny.cpp:90]   --->   Operation 103 'sub' 'tt3_V_2' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 3.91>
+ST_11 : Operation 104 [1/2] (3.44ns)   --->   "%empty = call fastcc i835 @mp_mul(i448 %t1_V, i448 %t2_V)" [sikehls/fpx.cpp:182->sikehls/ec_isogeny.cpp:88]   --->   Operation 104 'call' 'empty' <Predicate = true> <Delay = 3.44> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_11 : Operation 105 [1/2] (3.44ns)   --->   "%call_ret_i = call fastcc i448 @rdc_mont(i836 %tt3_V)" [sikehls/fpx.cpp:186->sikehls/ec_isogeny.cpp:88]   --->   Operation 105 'call' 'call_ret_i' <Predicate = true> <Delay = 3.44> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_11 : Operation 106 [2/2] (2.40ns)   --->   "%empty_7 = call fastcc i835 @mp_mul(i448 %t1_V_7, i448 %t2_V_1)" [sikehls/fpx.cpp:182->sikehls/ec_isogeny.cpp:89]   --->   Operation 106 'call' 'empty_7' <Predicate = true> <Delay = 2.40> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_11 : Operation 107 [2/2] (3.91ns)   --->   "%call_ret2_i1 = call fastcc i448 @rdc_mont(i836 %tt3_V_1)" [sikehls/fpx.cpp:185->sikehls/ec_isogeny.cpp:89]   --->   Operation 107 'call' 'call_ret2_i1' <Predicate = true> <Delay = 3.91> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_11 : Operation 108 [1/2] (3.44ns)   --->   "%tt3_V_2 = sub i836 %zext_ln180_2, %zext_ln181_2" [sikehls/fpx.cpp:183->sikehls/ec_isogeny.cpp:90]   --->   Operation 108 'sub' 'tt3_V_2' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 3.91>
+ST_12 : Operation 109 [1/2] (3.44ns)   --->   "%empty_7 = call fastcc i835 @mp_mul(i448 %t1_V_7, i448 %t2_V_1)" [sikehls/fpx.cpp:182->sikehls/ec_isogeny.cpp:89]   --->   Operation 109 'call' 'empty_7' <Predicate = true> <Delay = 3.44> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_12 : Operation 110 [1/2] (3.44ns)   --->   "%call_ret2_i1 = call fastcc i448 @rdc_mont(i836 %tt3_V_1)" [sikehls/fpx.cpp:185->sikehls/ec_isogeny.cpp:89]   --->   Operation 110 'call' 'call_ret2_i1' <Predicate = true> <Delay = 3.44> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_12 : Operation 111 [2/2] (3.91ns)   --->   "%call_ret_i1 = call fastcc i448 @rdc_mont(i836 %tt3_V_1)" [sikehls/fpx.cpp:186->sikehls/ec_isogeny.cpp:89]   --->   Operation 111 'call' 'call_ret_i1' <Predicate = true> <Delay = 3.91> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 13 <SV = 12> <Delay = 3.91>
+ST_13 : Operation 112 [1/1] (0.00ns)   --->   "%coeff_V_addr_4 = getelementptr [6 x i448]* %coeff_V, i64 0, i64 0" [sikehls/fpx.cpp:171->sikehls/ec_isogeny.cpp:91]   --->   Operation 112 'getelementptr' 'coeff_V_addr_4' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 113 [1/2] (3.44ns)   --->   "%call_ret_i1 = call fastcc i448 @rdc_mont(i836 %tt3_V_1)" [sikehls/fpx.cpp:186->sikehls/ec_isogeny.cpp:89]   --->   Operation 113 'call' 'call_ret_i1' <Predicate = true> <Delay = 3.44> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_13 : Operation 114 [2/2] (3.91ns)   --->   "%t0_1_V_1 = call fastcc i448 @rdc_mont(i836 %tt3_V_2)" [sikehls/fpx.cpp:185->sikehls/ec_isogeny.cpp:90]   --->   Operation 114 'call' 't0_1_V_1' <Predicate = true> <Delay = 3.91> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_13 : Operation 115 [2/2] (3.25ns)   --->   "%coeff_V_load_4 = load i448* %coeff_V_addr_4, align 8" [sikehls/fpx.cpp:178->sikehls/ec_isogeny.cpp:91]   --->   Operation 115 'load' 'coeff_V_load_4' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 448> <Depth = 2> <RAM>
+ST_13 : Operation 116 [2/2] (3.44ns)   --->   "%add_ln214_2 = add i448 48878847322690443103818290022914987238171560487523193022651614672410442478663953451940433343657236891797438053385769878684629467134, %call_ret_i" [sikehls/fpx.cpp:10->sikehls/fpx.cpp:143->sikehls/ec_isogeny.cpp:93]   --->   Operation 116 'add' 'add_ln214_2' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 117 [2/2] (3.44ns)   --->   "%add_ln214_3 = add i448 48878847322690443103818290022914987238171560487523193022651614672410442478663953451940433343657236891797438053385769878684629467134, %call_ret2_i" [sikehls/fpx.cpp:10->sikehls/fpx.cpp:144->sikehls/ec_isogeny.cpp:93]   --->   Operation 117 'add' 'add_ln214_3' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 6.88>
+ST_14 : Operation 118 [1/1] (0.00ns)   --->   "%coeff_V_addr_5 = getelementptr [6 x i448]* %coeff_V, i64 0, i64 1" [sikehls/fpx.cpp:178->sikehls/ec_isogeny.cpp:91]   --->   Operation 118 'getelementptr' 'coeff_V_addr_5' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 119 [1/1] (2.32ns)   --->   "store i448 %call_ret2_i, i448* %P_X_V_addr_1, align 8" [sikehls/fpx.cpp:185->sikehls/ec_isogeny.cpp:88]   --->   Operation 119 'store' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 448> <Depth = 2> <RAM>
+ST_14 : Operation 120 [1/1] (2.32ns)   --->   "store i448 %call_ret_i, i448* %P_X_V_addr, align 8" [sikehls/fpx.cpp:186->sikehls/ec_isogeny.cpp:88]   --->   Operation 120 'store' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 448> <Depth = 2> <RAM>
+ST_14 : Operation 121 [1/1] (2.32ns)   --->   "store i448 %call_ret2_i1, i448* %P_Z_V_addr_1, align 8" [sikehls/fpx.cpp:185->sikehls/ec_isogeny.cpp:89]   --->   Operation 121 'store' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 448> <Depth = 2> <RAM>
+ST_14 : Operation 122 [1/1] (2.32ns)   --->   "store i448 %call_ret_i1, i448* %P_Z_V_addr, align 8" [sikehls/fpx.cpp:186->sikehls/ec_isogeny.cpp:89]   --->   Operation 122 'store' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 448> <Depth = 2> <RAM>
+ST_14 : Operation 123 [1/2] (3.44ns)   --->   "%t0_1_V_1 = call fastcc i448 @rdc_mont(i836 %tt3_V_2)" [sikehls/fpx.cpp:185->sikehls/ec_isogeny.cpp:90]   --->   Operation 123 'call' 't0_1_V_1' <Predicate = true> <Delay = 3.44> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_14 : Operation 124 [1/2] (3.25ns)   --->   "%coeff_V_load_4 = load i448* %coeff_V_addr_4, align 8" [sikehls/fpx.cpp:178->sikehls/ec_isogeny.cpp:91]   --->   Operation 124 'load' 'coeff_V_load_4' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 448> <Depth = 2> <RAM>
+ST_14 : Operation 125 [2/2] (3.25ns)   --->   "%coeff_V_load_5 = load i448* %coeff_V_addr_5, align 8" [sikehls/fpx.cpp:178->sikehls/ec_isogeny.cpp:91]   --->   Operation 125 'load' 'coeff_V_load_5' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 448> <Depth = 2> <RAM>
+ST_14 : Operation 126 [2/2] (2.40ns)   --->   "%tt1_V_6 = call fastcc i835 @mp_mul(i448 %coeff_V_load_4, i448 %t0_1_V_1)" [sikehls/fpx.cpp:180->sikehls/ec_isogeny.cpp:91]   --->   Operation 126 'call' 'tt1_V_6' <Predicate = true> <Delay = 2.40> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_14 : Operation 127 [2/2] (3.44ns)   --->   "%t1_0_V_1 = add i448 %call_ret_i1, %call_ret_i" [sikehls/fpx.cpp:135->sikehls/ec_isogeny.cpp:92]   --->   Operation 127 'add' 't1_0_V_1' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 128 [2/2] (3.44ns)   --->   "%t1_1_V_1 = add i448 %call_ret2_i1, %call_ret2_i" [sikehls/fpx.cpp:136->sikehls/ec_isogeny.cpp:92]   --->   Operation 128 'add' 't1_1_V_1' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 129 [1/2] (3.44ns)   --->   "%add_ln214_2 = add i448 48878847322690443103818290022914987238171560487523193022651614672410442478663953451940433343657236891797438053385769878684629467134, %call_ret_i" [sikehls/fpx.cpp:10->sikehls/fpx.cpp:143->sikehls/ec_isogeny.cpp:93]   --->   Operation 129 'add' 'add_ln214_2' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 130 [2/2] (3.44ns)   --->   "%sub_ln214 = sub i448 %add_ln214_2, %call_ret_i1" [sikehls/fpx.cpp:10->sikehls/fpx.cpp:143->sikehls/ec_isogeny.cpp:93]   --->   Operation 130 'sub' 'sub_ln214' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 131 [1/2] (3.44ns)   --->   "%add_ln214_3 = add i448 48878847322690443103818290022914987238171560487523193022651614672410442478663953451940433343657236891797438053385769878684629467134, %call_ret2_i" [sikehls/fpx.cpp:10->sikehls/fpx.cpp:144->sikehls/ec_isogeny.cpp:93]   --->   Operation 131 'add' 'add_ln214_3' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 132 [2/2] (3.44ns)   --->   "%sub_ln214_2 = sub i448 %add_ln214_3, %call_ret2_i1" [sikehls/fpx.cpp:10->sikehls/fpx.cpp:144->sikehls/ec_isogeny.cpp:93]   --->   Operation 132 'sub' 'sub_ln214_2' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 14> <Delay = 6.88>
+ST_15 : Operation 133 [1/2] (3.25ns)   --->   "%coeff_V_load_5 = load i448* %coeff_V_addr_5, align 8" [sikehls/fpx.cpp:178->sikehls/ec_isogeny.cpp:91]   --->   Operation 133 'load' 'coeff_V_load_5' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 448> <Depth = 2> <RAM>
+ST_15 : Operation 134 [2/2] (3.44ns)   --->   "%t1_V_2 = add i448 %coeff_V_load_5, %coeff_V_load_4" [sikehls/fpx.cpp:178->sikehls/ec_isogeny.cpp:91]   --->   Operation 134 'add' 't1_V_2' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 135 [1/2] (3.44ns)   --->   "%tt1_V_6 = call fastcc i835 @mp_mul(i448 %coeff_V_load_4, i448 %t0_1_V_1)" [sikehls/fpx.cpp:180->sikehls/ec_isogeny.cpp:91]   --->   Operation 135 'call' 'tt1_V_6' <Predicate = true> <Delay = 3.44> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_15 : Operation 136 [2/2] (2.40ns)   --->   "%tt2_V_3 = call fastcc i835 @mp_mul(i448 %coeff_V_load_5, i448 %t0_1_V_1)" [sikehls/fpx.cpp:181->sikehls/ec_isogeny.cpp:91]   --->   Operation 136 'call' 'tt2_V_3' <Predicate = true> <Delay = 2.40> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_15 : Operation 137 [1/2] (3.44ns)   --->   "%t1_0_V_1 = add i448 %call_ret_i1, %call_ret_i" [sikehls/fpx.cpp:135->sikehls/ec_isogeny.cpp:92]   --->   Operation 137 'add' 't1_0_V_1' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 138 [1/2] (3.44ns)   --->   "%t1_1_V_1 = add i448 %call_ret2_i1, %call_ret2_i" [sikehls/fpx.cpp:136->sikehls/ec_isogeny.cpp:92]   --->   Operation 138 'add' 't1_1_V_1' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 139 [1/2] (3.44ns)   --->   "%sub_ln214 = sub i448 %add_ln214_2, %call_ret_i1" [sikehls/fpx.cpp:10->sikehls/fpx.cpp:143->sikehls/ec_isogeny.cpp:93]   --->   Operation 139 'sub' 'sub_ln214' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 140 [1/2] (3.44ns)   --->   "%sub_ln214_2 = sub i448 %add_ln214_3, %call_ret2_i1" [sikehls/fpx.cpp:10->sikehls/fpx.cpp:144->sikehls/ec_isogeny.cpp:93]   --->   Operation 140 'sub' 'sub_ln214_2' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 141 [2/2] (3.44ns)   --->   "%sub_ln214_4 = sub i448 %sub_ln214, %sub_ln214_2" [sikehls/fpx.cpp:16->sikehls/fpx.cpp:164->sikehls/ec_isogeny.cpp:95]   --->   Operation 141 'sub' 'sub_ln214_4' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 16 <SV = 15> <Delay = 6.88>
+ST_16 : Operation 142 [1/2] (3.44ns)   --->   "%t1_V_2 = add i448 %coeff_V_load_5, %coeff_V_load_4" [sikehls/fpx.cpp:178->sikehls/ec_isogeny.cpp:91]   --->   Operation 142 'add' 't1_V_2' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 143 [1/1] (0.00ns)   --->   "%zext_ln180_3 = zext i835 %tt1_V_6 to i836" [sikehls/fpx.cpp:180->sikehls/ec_isogeny.cpp:91]   --->   Operation 143 'zext' 'zext_ln180_3' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 144 [1/2] (3.44ns)   --->   "%tt2_V_3 = call fastcc i835 @mp_mul(i448 %coeff_V_load_5, i448 %t0_1_V_1)" [sikehls/fpx.cpp:181->sikehls/ec_isogeny.cpp:91]   --->   Operation 144 'call' 'tt2_V_3' <Predicate = true> <Delay = 3.44> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_16 : Operation 145 [1/1] (0.00ns)   --->   "%zext_ln181_3 = zext i835 %tt2_V_3 to i836" [sikehls/fpx.cpp:181->sikehls/ec_isogeny.cpp:91]   --->   Operation 145 'zext' 'zext_ln181_3' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 146 [2/2] (3.44ns)   --->   "%tt3_V_3 = sub i836 %zext_ln180_3, %zext_ln181_3" [sikehls/fpx.cpp:183->sikehls/ec_isogeny.cpp:91]   --->   Operation 146 'sub' 'tt3_V_3' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 147 [1/1] (2.32ns)   --->   "store i448 %sub_ln214, i448* %P_Z_V_addr, align 8" [sikehls/fpx.cpp:10->sikehls/fpx.cpp:143->sikehls/ec_isogeny.cpp:93]   --->   Operation 147 'store' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 448> <Depth = 2> <RAM>
+ST_16 : Operation 148 [1/1] (2.32ns)   --->   "store i448 %sub_ln214_2, i448* %P_Z_V_addr_1, align 8" [sikehls/fpx.cpp:10->sikehls/fpx.cpp:144->sikehls/ec_isogeny.cpp:93]   --->   Operation 148 'store' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 448> <Depth = 2> <RAM>
+ST_16 : Operation 149 [2/2] (3.44ns)   --->   "%t1_V_4 = add i448 %sub_ln214_2, %sub_ln214" [sikehls/fpx.cpp:163->sikehls/ec_isogeny.cpp:95]   --->   Operation 149 'add' 't1_V_4' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 150 [1/2] (3.44ns)   --->   "%sub_ln214_4 = sub i448 %sub_ln214, %sub_ln214_2" [sikehls/fpx.cpp:16->sikehls/fpx.cpp:164->sikehls/ec_isogeny.cpp:95]   --->   Operation 150 'sub' 'sub_ln214_4' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 151 [2/2] (3.44ns)   --->   "%add_ln214_5 = add i448 97757694645380886207636580045829974476343120975046386045303229344820884957327906903880866687314473783594876106771539757369258934268, %sub_ln214_4" [sikehls/fpx.cpp:16->sikehls/fpx.cpp:164->sikehls/ec_isogeny.cpp:95]   --->   Operation 151 'add' 'add_ln214_5' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 152 [1/1] (0.00ns)   --->   "%t3_V_1 = shl i448 %sub_ln214, 1" [sikehls/fpx.cpp:165->sikehls/ec_isogeny.cpp:95]   --->   Operation 152 'shl' 't3_V_1' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 153 [2/2] (2.40ns)   --->   "%temp_V_3 = call fastcc i835 @mp_mul(i448 %t3_V_1, i448 %sub_ln214_2)" [sikehls/fpx.cpp:87->sikehls/fpx.cpp:167->sikehls/ec_isogeny.cpp:95]   --->   Operation 153 'call' 'temp_V_3' <Predicate = true> <Delay = 2.40> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 17 <SV = 16> <Delay = 5.84>
+ST_17 : Operation 154 [1/2] (3.44ns)   --->   "%tt3_V_3 = sub i836 %zext_ln180_3, %zext_ln181_3" [sikehls/fpx.cpp:183->sikehls/ec_isogeny.cpp:91]   --->   Operation 154 'sub' 'tt3_V_3' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 155 [2/2] (3.44ns)   --->   "%sub_ln214_3 = sub i448 %t1_0_V_1, %t1_1_V_1" [sikehls/fpx.cpp:16->sikehls/fpx.cpp:164->sikehls/ec_isogeny.cpp:94]   --->   Operation 155 'sub' 'sub_ln214_3' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 156 [1/2] (3.44ns)   --->   "%t1_V_4 = add i448 %sub_ln214_2, %sub_ln214" [sikehls/fpx.cpp:163->sikehls/ec_isogeny.cpp:95]   --->   Operation 156 'add' 't1_V_4' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 157 [1/2] (3.44ns)   --->   "%add_ln214_5 = add i448 97757694645380886207636580045829974476343120975046386045303229344820884957327906903880866687314473783594876106771539757369258934268, %sub_ln214_4" [sikehls/fpx.cpp:16->sikehls/fpx.cpp:164->sikehls/ec_isogeny.cpp:95]   --->   Operation 157 'add' 'add_ln214_5' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 158 [2/2] (2.40ns)   --->   "%temp_V_2 = call fastcc i835 @mp_mul(i448 %t1_V_4, i448 %add_ln214_5)" [sikehls/fpx.cpp:87->sikehls/fpx.cpp:166->sikehls/ec_isogeny.cpp:95]   --->   Operation 158 'call' 'temp_V_2' <Predicate = true> <Delay = 2.40> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_17 : Operation 159 [1/2] (3.44ns)   --->   "%temp_V_3 = call fastcc i835 @mp_mul(i448 %t3_V_1, i448 %sub_ln214_2)" [sikehls/fpx.cpp:87->sikehls/fpx.cpp:167->sikehls/ec_isogeny.cpp:95]   --->   Operation 159 'call' 'temp_V_3' <Predicate = true> <Delay = 3.44> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 18 <SV = 17> <Delay = 6.88>
+ST_18 : Operation 160 [2/2] (3.44ns)   --->   "%t1_V_3 = add i448 %t1_1_V_1, %t1_0_V_1" [sikehls/fpx.cpp:163->sikehls/ec_isogeny.cpp:94]   --->   Operation 160 'add' 't1_V_3' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 161 [1/2] (3.44ns)   --->   "%sub_ln214_3 = sub i448 %t1_0_V_1, %t1_1_V_1" [sikehls/fpx.cpp:16->sikehls/fpx.cpp:164->sikehls/ec_isogeny.cpp:94]   --->   Operation 161 'sub' 'sub_ln214_3' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 162 [2/2] (3.44ns)   --->   "%add_ln214_4 = add i448 97757694645380886207636580045829974476343120975046386045303229344820884957327906903880866687314473783594876106771539757369258934268, %sub_ln214_3" [sikehls/fpx.cpp:16->sikehls/fpx.cpp:164->sikehls/ec_isogeny.cpp:94]   --->   Operation 162 'add' 'add_ln214_4' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 163 [1/1] (0.00ns)   --->   "%t3_V = shl i448 %t1_0_V_1, 1" [sikehls/fpx.cpp:165->sikehls/ec_isogeny.cpp:94]   --->   Operation 163 'shl' 't3_V' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 164 [2/2] (2.40ns)   --->   "%temp_V_1 = call fastcc i835 @mp_mul(i448 %t3_V, i448 %t1_1_V_1)" [sikehls/fpx.cpp:87->sikehls/fpx.cpp:167->sikehls/ec_isogeny.cpp:94]   --->   Operation 164 'call' 'temp_V_1' <Predicate = true> <Delay = 2.40> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_18 : Operation 165 [1/2] (3.44ns)   --->   "%temp_V_2 = call fastcc i835 @mp_mul(i448 %t1_V_4, i448 %add_ln214_5)" [sikehls/fpx.cpp:87->sikehls/fpx.cpp:166->sikehls/ec_isogeny.cpp:95]   --->   Operation 165 'call' 'temp_V_2' <Predicate = true> <Delay = 3.44> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_18 : Operation 166 [1/1] (0.00ns)   --->   "%zext_ln88_3 = zext i835 %temp_V_3 to i836" [sikehls/fpx.cpp:88->sikehls/fpx.cpp:167->sikehls/ec_isogeny.cpp:95]   --->   Operation 166 'zext' 'zext_ln88_3' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 167 [2/2] (3.91ns)   --->   "%call_ret_i2 = call fastcc i448 @rdc_mont(i836 %zext_ln88_3)" [sikehls/fpx.cpp:88->sikehls/fpx.cpp:167->sikehls/ec_isogeny.cpp:95]   --->   Operation 167 'call' 'call_ret_i2' <Predicate = true> <Delay = 3.91> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 19 <SV = 18> <Delay = 5.84>
+ST_19 : Operation 168 [1/2] (3.44ns)   --->   "%t1_V_3 = add i448 %t1_1_V_1, %t1_0_V_1" [sikehls/fpx.cpp:163->sikehls/ec_isogeny.cpp:94]   --->   Operation 168 'add' 't1_V_3' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 169 [1/2] (3.44ns)   --->   "%add_ln214_4 = add i448 97757694645380886207636580045829974476343120975046386045303229344820884957327906903880866687314473783594876106771539757369258934268, %sub_ln214_3" [sikehls/fpx.cpp:16->sikehls/fpx.cpp:164->sikehls/ec_isogeny.cpp:94]   --->   Operation 169 'add' 'add_ln214_4' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 170 [2/2] (2.40ns)   --->   "%temp_V = call fastcc i835 @mp_mul(i448 %t1_V_3, i448 %add_ln214_4)" [sikehls/fpx.cpp:87->sikehls/fpx.cpp:166->sikehls/ec_isogeny.cpp:94]   --->   Operation 170 'call' 'temp_V' <Predicate = true> <Delay = 2.40> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_19 : Operation 171 [1/2] (3.44ns)   --->   "%temp_V_1 = call fastcc i835 @mp_mul(i448 %t3_V, i448 %t1_1_V_1)" [sikehls/fpx.cpp:87->sikehls/fpx.cpp:167->sikehls/ec_isogeny.cpp:94]   --->   Operation 171 'call' 'temp_V_1' <Predicate = true> <Delay = 3.44> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_19 : Operation 172 [1/1] (0.00ns)   --->   "%zext_ln88_2 = zext i835 %temp_V_2 to i836" [sikehls/fpx.cpp:88->sikehls/fpx.cpp:166->sikehls/ec_isogeny.cpp:95]   --->   Operation 172 'zext' 'zext_ln88_2' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 173 [2/2] (3.91ns)   --->   "%call_ret1_i = call fastcc i448 @rdc_mont(i836 %zext_ln88_2)" [sikehls/fpx.cpp:88->sikehls/fpx.cpp:166->sikehls/ec_isogeny.cpp:95]   --->   Operation 173 'call' 'call_ret1_i' <Predicate = true> <Delay = 3.91> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_19 : Operation 174 [1/2] (3.44ns)   --->   "%call_ret_i2 = call fastcc i448 @rdc_mont(i836 %zext_ln88_3)" [sikehls/fpx.cpp:88->sikehls/fpx.cpp:167->sikehls/ec_isogeny.cpp:95]   --->   Operation 174 'call' 'call_ret_i2' <Predicate = true> <Delay = 3.44> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_19 : Operation 175 [1/1] (2.32ns)   --->   "store i448 %call_ret_i2, i448* %P_Z_V_addr_1, align 8" [sikehls/fpx.cpp:88->sikehls/fpx.cpp:167->sikehls/ec_isogeny.cpp:95]   --->   Operation 175 'store' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 448> <Depth = 2> <RAM>
+
+State 20 <SV = 19> <Delay = 5.76>
+ST_20 : Operation 176 [2/2] (2.40ns)   --->   "%empty_8 = call fastcc i835 @mp_mul(i448 %t1_V, i448 %t1_V_7)" [sikehls/fpx.cpp:182->sikehls/ec_isogeny.cpp:90]   --->   Operation 176 'call' 'empty_8' <Predicate = true> <Delay = 2.40> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_20 : Operation 177 [2/2] (3.91ns)   --->   "%t0_1_V_2 = call fastcc i448 @rdc_mont(i836 %tt3_V_3)" [sikehls/fpx.cpp:185->sikehls/ec_isogeny.cpp:91]   --->   Operation 177 'call' 't0_1_V_2' <Predicate = true> <Delay = 3.91> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_20 : Operation 178 [1/2] (3.44ns)   --->   "%temp_V = call fastcc i835 @mp_mul(i448 %t1_V_3, i448 %add_ln214_4)" [sikehls/fpx.cpp:87->sikehls/fpx.cpp:166->sikehls/ec_isogeny.cpp:94]   --->   Operation 178 'call' 'temp_V' <Predicate = true> <Delay = 3.44> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_20 : Operation 179 [1/2] (3.44ns)   --->   "%call_ret1_i = call fastcc i448 @rdc_mont(i836 %zext_ln88_2)" [sikehls/fpx.cpp:88->sikehls/fpx.cpp:166->sikehls/ec_isogeny.cpp:95]   --->   Operation 179 'call' 'call_ret1_i' <Predicate = true> <Delay = 3.44> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_20 : Operation 180 [1/1] (2.32ns)   --->   "store i448 %call_ret1_i, i448* %P_Z_V_addr, align 8" [sikehls/fpx.cpp:88->sikehls/fpx.cpp:166->sikehls/ec_isogeny.cpp:95]   --->   Operation 180 'store' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 448> <Depth = 2> <RAM>
+ST_20 : Operation 181 [2/2] (2.32ns)   --->   "%P_Z_V_load_3 = load i448* %P_Z_V_addr_1, align 8" [sikehls/fpx.cpp:144->sikehls/ec_isogeny.cpp:97]   --->   Operation 181 'load' 'P_Z_V_load_3' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 448> <Depth = 2> <RAM>
+
+State 21 <SV = 20> <Delay = 5.76>
+ST_21 : Operation 182 [1/2] (3.44ns)   --->   "%empty_8 = call fastcc i835 @mp_mul(i448 %t1_V, i448 %t1_V_7)" [sikehls/fpx.cpp:182->sikehls/ec_isogeny.cpp:90]   --->   Operation 182 'call' 'empty_8' <Predicate = true> <Delay = 3.44> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_21 : Operation 183 [1/2] (3.44ns)   --->   "%t0_1_V_2 = call fastcc i448 @rdc_mont(i836 %tt3_V_3)" [sikehls/fpx.cpp:185->sikehls/ec_isogeny.cpp:91]   --->   Operation 183 'call' 't0_1_V_2' <Predicate = true> <Delay = 3.44> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_21 : Operation 184 [1/1] (0.00ns)   --->   "%zext_ln88_1 = zext i835 %temp_V_1 to i836" [sikehls/fpx.cpp:88->sikehls/fpx.cpp:167->sikehls/ec_isogeny.cpp:94]   --->   Operation 184 'zext' 'zext_ln88_1' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 185 [2/2] (3.91ns)   --->   "%t1_1_V_2 = call fastcc i448 @rdc_mont(i836 %zext_ln88_1)" [sikehls/fpx.cpp:88->sikehls/fpx.cpp:167->sikehls/ec_isogeny.cpp:94]   --->   Operation 185 'call' 't1_1_V_2' <Predicate = true> <Delay = 3.91> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_21 : Operation 186 [2/2] (2.32ns)   --->   "%P_Z_V_load_2 = load i448* %P_Z_V_addr, align 8" [sikehls/fpx.cpp:143->sikehls/ec_isogeny.cpp:97]   --->   Operation 186 'load' 'P_Z_V_load_2' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 448> <Depth = 2> <RAM>
+ST_21 : Operation 187 [1/2] (2.32ns)   --->   "%P_Z_V_load_3 = load i448* %P_Z_V_addr_1, align 8" [sikehls/fpx.cpp:144->sikehls/ec_isogeny.cpp:97]   --->   Operation 187 'load' 'P_Z_V_load_3' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 448> <Depth = 2> <RAM>
+ST_21 : Operation 188 [2/2] (3.44ns)   --->   "%add_ln214_7 = add i448 48878847322690443103818290022914987238171560487523193022651614672410442478663953451940433343657236891797438053385769878684629467134, %P_Z_V_load_3" [sikehls/fpx.cpp:10->sikehls/fpx.cpp:144->sikehls/ec_isogeny.cpp:97]   --->   Operation 188 'add' 'add_ln214_7' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 22 <SV = 21> <Delay = 6.88>
+ST_22 : Operation 189 [1/1] (0.00ns)   --->   "%t2_V_3 = shl i448 %t0_1_V_1, 1" [sikehls/fpx.cpp:179->sikehls/ec_isogeny.cpp:91]   --->   Operation 189 'shl' 't2_V_3' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 190 [2/2] (2.40ns)   --->   "%empty_9 = call fastcc i835 @mp_mul(i448 %t1_V_2, i448 %t2_V_3)" [sikehls/fpx.cpp:182->sikehls/ec_isogeny.cpp:91]   --->   Operation 190 'call' 'empty_9' <Predicate = true> <Delay = 2.40> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_22 : Operation 191 [1/1] (0.00ns)   --->   "%zext_ln88 = zext i835 %temp_V to i836" [sikehls/fpx.cpp:88->sikehls/fpx.cpp:166->sikehls/ec_isogeny.cpp:94]   --->   Operation 191 'zext' 'zext_ln88' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 192 [2/2] (3.91ns)   --->   "%t1_0_V_2 = call fastcc i448 @rdc_mont(i836 %zext_ln88)" [sikehls/fpx.cpp:88->sikehls/fpx.cpp:166->sikehls/ec_isogeny.cpp:94]   --->   Operation 192 'call' 't1_0_V_2' <Predicate = true> <Delay = 3.91> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_22 : Operation 193 [1/2] (3.44ns)   --->   "%t1_1_V_2 = call fastcc i448 @rdc_mont(i836 %zext_ln88_1)" [sikehls/fpx.cpp:88->sikehls/fpx.cpp:167->sikehls/ec_isogeny.cpp:94]   --->   Operation 193 'call' 't1_1_V_2' <Predicate = true> <Delay = 3.44> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_22 : Operation 194 [1/2] (2.32ns)   --->   "%P_Z_V_load_2 = load i448* %P_Z_V_addr, align 8" [sikehls/fpx.cpp:143->sikehls/ec_isogeny.cpp:97]   --->   Operation 194 'load' 'P_Z_V_load_2' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 448> <Depth = 2> <RAM>
+ST_22 : Operation 195 [2/2] (3.44ns)   --->   "%add_ln214_6 = add i448 48878847322690443103818290022914987238171560487523193022651614672410442478663953451940433343657236891797438053385769878684629467134, %P_Z_V_load_2" [sikehls/fpx.cpp:10->sikehls/fpx.cpp:143->sikehls/ec_isogeny.cpp:97]   --->   Operation 195 'add' 'add_ln214_6' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 196 [1/2] (3.44ns)   --->   "%add_ln214_7 = add i448 48878847322690443103818290022914987238171560487523193022651614672410442478663953451940433343657236891797438053385769878684629467134, %P_Z_V_load_3" [sikehls/fpx.cpp:10->sikehls/fpx.cpp:144->sikehls/ec_isogeny.cpp:97]   --->   Operation 196 'add' 'add_ln214_7' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 197 [2/2] (3.44ns)   --->   "%t0_1_V_3 = sub i448 %add_ln214_7, %t0_1_V_2" [sikehls/fpx.cpp:10->sikehls/fpx.cpp:144->sikehls/ec_isogeny.cpp:97]   --->   Operation 197 'sub' 't0_1_V_3' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 23 <SV = 22> <Delay = 6.88>
+ST_23 : Operation 198 [1/2] (3.44ns)   --->   "%empty_9 = call fastcc i835 @mp_mul(i448 %t1_V_2, i448 %t2_V_3)" [sikehls/fpx.cpp:182->sikehls/ec_isogeny.cpp:91]   --->   Operation 198 'call' 'empty_9' <Predicate = true> <Delay = 3.44> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_23 : Operation 199 [1/2] (3.44ns)   --->   "%t1_0_V_2 = call fastcc i448 @rdc_mont(i836 %zext_ln88)" [sikehls/fpx.cpp:88->sikehls/fpx.cpp:166->sikehls/ec_isogeny.cpp:94]   --->   Operation 199 'call' 't1_0_V_2' <Predicate = true> <Delay = 3.44> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_23 : Operation 200 [1/2] (3.44ns)   --->   "%add_ln214_6 = add i448 48878847322690443103818290022914987238171560487523193022651614672410442478663953451940433343657236891797438053385769878684629467134, %P_Z_V_load_2" [sikehls/fpx.cpp:10->sikehls/fpx.cpp:143->sikehls/ec_isogeny.cpp:97]   --->   Operation 200 'add' 'add_ln214_6' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 201 [2/2] (3.44ns)   --->   "%t0_0_V_3 = sub i448 %add_ln214_6, %t0_1_V_2" [sikehls/fpx.cpp:10->sikehls/fpx.cpp:143->sikehls/ec_isogeny.cpp:97]   --->   Operation 201 'sub' 't0_0_V_3' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 202 [1/2] (3.44ns)   --->   "%t0_1_V_3 = sub i448 %add_ln214_7, %t0_1_V_2" [sikehls/fpx.cpp:10->sikehls/fpx.cpp:144->sikehls/ec_isogeny.cpp:97]   --->   Operation 202 'sub' 't0_1_V_3' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 203 [2/2] (2.40ns)   --->   "%tt2_V_5 = call fastcc i835 @mp_mul(i448 %P_Z_V_load_3, i448 %t0_1_V_3)" [sikehls/fpx.cpp:181->sikehls/ec_isogeny.cpp:99]   --->   Operation 203 'call' 'tt2_V_5' <Predicate = true> <Delay = 2.40> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 24 <SV = 23> <Delay = 6.88>
+ST_24 : Operation 204 [2/2] (3.44ns)   --->   "call fastcc void @mp2_add(i448 %t1_0_V_2, i448 %t1_1_V_2, i448 %t0_1_V_2, i448 %t0_1_V_2, [2 x i448]* %P_X_V)" [sikehls/ec_isogeny.cpp:96]   --->   Operation 204 'call' <Predicate = true> <Delay = 3.44> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_24 : Operation 205 [1/2] (3.44ns)   --->   "%t0_0_V_3 = sub i448 %add_ln214_6, %t0_1_V_2" [sikehls/fpx.cpp:10->sikehls/fpx.cpp:143->sikehls/ec_isogeny.cpp:97]   --->   Operation 205 'sub' 't0_0_V_3' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 206 [2/2] (3.44ns)   --->   "%t1_V_6 = add i448 %P_Z_V_load_3, %P_Z_V_load_2" [sikehls/fpx.cpp:178->sikehls/ec_isogeny.cpp:99]   --->   Operation 206 'add' 't1_V_6' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 207 [2/2] (3.44ns)   --->   "%t2_V_5 = add i448 %t0_1_V_3, %t0_0_V_3" [sikehls/fpx.cpp:179->sikehls/ec_isogeny.cpp:99]   --->   Operation 207 'add' 't2_V_5' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 208 [2/2] (2.40ns)   --->   "%tt1_V_s = call fastcc i835 @mp_mul(i448 %P_Z_V_load_2, i448 %t0_0_V_3)" [sikehls/fpx.cpp:180->sikehls/ec_isogeny.cpp:99]   --->   Operation 208 'call' 'tt1_V_s' <Predicate = true> <Delay = 2.40> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_24 : Operation 209 [1/2] (3.44ns)   --->   "%tt2_V_5 = call fastcc i835 @mp_mul(i448 %P_Z_V_load_3, i448 %t0_1_V_3)" [sikehls/fpx.cpp:181->sikehls/ec_isogeny.cpp:99]   --->   Operation 209 'call' 'tt2_V_5' <Predicate = true> <Delay = 3.44> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 25 <SV = 24> <Delay = 6.88>
+ST_25 : Operation 210 [1/2] (0.00ns)   --->   "call fastcc void @mp2_add(i448 %t1_0_V_2, i448 %t1_1_V_2, i448 %t0_1_V_2, i448 %t0_1_V_2, [2 x i448]* %P_X_V)" [sikehls/ec_isogeny.cpp:96]   --->   Operation 210 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_25 : Operation 211 [1/2] (3.44ns)   --->   "%t1_V_6 = add i448 %P_Z_V_load_3, %P_Z_V_load_2" [sikehls/fpx.cpp:178->sikehls/ec_isogeny.cpp:99]   --->   Operation 211 'add' 't1_V_6' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 212 [1/2] (3.44ns)   --->   "%t2_V_5 = add i448 %t0_1_V_3, %t0_0_V_3" [sikehls/fpx.cpp:179->sikehls/ec_isogeny.cpp:99]   --->   Operation 212 'add' 't2_V_5' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 213 [1/2] (3.44ns)   --->   "%tt1_V_s = call fastcc i835 @mp_mul(i448 %P_Z_V_load_2, i448 %t0_0_V_3)" [sikehls/fpx.cpp:180->sikehls/ec_isogeny.cpp:99]   --->   Operation 213 'call' 'tt1_V_s' <Predicate = true> <Delay = 3.44> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_25 : Operation 214 [1/1] (0.00ns)   --->   "%zext_ln180_5 = zext i835 %tt1_V_s to i836" [sikehls/fpx.cpp:180->sikehls/ec_isogeny.cpp:99]   --->   Operation 214 'zext' 'zext_ln180_5' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 215 [1/1] (0.00ns)   --->   "%zext_ln181_5 = zext i835 %tt2_V_5 to i836" [sikehls/fpx.cpp:181->sikehls/ec_isogeny.cpp:99]   --->   Operation 215 'zext' 'zext_ln181_5' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 216 [2/2] (2.40ns)   --->   "%empty_11 = call fastcc i835 @mp_mul(i448 %t1_V_6, i448 %t2_V_5)" [sikehls/fpx.cpp:182->sikehls/ec_isogeny.cpp:99]   --->   Operation 216 'call' 'empty_11' <Predicate = true> <Delay = 2.40> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_25 : Operation 217 [2/2] (3.44ns)   --->   "%tt3_V_5 = sub i836 %zext_ln180_5, %zext_ln181_5" [sikehls/fpx.cpp:183->sikehls/ec_isogeny.cpp:99]   --->   Operation 217 'sub' 'tt3_V_5' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 26 <SV = 25> <Delay = 3.44>
+ST_26 : Operation 218 [2/2] (2.32ns)   --->   "%P_X_V_load_2 = load i448* %P_X_V_addr, align 8" [sikehls/fpx.cpp:178->sikehls/ec_isogeny.cpp:98]   --->   Operation 218 'load' 'P_X_V_load_2' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 448> <Depth = 2> <RAM>
+ST_26 : Operation 219 [1/2] (3.44ns)   --->   "%empty_11 = call fastcc i835 @mp_mul(i448 %t1_V_6, i448 %t2_V_5)" [sikehls/fpx.cpp:182->sikehls/ec_isogeny.cpp:99]   --->   Operation 219 'call' 'empty_11' <Predicate = true> <Delay = 3.44> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_26 : Operation 220 [1/2] (3.44ns)   --->   "%tt3_V_5 = sub i836 %zext_ln180_5, %zext_ln181_5" [sikehls/fpx.cpp:183->sikehls/ec_isogeny.cpp:99]   --->   Operation 220 'sub' 'tt3_V_5' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 27 <SV = 26> <Delay = 4.72>
+ST_27 : Operation 221 [1/2] (2.32ns)   --->   "%P_X_V_load_2 = load i448* %P_X_V_addr, align 8" [sikehls/fpx.cpp:178->sikehls/ec_isogeny.cpp:98]   --->   Operation 221 'load' 'P_X_V_load_2' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 448> <Depth = 2> <RAM>
+ST_27 : Operation 222 [2/2] (2.32ns)   --->   "%P_X_V_load_3 = load i448* %P_X_V_addr_1, align 8" [sikehls/fpx.cpp:178->sikehls/ec_isogeny.cpp:98]   --->   Operation 222 'load' 'P_X_V_load_3' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 448> <Depth = 2> <RAM>
+ST_27 : Operation 223 [2/2] (2.40ns)   --->   "%tt1_V_8 = call fastcc i835 @mp_mul(i448 %P_X_V_load_2, i448 %t1_0_V_2)" [sikehls/fpx.cpp:180->sikehls/ec_isogeny.cpp:98]   --->   Operation 223 'call' 'tt1_V_8' <Predicate = true> <Delay = 2.40> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_27 : Operation 224 [2/2] (3.91ns)   --->   "%call_ret1_i2 = call fastcc i448 @rdc_mont(i836 %tt3_V_5)" [sikehls/fpx.cpp:185->sikehls/ec_isogeny.cpp:99]   --->   Operation 224 'call' 'call_ret1_i2' <Predicate = true> <Delay = 3.91> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 28 <SV = 27> <Delay = 5.76>
+ST_28 : Operation 225 [1/2] (2.32ns)   --->   "%P_X_V_load_3 = load i448* %P_X_V_addr_1, align 8" [sikehls/fpx.cpp:178->sikehls/ec_isogeny.cpp:98]   --->   Operation 225 'load' 'P_X_V_load_3' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 448> <Depth = 2> <RAM>
+ST_28 : Operation 226 [2/2] (3.44ns)   --->   "%t1_V_5 = add i448 %P_X_V_load_3, %P_X_V_load_2" [sikehls/fpx.cpp:178->sikehls/ec_isogeny.cpp:98]   --->   Operation 226 'add' 't1_V_5' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_28 : Operation 227 [2/2] (3.44ns)   --->   "%t2_V_4 = add i448 %t1_1_V_2, %t1_0_V_2" [sikehls/fpx.cpp:179->sikehls/ec_isogeny.cpp:98]   --->   Operation 227 'add' 't2_V_4' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_28 : Operation 228 [1/2] (3.44ns)   --->   "%tt1_V_8 = call fastcc i835 @mp_mul(i448 %P_X_V_load_2, i448 %t1_0_V_2)" [sikehls/fpx.cpp:180->sikehls/ec_isogeny.cpp:98]   --->   Operation 228 'call' 'tt1_V_8' <Predicate = true> <Delay = 3.44> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_28 : Operation 229 [2/2] (2.40ns)   --->   "%tt2_V_4 = call fastcc i835 @mp_mul(i448 %P_X_V_load_3, i448 %t1_1_V_2)" [sikehls/fpx.cpp:181->sikehls/ec_isogeny.cpp:98]   --->   Operation 229 'call' 'tt2_V_4' <Predicate = true> <Delay = 2.40> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_28 : Operation 230 [1/2] (3.44ns)   --->   "%call_ret1_i2 = call fastcc i448 @rdc_mont(i836 %tt3_V_5)" [sikehls/fpx.cpp:185->sikehls/ec_isogeny.cpp:99]   --->   Operation 230 'call' 'call_ret1_i2' <Predicate = true> <Delay = 3.44> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_28 : Operation 231 [1/1] (2.32ns)   --->   "store i448 %call_ret1_i2, i448* %P_Z_V_addr_1, align 8" [sikehls/fpx.cpp:185->sikehls/ec_isogeny.cpp:99]   --->   Operation 231 'store' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 448> <Depth = 2> <RAM>
+ST_28 : Operation 232 [2/2] (3.91ns)   --->   "%call_ret_i4 = call fastcc i448 @rdc_mont(i836 %tt3_V_5)" [sikehls/fpx.cpp:186->sikehls/ec_isogeny.cpp:99]   --->   Operation 232 'call' 'call_ret_i4' <Predicate = true> <Delay = 3.91> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 29 <SV = 28> <Delay = 6.88>
+ST_29 : Operation 233 [1/2] (3.44ns)   --->   "%t1_V_5 = add i448 %P_X_V_load_3, %P_X_V_load_2" [sikehls/fpx.cpp:178->sikehls/ec_isogeny.cpp:98]   --->   Operation 233 'add' 't1_V_5' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_29 : Operation 234 [1/2] (3.44ns)   --->   "%t2_V_4 = add i448 %t1_1_V_2, %t1_0_V_2" [sikehls/fpx.cpp:179->sikehls/ec_isogeny.cpp:98]   --->   Operation 234 'add' 't2_V_4' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_29 : Operation 235 [1/1] (0.00ns)   --->   "%zext_ln180_4 = zext i835 %tt1_V_8 to i836" [sikehls/fpx.cpp:180->sikehls/ec_isogeny.cpp:98]   --->   Operation 235 'zext' 'zext_ln180_4' <Predicate = true> <Delay = 0.00>
+ST_29 : Operation 236 [1/2] (3.44ns)   --->   "%tt2_V_4 = call fastcc i835 @mp_mul(i448 %P_X_V_load_3, i448 %t1_1_V_2)" [sikehls/fpx.cpp:181->sikehls/ec_isogeny.cpp:98]   --->   Operation 236 'call' 'tt2_V_4' <Predicate = true> <Delay = 3.44> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_29 : Operation 237 [1/1] (0.00ns)   --->   "%zext_ln181_4 = zext i835 %tt2_V_4 to i836" [sikehls/fpx.cpp:181->sikehls/ec_isogeny.cpp:98]   --->   Operation 237 'zext' 'zext_ln181_4' <Predicate = true> <Delay = 0.00>
+ST_29 : Operation 238 [2/2] (3.44ns)   --->   "%tt3_V_4 = sub i836 %zext_ln180_4, %zext_ln181_4" [sikehls/fpx.cpp:183->sikehls/ec_isogeny.cpp:98]   --->   Operation 238 'sub' 'tt3_V_4' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_29 : Operation 239 [1/2] (3.44ns)   --->   "%call_ret_i4 = call fastcc i448 @rdc_mont(i836 %tt3_V_5)" [sikehls/fpx.cpp:186->sikehls/ec_isogeny.cpp:99]   --->   Operation 239 'call' 'call_ret_i4' <Predicate = true> <Delay = 3.44> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_29 : Operation 240 [1/1] (2.32ns)   --->   "store i448 %call_ret_i4, i448* %P_Z_V_addr, align 8" [sikehls/fpx.cpp:186->sikehls/ec_isogeny.cpp:99]   --->   Operation 240 'store' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 448> <Depth = 2> <RAM>
+
+State 30 <SV = 29> <Delay = 7.35>
+ST_30 : Operation 241 [2/2] (2.40ns)   --->   "%empty_10 = call fastcc i835 @mp_mul(i448 %t1_V_5, i448 %t2_V_4)" [sikehls/fpx.cpp:182->sikehls/ec_isogeny.cpp:98]   --->   Operation 241 'call' 'empty_10' <Predicate = true> <Delay = 2.40> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_30 : Operation 242 [1/2] (3.44ns)   --->   "%tt3_V_4 = sub i836 %zext_ln180_4, %zext_ln181_4" [sikehls/fpx.cpp:183->sikehls/ec_isogeny.cpp:98]   --->   Operation 242 'sub' 'tt3_V_4' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_30 : Operation 243 [2/2] (3.91ns)   --->   "%call_ret1_i1 = call fastcc i448 @rdc_mont(i836 %tt3_V_4)" [sikehls/fpx.cpp:185->sikehls/ec_isogeny.cpp:98]   --->   Operation 243 'call' 'call_ret1_i1' <Predicate = true> <Delay = 3.91> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 31 <SV = 30> <Delay = 5.76>
+ST_31 : Operation 244 [1/2] (3.44ns)   --->   "%empty_10 = call fastcc i835 @mp_mul(i448 %t1_V_5, i448 %t2_V_4)" [sikehls/fpx.cpp:182->sikehls/ec_isogeny.cpp:98]   --->   Operation 244 'call' 'empty_10' <Predicate = true> <Delay = 3.44> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_31 : Operation 245 [1/2] (3.44ns)   --->   "%call_ret1_i1 = call fastcc i448 @rdc_mont(i836 %tt3_V_4)" [sikehls/fpx.cpp:185->sikehls/ec_isogeny.cpp:98]   --->   Operation 245 'call' 'call_ret1_i1' <Predicate = true> <Delay = 3.44> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_31 : Operation 246 [1/1] (2.32ns)   --->   "store i448 %call_ret1_i1, i448* %P_X_V_addr_1, align 8" [sikehls/fpx.cpp:185->sikehls/ec_isogeny.cpp:98]   --->   Operation 246 'store' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 448> <Depth = 2> <RAM>
+ST_31 : Operation 247 [2/2] (3.91ns)   --->   "%call_ret_i3 = call fastcc i448 @rdc_mont(i836 %tt3_V_4)" [sikehls/fpx.cpp:186->sikehls/ec_isogeny.cpp:98]   --->   Operation 247 'call' 'call_ret_i3' <Predicate = true> <Delay = 3.91> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 32 <SV = 31> <Delay = 5.76>
+ST_32 : Operation 248 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([2 x i448]* %P_X_V), !map !343"   --->   Operation 248 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_32 : Operation 249 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([2 x i448]* %P_Z_V), !map !349"   --->   Operation 249 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_32 : Operation 250 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([6 x i448]* %coeff_V), !map !353"   --->   Operation 250 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_32 : Operation 251 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([12 x i8]* @eval_4_isog_str) nounwind"   --->   Operation 251 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_32 : Operation 252 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, [1 x i8]* @p_str9, [1 x i8]* @p_str9, [7 x i8]* @p_str11, [1 x i8]* @p_str9) nounwind" [sikehls/ec_isogeny.cpp:79]   --->   Operation 252 'specresourcelimit' <Predicate = true> <Delay = 0.00>
+ST_32 : Operation 253 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecResourceLimit(i32 2, [1 x i8]* @p_str9, [1 x i8]* @p_str9, [8 x i8]* @p_str15, [1 x i8]* @p_str9) nounwind" [sikehls/ec_isogeny.cpp:80]   --->   Operation 253 'specresourcelimit' <Predicate = true> <Delay = 0.00>
+ST_32 : Operation 254 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, [1 x i8]* @p_str9, [1 x i8]* @p_str9, [9 x i8]* @p_str12, [1 x i8]* @p_str9) nounwind" [sikehls/ec_isogeny.cpp:81]   --->   Operation 254 'specresourcelimit' <Predicate = true> <Delay = 0.00>
+ST_32 : Operation 255 [1/2] (3.44ns)   --->   "%call_ret_i3 = call fastcc i448 @rdc_mont(i836 %tt3_V_4)" [sikehls/fpx.cpp:186->sikehls/ec_isogeny.cpp:98]   --->   Operation 255 'call' 'call_ret_i3' <Predicate = true> <Delay = 3.44> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_32 : Operation 256 [1/1] (2.32ns)   --->   "store i448 %call_ret_i3, i448* %P_X_V_addr, align 8" [sikehls/fpx.cpp:186->sikehls/ec_isogeny.cpp:98]   --->   Operation 256 'store' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 448> <Depth = 2> <RAM>
+ST_32 : Operation 257 [1/1] (0.00ns)   --->   "ret void" [sikehls/ec_isogeny.cpp:100]   --->   Operation 257 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 2.32ns
+The critical path consists of the following:
+	'getelementptr' operation ('P_X_V_addr', sikehls/fpx.cpp:132->sikehls/ec_isogeny.cpp:86) [4]  (0 ns)
+	'load' operation ('P_X_V_load', sikehls/fpx.cpp:135->sikehls/ec_isogeny.cpp:86) on array 'P_X_V' [21]  (2.32 ns)
+
+ <State 2>: 5.76ns
+The critical path consists of the following:
+	'load' operation ('P_X_V_load', sikehls/fpx.cpp:135->sikehls/ec_isogeny.cpp:86) on array 'P_X_V' [21]  (2.32 ns)
+	'add' operation ('ssdm_int<448 + 1024 * 0, false>[0].V', sikehls/fpx.cpp:135->sikehls/ec_isogeny.cpp:86) [23]  (3.44 ns)
+
+ <State 3>: 6.88ns
+The critical path consists of the following:
+	'add' operation ('add_ln214', sikehls/fpx.cpp:10->sikehls/fpx.cpp:143->sikehls/ec_isogeny.cpp:87) [27]  (3.44 ns)
+	'sub' operation ('ssdm_int<448 + 1024 * 0, false>[0].V', sikehls/fpx.cpp:10->sikehls/fpx.cpp:143->sikehls/ec_isogeny.cpp:87) [28]  (3.44 ns)
+
+ <State 4>: 6.88ns
+The critical path consists of the following:
+	'add' operation ('add_ln214_1', sikehls/fpx.cpp:10->sikehls/fpx.cpp:144->sikehls/ec_isogeny.cpp:87) [29]  (3.44 ns)
+	'sub' operation ('ssdm_int<448 + 1024 * 0, false>[1].V', sikehls/fpx.cpp:10->sikehls/fpx.cpp:144->sikehls/ec_isogeny.cpp:87) [30]  (3.44 ns)
+
+ <State 5>: 6.88ns
+The critical path consists of the following:
+	'call' operation ('tt2_V', sikehls/fpx.cpp:181->sikehls/ec_isogeny.cpp:88) to 'mp_mul' [37]  (3.44 ns)
+	'sub' operation ('tt3.V', sikehls/fpx.cpp:183->sikehls/ec_isogeny.cpp:88) [40]  (3.44 ns)
+
+ <State 6>: 7.36ns
+The critical path consists of the following:
+	'sub' operation ('tt3.V', sikehls/fpx.cpp:183->sikehls/ec_isogeny.cpp:88) [40]  (3.44 ns)
+	'call' operation ('call_ret2_i', sikehls/fpx.cpp:185->sikehls/ec_isogeny.cpp:88) to 'rdc_mont' [41]  (3.92 ns)
+
+ <State 7>: 6.7ns
+The critical path consists of the following:
+	'load' operation ('coeff_V_load_3', sikehls/fpx.cpp:179->sikehls/ec_isogeny.cpp:89) on array 'coeff_V' [47]  (3.25 ns)
+	'add' operation ('t2.V', sikehls/fpx.cpp:179->sikehls/ec_isogeny.cpp:89) [48]  (3.44 ns)
+
+ <State 8>: 6.88ns
+The critical path consists of the following:
+	'call' operation ('tt2_V_1', sikehls/fpx.cpp:181->sikehls/ec_isogeny.cpp:89) to 'mp_mul' [51]  (3.44 ns)
+	'sub' operation ('tt3.V', sikehls/fpx.cpp:183->sikehls/ec_isogeny.cpp:89) [54]  (3.44 ns)
+
+ <State 9>: 3.44ns
+The critical path consists of the following:
+	'add' operation ('t1.V', sikehls/fpx.cpp:178->sikehls/ec_isogeny.cpp:88) [31]  (3.44 ns)
+
+ <State 10>: 6.88ns
+The critical path consists of the following:
+	'call' operation ('tt2_V_2', sikehls/fpx.cpp:181->sikehls/ec_isogeny.cpp:90) to 'mp_mul' [61]  (3.44 ns)
+	'sub' operation ('tt3.V', sikehls/fpx.cpp:183->sikehls/ec_isogeny.cpp:90) [64]  (3.44 ns)
+
+ <State 11>: 3.92ns
+The critical path consists of the following:
+	'call' operation ('call_ret2_i1', sikehls/fpx.cpp:185->sikehls/ec_isogeny.cpp:89) to 'rdc_mont' [55]  (3.92 ns)
+
+ <State 12>: 3.92ns
+The critical path consists of the following:
+	'call' operation ('call_ret_i1', sikehls/fpx.cpp:186->sikehls/ec_isogeny.cpp:89) to 'rdc_mont' [57]  (3.92 ns)
+
+ <State 13>: 3.92ns
+The critical path consists of the following:
+	'call' operation ('c[0].V', sikehls/fpx.cpp:185->sikehls/ec_isogeny.cpp:90) to 'rdc_mont' [65]  (3.92 ns)
+
+ <State 14>: 6.88ns
+The critical path consists of the following:
+	'add' operation ('add_ln214_2', sikehls/fpx.cpp:10->sikehls/fpx.cpp:143->sikehls/ec_isogeny.cpp:93) [79]  (3.44 ns)
+	'sub' operation ('sub_ln214', sikehls/fpx.cpp:10->sikehls/fpx.cpp:143->sikehls/ec_isogeny.cpp:93) [80]  (3.44 ns)
+
+ <State 15>: 6.88ns
+The critical path consists of the following:
+	'sub' operation ('sub_ln214', sikehls/fpx.cpp:10->sikehls/fpx.cpp:143->sikehls/ec_isogeny.cpp:93) [80]  (3.44 ns)
+	'sub' operation ('sub_ln214_4', sikehls/fpx.cpp:16->sikehls/fpx.cpp:164->sikehls/ec_isogeny.cpp:95) [96]  (3.44 ns)
+
+ <State 16>: 6.88ns
+The critical path consists of the following:
+	'call' operation ('tt2_V_3', sikehls/fpx.cpp:181->sikehls/ec_isogeny.cpp:91) to 'mp_mul' [72]  (3.44 ns)
+	'sub' operation ('tt3.V', sikehls/fpx.cpp:183->sikehls/ec_isogeny.cpp:91) [75]  (3.44 ns)
+
+ <State 17>: 5.84ns
+The critical path consists of the following:
+	'add' operation ('t1.V', sikehls/fpx.cpp:163->sikehls/ec_isogeny.cpp:95) [95]  (3.44 ns)
+	'call' operation ('temp_V_2', sikehls/fpx.cpp:87->sikehls/fpx.cpp:166->sikehls/ec_isogeny.cpp:95) to 'mp_mul' [99]  (2.4 ns)
+
+ <State 18>: 6.88ns
+The critical path consists of the following:
+	'sub' operation ('sub_ln214_3', sikehls/fpx.cpp:16->sikehls/fpx.cpp:164->sikehls/ec_isogeny.cpp:94) [86]  (3.44 ns)
+	'add' operation ('add_ln214_4', sikehls/fpx.cpp:16->sikehls/fpx.cpp:164->sikehls/ec_isogeny.cpp:94) [87]  (3.44 ns)
+
+ <State 19>: 5.84ns
+The critical path consists of the following:
+	'add' operation ('t1.V', sikehls/fpx.cpp:163->sikehls/ec_isogeny.cpp:94) [85]  (3.44 ns)
+	'call' operation ('temp_V', sikehls/fpx.cpp:87->sikehls/fpx.cpp:166->sikehls/ec_isogeny.cpp:94) to 'mp_mul' [89]  (2.4 ns)
+
+ <State 20>: 5.76ns
+The critical path consists of the following:
+	'call' operation ('call_ret1_i', sikehls/fpx.cpp:88->sikehls/fpx.cpp:166->sikehls/ec_isogeny.cpp:95) to 'rdc_mont' [101]  (3.44 ns)
+	'store' operation ('store_ln88', sikehls/fpx.cpp:88->sikehls/fpx.cpp:166->sikehls/ec_isogeny.cpp:95) of variable 'call_ret1_i', sikehls/fpx.cpp:88->sikehls/fpx.cpp:166->sikehls/ec_isogeny.cpp:95 on array 'P_Z_V' [102]  (2.32 ns)
+
+ <State 21>: 5.76ns
+The critical path consists of the following:
+	'load' operation ('P_Z_V_load_3', sikehls/fpx.cpp:144->sikehls/ec_isogeny.cpp:97) on array 'P_Z_V' [111]  (2.32 ns)
+	'add' operation ('add_ln214_7', sikehls/fpx.cpp:10->sikehls/fpx.cpp:144->sikehls/ec_isogeny.cpp:97) [112]  (3.44 ns)
+
+ <State 22>: 6.88ns
+The critical path consists of the following:
+	'add' operation ('add_ln214_7', sikehls/fpx.cpp:10->sikehls/fpx.cpp:144->sikehls/ec_isogeny.cpp:97) [112]  (3.44 ns)
+	'sub' operation ('ssdm_int<448 + 1024 * 0, false>[1].V', sikehls/fpx.cpp:10->sikehls/fpx.cpp:144->sikehls/ec_isogeny.cpp:97) [113]  (3.44 ns)
+
+ <State 23>: 6.88ns
+The critical path consists of the following:
+	'add' operation ('add_ln214_6', sikehls/fpx.cpp:10->sikehls/fpx.cpp:143->sikehls/ec_isogeny.cpp:97) [109]  (3.44 ns)
+	'sub' operation ('ssdm_int<448 + 1024 * 0, false>[0].V', sikehls/fpx.cpp:10->sikehls/fpx.cpp:143->sikehls/ec_isogeny.cpp:97) [110]  (3.44 ns)
+
+ <State 24>: 6.88ns
+The critical path consists of the following:
+	'sub' operation ('ssdm_int<448 + 1024 * 0, false>[0].V', sikehls/fpx.cpp:10->sikehls/fpx.cpp:143->sikehls/ec_isogeny.cpp:97) [110]  (3.44 ns)
+	'add' operation ('t2.V', sikehls/fpx.cpp:179->sikehls/ec_isogeny.cpp:99) [129]  (3.44 ns)
+
+ <State 25>: 6.88ns
+The critical path consists of the following:
+	'call' operation ('tt1_V_s', sikehls/fpx.cpp:180->sikehls/ec_isogeny.cpp:99) to 'mp_mul' [130]  (3.44 ns)
+	'sub' operation ('tt3.V', sikehls/fpx.cpp:183->sikehls/ec_isogeny.cpp:99) [135]  (3.44 ns)
+
+ <State 26>: 3.44ns
+The critical path consists of the following:
+	'call' operation ('empty_11', sikehls/fpx.cpp:182->sikehls/ec_isogeny.cpp:99) to 'mp_mul' [134]  (3.44 ns)
+
+ <State 27>: 4.72ns
+The critical path consists of the following:
+	'load' operation ('P_X_V_load_2', sikehls/fpx.cpp:178->sikehls/ec_isogeny.cpp:98) on array 'P_X_V' [114]  (2.32 ns)
+	'call' operation ('tt1_V_8', sikehls/fpx.cpp:180->sikehls/ec_isogeny.cpp:98) to 'mp_mul' [118]  (2.4 ns)
+
+ <State 28>: 5.76ns
+The critical path consists of the following:
+	'load' operation ('P_X_V_load_3', sikehls/fpx.cpp:178->sikehls/ec_isogeny.cpp:98) on array 'P_X_V' [115]  (2.32 ns)
+	'add' operation ('t1.V', sikehls/fpx.cpp:178->sikehls/ec_isogeny.cpp:98) [116]  (3.44 ns)
+
+ <State 29>: 6.88ns
+The critical path consists of the following:
+	'call' operation ('tt2_V_4', sikehls/fpx.cpp:181->sikehls/ec_isogeny.cpp:98) to 'mp_mul' [120]  (3.44 ns)
+	'sub' operation ('tt3.V', sikehls/fpx.cpp:183->sikehls/ec_isogeny.cpp:98) [123]  (3.44 ns)
+
+ <State 30>: 7.36ns
+The critical path consists of the following:
+	'sub' operation ('tt3.V', sikehls/fpx.cpp:183->sikehls/ec_isogeny.cpp:98) [123]  (3.44 ns)
+	'call' operation ('call_ret1_i1', sikehls/fpx.cpp:185->sikehls/ec_isogeny.cpp:98) to 'rdc_mont' [124]  (3.92 ns)
+
+ <State 31>: 5.76ns
+The critical path consists of the following:
+	'call' operation ('call_ret1_i1', sikehls/fpx.cpp:185->sikehls/ec_isogeny.cpp:98) to 'rdc_mont' [124]  (3.44 ns)
+	'store' operation ('store_ln185', sikehls/fpx.cpp:185->sikehls/ec_isogeny.cpp:98) of variable 'call_ret1_i1', sikehls/fpx.cpp:185->sikehls/ec_isogeny.cpp:98 on array 'P_X_V' [125]  (2.32 ns)
+
+ <State 32>: 5.76ns
+The critical path consists of the following:
+	'call' operation ('call_ret_i3', sikehls/fpx.cpp:186->sikehls/ec_isogeny.cpp:98) to 'rdc_mont' [126]  (3.44 ns)
+	'store' operation ('store_ln186', sikehls/fpx.cpp:186->sikehls/ec_isogeny.cpp:98) of variable 'call_ret_i3', sikehls/fpx.cpp:186->sikehls/ec_isogeny.cpp:98 on array 'P_X_V' [127]  (2.32 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

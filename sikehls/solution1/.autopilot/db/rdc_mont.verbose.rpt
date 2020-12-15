@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'rdc_mont'
 ================================================================
-* Date:           Mon Dec 14 20:27:09 2020
+* Date:           Tue Dec 15 15:56:14 2020
 
 * Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
 * Project:        sikehls
@@ -59,9 +59,9 @@
 |Instance         |        0|     70|   24253|   4199|    -|
 |Memory           |        -|      -|       -|      -|    -|
 |Multiplexer      |        -|      -|       -|     66|    -|
-|Register         |        -|      -|    2187|      -|    -|
+|Register         |        -|      -|    2186|      -|    -|
 +-----------------+---------+-------+--------+-------+-----+
-|Total            |        0|     70|   26440|   4265|    0|
+|Total            |        0|     70|   26439|   4265|    0|
 +-----------------+---------+-------+--------+-------+-----+
 |Available        |      280|    220|  106400|  53200|    0|
 +-----------------+---------+-------+--------+-------+-----+
@@ -74,7 +74,7 @@
     |         Instance         |        Module        | BRAM_18K| DSP48E|   FF  |  LUT | URAM|
     +--------------------------+----------------------+---------+-------+-------+------+-----+
     |grp_bc_mult_448_fu_30     |bc_mult_448           |        0|     70|  23673|  4067|    0|
-    |xDBL_add_837ns_83kbM_U44  |xDBL_add_837ns_83kbM  |        0|      0|    580|   132|    0|
+    |eval_4_isog_add_8mb6_U44  |eval_4_isog_add_8mb6  |        0|      0|    580|   132|    0|
     +--------------------------+----------------------+---------+-------+-------+------+-----+
     |Total                     |                      |        0|     70|  24253|  4199|    0|
     +--------------------------+----------------------+---------+-------+-------+------+-----+
@@ -111,11 +111,11 @@
     |ap_return                           |  448|   0|  448|          0|
     |ap_return_preg                      |  448|   0|  448|          0|
     |grp_bc_mult_448_fu_30_ap_start_reg  |    1|   0|    1|          0|
-    |m_V_reg_93                          |    1|   0|  448|        447|
-    |ma_V_read_reg_83                    |  837|   0|  837|          0|
-    |ma_trunc_V_reg_88                   |  448|   0|  448|          0|
+    |m_V_reg_97                          |    1|   0|  448|        447|
+    |ma_V_read_reg_87                    |  836|   0|  836|          0|
+    |ma_trunc_V_reg_92                   |  448|   0|  448|          0|
     +------------------------------------+-----+----+-----+-----------+
-    |Total                               | 2187|   0| 2634|        447|
+    |Total                               | 2186|   0| 2633|        447|
     +------------------------------------+-----+----+-----+-----------+
 
 
@@ -134,7 +134,7 @@
 |ap_idle    | out |    1| ap_ctrl_hs |   rdc_mont   | return value |
 |ap_ready   | out |    1| ap_ctrl_hs |   rdc_mont   | return value |
 |ap_return  | out |  448| ap_ctrl_hs |   rdc_mont   | return value |
-|ma_V       |  in |  837|   ap_none  |     ma_V     |    scalar    |
+|ma_V       |  in |  836|   ap_none  |     ma_V     |    scalar    |
 +-----------+-----+-----+------------+--------------+--------------+
 
 ============================================================
@@ -176,8 +176,8 @@ IsGatedGlobalClock: 0
 * FSM state operations: 
 
 State 1 <SV = 0> <Delay = 1.76>
-ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%ma_V_read = call i837 @_ssdm_op_Read.ap_auto.i837(i837 %ma_V)" [sikehls/fpx.cpp:72]   --->   Operation 5 'read' 'ma_V_read' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%ma_trunc_V = trunc i837 %ma_V_read to i448" [sikehls/fpx.cpp:72]   --->   Operation 6 'trunc' 'ma_trunc_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%ma_V_read = call i836 @_ssdm_op_Read.ap_auto.i836(i836 %ma_V)" [sikehls/fpx.cpp:72]   --->   Operation 5 'read' 'ma_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%ma_trunc_V = trunc i836 %ma_V_read to i448" [sikehls/fpx.cpp:72]   --->   Operation 6 'trunc' 'ma_trunc_V' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 7 [2/2] (1.76ns)   --->   "%mult_V_2 = call fastcc i835 @bc_mult_448(i448 %ma_trunc_V, i448 24439423661345221551909145011457493619085780243761596511325807336205221239331976725970216671828618445898719026692884939342314733568)" [sikehls/fpx.cpp:74]   --->   Operation 7 'call' 'mult_V_2' <Predicate = true> <Delay = 1.76> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 2 <SV = 1> <Delay = 5.21>
@@ -189,13 +189,14 @@ ST_2 : Operation 11 [2/2] (1.76ns)   --->   "%mult_V = call fastcc i835 @bc_mult
 State 3 <SV = 2> <Delay = 6.88>
 ST_3 : Operation 12 [1/2] (3.44ns)   --->   "%mult_V = call fastcc i835 @bc_mult_448(i448 %m_V, i448 24439423661345221551909145011457493619085780243761596511325807336205221239331976725970216671828618445898719026692884939342314733567)" [sikehls/fpx.cpp:76]   --->   Operation 12 'call' 'mult_V' <Predicate = true> <Delay = 3.44> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 ST_3 : Operation 13 [1/1] (0.00ns)   --->   "%zext_ln209 = zext i835 %mult_V to i837" [sikehls/fpx.cpp:77]   --->   Operation 13 'zext' 'zext_ln209' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 14 [2/2] (3.44ns)   --->   "%sum_V = add i837 %zext_ln209, %ma_V_read" [sikehls/fpx.cpp:77]   --->   Operation 14 'add' 'sum_V' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 14 [1/1] (0.00ns)   --->   "%sext_ln209 = sext i836 %ma_V_read to i837" [sikehls/fpx.cpp:77]   --->   Operation 14 'sext' 'sext_ln209' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 15 [2/2] (3.44ns)   --->   "%sum_V = add i837 %zext_ln209, %sext_ln209" [sikehls/fpx.cpp:77]   --->   Operation 15 'add' 'sum_V' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 
 State 4 <SV = 3> <Delay = 3.44>
-ST_4 : Operation 15 [1/2] (3.44ns)   --->   "%sum_V = add i837 %zext_ln209, %ma_V_read" [sikehls/fpx.cpp:77]   --->   Operation 15 'add' 'sum_V' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_4 : Operation 16 [1/1] (0.00ns)   --->   "%tmp_1 = call i389 @_ssdm_op_PartSelect.i389.i837.i32.i32(i837 %sum_V, i32 448, i32 836)" [sikehls/fpx.cpp:78]   --->   Operation 16 'partselect' 'tmp_1' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 17 [1/1] (0.00ns)   --->   "%sext_ln1503 = sext i389 %tmp_1 to i448" [sikehls/fpx.cpp:78]   --->   Operation 17 'sext' 'sext_ln1503' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 18 [1/1] (0.00ns)   --->   "ret i448 %sext_ln1503" [sikehls/fpx.cpp:79]   --->   Operation 18 'ret' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 16 [1/2] (3.44ns)   --->   "%sum_V = add i837 %zext_ln209, %sext_ln209" [sikehls/fpx.cpp:77]   --->   Operation 16 'add' 'sum_V' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 17 [1/1] (0.00ns)   --->   "%tmp_1 = call i389 @_ssdm_op_PartSelect.i389.i837.i32.i32(i837 %sum_V, i32 448, i32 836)" [sikehls/fpx.cpp:78]   --->   Operation 17 'partselect' 'tmp_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 18 [1/1] (0.00ns)   --->   "%sext_ln1503 = sext i389 %tmp_1 to i448" [sikehls/fpx.cpp:78]   --->   Operation 18 'sext' 'sext_ln1503' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 19 [1/1] (0.00ns)   --->   "ret i448 %sext_ln1503" [sikehls/fpx.cpp:79]   --->   Operation 19 'ret' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
@@ -216,13 +217,14 @@ Port [ ma_V]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; exter
 
 <LifeTime>
 <method=bitvector/>
-ma_V_read   (read          ) [ 00111]
+ma_V_read   (read          ) [ 00110]
 ma_trunc_V  (trunc         ) [ 00100]
 mult_V_2    (call          ) [ 00000]
 tmp         (bitselect     ) [ 00000]
 m_V         (bitconcatenate) [ 00010]
 mult_V      (call          ) [ 00000]
 zext_ln209  (zext          ) [ 00001]
+sext_ln209  (sext          ) [ 00001]
 sum_V       (add           ) [ 00000]
 tmp_1       (partselect    ) [ 00000]
 sext_ln1503 (sext          ) [ 00000]
@@ -246,7 +248,7 @@ ret_ln79    (ret           ) [ 00000]
 <pin id="3" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="_ssdm_op_Read.ap_auto.i837"/></StgValue>
+<StgValue><ssdm name="_ssdm_op_Read.ap_auto.i836"/></StgValue>
 </bind>
 </comp>
 
@@ -342,9 +344,9 @@ ret_ln79    (ret           ) [ 00000]
 
 <comp id="24" class="1004" name="ma_V_read_read_fu_24">
 <pin_list>
-<pin id="25" dir="0" index="0" bw="837" slack="0"/>
-<pin id="26" dir="0" index="1" bw="837" slack="0"/>
-<pin id="27" dir="1" index="2" bw="837" slack="0"/>
+<pin id="25" dir="0" index="0" bw="836" slack="0"/>
+<pin id="26" dir="0" index="1" bw="836" slack="0"/>
+<pin id="27" dir="1" index="2" bw="836" slack="0"/>
 </pin_list>
 <bind>
 <opcode="read(1150) " fcode="read"/>
@@ -367,7 +369,7 @@ ret_ln79    (ret           ) [ 00000]
 
 <comp id="38" class="1004" name="ma_trunc_V_fu_38">
 <pin_list>
-<pin id="39" dir="0" index="0" bw="837" slack="0"/>
+<pin id="39" dir="0" index="0" bw="836" slack="0"/>
 <pin id="40" dir="1" index="1" bw="448" slack="0"/>
 </pin_list>
 <bind>
@@ -413,11 +415,22 @@ ret_ln79    (ret           ) [ 00000]
 </bind>
 </comp>
 
-<comp id="64" class="1004" name="grp_fu_64">
+<comp id="64" class="1004" name="sext_ln209_fu_64">
 <pin_list>
-<pin id="65" dir="0" index="0" bw="835" slack="0"/>
-<pin id="66" dir="0" index="1" bw="837" slack="2"/>
-<pin id="67" dir="1" index="2" bw="837" slack="0"/>
+<pin id="65" dir="0" index="0" bw="836" slack="2"/>
+<pin id="66" dir="1" index="1" bw="837" slack="0"/>
+</pin_list>
+<bind>
+<opcode="sext(35) " fcode="sext"/>
+<opset="sext_ln209/3 "/>
+</bind>
+</comp>
+
+<comp id="67" class="1004" name="grp_fu_67">
+<pin_list>
+<pin id="68" dir="0" index="0" bw="835" slack="0"/>
+<pin id="69" dir="0" index="1" bw="836" slack="0"/>
+<pin id="70" dir="1" index="2" bw="837" slack="0"/>
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
@@ -425,13 +438,13 @@ ret_ln79    (ret           ) [ 00000]
 </bind>
 </comp>
 
-<comp id="69" class="1004" name="tmp_1_fu_69">
+<comp id="73" class="1004" name="tmp_1_fu_73">
 <pin_list>
-<pin id="70" dir="0" index="0" bw="389" slack="0"/>
-<pin id="71" dir="0" index="1" bw="837" slack="0"/>
-<pin id="72" dir="0" index="2" bw="10" slack="0"/>
-<pin id="73" dir="0" index="3" bw="11" slack="0"/>
-<pin id="74" dir="1" index="4" bw="389" slack="0"/>
+<pin id="74" dir="0" index="0" bw="389" slack="0"/>
+<pin id="75" dir="0" index="1" bw="837" slack="0"/>
+<pin id="76" dir="0" index="2" bw="10" slack="0"/>
+<pin id="77" dir="0" index="3" bw="11" slack="0"/>
+<pin id="78" dir="1" index="4" bw="389" slack="0"/>
 </pin_list>
 <bind>
 <opcode="partselect(1002) " fcode="partselect"/>
@@ -439,10 +452,10 @@ ret_ln79    (ret           ) [ 00000]
 </bind>
 </comp>
 
-<comp id="79" class="1004" name="sext_ln1503_fu_79">
+<comp id="83" class="1004" name="sext_ln1503_fu_83">
 <pin_list>
-<pin id="80" dir="0" index="0" bw="389" slack="0"/>
-<pin id="81" dir="1" index="1" bw="448" slack="2147483647"/>
+<pin id="84" dir="0" index="0" bw="389" slack="0"/>
+<pin id="85" dir="1" index="1" bw="448" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="sext(35) " fcode="sext"/>
@@ -450,43 +463,53 @@ ret_ln79    (ret           ) [ 00000]
 </bind>
 </comp>
 
-<comp id="83" class="1005" name="ma_V_read_reg_83">
+<comp id="87" class="1005" name="ma_V_read_reg_87">
 <pin_list>
-<pin id="84" dir="0" index="0" bw="837" slack="2"/>
-<pin id="85" dir="1" index="1" bw="837" slack="2"/>
+<pin id="88" dir="0" index="0" bw="836" slack="2"/>
+<pin id="89" dir="1" index="1" bw="836" slack="2"/>
 </pin_list>
 <bind>
 <opset="ma_V_read "/>
 </bind>
 </comp>
 
-<comp id="88" class="1005" name="ma_trunc_V_reg_88">
+<comp id="92" class="1005" name="ma_trunc_V_reg_92">
 <pin_list>
-<pin id="89" dir="0" index="0" bw="448" slack="1"/>
-<pin id="90" dir="1" index="1" bw="448" slack="1"/>
+<pin id="93" dir="0" index="0" bw="448" slack="1"/>
+<pin id="94" dir="1" index="1" bw="448" slack="1"/>
 </pin_list>
 <bind>
 <opset="ma_trunc_V "/>
 </bind>
 </comp>
 
-<comp id="93" class="1005" name="m_V_reg_93">
+<comp id="97" class="1005" name="m_V_reg_97">
 <pin_list>
-<pin id="94" dir="0" index="0" bw="448" slack="1"/>
-<pin id="95" dir="1" index="1" bw="448" slack="1"/>
+<pin id="98" dir="0" index="0" bw="448" slack="1"/>
+<pin id="99" dir="1" index="1" bw="448" slack="1"/>
 </pin_list>
 <bind>
 <opset="m_V "/>
 </bind>
 </comp>
 
-<comp id="98" class="1005" name="zext_ln209_reg_98">
+<comp id="102" class="1005" name="zext_ln209_reg_102">
 <pin_list>
-<pin id="99" dir="0" index="0" bw="837" slack="1"/>
-<pin id="100" dir="1" index="1" bw="837" slack="1"/>
+<pin id="103" dir="0" index="0" bw="837" slack="1"/>
+<pin id="104" dir="1" index="1" bw="837" slack="1"/>
 </pin_list>
 <bind>
 <opset="zext_ln209 "/>
+</bind>
+</comp>
+
+<comp id="107" class="1005" name="sext_ln209_reg_107">
+<pin_list>
+<pin id="108" dir="0" index="0" bw="837" slack="1"/>
+<pin id="109" dir="1" index="1" bw="837" slack="1"/>
+</pin_list>
+<bind>
+<opset="sext_ln209 "/>
 </bind>
 </comp>
 
@@ -523,33 +546,39 @@ ret_ln79    (ret           ) [ 00000]
 
 <net id="63"><net_src comp="30" pin="3"/><net_sink comp="60" pin=0"/></net>
 
-<net id="68"><net_src comp="60" pin="1"/><net_sink comp="64" pin=0"/></net>
+<net id="71"><net_src comp="60" pin="1"/><net_sink comp="67" pin=0"/></net>
 
-<net id="75"><net_src comp="18" pin="0"/><net_sink comp="69" pin=0"/></net>
+<net id="72"><net_src comp="64" pin="1"/><net_sink comp="67" pin=1"/></net>
 
-<net id="76"><net_src comp="64" pin="2"/><net_sink comp="69" pin=1"/></net>
+<net id="79"><net_src comp="18" pin="0"/><net_sink comp="73" pin=0"/></net>
 
-<net id="77"><net_src comp="20" pin="0"/><net_sink comp="69" pin=2"/></net>
+<net id="80"><net_src comp="67" pin="2"/><net_sink comp="73" pin=1"/></net>
 
-<net id="78"><net_src comp="22" pin="0"/><net_sink comp="69" pin=3"/></net>
+<net id="81"><net_src comp="20" pin="0"/><net_sink comp="73" pin=2"/></net>
 
-<net id="82"><net_src comp="69" pin="4"/><net_sink comp="79" pin=0"/></net>
+<net id="82"><net_src comp="22" pin="0"/><net_sink comp="73" pin=3"/></net>
 
-<net id="86"><net_src comp="24" pin="2"/><net_sink comp="83" pin=0"/></net>
+<net id="86"><net_src comp="73" pin="4"/><net_sink comp="83" pin=0"/></net>
 
-<net id="87"><net_src comp="83" pin="1"/><net_sink comp="64" pin=1"/></net>
+<net id="90"><net_src comp="24" pin="2"/><net_sink comp="87" pin=0"/></net>
 
-<net id="91"><net_src comp="38" pin="1"/><net_sink comp="88" pin=0"/></net>
+<net id="91"><net_src comp="87" pin="1"/><net_sink comp="64" pin=0"/></net>
 
-<net id="92"><net_src comp="88" pin="1"/><net_sink comp="30" pin=1"/></net>
+<net id="95"><net_src comp="38" pin="1"/><net_sink comp="92" pin=0"/></net>
 
-<net id="96"><net_src comp="51" pin="3"/><net_sink comp="93" pin=0"/></net>
+<net id="96"><net_src comp="92" pin="1"/><net_sink comp="30" pin=1"/></net>
 
-<net id="97"><net_src comp="93" pin="1"/><net_sink comp="30" pin=1"/></net>
+<net id="100"><net_src comp="51" pin="3"/><net_sink comp="97" pin=0"/></net>
 
-<net id="101"><net_src comp="60" pin="1"/><net_sink comp="98" pin=0"/></net>
+<net id="101"><net_src comp="97" pin="1"/><net_sink comp="30" pin=1"/></net>
 
-<net id="102"><net_src comp="98" pin="1"/><net_sink comp="64" pin=0"/></net>
+<net id="105"><net_src comp="60" pin="1"/><net_sink comp="102" pin=0"/></net>
+
+<net id="106"><net_src comp="102" pin="1"/><net_sink comp="67" pin=0"/></net>
+
+<net id="110"><net_src comp="64" pin="1"/><net_sink comp="107" pin=0"/></net>
+
+<net id="111"><net_src comp="107" pin="1"/><net_sink comp="67" pin=1"/></net>
 
 </net_list>
 
@@ -586,7 +615,7 @@ ret_ln79    (ret           ) [ 00000]
 |----------|-----------------------|---------|---------|---------|---------|
 |   call   | grp_bc_mult_448_fu_30 |    70   |  53.07  |  54186  |   4140  |
 |----------|-----------------------|---------|---------|---------|---------|
-|    add   |       grp_fu_64       |    0    |    0    |   580   |   132   |
+|    add   |       grp_fu_67       |    0    |    0    |   580   |   132   |
 |----------|-----------------------|---------|---------|---------|---------|
 |   read   |  ma_V_read_read_fu_24 |    0    |    0    |    0    |    0    |
 |----------|-----------------------|---------|---------|---------|---------|
@@ -598,9 +627,10 @@ ret_ln79    (ret           ) [ 00000]
 |----------|-----------------------|---------|---------|---------|---------|
 |   zext   |    zext_ln209_fu_60   |    0    |    0    |    0    |    0    |
 |----------|-----------------------|---------|---------|---------|---------|
-|partselect|      tmp_1_fu_69      |    0    |    0    |    0    |    0    |
+|   sext   |    sext_ln209_fu_64   |    0    |    0    |    0    |    0    |
+|          |   sext_ln1503_fu_83   |    0    |    0    |    0    |    0    |
 |----------|-----------------------|---------|---------|---------|---------|
-|   sext   |   sext_ln1503_fu_79   |    0    |    0    |    0    |    0    |
+|partselect|      tmp_1_fu_73      |    0    |    0    |    0    |    0    |
 |----------|-----------------------|---------|---------|---------|---------|
 |   Total  |                       |    70   |  53.07  |  54766  |   4272  |
 |----------|-----------------------|---------|---------|---------|---------|
@@ -609,16 +639,17 @@ Memories:
 N/A
 
 * Register list:
-+-----------------+--------+
-|                 |   FF   |
-+-----------------+--------+
-|    m_V_reg_93   |   448  |
-| ma_V_read_reg_83|   837  |
-|ma_trunc_V_reg_88|   448  |
-|zext_ln209_reg_98|   837  |
-+-----------------+--------+
-|      Total      |  2570  |
-+-----------------+--------+
++------------------+--------+
+|                  |   FF   |
++------------------+--------+
+|    m_V_reg_97    |   448  |
+| ma_V_read_reg_87 |   836  |
+| ma_trunc_V_reg_92|   448  |
+|sext_ln209_reg_107|   837  |
+|zext_ln209_reg_102|   837  |
++------------------+--------+
+|       Total      |  3406  |
++------------------+--------+
 
 * Multiplexer (MUX) list: 
 |-----------------------|------|------|------|--------||---------||---------|
@@ -626,9 +657,10 @@ N/A
 |-----------------------|------|------|------|--------||---------||---------|
 | grp_bc_mult_448_fu_30 |  p1  |   4  |  448 |  1792  ||    21   |
 | grp_bc_mult_448_fu_30 |  p2  |   2  |  435 |   870  |
-|       grp_fu_64       |  p0  |   2  |  835 |  1670  ||    9    |
+|       grp_fu_67       |  p0  |   2  |  835 |  1670  ||    9    |
+|       grp_fu_67       |  p1  |   2  |  836 |  1672  ||    9    |
 |-----------------------|------|------|------|--------||---------||---------|
-|         Total         |      |      |      |  4332  ||  5.3985 ||    30   |
+|         Total         |      |      |      |  6004  ||  7.1675 ||    39   |
 |-----------------------|------|------|------|--------||---------||---------|
 
 
@@ -639,8 +671,8 @@ N/A
 +-----------+--------+--------+--------+--------+
 |  Function |   70   |   53   |  54766 |  4272  |
 |   Memory  |    -   |    -   |    -   |    -   |
-|Multiplexer|    -   |    5   |    -   |   30   |
-|  Register |    -   |    -   |  2570  |    -   |
+|Multiplexer|    -   |    7   |    -   |   39   |
+|  Register |    -   |    -   |  3406  |    -   |
 +-----------+--------+--------+--------+--------+
-|   Total   |   70   |   58   |  57336 |  4302  |
+|   Total   |   70   |   60   |  58172 |  4311  |
 +-----------+--------+--------+--------+--------+

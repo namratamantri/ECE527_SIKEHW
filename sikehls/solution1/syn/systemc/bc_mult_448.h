@@ -11,17 +11,17 @@
 #include "systemc.h"
 #include "AESL_pkg.h"
 
-#include "xDBL_mux_73_64_1_1.h"
-#include "xDBL_mul_64ns_64nbkb.h"
-#include "xDBL_mul_64s_64s_cud.h"
-#include "xDBL_mux_73_448_1_1.h"
-#include "xDBL_add_451ns_45dEe.h"
-#include "xDBL_add_515ns_51eOg.h"
-#include "xDBL_add_579ns_57fYi.h"
-#include "xDBL_add_643ns_64g8j.h"
-#include "xDBL_add_707ns_70hbi.h"
-#include "xDBL_add_771ns_77ibs.h"
-#include "xDBL_add_835ns_83jbC.h"
+#include "eval_4_isog_mux_7bkb.h"
+#include "eval_4_isog_mul_6cud.h"
+#include "eval_4_isog_mul_6dEe.h"
+#include "eval_4_isog_mux_7eOg.h"
+#include "eval_4_isog_add_4fYi.h"
+#include "eval_4_isog_add_5g8j.h"
+#include "eval_4_isog_add_5hbi.h"
+#include "eval_4_isog_add_6ibs.h"
+#include "eval_4_isog_add_7jbC.h"
+#include "eval_4_isog_add_7kbM.h"
+#include "eval_4_isog_add_8lbW.h"
 
 namespace ap_rtl {
 
@@ -47,34 +47,34 @@ struct bc_mult_448 : public sc_module {
 
     sc_trace_file* mVcdFile;
 
-    xDBL_mux_73_64_1_1<1,1,64,64,64,64,64,64,64,3,64>* xDBL_mux_73_64_1_1_U1;
-    xDBL_mul_64ns_64nbkb<1,5,64,64,128>* xDBL_mul_64ns_64nbkb_U2;
-    xDBL_mul_64ns_64nbkb<1,5,64,64,128>* xDBL_mul_64ns_64nbkb_U3;
-    xDBL_mul_64ns_64nbkb<1,5,64,64,128>* xDBL_mul_64ns_64nbkb_U4;
-    xDBL_mul_64ns_64nbkb<1,5,64,64,128>* xDBL_mul_64ns_64nbkb_U5;
-    xDBL_mul_64ns_64nbkb<1,5,64,64,128>* xDBL_mul_64ns_64nbkb_U6;
-    xDBL_mul_64ns_64nbkb<1,5,64,64,128>* xDBL_mul_64ns_64nbkb_U7;
-    xDBL_mul_64s_64s_cud<1,5,64,64,64>* xDBL_mul_64s_64s_cud_U8;
-    xDBL_mux_73_448_1_1<1,1,448,448,448,448,448,448,448,3,448>* xDBL_mux_73_448_1_1_U9;
-    xDBL_add_451ns_45dEe<1,2,451,451,451>* xDBL_add_451ns_45dEe_U10;
-    xDBL_mux_73_448_1_1<1,1,448,448,448,448,448,448,448,3,448>* xDBL_mux_73_448_1_1_U11;
-    xDBL_add_515ns_51eOg<1,2,515,515,515>* xDBL_add_515ns_51eOg_U12;
-    xDBL_mux_73_448_1_1<1,1,448,448,448,448,448,448,448,3,448>* xDBL_mux_73_448_1_1_U13;
-    xDBL_add_579ns_57fYi<1,2,579,579,579>* xDBL_add_579ns_57fYi_U14;
-    xDBL_mux_73_448_1_1<1,1,448,448,448,448,448,448,448,3,448>* xDBL_mux_73_448_1_1_U15;
-    xDBL_add_643ns_64g8j<1,2,643,643,643>* xDBL_add_643ns_64g8j_U16;
-    xDBL_mux_73_448_1_1<1,1,448,448,448,448,448,448,448,3,448>* xDBL_mux_73_448_1_1_U17;
-    xDBL_add_707ns_70hbi<1,2,707,707,707>* xDBL_add_707ns_70hbi_U18;
-    xDBL_mux_73_448_1_1<1,1,448,448,448,448,448,448,448,3,448>* xDBL_mux_73_448_1_1_U19;
-    xDBL_add_771ns_77ibs<1,2,771,771,771>* xDBL_add_771ns_77ibs_U20;
-    xDBL_mux_73_448_1_1<1,1,448,448,448,448,448,448,448,3,448>* xDBL_mux_73_448_1_1_U21;
-    xDBL_add_835ns_83jbC<1,2,835,835,835>* xDBL_add_835ns_83jbC_U22;
-    xDBL_add_579ns_57fYi<1,2,579,579,579>* xDBL_add_579ns_57fYi_U23;
-    xDBL_add_707ns_70hbi<1,2,707,707,707>* xDBL_add_707ns_70hbi_U24;
-    xDBL_add_835ns_83jbC<1,2,835,835,835>* xDBL_add_835ns_83jbC_U25;
-    xDBL_add_579ns_57fYi<1,2,579,579,579>* xDBL_add_579ns_57fYi_U26;
-    xDBL_add_835ns_83jbC<1,2,835,835,835>* xDBL_add_835ns_83jbC_U27;
-    xDBL_add_835ns_83jbC<1,2,835,835,835>* xDBL_add_835ns_83jbC_U28;
+    eval_4_isog_mux_7bkb<1,1,64,64,64,64,64,64,64,3,64>* eval_4_isog_mux_7bkb_U1;
+    eval_4_isog_mul_6cud<1,5,64,64,128>* eval_4_isog_mul_6cud_U2;
+    eval_4_isog_mul_6cud<1,5,64,64,128>* eval_4_isog_mul_6cud_U3;
+    eval_4_isog_mul_6cud<1,5,64,64,128>* eval_4_isog_mul_6cud_U4;
+    eval_4_isog_mul_6cud<1,5,64,64,128>* eval_4_isog_mul_6cud_U5;
+    eval_4_isog_mul_6cud<1,5,64,64,128>* eval_4_isog_mul_6cud_U6;
+    eval_4_isog_mul_6cud<1,5,64,64,128>* eval_4_isog_mul_6cud_U7;
+    eval_4_isog_mul_6dEe<1,5,64,64,64>* eval_4_isog_mul_6dEe_U8;
+    eval_4_isog_mux_7eOg<1,1,448,448,448,448,448,448,448,3,448>* eval_4_isog_mux_7eOg_U9;
+    eval_4_isog_add_4fYi<1,2,451,451,451>* eval_4_isog_add_4fYi_U10;
+    eval_4_isog_mux_7eOg<1,1,448,448,448,448,448,448,448,3,448>* eval_4_isog_mux_7eOg_U11;
+    eval_4_isog_add_5g8j<1,2,515,515,515>* eval_4_isog_add_5g8j_U12;
+    eval_4_isog_mux_7eOg<1,1,448,448,448,448,448,448,448,3,448>* eval_4_isog_mux_7eOg_U13;
+    eval_4_isog_add_5hbi<1,2,579,579,579>* eval_4_isog_add_5hbi_U14;
+    eval_4_isog_mux_7eOg<1,1,448,448,448,448,448,448,448,3,448>* eval_4_isog_mux_7eOg_U15;
+    eval_4_isog_add_6ibs<1,2,643,643,643>* eval_4_isog_add_6ibs_U16;
+    eval_4_isog_mux_7eOg<1,1,448,448,448,448,448,448,448,3,448>* eval_4_isog_mux_7eOg_U17;
+    eval_4_isog_add_7jbC<1,2,707,707,707>* eval_4_isog_add_7jbC_U18;
+    eval_4_isog_mux_7eOg<1,1,448,448,448,448,448,448,448,3,448>* eval_4_isog_mux_7eOg_U19;
+    eval_4_isog_add_7kbM<1,2,771,771,771>* eval_4_isog_add_7kbM_U20;
+    eval_4_isog_mux_7eOg<1,1,448,448,448,448,448,448,448,3,448>* eval_4_isog_mux_7eOg_U21;
+    eval_4_isog_add_8lbW<1,2,835,835,835>* eval_4_isog_add_8lbW_U22;
+    eval_4_isog_add_5hbi<1,2,579,579,579>* eval_4_isog_add_5hbi_U23;
+    eval_4_isog_add_7jbC<1,2,707,707,707>* eval_4_isog_add_7jbC_U24;
+    eval_4_isog_add_8lbW<1,2,835,835,835>* eval_4_isog_add_8lbW_U25;
+    eval_4_isog_add_5hbi<1,2,579,579,579>* eval_4_isog_add_5hbi_U26;
+    eval_4_isog_add_8lbW<1,2,835,835,835>* eval_4_isog_add_8lbW_U27;
+    eval_4_isog_add_8lbW<1,2,835,835,835>* eval_4_isog_add_8lbW_U28;
     sc_signal< sc_lv<8> > ap_CS_fsm;
     sc_signal< sc_logic > ap_CS_fsm_state1;
     sc_signal< sc_lv<3> > i7_0_reg_332;

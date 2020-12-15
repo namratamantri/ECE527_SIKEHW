@@ -20,37 +20,7 @@
 <InvalidType>0</InvalidType>
 </RtlPorts>
 <RtlPorts>
-<name>Q_X_V</name>
-<CType>
-<TypeName>ap_uint 448</TypeName>
-<TypeWidth>448</TypeWidth>
-<PhysicalWidth>448</PhysicalWidth>
-</CType>
-<CFractionWidth>0</CFractionWidth>
-<InvalidType>0</InvalidType>
-</RtlPorts>
-<RtlPorts>
-<name>Q_Z_V</name>
-<CType>
-<TypeName>ap_uint 448</TypeName>
-<TypeWidth>448</TypeWidth>
-<PhysicalWidth>448</PhysicalWidth>
-</CType>
-<CFractionWidth>0</CFractionWidth>
-<InvalidType>0</InvalidType>
-</RtlPorts>
-<RtlPorts>
-<name>A24plus_V</name>
-<CType>
-<TypeName>ap_uint 448</TypeName>
-<TypeWidth>448</TypeWidth>
-<PhysicalWidth>448</PhysicalWidth>
-</CType>
-<CFractionWidth>0</CFractionWidth>
-<InvalidType>0</InvalidType>
-</RtlPorts>
-<RtlPorts>
-<name>C24_V</name>
+<name>coeff_V</name>
 <CType>
 <TypeName>ap_uint 448</TypeName>
 <TypeWidth>448</TypeWidth>
