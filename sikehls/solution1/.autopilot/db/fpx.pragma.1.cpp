@@ -6480,6 +6480,7 @@ _ssdm_InlineSelf(0, "");
 
 void mp_mul(const digit_t a, const digit_t b, digit_d* c)
 {
+_ssdm_InlineSelf(2, "");
 
 
  bc_mult_448(a,b,c);
@@ -6487,6 +6488,7 @@ void mp_mul(const digit_t a, const digit_t b, digit_d* c)
 
 void rdc_mont(digit_d ma, digit_t* mc)
 {
+_ssdm_InlineSelf(2, "");
  digit_d one = 1;
  digit_d mask = one<<448 - 1;
  digit_t ma_trunc = (digit_t) ma;

@@ -21,9 +21,9 @@
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>67</Best-caseLatency>
-<Average-caseLatency>67</Average-caseLatency>
-<Worst-caseLatency>67</Worst-caseLatency>
+<Best-caseLatency>68</Best-caseLatency>
+<Average-caseLatency>68</Average-caseLatency>
+<Worst-caseLatency>68</Worst-caseLatency>
 <Interval-min>68</Interval-min>
 <Interval-max>68</Interval-max>
 </SummaryOfOverallLatency>
@@ -33,8 +33,8 @@
 <Resources>
 <BRAM_18K>0</BRAM_18K>
 <DSP48E>70</DSP48E>
-<FF>24707</FF>
-<LUT>4256</LUT>
+<FF>26440</FF>
+<LUT>4265</LUT>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>
@@ -114,6 +114,17 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
+<name>ap_return</name>
+<Object>rdc_mont</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>448</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
 <name>ma_V</name>
 <Object>ma_V</Object>
 <Type>scalar</Type>
@@ -121,33 +132,8 @@
 <IOProtocol>ap_none</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>896</Bits>
+<Bits>837</Bits>
 <Attribute>data</Attribute>
-<CType>int</CType>
-</RtlPorts>
-<RtlPorts>
-<name>mc_V</name>
-<Object>mc_V</Object>
-<Type>pointer</Type>
-<Scope></Scope>
-<IOProtocol>ap_vld</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>448</Bits>
-<Attribute>data</Attribute>
-<CType>int</CType>
-</RtlPorts>
-<RtlPorts>
-<name>mc_V_ap_vld</name>
-<Object>mc_V</Object>
-<Type>pointer</Type>
-<Scope></Scope>
-<IOProtocol>ap_vld</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>1</Bits>
-<Attribute>control</Attribute>
-<CType>int</CType>
 </RtlPorts>
 </InterfaceSummary>
 

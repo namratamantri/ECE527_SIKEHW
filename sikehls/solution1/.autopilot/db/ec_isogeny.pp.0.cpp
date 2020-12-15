@@ -6431,8 +6431,13 @@ void xDBL(const point_proj_t P, point_proj_t Q, const f2elm_t A24plus, const f2e
 {_ssdm_SpecArrayDimSize(P, 1);_ssdm_SpecArrayDimSize(Q, 1);_ssdm_SpecArrayDimSize(A24plus, 2);_ssdm_SpecArrayDimSize(C24, 2);
 
 
+#pragma HLS inline region recursive
+#pragma HLS ALLOCATION instances=bc_mult_448 limit=2 function
+#pragma HLS ALLOCATION instances=mp_mul limit=2 function
+#pragma HLS ALLOCATION instances=Mul limit=110 core
+#pragma HLS ALLOCATION instances=MulnS limit=110 core
 
-    f2elm_t t0, t1;
+ f2elm_t t0, t1;
 
     mp2_sub_p2(P->X, P->Z, t0);
     mp2_add(P->X, P->Z, t1);

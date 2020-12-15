@@ -3,7 +3,7 @@
 #define N 7
 #define P 64
 //broadcast multiplier for 448 bit multiplication. Uses N parallel multipliers of P bits each. N*P = 448.
-void bc_mult_448(digit_t a,digit_t b, digit_d* c){
+void __attribute__ ((noinline)) bc_mult_448(digit_t a,digit_t b, digit_d* c){
 #pragma HLS inline off
 	digit_t partial_products[N][N];
 	ap_uint<P> ai[N];

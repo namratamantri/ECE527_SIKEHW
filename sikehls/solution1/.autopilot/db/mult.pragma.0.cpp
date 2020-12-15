@@ -6425,7 +6425,7 @@ void bc_mult_448(digit_t a,digit_t b, digit_d* c);
 
 
 
-void bc_mult_448(digit_t a,digit_t b, digit_d* c){
+void __attribute__ ((noinline)) bc_mult_448(digit_t a,digit_t b, digit_d* c){
 #pragma HLS inline off
  digit_t partial_products[7][7];
  ap_uint<64> ai[7];

@@ -1,7 +1,7 @@
 # This script segment is generated automatically by AutoPilot
 
 set id 1
-set name rdc_mont_mux_73_6bkb
+set name xDBL_mux_73_64_1_1
 set corename simcore_mux
 set op mux
 set stage_num 1
@@ -20,7 +20,7 @@ set din4_signed 0
 set din5_width 64
 set din5_signed 0
 set din6_width 64
-set din6_signed 1
+set din6_signed 0
 set din7_width 3
 set din7_signed 0
 set dout_width 64
@@ -104,7 +104,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_pipemux, check your
 
 
 set id 2
-set name rdc_mont_mul_64nscud
+set name xDBL_mul_64ns_64nbkb
 set corename simcore_mul
 set op mul
 set stage_num 5
@@ -189,7 +189,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_multicycle_mul, che
 
 
 set id 8
-set name rdc_mont_mul_64s_dEe
+set name xDBL_mul_64s_64s_cud
 set corename simcore_mul
 set op mul
 set stage_num 5
@@ -274,7 +274,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_multicycle_mul, che
 
 
 set id 9
-set name rdc_mont_mux_73_4eOg
+set name xDBL_mux_73_448_1_1
 set corename simcore_mux
 set op mux
 set stage_num 1
@@ -377,7 +377,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_pipemux, check your
 
 
 set id 10
-set name rdc_mont_add_451nfYi
+set name xDBL_add_451ns_45dEe
 set corename simcore_add
 set op add
 set stage_num 2
@@ -462,7 +462,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_pipeaddsub, check y
 
 
 set id 12
-set name rdc_mont_add_515ng8j
+set name xDBL_add_515ns_51eOg
 set corename simcore_add
 set op add
 set stage_num 2
@@ -547,7 +547,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_pipeaddsub, check y
 
 
 set id 14
-set name rdc_mont_add_579nhbi
+set name xDBL_add_579ns_57fYi
 set corename simcore_add
 set op add
 set stage_num 2
@@ -632,7 +632,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_pipeaddsub, check y
 
 
 set id 16
-set name rdc_mont_add_643nibs
+set name xDBL_add_643ns_64g8j
 set corename simcore_add
 set op add
 set stage_num 2
@@ -717,7 +717,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_pipeaddsub, check y
 
 
 set id 18
-set name rdc_mont_add_707njbC
+set name xDBL_add_707ns_70hbi
 set corename simcore_add
 set op add
 set stage_num 2
@@ -802,7 +802,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_pipeaddsub, check y
 
 
 set id 20
-set name rdc_mont_add_771nkbM
+set name xDBL_add_771ns_77ibs
 set corename simcore_add
 set op add
 set stage_num 2
@@ -887,7 +887,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_pipeaddsub, check y
 
 
 set id 22
-set name rdc_mont_add_835nlbW
+set name xDBL_add_835ns_83jbC
 set corename simcore_add
 set op add
 set stage_num 2
@@ -1004,7 +1004,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_b_V \
     op interface \
-    ports { b_V { I 435 vector } } \
+    ports { b_V { I 448 vector } } \
 } "
 }
 

@@ -156,7 +156,7 @@
 <IOProtocol>ap_none</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>435</Bits>
+<Bits>448</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 </InterfaceSummary>

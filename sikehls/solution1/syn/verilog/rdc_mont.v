@@ -7,8 +7,6 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="rdc_mont,hls_ip_2019_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=1,HLS_INPUT_PART=xc7z020-clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=6.978000,HLS_SYN_LAT=67,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=70,HLS_SYN_FF=24707,HLS_SYN_LUT=4256,HLS_VERSION=2019_1}" *)
-
 module rdc_mont (
         ap_clk,
         ap_rst,
@@ -17,8 +15,7 @@ module rdc_mont (
         ap_idle,
         ap_ready,
         ma_V,
-        mc_V,
-        mc_V_ap_vld
+        ap_return
 );
 
 parameter    ap_ST_fsm_state1 = 4'd1;
@@ -32,69 +29,73 @@ input   ap_start;
 output   ap_done;
 output   ap_idle;
 output   ap_ready;
-input  [895:0] ma_V;
-output  [447:0] mc_V;
-output   mc_V_ap_vld;
+input  [836:0] ma_V;
+output  [447:0] ap_return;
 
 reg ap_done;
 reg ap_idle;
 reg ap_ready;
-reg mc_V_ap_vld;
+reg[447:0] ap_return;
 
 (* fsm_encoding = "none" *) reg   [3:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
-wire   [447:0] ma_trunc_V_fu_55_p1;
-reg   [447:0] ma_trunc_V_reg_102;
-wire   [447:0] m_V_fu_68_p3;
-reg   [447:0] m_V_reg_107;
+reg   [836:0] ma_V_read_reg_83;
+wire   [447:0] ma_trunc_V_fu_38_p1;
+reg   [447:0] ma_trunc_V_reg_88;
+wire   [447:0] m_V_fu_51_p3;
+reg   [447:0] m_V_reg_93;
 wire    ap_CS_fsm_state2;
-wire    grp_bc_mult_448_fu_47_ap_ready;
-wire    grp_bc_mult_448_fu_47_ap_done;
+wire    grp_bc_mult_448_fu_30_ap_ready;
+wire    grp_bc_mult_448_fu_30_ap_done;
 wire    ap_CS_fsm_state3;
-wire    grp_bc_mult_448_fu_47_ap_start;
-wire    grp_bc_mult_448_fu_47_ap_idle;
-reg   [447:0] grp_bc_mult_448_fu_47_a_V;
-reg   [434:0] grp_bc_mult_448_fu_47_b_V;
-wire   [834:0] grp_bc_mult_448_fu_47_ap_return;
-reg    grp_bc_mult_448_fu_47_ap_start_reg;
+wire    grp_bc_mult_448_fu_30_ap_start;
+wire    grp_bc_mult_448_fu_30_ap_idle;
+reg   [447:0] grp_bc_mult_448_fu_30_a_V;
+reg   [447:0] grp_bc_mult_448_fu_30_b_V;
+wire   [834:0] grp_bc_mult_448_fu_30_ap_return;
+reg    grp_bc_mult_448_fu_30_ap_start_reg;
+wire   [0:0] tmp_fu_43_p3;
+wire   [836:0] grp_fu_64_p0;
+wire   [836:0] grp_fu_64_p2;
 wire    ap_CS_fsm_state4;
-wire   [0:0] tmp_fu_60_p3;
-wire   [895:0] grp_fu_81_p1;
-wire   [895:0] grp_fu_81_p2;
-reg    grp_fu_81_ce;
+wire   [388:0] tmp_1_fu_69_p4;
+reg    grp_fu_64_ce;
+wire  signed [447:0] sext_ln1503_fu_79_p1;
+reg   [447:0] ap_return_preg;
 reg   [3:0] ap_NS_fsm;
 
 // power-on initialization
 initial begin
 #0 ap_CS_fsm = 4'd1;
-#0 grp_bc_mult_448_fu_47_ap_start_reg = 1'b0;
+#0 grp_bc_mult_448_fu_30_ap_start_reg = 1'b0;
+#0 ap_return_preg = 448'd0;
 end
 
-bc_mult_448 grp_bc_mult_448_fu_47(
+bc_mult_448 grp_bc_mult_448_fu_30(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst),
-    .ap_start(grp_bc_mult_448_fu_47_ap_start),
-    .ap_done(grp_bc_mult_448_fu_47_ap_done),
-    .ap_idle(grp_bc_mult_448_fu_47_ap_idle),
-    .ap_ready(grp_bc_mult_448_fu_47_ap_ready),
-    .a_V(grp_bc_mult_448_fu_47_a_V),
-    .b_V(grp_bc_mult_448_fu_47_b_V),
-    .ap_return(grp_bc_mult_448_fu_47_ap_return)
+    .ap_start(grp_bc_mult_448_fu_30_ap_start),
+    .ap_done(grp_bc_mult_448_fu_30_ap_done),
+    .ap_idle(grp_bc_mult_448_fu_30_ap_idle),
+    .ap_ready(grp_bc_mult_448_fu_30_ap_ready),
+    .a_V(grp_bc_mult_448_fu_30_a_V),
+    .b_V(grp_bc_mult_448_fu_30_b_V),
+    .ap_return(grp_bc_mult_448_fu_30_ap_return)
 );
 
-rdc_mont_add_896nmb6 #(
+xDBL_add_837ns_83kbM #(
     .ID( 1 ),
     .NUM_STAGE( 2 ),
-    .din0_WIDTH( 896 ),
-    .din1_WIDTH( 896 ),
-    .dout_WIDTH( 896 ))
-rdc_mont_add_896nmb6_U42(
+    .din0_WIDTH( 837 ),
+    .din1_WIDTH( 837 ),
+    .dout_WIDTH( 837 ))
+xDBL_add_837ns_83kbM_U44(
     .clk(ap_clk),
     .reset(ap_rst),
-    .din0(ma_V),
-    .din1(grp_fu_81_p1),
-    .ce(grp_fu_81_ce),
-    .dout(grp_fu_81_p2)
+    .din0(grp_fu_64_p0),
+    .din1(ma_V_read_reg_83),
+    .ce(grp_fu_64_ce),
+    .dout(grp_fu_64_p2)
 );
 
 always @ (posedge ap_clk) begin
@@ -107,30 +108,47 @@ end
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
-        grp_bc_mult_448_fu_47_ap_start_reg <= 1'b0;
+        ap_return_preg <= 448'd0;
     end else begin
-        if ((((grp_bc_mult_448_fu_47_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state2)) | ((ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1)))) begin
-            grp_bc_mult_448_fu_47_ap_start_reg <= 1'b1;
-        end else if ((grp_bc_mult_448_fu_47_ap_ready == 1'b1)) begin
-            grp_bc_mult_448_fu_47_ap_start_reg <= 1'b0;
+        if ((1'b1 == ap_CS_fsm_state4)) begin
+            ap_return_preg <= sext_ln1503_fu_79_p1;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((grp_bc_mult_448_fu_47_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
-        m_V_reg_107[447] <= m_V_fu_68_p3[447];
+    if (ap_rst == 1'b1) begin
+        grp_bc_mult_448_fu_30_ap_start_reg <= 1'b0;
+    end else begin
+        if ((((grp_bc_mult_448_fu_30_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state2)) | ((ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1)))) begin
+            grp_bc_mult_448_fu_30_ap_start_reg <= 1'b1;
+        end else if ((grp_bc_mult_448_fu_30_ap_ready == 1'b1)) begin
+            grp_bc_mult_448_fu_30_ap_start_reg <= 1'b0;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state4)) begin
+        ap_return <= sext_ln1503_fu_79_p1;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((grp_bc_mult_448_fu_30_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
+        m_V_reg_93[447] <= m_V_fu_51_p3[447];
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
-        ma_trunc_V_reg_102 <= ma_trunc_V_fu_55_p1;
+        ma_V_read_reg_83 <= ma_V;
+        ma_trunc_V_reg_88 <= ma_trunc_V_fu_38_p1;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state4)) begin
+    if (((ap_start == 1'b0) & (1'b1 == ap_CS_fsm_state1))) begin
         ap_done = 1'b1;
     end else begin
         ap_done = 1'b0;
@@ -155,37 +173,29 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state3)) begin
-        grp_bc_mult_448_fu_47_a_V = m_V_reg_107;
+        grp_bc_mult_448_fu_30_a_V = m_V_reg_93;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        grp_bc_mult_448_fu_47_a_V = ma_trunc_V_reg_102;
+        grp_bc_mult_448_fu_30_a_V = ma_trunc_V_reg_88;
     end else begin
-        grp_bc_mult_448_fu_47_a_V = 'bx;
+        grp_bc_mult_448_fu_30_a_V = 'bx;
     end
 end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state3)) begin
-        grp_bc_mult_448_fu_47_b_V = 435'd24439423661345221551909145011457493619085780243761596511325807336205221239331976725970216671828618445898719026692884939342314733567;
+        grp_bc_mult_448_fu_30_b_V = 448'd24439423661345221551909145011457493619085780243761596511325807336205221239331976725970216671828618445898719026692884939342314733567;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        grp_bc_mult_448_fu_47_b_V = 435'd24439423661345221551909145011457493619085780243761596511325807336205221239331976725970216671828618445898719026692884939342314733568;
+        grp_bc_mult_448_fu_30_b_V = 448'd24439423661345221551909145011457493619085780243761596511325807336205221239331976725970216671828618445898719026692884939342314733568;
     end else begin
-        grp_bc_mult_448_fu_47_b_V = 'bx;
+        grp_bc_mult_448_fu_30_b_V = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state4) | ((grp_bc_mult_448_fu_47_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state3)))) begin
-        grp_fu_81_ce = 1'b1;
+    if (((1'b1 == ap_CS_fsm_state4) | ((grp_bc_mult_448_fu_30_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state3)))) begin
+        grp_fu_64_ce = 1'b1;
     end else begin
-        grp_fu_81_ce = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state4)) begin
-        mc_V_ap_vld = 1'b1;
-    end else begin
-        mc_V_ap_vld = 1'b0;
+        grp_fu_64_ce = 1'b0;
     end
 end
 
@@ -199,14 +209,14 @@ always @ (*) begin
             end
         end
         ap_ST_fsm_state2 : begin
-            if (((grp_bc_mult_448_fu_47_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
+            if (((grp_bc_mult_448_fu_30_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
                 ap_NS_fsm = ap_ST_fsm_state3;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state2;
             end
         end
         ap_ST_fsm_state3 : begin
-            if (((grp_bc_mult_448_fu_47_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state3))) begin
+            if (((grp_bc_mult_448_fu_30_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state3))) begin
                 ap_NS_fsm = ap_ST_fsm_state4;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state3;
@@ -229,20 +239,22 @@ assign ap_CS_fsm_state3 = ap_CS_fsm[32'd2];
 
 assign ap_CS_fsm_state4 = ap_CS_fsm[32'd3];
 
-assign grp_bc_mult_448_fu_47_ap_start = grp_bc_mult_448_fu_47_ap_start_reg;
+assign grp_bc_mult_448_fu_30_ap_start = grp_bc_mult_448_fu_30_ap_start_reg;
 
-assign grp_fu_81_p1 = grp_bc_mult_448_fu_47_ap_return;
+assign grp_fu_64_p0 = grp_bc_mult_448_fu_30_ap_return;
 
-assign m_V_fu_68_p3 = {{tmp_fu_60_p3}, {447'd0}};
+assign m_V_fu_51_p3 = {{tmp_fu_43_p3}, {447'd0}};
 
-assign ma_trunc_V_fu_55_p1 = ma_V[447:0];
+assign ma_trunc_V_fu_38_p1 = ma_V[447:0];
 
-assign mc_V = {{grp_fu_81_p2[895:448]}};
+assign sext_ln1503_fu_79_p1 = $signed(tmp_1_fu_69_p4);
 
-assign tmp_fu_60_p3 = grp_bc_mult_448_fu_47_ap_return[32'd447];
+assign tmp_1_fu_69_p4 = {{grp_fu_64_p2[836:448]}};
+
+assign tmp_fu_43_p3 = grp_bc_mult_448_fu_30_ap_return[32'd447];
 
 always @ (posedge ap_clk) begin
-    m_V_reg_107[446:0] <= 447'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
+    m_V_reg_93[446:0] <= 447'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
 end
 
 endmodule //rdc_mont

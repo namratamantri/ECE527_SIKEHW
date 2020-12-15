@@ -59,6 +59,8 @@
                                     									
                                     <listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2019.1/include/etc"/>
                                     									
+                                    <listOptionValue builtIn="false" value="C:/Users/namra/Documents/Documents/ece527/project"/>
+                                    									
                                     <listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2019.1/win64/tools/auto_cc/include"/>
                                     								
                                 </option>
@@ -92,6 +94,8 @@
                                     <listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2019.1/win64/tools/systemc/include"/>
                                     									
                                     <listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2019.1/include/etc"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="C:/Users/namra/Documents/Documents/ece527/project"/>
                                     									
                                     <listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2019.1/win64/tools/auto_cc/include"/>
                                     								
@@ -227,6 +231,8 @@
                                     									
                                     <listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2019.1/include/etc"/>
                                     									
+                                    <listOptionValue builtIn="false" value="C:/Users/namra/Documents/Documents/ece527/project"/>
+                                    									
                                     <listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2019.1/win64/tools/auto_cc/include"/>
                                     								
                                 </option>
@@ -250,6 +256,8 @@
                                     <listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2019.1/win64/tools/systemc/include"/>
                                     									
                                     <listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2019.1/include/etc"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="C:/Users/namra/Documents/Documents/ece527/project"/>
                                     									
                                     <listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2019.1/win64/tools/auto_cc/include"/>
                                     								

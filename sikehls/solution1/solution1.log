@@ -7120,3 +7120,1344 @@ INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:09 
 INFO: [VHDL 208-304] Generating VHDL RTL for rdc_mont.
 INFO: [VLOG 209-307] Generating Verilog RTL for rdc_mont.
 INFO: [HLS 200-112] Total elapsed time: 74.926 seconds; peak allocated memory: 176.629 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'sikehls/ec_isogeny.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'sikehls/fpx.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'sikehls/mult.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:03 ; elapsed = 00:01:06 . Memory (MB): peak = 170.973 ; gain = 79.613
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:03 ; elapsed = 00:01:06 . Memory (MB): peak = 170.973 ; gain = 79.613
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'mp_sub434_p2' into 'mp2_sub_p2' (sikehls/fpx.cpp:141).
+INFO: [XFORM 203-603] Inlining function 'mp_sub434_p2' into 'mp2_sub_p2' (sikehls/fpx.cpp:140).
+INFO: [XFORM 203-603] Inlining function 'mp2_sub_p2' into 'xDBL' (sikehls/ec_isogeny.cpp:21).
+INFO: [XFORM 203-603] Inlining function 'mp2_sub_p2' into 'xDBL' (sikehls/ec_isogeny.cpp:15).
+INFO: [XFORM 203-603] Inlining function 'mp2_add' into 'xDBL' (sikehls/ec_isogeny.cpp:23).
+INFO: [XFORM 203-603] Inlining function 'mp2_add' into 'xDBL' (sikehls/ec_isogeny.cpp:16).
+INFO: [XFORM 203-603] Inlining function 'mp_sub434_p4' into 'fp2sqr_mont' (sikehls/fpx.cpp:160).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:04 ; elapsed = 00:01:08 . Memory (MB): peak = 170.973 ; gain = 79.613
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'mp_mul' into 'fpmul_mont' (sikehls/fpx.cpp:84) automatically.
+INFO: [XFORM 203-602] Inlining function 'rdc_mont' into 'fpmul_mont' (sikehls/fpx.cpp:85) automatically.
+INFO: [XFORM 203-602] Inlining function 'fpmul_mont' into 'fp2sqr_mont' (sikehls/fpx.cpp:162) automatically.
+INFO: [XFORM 203-602] Inlining function 'mp_mul' into 'fp2mul_mont.3' (sikehls/fpx.cpp:176) automatically.
+INFO: [XFORM 203-602] Inlining function 'rdc_mont.1' into 'fp2mul_mont.3' (sikehls/fpx.cpp:181) automatically.
+INFO: [XFORM 203-602] Inlining function 'mp_mul' into 'fp2mul_mont.2' (sikehls/fpx.cpp:176) automatically.
+INFO: [XFORM 203-602] Inlining function 'rdc_mont.1' into 'fp2mul_mont.2' (sikehls/fpx.cpp:181) automatically.
+INFO: [XFORM 203-602] Inlining function 'mp_mul' into 'fp2mul_mont.1' (sikehls/fpx.cpp:176) automatically.
+INFO: [XFORM 203-602] Inlining function 'rdc_mont' into 'fp2mul_mont.1' (sikehls/fpx.cpp:181) automatically.
+INFO: [XFORM 203-602] Inlining function 'mp_mul' into 'fp2mul_mont' (sikehls/fpx.cpp:176) automatically.
+INFO: [XFORM 203-602] Inlining function 'rdc_mont.1' into 'fp2mul_mont' (sikehls/fpx.cpp:181) automatically.
+WARNING: [SYNCHK 200-23] sikehls/mult.cpp:23: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:05 ; elapsed = 00:01:09 . Memory (MB): peak = 174.941 ; gain = 83.582
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loopb22' (sikehls/mult.cpp:28) in function 'bc_mult_448' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'loopb21' (sikehls/mult.cpp:21) in function 'bc_mult_448' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'loopb23' (sikehls/mult.cpp:30) in function 'bc_mult_448' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'loop3_1' (sikehls/mult.cpp:42) in function 'bc_mult_448' completely with a factor of 7.
+INFO: [XFORM 203-102] Partitioning array 't0.V' (sikehls/ec_isogeny.cpp:13) automatically.
+INFO: [XFORM 203-102] Partitioning array 't1.V' (sikehls/ec_isogeny.cpp:13) automatically.
+INFO: [XFORM 203-101] Partitioning array 'ai.V' (sikehls/mult.cpp:9) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'bi.V' (sikehls/mult.cpp:10) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'sum.V' (sikehls/mult.cpp:11) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'partial_products.V' (sikehls/mult.cpp:8) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'partial_products.V' (sikehls/mult.cpp:8) in dimension 2 completely.
+INFO: [XFORM 203-602] Inlining function 'mp_mul' into 'fpmul_mont' (sikehls/fpx.cpp:84) automatically.
+INFO: [XFORM 203-602] Inlining function 'rdc_mont' into 'fpmul_mont' (sikehls/fpx.cpp:85) automatically.
+INFO: [XFORM 203-602] Inlining function 'fpmul_mont' into 'fp2sqr_mont' (sikehls/fpx.cpp:162) automatically.
+INFO: [XFORM 203-602] Inlining function 'mp_mul' into 'fp2mul_mont.3' (sikehls/fpx.cpp:176) automatically.
+INFO: [XFORM 203-602] Inlining function 'rdc_mont' into 'fp2mul_mont.3' (sikehls/fpx.cpp:181) automatically.
+INFO: [XFORM 203-602] Inlining function 'mp_mul' into 'fp2mul_mont.2' (sikehls/fpx.cpp:176) automatically.
+INFO: [XFORM 203-602] Inlining function 'rdc_mont' into 'fp2mul_mont.2' (sikehls/fpx.cpp:181) automatically.
+INFO: [XFORM 203-602] Inlining function 'mp_mul' into 'fp2mul_mont.1' (sikehls/fpx.cpp:176) automatically.
+INFO: [XFORM 203-602] Inlining function 'rdc_mont' into 'fp2mul_mont.1' (sikehls/fpx.cpp:181) automatically.
+INFO: [XFORM 203-602] Inlining function 'mp_mul' into 'fp2mul_mont' (sikehls/fpx.cpp:176) automatically.
+INFO: [XFORM 203-602] Inlining function 'rdc_mont' into 'fp2mul_mont' (sikehls/fpx.cpp:181) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp2sqr_mont' into 'xDBL' (sikehls/ec_isogeny.cpp:17) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp2mul_mont.3' into 'xDBL' (sikehls/ec_isogeny.cpp:19) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp2mul_mont.2' into 'xDBL' (sikehls/ec_isogeny.cpp:20) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp2mul_mont.1' into 'xDBL' (sikehls/ec_isogeny.cpp:22) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp2mul_mont' into 'xDBL' (sikehls/ec_isogeny.cpp:24) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'bc_mult_448' (sikehls/mult.cpp:23:29)...6 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:07 ; elapsed = 00:01:12 . Memory (MB): peak = 218.949 ; gain = 127.590
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:09 ; elapsed = 00:01:14 . Memory (MB): peak = 227.250 ; gain = 135.891
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'xDBL' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bc_mult_448' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loopb22'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 6.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 74.75 seconds; current allocated memory: 176.363 MB.
+INFO: [HLS 200-434] Only 1 loops out of a total 2 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.581 seconds; current allocated memory: 177.277 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'xDBL' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.139 seconds; current allocated memory: 177.975 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.965 seconds; current allocated memory: 178.803 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bc_mult_448' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'xDBL_mul_64ns_64ns_128_5_1' to 'xDBL_mul_64ns_64nbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_mul_64s_64s_64_5_1' to 'xDBL_mul_64s_64s_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_451ns_451ns_451_2_1' to 'xDBL_add_451ns_45dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_515ns_515ns_515_2_1' to 'xDBL_add_515ns_51eOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_579ns_579ns_579_2_1' to 'xDBL_add_579ns_57fYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_643ns_643ns_643_2_1' to 'xDBL_add_643ns_64g8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_707ns_707ns_707_2_1' to 'xDBL_add_707ns_70hbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_771ns_771ns_771_2_1' to 'xDBL_add_771ns_77ibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_835ns_835ns_835_2_1' to 'xDBL_add_835ns_83jbC' due to the length limit 20
+INFO: [RTGEN 206-104] Estimated max fanout for 'bc_mult_448' is 6626 from HDL expression: (1'b1 == ap_CS_fsm_state9)
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_451ns_45dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_515ns_51eOg': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_579ns_57fYi': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_643ns_64g8j': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_707ns_70hbi': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_771ns_77ibs': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_835ns_83jbC': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_mul_64ns_64nbkb': 6 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_mul_64s_64s_cud': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_mux_73_448_1_1': 7 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_mux_73_64_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bc_mult_448'.
+INFO: [HLS 200-111]  Elapsed time: 2.26 seconds; current allocated memory: 180.670 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'xDBL' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'xDBL/P_X_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'xDBL/P_Z_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'xDBL/Q_X_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'xDBL/Q_Z_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'xDBL/A24plus_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'xDBL/C24_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'xDBL' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_448ns_448ns_448_2_1' to 'xDBL_add_448ns_44kbM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_sub_448ns_448ns_448_2_1' to 'xDBL_sub_448ns_44lbW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_836ns_836ns_836_2_1' to 'xDBL_add_836ns_83mb6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_435s_435ns_435_2_1' to 'xDBL_add_435s_435ncg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_389ns_389ns_389_2_1' to 'xDBL_add_389ns_38ocq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_sub_435ns_435ns_435_2_1' to 'xDBL_sub_435ns_43pcA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_sub_836ns_836ns_836_2_1' to 'xDBL_sub_836ns_83qcK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_436ns_436ns_436_2_1' to 'xDBL_add_436ns_43rcU' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_837s_837ns_837_2_1' to 'xDBL_add_837s_837sc4' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_391s_391s_391_2_1' to 'xDBL_add_391s_391tde' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_389ns_38ocq': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_391s_391tde': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_435s_435ncg': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_436ns_43rcU': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_448ns_44kbM': 10 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_836ns_83mb6': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_837s_837sc4': 7 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_sub_435ns_43pcA': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_sub_448ns_44lbW': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_sub_836ns_83qcK': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'xDBL'.
+INFO: [HLS 200-111]  Elapsed time: 3.376 seconds; current allocated memory: 182.987 MB.
+INFO: [RTMG 210-282] Generating pipelined core: 'xDBL_mul_64ns_64nbkb_MulnS_0'
+INFO: [RTMG 210-282] Generating pipelined core: 'xDBL_mul_64s_64s_cud_MulnS_1'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_451ns_45dEe_AddSubnS_0'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_515ns_51eOg_AddSubnS_1'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_579ns_57fYi_AddSubnS_2'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_643ns_64g8j_AddSubnS_3'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_707ns_70hbi_AddSubnS_4'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_771ns_77ibs_AddSubnS_5'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_835ns_83jbC_AddSubnS_6'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_448ns_44kbM_AddSubnS_7'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_sub_448ns_44lbW_AddSubnS_8'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_836ns_83mb6_AddSubnS_9'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_435s_435ncg_AddSubnS_10'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_389ns_38ocq_AddSubnS_11'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_sub_435ns_43pcA_AddSubnS_12'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_sub_836ns_83qcK_AddSubnS_13'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_436ns_43rcU_AddSubnS_14'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_837s_837sc4_AddSubnS_15'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_391s_391tde_AddSubnS_16'
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:21 ; elapsed = 00:01:35 . Memory (MB): peak = 251.766 ; gain = 160.406
+INFO: [VHDL 208-304] Generating VHDL RTL for xDBL.
+INFO: [VLOG 209-307] Generating Verilog RTL for xDBL.
+INFO: [HLS 200-112] Total elapsed time: 94.9 seconds; peak allocated memory: 182.987 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'sikehls/ec_isogeny.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'sikehls/fpx.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'sikehls/mult.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:04 ; elapsed = 00:01:03 . Memory (MB): peak = 170.656 ; gain = 79.211
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:04 ; elapsed = 00:01:03 . Memory (MB): peak = 170.656 ; gain = 79.211
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'mp_sub434_p2' into 'mp2_sub_p2' (sikehls/fpx.cpp:141).
+INFO: [XFORM 203-603] Inlining function 'mp_sub434_p2' into 'mp2_sub_p2' (sikehls/fpx.cpp:140).
+INFO: [XFORM 203-603] Inlining function 'mp2_sub_p2' into 'xDBL' (sikehls/ec_isogeny.cpp:22).
+INFO: [XFORM 203-603] Inlining function 'mp2_sub_p2' into 'xDBL' (sikehls/ec_isogeny.cpp:16).
+INFO: [XFORM 203-603] Inlining function 'mp2_add' into 'xDBL' (sikehls/ec_isogeny.cpp:24).
+INFO: [XFORM 203-603] Inlining function 'mp2_add' into 'xDBL' (sikehls/ec_isogeny.cpp:17).
+INFO: [XFORM 203-603] Inlining function 'mp_sub434_p4' into 'fp2sqr_mont' (sikehls/fpx.cpp:160).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:05 ; elapsed = 00:01:06 . Memory (MB): peak = 170.656 ; gain = 79.211
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'mp_mul' into 'fpmul_mont' (sikehls/fpx.cpp:84) automatically.
+INFO: [XFORM 203-602] Inlining function 'rdc_mont' into 'fpmul_mont' (sikehls/fpx.cpp:85) automatically.
+INFO: [XFORM 203-602] Inlining function 'fpmul_mont' into 'fp2sqr_mont' (sikehls/fpx.cpp:162) automatically.
+INFO: [XFORM 203-602] Inlining function 'mp_mul' into 'fp2mul_mont.3' (sikehls/fpx.cpp:176) automatically.
+INFO: [XFORM 203-602] Inlining function 'rdc_mont.1' into 'fp2mul_mont.3' (sikehls/fpx.cpp:181) automatically.
+INFO: [XFORM 203-602] Inlining function 'mp_mul' into 'fp2mul_mont.2' (sikehls/fpx.cpp:176) automatically.
+INFO: [XFORM 203-602] Inlining function 'rdc_mont.1' into 'fp2mul_mont.2' (sikehls/fpx.cpp:181) automatically.
+INFO: [XFORM 203-602] Inlining function 'mp_mul' into 'fp2mul_mont.1' (sikehls/fpx.cpp:176) automatically.
+INFO: [XFORM 203-602] Inlining function 'rdc_mont' into 'fp2mul_mont.1' (sikehls/fpx.cpp:181) automatically.
+INFO: [XFORM 203-602] Inlining function 'mp_mul' into 'fp2mul_mont' (sikehls/fpx.cpp:176) automatically.
+INFO: [XFORM 203-602] Inlining function 'rdc_mont.1' into 'fp2mul_mont' (sikehls/fpx.cpp:181) automatically.
+WARNING: [SYNCHK 200-23] sikehls/mult.cpp:23: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:06 ; elapsed = 00:01:07 . Memory (MB): peak = 174.852 ; gain = 83.406
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loopb22' (sikehls/mult.cpp:28) in function 'bc_mult_448' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'loopb21' (sikehls/mult.cpp:21) in function 'bc_mult_448' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'loopb23' (sikehls/mult.cpp:30) in function 'bc_mult_448' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'loop3_1' (sikehls/mult.cpp:42) in function 'bc_mult_448' completely with a factor of 7.
+INFO: [XFORM 203-102] Partitioning array 't0.V' (sikehls/ec_isogeny.cpp:14) automatically.
+INFO: [XFORM 203-102] Partitioning array 't1.V' (sikehls/ec_isogeny.cpp:14) automatically.
+INFO: [XFORM 203-101] Partitioning array 'ai.V' (sikehls/mult.cpp:9) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'bi.V' (sikehls/mult.cpp:10) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'sum.V' (sikehls/mult.cpp:11) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'partial_products.V' (sikehls/mult.cpp:8) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'partial_products.V' (sikehls/mult.cpp:8) in dimension 2 completely.
+INFO: [XFORM 203-602] Inlining function 'mp_mul' into 'fpmul_mont' (sikehls/fpx.cpp:84) automatically.
+INFO: [XFORM 203-602] Inlining function 'rdc_mont' into 'fpmul_mont' (sikehls/fpx.cpp:85) automatically.
+INFO: [XFORM 203-602] Inlining function 'fpmul_mont' into 'fp2sqr_mont' (sikehls/fpx.cpp:162) automatically.
+INFO: [XFORM 203-602] Inlining function 'mp_mul' into 'fp2mul_mont.3' (sikehls/fpx.cpp:176) automatically.
+INFO: [XFORM 203-602] Inlining function 'rdc_mont' into 'fp2mul_mont.3' (sikehls/fpx.cpp:181) automatically.
+INFO: [XFORM 203-602] Inlining function 'mp_mul' into 'fp2mul_mont.2' (sikehls/fpx.cpp:176) automatically.
+INFO: [XFORM 203-602] Inlining function 'rdc_mont' into 'fp2mul_mont.2' (sikehls/fpx.cpp:181) automatically.
+INFO: [XFORM 203-602] Inlining function 'mp_mul' into 'fp2mul_mont.1' (sikehls/fpx.cpp:176) automatically.
+INFO: [XFORM 203-602] Inlining function 'rdc_mont' into 'fp2mul_mont.1' (sikehls/fpx.cpp:181) automatically.
+INFO: [XFORM 203-602] Inlining function 'mp_mul' into 'fp2mul_mont' (sikehls/fpx.cpp:176) automatically.
+INFO: [XFORM 203-602] Inlining function 'rdc_mont' into 'fp2mul_mont' (sikehls/fpx.cpp:181) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp2sqr_mont' into 'xDBL' (sikehls/ec_isogeny.cpp:18) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp2mul_mont.3' into 'xDBL' (sikehls/ec_isogeny.cpp:20) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp2mul_mont.2' into 'xDBL' (sikehls/ec_isogeny.cpp:21) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp2mul_mont.1' into 'xDBL' (sikehls/ec_isogeny.cpp:23) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp2mul_mont' into 'xDBL' (sikehls/ec_isogeny.cpp:25) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'bc_mult_448' (sikehls/mult.cpp:23:29)...6 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:08 ; elapsed = 00:01:10 . Memory (MB): peak = 218.348 ; gain = 126.902
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:10 ; elapsed = 00:01:12 . Memory (MB): peak = 227.266 ; gain = 135.820
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'xDBL' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bc_mult_448' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loopb22'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 6.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 72.409 seconds; current allocated memory: 176.357 MB.
+INFO: [HLS 200-434] Only 1 loops out of a total 2 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.529 seconds; current allocated memory: 177.287 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'xDBL' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.986 seconds; current allocated memory: 177.970 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Starting global binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.034 seconds; current allocated memory: 178.882 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bc_mult_448' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'xDBL_mul_64ns_64ns_128_5_1' to 'xDBL_mul_64ns_64nbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_mul_64s_64s_64_5_1' to 'xDBL_mul_64s_64s_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_451ns_451ns_451_2_1' to 'xDBL_add_451ns_45dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_515ns_515ns_515_2_1' to 'xDBL_add_515ns_51eOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_579ns_579ns_579_2_1' to 'xDBL_add_579ns_57fYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_643ns_643ns_643_2_1' to 'xDBL_add_643ns_64g8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_707ns_707ns_707_2_1' to 'xDBL_add_707ns_70hbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_771ns_771ns_771_2_1' to 'xDBL_add_771ns_77ibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_835ns_835ns_835_2_1' to 'xDBL_add_835ns_83jbC' due to the length limit 20
+INFO: [RTGEN 206-104] Estimated max fanout for 'bc_mult_448' is 6626 from HDL expression: (1'b1 == ap_CS_fsm_state9)
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_451ns_45dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_515ns_51eOg': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_579ns_57fYi': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_643ns_64g8j': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_707ns_70hbi': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_771ns_77ibs': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_835ns_83jbC': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_mul_64ns_64nbkb': 6 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_mul_64s_64s_cud': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_mux_73_448_1_1': 7 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_mux_73_64_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bc_mult_448'.
+INFO: [HLS 200-111]  Elapsed time: 1.869 seconds; current allocated memory: 180.749 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'xDBL' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'xDBL/P_X_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'xDBL/P_Z_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'xDBL/Q_X_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'xDBL/Q_Z_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'xDBL/A24plus_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'xDBL/C24_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'xDBL' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_448ns_448ns_448_2_1' to 'xDBL_add_448ns_44kbM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_sub_448ns_448ns_448_2_1' to 'xDBL_sub_448ns_44lbW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_836ns_836ns_836_2_1' to 'xDBL_add_836ns_83mb6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_435s_435ns_435_2_1' to 'xDBL_add_435s_435ncg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_389ns_389ns_389_2_1' to 'xDBL_add_389ns_38ocq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_sub_435ns_435ns_435_2_1' to 'xDBL_sub_435ns_43pcA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_sub_836ns_836ns_836_2_1' to 'xDBL_sub_836ns_83qcK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_436ns_436ns_436_2_1' to 'xDBL_add_436ns_43rcU' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_837s_837ns_837_2_1' to 'xDBL_add_837s_837sc4' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_391s_391s_391_2_1' to 'xDBL_add_391s_391tde' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_389ns_38ocq': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_391s_391tde': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_435s_435ncg': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_436ns_43rcU': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_448ns_44kbM': 10 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_836ns_83mb6': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_837s_837sc4': 7 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_sub_435ns_43pcA': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_sub_448ns_44lbW': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_sub_836ns_83qcK': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'xDBL'.
+INFO: [HLS 200-111]  Elapsed time: 2.758 seconds; current allocated memory: 183.069 MB.
+INFO: [RTMG 210-282] Generating pipelined core: 'xDBL_mul_64ns_64nbkb_MulnS_0'
+INFO: [RTMG 210-282] Generating pipelined core: 'xDBL_mul_64s_64s_cud_MulnS_1'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_451ns_45dEe_AddSubnS_0'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_515ns_51eOg_AddSubnS_1'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_579ns_57fYi_AddSubnS_2'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_643ns_64g8j_AddSubnS_3'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_707ns_70hbi_AddSubnS_4'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_771ns_77ibs_AddSubnS_5'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_835ns_83jbC_AddSubnS_6'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_448ns_44kbM_AddSubnS_7'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_sub_448ns_44lbW_AddSubnS_8'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_836ns_83mb6_AddSubnS_9'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_435s_435ncg_AddSubnS_10'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_389ns_38ocq_AddSubnS_11'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_sub_435ns_43pcA_AddSubnS_12'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_sub_836ns_83qcK_AddSubnS_13'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_436ns_43rcU_AddSubnS_14'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_837s_837sc4_AddSubnS_15'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_391s_391tde_AddSubnS_16'
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:20 ; elapsed = 00:01:30 . Memory (MB): peak = 252.469 ; gain = 161.023
+INFO: [VHDL 208-304] Generating VHDL RTL for xDBL.
+INFO: [VLOG 209-307] Generating Verilog RTL for xDBL.
+INFO: [HLS 200-112] Total elapsed time: 89.98 seconds; peak allocated memory: 183.069 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'sikehls/ec_isogeny.cpp' ... 
+ERROR: [HLS 214-122] '#pragma HLS' is only allowed in function scope: C:\Users\namra\Documents\Documents\ece527\project\sikehls\ec_isogeny.cpp:7
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'sikehls/ec_isogeny.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'sikehls/fpx.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'sikehls/mult.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:03 ; elapsed = 00:00:55 . Memory (MB): peak = 171.016 ; gain = 79.652
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:03 ; elapsed = 00:00:55 . Memory (MB): peak = 171.016 ; gain = 79.652
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'mp_sub434_p2' into 'mp2_sub_p2' (sikehls/fpx.cpp:141).
+INFO: [XFORM 203-603] Inlining function 'mp_sub434_p2' into 'mp2_sub_p2' (sikehls/fpx.cpp:140).
+INFO: [XFORM 203-603] Inlining function 'mp2_sub_p2' into 'xDBL' (sikehls/ec_isogeny.cpp:22).
+INFO: [XFORM 203-603] Inlining function 'mp2_sub_p2' into 'xDBL' (sikehls/ec_isogeny.cpp:16).
+INFO: [XFORM 203-603] Inlining function 'mp2_add' into 'xDBL' (sikehls/ec_isogeny.cpp:24).
+INFO: [XFORM 203-603] Inlining function 'mp2_add' into 'xDBL' (sikehls/ec_isogeny.cpp:17).
+INFO: [XFORM 203-603] Inlining function 'mp_sub434_p4' into 'fp2sqr_mont' (sikehls/fpx.cpp:160).
+INFO: [XFORM 203-603] Inlining function 'fp2sqr_mont' into 'xDBL' (sikehls/ec_isogeny.cpp:18).
+INFO: [XFORM 203-603] Inlining function 'fp2sqr_mont' into 'xDBL' (sikehls/ec_isogeny.cpp:19).
+INFO: [XFORM 203-603] Inlining function 'fp2mul_mont' into 'xDBL' (sikehls/ec_isogeny.cpp:20).
+INFO: [XFORM 203-603] Inlining function 'fp2mul_mont' into 'xDBL' (sikehls/ec_isogeny.cpp:21).
+INFO: [XFORM 203-603] Inlining function 'fp2mul_mont' into 'xDBL' (sikehls/ec_isogeny.cpp:23).
+INFO: [XFORM 203-603] Inlining function 'fp2mul_mont' into 'xDBL' (sikehls/ec_isogeny.cpp:25).
+INFO: [XFORM 203-603] Inlining function 'fpmul_mont' into 'xDBL' (sikehls/fpx.cpp:162->sikehls/ec_isogeny.cpp:18).
+INFO: [XFORM 203-603] Inlining function 'fpmul_mont' into 'xDBL' (sikehls/fpx.cpp:163->sikehls/ec_isogeny.cpp:18).
+INFO: [XFORM 203-603] Inlining function 'fpmul_mont' into 'xDBL' (sikehls/fpx.cpp:162->sikehls/ec_isogeny.cpp:19).
+INFO: [XFORM 203-603] Inlining function 'fpmul_mont' into 'xDBL' (sikehls/fpx.cpp:163->sikehls/ec_isogeny.cpp:19).
+INFO: [XFORM 203-603] Inlining function 'mp_mul' into 'xDBL' (sikehls/fpx.cpp:176->sikehls/ec_isogeny.cpp:20).
+INFO: [XFORM 203-603] Inlining function 'mp_mul' into 'xDBL' (sikehls/fpx.cpp:177->sikehls/ec_isogeny.cpp:20).
+INFO: [XFORM 203-603] Inlining function 'mp_mul' into 'xDBL' (sikehls/fpx.cpp:178->sikehls/ec_isogeny.cpp:20).
+INFO: [XFORM 203-603] Inlining function 'rdc_mont' into 'xDBL' (sikehls/fpx.cpp:181->sikehls/ec_isogeny.cpp:20).
+INFO: [XFORM 203-603] Inlining function 'rdc_mont' into 'xDBL' (sikehls/fpx.cpp:182->sikehls/ec_isogeny.cpp:20).
+INFO: [XFORM 203-603] Inlining function 'mp_mul' into 'xDBL' (sikehls/fpx.cpp:176->sikehls/ec_isogeny.cpp:21).
+INFO: [XFORM 203-603] Inlining function 'mp_mul' into 'xDBL' (sikehls/fpx.cpp:177->sikehls/ec_isogeny.cpp:21).
+INFO: [XFORM 203-603] Inlining function 'mp_mul' into 'xDBL' (sikehls/fpx.cpp:178->sikehls/ec_isogeny.cpp:21).
+INFO: [XFORM 203-603] Inlining function 'rdc_mont' into 'xDBL' (sikehls/fpx.cpp:181->sikehls/ec_isogeny.cpp:21).
+INFO: [XFORM 203-603] Inlining function 'rdc_mont' into 'xDBL' (sikehls/fpx.cpp:182->sikehls/ec_isogeny.cpp:21).
+INFO: [XFORM 203-603] Inlining function 'mp_mul' into 'xDBL' (sikehls/fpx.cpp:176->sikehls/ec_isogeny.cpp:23).
+INFO: [XFORM 203-603] Inlining function 'mp_mul' into 'xDBL' (sikehls/fpx.cpp:177->sikehls/ec_isogeny.cpp:23).
+INFO: [XFORM 203-603] Inlining function 'mp_mul' into 'xDBL' (sikehls/fpx.cpp:178->sikehls/ec_isogeny.cpp:23).
+INFO: [XFORM 203-603] Inlining function 'rdc_mont' into 'xDBL' (sikehls/fpx.cpp:181->sikehls/ec_isogeny.cpp:23).
+INFO: [XFORM 203-603] Inlining function 'rdc_mont' into 'xDBL' (sikehls/fpx.cpp:182->sikehls/ec_isogeny.cpp:23).
+INFO: [XFORM 203-603] Inlining function 'mp_mul' into 'xDBL' (sikehls/fpx.cpp:176->sikehls/ec_isogeny.cpp:25).
+INFO: [XFORM 203-603] Inlining function 'mp_mul' into 'xDBL' (sikehls/fpx.cpp:177->sikehls/ec_isogeny.cpp:25).
+INFO: [XFORM 203-603] Inlining function 'mp_mul' into 'xDBL' (sikehls/fpx.cpp:178->sikehls/ec_isogeny.cpp:25).
+INFO: [XFORM 203-603] Inlining function 'rdc_mont' into 'xDBL' (sikehls/fpx.cpp:181->sikehls/ec_isogeny.cpp:25).
+INFO: [XFORM 203-603] Inlining function 'rdc_mont' into 'xDBL' (sikehls/fpx.cpp:182->sikehls/ec_isogeny.cpp:25).
+INFO: [XFORM 203-603] Inlining function 'mp_mul' into 'xDBL' (sikehls/fpx.cpp:84->sikehls/fpx.cpp:162->sikehls/ec_isogeny.cpp:18).
+INFO: [XFORM 203-603] Inlining function 'rdc_mont' into 'xDBL' (sikehls/fpx.cpp:85->sikehls/fpx.cpp:162->sikehls/ec_isogeny.cpp:18).
+INFO: [XFORM 203-603] Inlining function 'mp_mul' into 'xDBL' (sikehls/fpx.cpp:84->sikehls/fpx.cpp:163->sikehls/ec_isogeny.cpp:18).
+INFO: [XFORM 203-603] Inlining function 'rdc_mont' into 'xDBL' (sikehls/fpx.cpp:85->sikehls/fpx.cpp:163->sikehls/ec_isogeny.cpp:18).
+INFO: [XFORM 203-603] Inlining function 'mp_mul' into 'xDBL' (sikehls/fpx.cpp:84->sikehls/fpx.cpp:162->sikehls/ec_isogeny.cpp:19).
+INFO: [XFORM 203-603] Inlining function 'rdc_mont' into 'xDBL' (sikehls/fpx.cpp:85->sikehls/fpx.cpp:162->sikehls/ec_isogeny.cpp:19).
+INFO: [XFORM 203-603] Inlining function 'mp_mul' into 'xDBL' (sikehls/fpx.cpp:84->sikehls/fpx.cpp:163->sikehls/ec_isogeny.cpp:19).
+INFO: [XFORM 203-603] Inlining function 'rdc_mont' into 'xDBL' (sikehls/fpx.cpp:85->sikehls/fpx.cpp:163->sikehls/ec_isogeny.cpp:19).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:04 ; elapsed = 00:00:58 . Memory (MB): peak = 171.016 ; gain = 79.652
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-23] sikehls/mult.cpp:23: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:05 ; elapsed = 00:00:59 . Memory (MB): peak = 176.078 ; gain = 84.715
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loopb22' (sikehls/mult.cpp:28) in function 'bc_mult_448' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'loopb21' (sikehls/mult.cpp:21) in function 'bc_mult_448' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'loopb23' (sikehls/mult.cpp:30) in function 'bc_mult_448' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'loop3_1' (sikehls/mult.cpp:42) in function 'bc_mult_448' completely with a factor of 7.
+INFO: [XFORM 203-101] Partitioning array 'ai.V' (sikehls/mult.cpp:9) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'bi.V' (sikehls/mult.cpp:10) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'sum.V' (sikehls/mult.cpp:11) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'partial_products.V' (sikehls/mult.cpp:8) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'partial_products.V' (sikehls/mult.cpp:8) in dimension 2 completely.
+INFO: [XFORM 203-11] Balancing expressions in function 'bc_mult_448' (sikehls/mult.cpp:23:29)...6 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:06 ; elapsed = 00:01:00 . Memory (MB): peak = 219.582 ; gain = 128.219
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:08 ; elapsed = 00:01:02 . Memory (MB): peak = 228.195 ; gain = 136.832
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'xDBL' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bc_mult_448' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loopb22'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 6.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 62.527 seconds; current allocated memory: 176.395 MB.
+INFO: [HLS 200-434] Only 1 loops out of a total 2 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.601 seconds; current allocated memory: 177.325 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'xDBL' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.575 seconds; current allocated memory: 178.004 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Starting global binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.651 seconds; current allocated memory: 178.911 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bc_mult_448' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'xDBL_mul_64ns_64ns_128_5_1' to 'xDBL_mul_64ns_64nbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_mul_64s_64s_64_5_1' to 'xDBL_mul_64s_64s_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_451ns_451ns_451_2_1' to 'xDBL_add_451ns_45dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_515ns_515ns_515_2_1' to 'xDBL_add_515ns_51eOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_579ns_579ns_579_2_1' to 'xDBL_add_579ns_57fYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_643ns_643ns_643_2_1' to 'xDBL_add_643ns_64g8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_707ns_707ns_707_2_1' to 'xDBL_add_707ns_70hbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_771ns_771ns_771_2_1' to 'xDBL_add_771ns_77ibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_835ns_835ns_835_2_1' to 'xDBL_add_835ns_83jbC' due to the length limit 20
+INFO: [RTGEN 206-104] Estimated max fanout for 'bc_mult_448' is 6626 from HDL expression: (1'b1 == ap_CS_fsm_state9)
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_451ns_45dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_515ns_51eOg': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_579ns_57fYi': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_643ns_64g8j': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_707ns_70hbi': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_771ns_77ibs': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_835ns_83jbC': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_mul_64ns_64nbkb': 6 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_mul_64s_64s_cud': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_mux_73_448_1_1': 7 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_mux_73_64_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bc_mult_448'.
+INFO: [HLS 200-111]  Elapsed time: 2.031 seconds; current allocated memory: 180.778 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'xDBL' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'xDBL/P_X_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'xDBL/P_Z_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'xDBL/Q_X_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'xDBL/Q_Z_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'xDBL/A24plus_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'xDBL/C24_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'xDBL' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'xDBL_sub_448ns_448ns_448_2_1' to 'xDBL_sub_448ns_44kbM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_448ns_448ns_448_2_1' to 'xDBL_add_448ns_44lbW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_836ns_836ns_836_2_1' to 'xDBL_add_836ns_83mb6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_389ns_389ns_389_2_1' to 'xDBL_add_389ns_38ncg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_sub_389ns_389ns_389_2_1' to 'xDBL_sub_389ns_38ocq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_sub_836ns_836ns_836_2_1' to 'xDBL_sub_836ns_83pcA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_435s_435s_435_2_1' to 'xDBL_add_435s_435qcK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_436ns_436ns_436_2_1' to 'xDBL_add_436ns_43rcU' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_837ns_837s_837_2_1' to 'xDBL_add_837ns_83sc4' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_391s_391s_391_2_1' to 'xDBL_add_391s_391tde' due to the length limit 20
+INFO: [RTGEN 206-104] Estimated max fanout for 'xDBL' is 5586 from HDL expression: (1'b1 == ap_CS_fsm_state16)
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_389ns_38ncg': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_391s_391tde': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_435s_435qcK': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_436ns_43rcU': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_448ns_44lbW': 10 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_836ns_83mb6': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_837ns_83sc4': 7 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_sub_389ns_38ocq': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_sub_448ns_44kbM': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_sub_836ns_83pcA': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'xDBL'.
+INFO: [HLS 200-111]  Elapsed time: 1.68 seconds; current allocated memory: 183.092 MB.
+INFO: [RTMG 210-282] Generating pipelined core: 'xDBL_mul_64ns_64nbkb_MulnS_0'
+INFO: [RTMG 210-282] Generating pipelined core: 'xDBL_mul_64s_64s_cud_MulnS_1'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_451ns_45dEe_AddSubnS_0'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_515ns_51eOg_AddSubnS_1'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_579ns_57fYi_AddSubnS_2'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_643ns_64g8j_AddSubnS_3'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_707ns_70hbi_AddSubnS_4'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_771ns_77ibs_AddSubnS_5'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_835ns_83jbC_AddSubnS_6'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_sub_448ns_44kbM_AddSubnS_7'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_448ns_44lbW_AddSubnS_8'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_836ns_83mb6_AddSubnS_9'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_389ns_38ncg_AddSubnS_10'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_sub_389ns_38ocq_AddSubnS_11'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_sub_836ns_83pcA_AddSubnS_12'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_435s_435qcK_AddSubnS_13'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_436ns_43rcU_AddSubnS_14'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_837ns_83sc4_AddSubnS_15'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_391s_391tde_AddSubnS_16'
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:17 ; elapsed = 00:01:18 . Memory (MB): peak = 252.965 ; gain = 161.602
+INFO: [VHDL 208-304] Generating VHDL RTL for xDBL.
+INFO: [VLOG 209-307] Generating Verilog RTL for xDBL.
+INFO: [HLS 200-112] Total elapsed time: 77.88 seconds; peak allocated memory: 183.092 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'sikehls/ec_isogeny.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'sikehls/fpx.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'sikehls/mult.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:03 ; elapsed = 00:01:03 . Memory (MB): peak = 170.574 ; gain = 79.277
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:03 ; elapsed = 00:01:03 . Memory (MB): peak = 170.574 ; gain = 79.277
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'mp_sub434_p2' into 'mp2_sub_p2' (sikehls/fpx.cpp:141).
+INFO: [XFORM 203-603] Inlining function 'mp_sub434_p2' into 'mp2_sub_p2' (sikehls/fpx.cpp:140).
+INFO: [XFORM 203-603] Inlining function 'mp2_sub_p2' into 'xDBL' (sikehls/ec_isogeny.cpp:24).
+INFO: [XFORM 203-603] Inlining function 'mp2_sub_p2' into 'xDBL' (sikehls/ec_isogeny.cpp:18).
+INFO: [XFORM 203-603] Inlining function 'mp2_add' into 'xDBL' (sikehls/ec_isogeny.cpp:26).
+INFO: [XFORM 203-603] Inlining function 'mp2_add' into 'xDBL' (sikehls/ec_isogeny.cpp:19).
+INFO: [XFORM 203-603] Inlining function 'mp_sub434_p4' into 'fp2sqr_mont' (sikehls/fpx.cpp:160).
+INFO: [XFORM 203-603] Inlining function 'fp2sqr_mont' into 'xDBL' (sikehls/ec_isogeny.cpp:20).
+INFO: [XFORM 203-603] Inlining function 'fp2sqr_mont' into 'xDBL' (sikehls/ec_isogeny.cpp:21).
+INFO: [XFORM 203-603] Inlining function 'fp2mul_mont' into 'xDBL' (sikehls/ec_isogeny.cpp:22).
+INFO: [XFORM 203-603] Inlining function 'fp2mul_mont' into 'xDBL' (sikehls/ec_isogeny.cpp:23).
+INFO: [XFORM 203-603] Inlining function 'fp2mul_mont' into 'xDBL' (sikehls/ec_isogeny.cpp:25).
+INFO: [XFORM 203-603] Inlining function 'fp2mul_mont' into 'xDBL' (sikehls/ec_isogeny.cpp:27).
+INFO: [XFORM 203-603] Inlining function 'fpmul_mont' into 'xDBL' (sikehls/fpx.cpp:162->sikehls/ec_isogeny.cpp:20).
+INFO: [XFORM 203-603] Inlining function 'fpmul_mont' into 'xDBL' (sikehls/fpx.cpp:163->sikehls/ec_isogeny.cpp:20).
+INFO: [XFORM 203-603] Inlining function 'fpmul_mont' into 'xDBL' (sikehls/fpx.cpp:162->sikehls/ec_isogeny.cpp:21).
+INFO: [XFORM 203-603] Inlining function 'fpmul_mont' into 'xDBL' (sikehls/fpx.cpp:163->sikehls/ec_isogeny.cpp:21).
+INFO: [XFORM 203-603] Inlining function 'mp_mul' into 'xDBL' (sikehls/fpx.cpp:176->sikehls/ec_isogeny.cpp:22).
+INFO: [XFORM 203-603] Inlining function 'mp_mul' into 'xDBL' (sikehls/fpx.cpp:177->sikehls/ec_isogeny.cpp:22).
+INFO: [XFORM 203-603] Inlining function 'mp_mul' into 'xDBL' (sikehls/fpx.cpp:178->sikehls/ec_isogeny.cpp:22).
+INFO: [XFORM 203-603] Inlining function 'rdc_mont' into 'xDBL' (sikehls/fpx.cpp:181->sikehls/ec_isogeny.cpp:22).
+INFO: [XFORM 203-603] Inlining function 'rdc_mont' into 'xDBL' (sikehls/fpx.cpp:182->sikehls/ec_isogeny.cpp:22).
+INFO: [XFORM 203-603] Inlining function 'mp_mul' into 'xDBL' (sikehls/fpx.cpp:176->sikehls/ec_isogeny.cpp:23).
+INFO: [XFORM 203-603] Inlining function 'mp_mul' into 'xDBL' (sikehls/fpx.cpp:177->sikehls/ec_isogeny.cpp:23).
+INFO: [XFORM 203-603] Inlining function 'mp_mul' into 'xDBL' (sikehls/fpx.cpp:178->sikehls/ec_isogeny.cpp:23).
+INFO: [XFORM 203-603] Inlining function 'rdc_mont' into 'xDBL' (sikehls/fpx.cpp:181->sikehls/ec_isogeny.cpp:23).
+INFO: [XFORM 203-603] Inlining function 'rdc_mont' into 'xDBL' (sikehls/fpx.cpp:182->sikehls/ec_isogeny.cpp:23).
+INFO: [XFORM 203-603] Inlining function 'mp_mul' into 'xDBL' (sikehls/fpx.cpp:176->sikehls/ec_isogeny.cpp:25).
+INFO: [XFORM 203-603] Inlining function 'mp_mul' into 'xDBL' (sikehls/fpx.cpp:177->sikehls/ec_isogeny.cpp:25).
+INFO: [XFORM 203-603] Inlining function 'mp_mul' into 'xDBL' (sikehls/fpx.cpp:178->sikehls/ec_isogeny.cpp:25).
+INFO: [XFORM 203-603] Inlining function 'rdc_mont' into 'xDBL' (sikehls/fpx.cpp:181->sikehls/ec_isogeny.cpp:25).
+INFO: [XFORM 203-603] Inlining function 'rdc_mont' into 'xDBL' (sikehls/fpx.cpp:182->sikehls/ec_isogeny.cpp:25).
+INFO: [XFORM 203-603] Inlining function 'mp_mul' into 'xDBL' (sikehls/fpx.cpp:176->sikehls/ec_isogeny.cpp:27).
+INFO: [XFORM 203-603] Inlining function 'mp_mul' into 'xDBL' (sikehls/fpx.cpp:177->sikehls/ec_isogeny.cpp:27).
+INFO: [XFORM 203-603] Inlining function 'mp_mul' into 'xDBL' (sikehls/fpx.cpp:178->sikehls/ec_isogeny.cpp:27).
+INFO: [XFORM 203-603] Inlining function 'rdc_mont' into 'xDBL' (sikehls/fpx.cpp:181->sikehls/ec_isogeny.cpp:27).
+INFO: [XFORM 203-603] Inlining function 'rdc_mont' into 'xDBL' (sikehls/fpx.cpp:182->sikehls/ec_isogeny.cpp:27).
+INFO: [XFORM 203-603] Inlining function 'mp_mul' into 'xDBL' (sikehls/fpx.cpp:84->sikehls/fpx.cpp:162->sikehls/ec_isogeny.cpp:20).
+INFO: [XFORM 203-603] Inlining function 'rdc_mont' into 'xDBL' (sikehls/fpx.cpp:85->sikehls/fpx.cpp:162->sikehls/ec_isogeny.cpp:20).
+INFO: [XFORM 203-603] Inlining function 'mp_mul' into 'xDBL' (sikehls/fpx.cpp:84->sikehls/fpx.cpp:163->sikehls/ec_isogeny.cpp:20).
+INFO: [XFORM 203-603] Inlining function 'rdc_mont' into 'xDBL' (sikehls/fpx.cpp:85->sikehls/fpx.cpp:163->sikehls/ec_isogeny.cpp:20).
+INFO: [XFORM 203-603] Inlining function 'mp_mul' into 'xDBL' (sikehls/fpx.cpp:84->sikehls/fpx.cpp:162->sikehls/ec_isogeny.cpp:21).
+INFO: [XFORM 203-603] Inlining function 'rdc_mont' into 'xDBL' (sikehls/fpx.cpp:85->sikehls/fpx.cpp:162->sikehls/ec_isogeny.cpp:21).
+INFO: [XFORM 203-603] Inlining function 'mp_mul' into 'xDBL' (sikehls/fpx.cpp:84->sikehls/fpx.cpp:163->sikehls/ec_isogeny.cpp:21).
+INFO: [XFORM 203-603] Inlining function 'rdc_mont' into 'xDBL' (sikehls/fpx.cpp:85->sikehls/fpx.cpp:163->sikehls/ec_isogeny.cpp:21).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:04 ; elapsed = 00:01:05 . Memory (MB): peak = 170.574 ; gain = 79.277
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-23] sikehls/mult.cpp:23: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:05 ; elapsed = 00:01:06 . Memory (MB): peak = 175.629 ; gain = 84.332
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loopb22' (sikehls/mult.cpp:28) in function 'bc_mult_448' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'loopb21' (sikehls/mult.cpp:21) in function 'bc_mult_448' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'loopb23' (sikehls/mult.cpp:30) in function 'bc_mult_448' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'loop3_1' (sikehls/mult.cpp:42) in function 'bc_mult_448' completely with a factor of 7.
+INFO: [XFORM 203-101] Partitioning array 'ai.V' (sikehls/mult.cpp:9) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'bi.V' (sikehls/mult.cpp:10) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'sum.V' (sikehls/mult.cpp:11) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'partial_products.V' (sikehls/mult.cpp:8) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'partial_products.V' (sikehls/mult.cpp:8) in dimension 2 completely.
+INFO: [XFORM 203-11] Balancing expressions in function 'bc_mult_448' (sikehls/mult.cpp:23:29)...6 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:07 ; elapsed = 00:01:09 . Memory (MB): peak = 219.629 ; gain = 128.332
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:09 ; elapsed = 00:01:10 . Memory (MB): peak = 227.758 ; gain = 136.461
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'xDBL' ...
+ERROR: [SYN 201-222] Cannot find the specified core 'DSP48E'.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'sikehls/ec_isogeny.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'sikehls/fpx.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'sikehls/mult.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:03 ; elapsed = 00:01:01 . Memory (MB): peak = 170.496 ; gain = 79.188
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:03 ; elapsed = 00:01:01 . Memory (MB): peak = 170.496 ; gain = 79.188
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'mp_sub434_p2' into 'mp2_sub_p2' (sikehls/fpx.cpp:141).
+INFO: [XFORM 203-603] Inlining function 'mp_sub434_p2' into 'mp2_sub_p2' (sikehls/fpx.cpp:140).
+INFO: [XFORM 203-603] Inlining function 'mp2_sub_p2' into 'xDBL' (sikehls/ec_isogeny.cpp:25).
+INFO: [XFORM 203-603] Inlining function 'mp2_sub_p2' into 'xDBL' (sikehls/ec_isogeny.cpp:19).
+INFO: [XFORM 203-603] Inlining function 'mp2_add' into 'xDBL' (sikehls/ec_isogeny.cpp:27).
+INFO: [XFORM 203-603] Inlining function 'mp2_add' into 'xDBL' (sikehls/ec_isogeny.cpp:20).
+INFO: [XFORM 203-603] Inlining function 'mp_sub434_p4' into 'fp2sqr_mont' (sikehls/fpx.cpp:160).
+INFO: [XFORM 203-603] Inlining function 'fp2sqr_mont' into 'xDBL' (sikehls/ec_isogeny.cpp:21).
+INFO: [XFORM 203-603] Inlining function 'fp2sqr_mont' into 'xDBL' (sikehls/ec_isogeny.cpp:22).
+INFO: [XFORM 203-603] Inlining function 'fp2mul_mont' into 'xDBL' (sikehls/ec_isogeny.cpp:23).
+INFO: [XFORM 203-603] Inlining function 'fp2mul_mont' into 'xDBL' (sikehls/ec_isogeny.cpp:24).
+INFO: [XFORM 203-603] Inlining function 'fp2mul_mont' into 'xDBL' (sikehls/ec_isogeny.cpp:26).
+INFO: [XFORM 203-603] Inlining function 'fp2mul_mont' into 'xDBL' (sikehls/ec_isogeny.cpp:28).
+INFO: [XFORM 203-603] Inlining function 'fpmul_mont' into 'xDBL' (sikehls/fpx.cpp:162->sikehls/ec_isogeny.cpp:21).
+INFO: [XFORM 203-603] Inlining function 'fpmul_mont' into 'xDBL' (sikehls/fpx.cpp:163->sikehls/ec_isogeny.cpp:21).
+INFO: [XFORM 203-603] Inlining function 'fpmul_mont' into 'xDBL' (sikehls/fpx.cpp:162->sikehls/ec_isogeny.cpp:22).
+INFO: [XFORM 203-603] Inlining function 'fpmul_mont' into 'xDBL' (sikehls/fpx.cpp:163->sikehls/ec_isogeny.cpp:22).
+INFO: [XFORM 203-603] Inlining function 'mp_mul' into 'xDBL' (sikehls/fpx.cpp:176->sikehls/ec_isogeny.cpp:23).
+INFO: [XFORM 203-603] Inlining function 'mp_mul' into 'xDBL' (sikehls/fpx.cpp:177->sikehls/ec_isogeny.cpp:23).
+INFO: [XFORM 203-603] Inlining function 'mp_mul' into 'xDBL' (sikehls/fpx.cpp:178->sikehls/ec_isogeny.cpp:23).
+INFO: [XFORM 203-603] Inlining function 'rdc_mont' into 'xDBL' (sikehls/fpx.cpp:181->sikehls/ec_isogeny.cpp:23).
+INFO: [XFORM 203-603] Inlining function 'rdc_mont' into 'xDBL' (sikehls/fpx.cpp:182->sikehls/ec_isogeny.cpp:23).
+INFO: [XFORM 203-603] Inlining function 'mp_mul' into 'xDBL' (sikehls/fpx.cpp:176->sikehls/ec_isogeny.cpp:24).
+INFO: [XFORM 203-603] Inlining function 'mp_mul' into 'xDBL' (sikehls/fpx.cpp:177->sikehls/ec_isogeny.cpp:24).
+INFO: [XFORM 203-603] Inlining function 'mp_mul' into 'xDBL' (sikehls/fpx.cpp:178->sikehls/ec_isogeny.cpp:24).
+INFO: [XFORM 203-603] Inlining function 'rdc_mont' into 'xDBL' (sikehls/fpx.cpp:181->sikehls/ec_isogeny.cpp:24).
+INFO: [XFORM 203-603] Inlining function 'rdc_mont' into 'xDBL' (sikehls/fpx.cpp:182->sikehls/ec_isogeny.cpp:24).
+INFO: [XFORM 203-603] Inlining function 'mp_mul' into 'xDBL' (sikehls/fpx.cpp:176->sikehls/ec_isogeny.cpp:26).
+INFO: [XFORM 203-603] Inlining function 'mp_mul' into 'xDBL' (sikehls/fpx.cpp:177->sikehls/ec_isogeny.cpp:26).
+INFO: [XFORM 203-603] Inlining function 'mp_mul' into 'xDBL' (sikehls/fpx.cpp:178->sikehls/ec_isogeny.cpp:26).
+INFO: [XFORM 203-603] Inlining function 'rdc_mont' into 'xDBL' (sikehls/fpx.cpp:181->sikehls/ec_isogeny.cpp:26).
+INFO: [XFORM 203-603] Inlining function 'rdc_mont' into 'xDBL' (sikehls/fpx.cpp:182->sikehls/ec_isogeny.cpp:26).
+INFO: [XFORM 203-603] Inlining function 'mp_mul' into 'xDBL' (sikehls/fpx.cpp:176->sikehls/ec_isogeny.cpp:28).
+INFO: [XFORM 203-603] Inlining function 'mp_mul' into 'xDBL' (sikehls/fpx.cpp:177->sikehls/ec_isogeny.cpp:28).
+INFO: [XFORM 203-603] Inlining function 'mp_mul' into 'xDBL' (sikehls/fpx.cpp:178->sikehls/ec_isogeny.cpp:28).
+INFO: [XFORM 203-603] Inlining function 'rdc_mont' into 'xDBL' (sikehls/fpx.cpp:181->sikehls/ec_isogeny.cpp:28).
+INFO: [XFORM 203-603] Inlining function 'rdc_mont' into 'xDBL' (sikehls/fpx.cpp:182->sikehls/ec_isogeny.cpp:28).
+INFO: [XFORM 203-603] Inlining function 'mp_mul' into 'xDBL' (sikehls/fpx.cpp:84->sikehls/fpx.cpp:162->sikehls/ec_isogeny.cpp:21).
+INFO: [XFORM 203-603] Inlining function 'rdc_mont' into 'xDBL' (sikehls/fpx.cpp:85->sikehls/fpx.cpp:162->sikehls/ec_isogeny.cpp:21).
+INFO: [XFORM 203-603] Inlining function 'mp_mul' into 'xDBL' (sikehls/fpx.cpp:84->sikehls/fpx.cpp:163->sikehls/ec_isogeny.cpp:21).
+INFO: [XFORM 203-603] Inlining function 'rdc_mont' into 'xDBL' (sikehls/fpx.cpp:85->sikehls/fpx.cpp:163->sikehls/ec_isogeny.cpp:21).
+INFO: [XFORM 203-603] Inlining function 'mp_mul' into 'xDBL' (sikehls/fpx.cpp:84->sikehls/fpx.cpp:162->sikehls/ec_isogeny.cpp:22).
+INFO: [XFORM 203-603] Inlining function 'rdc_mont' into 'xDBL' (sikehls/fpx.cpp:85->sikehls/fpx.cpp:162->sikehls/ec_isogeny.cpp:22).
+INFO: [XFORM 203-603] Inlining function 'mp_mul' into 'xDBL' (sikehls/fpx.cpp:84->sikehls/fpx.cpp:163->sikehls/ec_isogeny.cpp:22).
+INFO: [XFORM 203-603] Inlining function 'rdc_mont' into 'xDBL' (sikehls/fpx.cpp:85->sikehls/fpx.cpp:163->sikehls/ec_isogeny.cpp:22).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:04 ; elapsed = 00:01:04 . Memory (MB): peak = 170.496 ; gain = 79.188
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-23] sikehls/mult.cpp:23: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:05 ; elapsed = 00:01:05 . Memory (MB): peak = 175.781 ; gain = 84.473
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loopb22' (sikehls/mult.cpp:28) in function 'bc_mult_448' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'loopb21' (sikehls/mult.cpp:21) in function 'bc_mult_448' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'loopb23' (sikehls/mult.cpp:30) in function 'bc_mult_448' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'loop3_1' (sikehls/mult.cpp:42) in function 'bc_mult_448' completely with a factor of 7.
+INFO: [XFORM 203-101] Partitioning array 'ai.V' (sikehls/mult.cpp:9) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'bi.V' (sikehls/mult.cpp:10) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'sum.V' (sikehls/mult.cpp:11) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'partial_products.V' (sikehls/mult.cpp:8) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'partial_products.V' (sikehls/mult.cpp:8) in dimension 2 completely.
+INFO: [XFORM 203-11] Balancing expressions in function 'bc_mult_448' (sikehls/mult.cpp:23:29)...6 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:07 ; elapsed = 00:01:07 . Memory (MB): peak = 219.570 ; gain = 128.262
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:08 ; elapsed = 00:01:09 . Memory (MB): peak = 227.895 ; gain = 136.586
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'xDBL' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bc_mult_448' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loopb22'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 6.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 69.317 seconds; current allocated memory: 176.412 MB.
+INFO: [HLS 200-434] Only 1 loops out of a total 2 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.508 seconds; current allocated memory: 177.342 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'xDBL' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.143 seconds; current allocated memory: 178.022 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Starting global binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.061 seconds; current allocated memory: 178.935 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bc_mult_448' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'xDBL_mul_64ns_64ns_128_5_1' to 'xDBL_mul_64ns_64nbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_mul_64s_64s_64_5_1' to 'xDBL_mul_64s_64s_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_451ns_451ns_451_2_1' to 'xDBL_add_451ns_45dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_515ns_515ns_515_2_1' to 'xDBL_add_515ns_51eOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_579ns_579ns_579_2_1' to 'xDBL_add_579ns_57fYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_643ns_643ns_643_2_1' to 'xDBL_add_643ns_64g8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_707ns_707ns_707_2_1' to 'xDBL_add_707ns_70hbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_771ns_771ns_771_2_1' to 'xDBL_add_771ns_77ibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_835ns_835ns_835_2_1' to 'xDBL_add_835ns_83jbC' due to the length limit 20
+INFO: [RTGEN 206-104] Estimated max fanout for 'bc_mult_448' is 6626 from HDL expression: (1'b1 == ap_CS_fsm_state9)
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_451ns_45dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_515ns_51eOg': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_579ns_57fYi': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_643ns_64g8j': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_707ns_70hbi': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_771ns_77ibs': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_835ns_83jbC': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_mul_64ns_64nbkb': 6 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_mul_64s_64s_cud': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_mux_73_448_1_1': 7 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_mux_73_64_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bc_mult_448'.
+INFO: [HLS 200-111]  Elapsed time: 1.844 seconds; current allocated memory: 180.802 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'xDBL' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'xDBL/P_X_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'xDBL/P_Z_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'xDBL/Q_X_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'xDBL/Q_Z_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'xDBL/A24plus_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'xDBL/C24_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'xDBL' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'xDBL_sub_448ns_448ns_448_2_1' to 'xDBL_sub_448ns_44kbM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_448ns_448ns_448_2_1' to 'xDBL_add_448ns_44lbW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_836ns_836ns_836_2_1' to 'xDBL_add_836ns_83mb6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_389ns_389ns_389_2_1' to 'xDBL_add_389ns_38ncg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_sub_389ns_389ns_389_2_1' to 'xDBL_sub_389ns_38ocq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_sub_836ns_836ns_836_2_1' to 'xDBL_sub_836ns_83pcA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_435s_435s_435_2_1' to 'xDBL_add_435s_435qcK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_436ns_436ns_436_2_1' to 'xDBL_add_436ns_43rcU' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_837ns_837s_837_2_1' to 'xDBL_add_837ns_83sc4' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_391s_391s_391_2_1' to 'xDBL_add_391s_391tde' due to the length limit 20
+INFO: [RTGEN 206-104] Estimated max fanout for 'xDBL' is 5586 from HDL expression: (1'b1 == ap_CS_fsm_state16)
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_389ns_38ncg': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_391s_391tde': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_435s_435qcK': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_436ns_43rcU': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_448ns_44lbW': 10 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_836ns_83mb6': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_837ns_83sc4': 7 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_sub_389ns_38ocq': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_sub_448ns_44kbM': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_sub_836ns_83pcA': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'xDBL'.
+INFO: [HLS 200-111]  Elapsed time: 2.893 seconds; current allocated memory: 183.117 MB.
+INFO: [RTMG 210-282] Generating pipelined core: 'xDBL_mul_64ns_64nbkb_MulnS_0'
+INFO: [RTMG 210-282] Generating pipelined core: 'xDBL_mul_64s_64s_cud_MulnS_1'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_451ns_45dEe_AddSubnS_0'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_515ns_51eOg_AddSubnS_1'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_579ns_57fYi_AddSubnS_2'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_643ns_64g8j_AddSubnS_3'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_707ns_70hbi_AddSubnS_4'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_771ns_77ibs_AddSubnS_5'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_835ns_83jbC_AddSubnS_6'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_sub_448ns_44kbM_AddSubnS_7'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_448ns_44lbW_AddSubnS_8'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_836ns_83mb6_AddSubnS_9'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_389ns_38ncg_AddSubnS_10'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_sub_389ns_38ocq_AddSubnS_11'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_sub_836ns_83pcA_AddSubnS_12'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_435s_435qcK_AddSubnS_13'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_436ns_43rcU_AddSubnS_14'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_837ns_83sc4_AddSubnS_15'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_391s_391tde_AddSubnS_16'
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:19 ; elapsed = 00:01:27 . Memory (MB): peak = 253.051 ; gain = 161.742
+INFO: [VHDL 208-304] Generating VHDL RTL for xDBL.
+INFO: [VLOG 209-307] Generating Verilog RTL for xDBL.
+INFO: [HLS 200-112] Total elapsed time: 86.817 seconds; peak allocated memory: 183.117 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'sikehls/ec_isogeny.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'sikehls/fpx.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'sikehls/mult.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:03 ; elapsed = 00:00:52 . Memory (MB): peak = 171.668 ; gain = 80.285
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:03 ; elapsed = 00:00:52 . Memory (MB): peak = 171.668 ; gain = 80.285
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'mp_sub434_p2' into 'mp2_sub_p2' (sikehls/fpx.cpp:142).
+INFO: [XFORM 203-603] Inlining function 'mp_sub434_p2' into 'mp2_sub_p2' (sikehls/fpx.cpp:141).
+INFO: [XFORM 203-603] Inlining function 'mp2_sub_p2' into 'xDBL' (sikehls/ec_isogeny.cpp:26).
+INFO: [XFORM 203-603] Inlining function 'mp2_sub_p2' into 'xDBL' (sikehls/ec_isogeny.cpp:20).
+INFO: [XFORM 203-603] Inlining function 'mp2_add' into 'xDBL' (sikehls/ec_isogeny.cpp:28).
+INFO: [XFORM 203-603] Inlining function 'mp2_add' into 'xDBL' (sikehls/ec_isogeny.cpp:21).
+INFO: [XFORM 203-603] Inlining function 'mp_sub434_p4' into 'fp2sqr_mont' (sikehls/fpx.cpp:161).
+INFO: [XFORM 203-603] Inlining function 'fp2sqr_mont' into 'xDBL' (sikehls/ec_isogeny.cpp:22).
+INFO: [XFORM 203-603] Inlining function 'fp2sqr_mont' into 'xDBL' (sikehls/ec_isogeny.cpp:23).
+INFO: [XFORM 203-603] Inlining function 'fp2mul_mont' into 'xDBL' (sikehls/ec_isogeny.cpp:24).
+INFO: [XFORM 203-603] Inlining function 'fp2mul_mont' into 'xDBL' (sikehls/ec_isogeny.cpp:25).
+INFO: [XFORM 203-603] Inlining function 'fp2mul_mont' into 'xDBL' (sikehls/ec_isogeny.cpp:27).
+INFO: [XFORM 203-603] Inlining function 'fp2mul_mont' into 'xDBL' (sikehls/ec_isogeny.cpp:29).
+INFO: [XFORM 203-603] Inlining function 'fpmul_mont' into 'xDBL' (sikehls/fpx.cpp:163->sikehls/ec_isogeny.cpp:22).
+INFO: [XFORM 203-603] Inlining function 'fpmul_mont' into 'xDBL' (sikehls/fpx.cpp:164->sikehls/ec_isogeny.cpp:22).
+INFO: [XFORM 203-603] Inlining function 'fpmul_mont' into 'xDBL' (sikehls/fpx.cpp:163->sikehls/ec_isogeny.cpp:23).
+INFO: [XFORM 203-603] Inlining function 'fpmul_mont' into 'xDBL' (sikehls/fpx.cpp:164->sikehls/ec_isogeny.cpp:23).
+INFO: [XFORM 203-603] Inlining function 'rdc_mont' into 'xDBL' (sikehls/fpx.cpp:182->sikehls/ec_isogeny.cpp:24).
+INFO: [XFORM 203-603] Inlining function 'rdc_mont' into 'xDBL' (sikehls/fpx.cpp:183->sikehls/ec_isogeny.cpp:24).
+INFO: [XFORM 203-603] Inlining function 'rdc_mont' into 'xDBL' (sikehls/fpx.cpp:182->sikehls/ec_isogeny.cpp:25).
+INFO: [XFORM 203-603] Inlining function 'rdc_mont' into 'xDBL' (sikehls/fpx.cpp:183->sikehls/ec_isogeny.cpp:25).
+INFO: [XFORM 203-603] Inlining function 'rdc_mont' into 'xDBL' (sikehls/fpx.cpp:182->sikehls/ec_isogeny.cpp:27).
+INFO: [XFORM 203-603] Inlining function 'rdc_mont' into 'xDBL' (sikehls/fpx.cpp:183->sikehls/ec_isogeny.cpp:27).
+INFO: [XFORM 203-603] Inlining function 'rdc_mont' into 'xDBL' (sikehls/fpx.cpp:182->sikehls/ec_isogeny.cpp:29).
+INFO: [XFORM 203-603] Inlining function 'rdc_mont' into 'xDBL' (sikehls/fpx.cpp:183->sikehls/ec_isogeny.cpp:29).
+INFO: [XFORM 203-603] Inlining function 'rdc_mont' into 'xDBL' (sikehls/fpx.cpp:86->sikehls/fpx.cpp:163->sikehls/ec_isogeny.cpp:22).
+INFO: [XFORM 203-603] Inlining function 'rdc_mont' into 'xDBL' (sikehls/fpx.cpp:86->sikehls/fpx.cpp:164->sikehls/ec_isogeny.cpp:22).
+INFO: [XFORM 203-603] Inlining function 'rdc_mont' into 'xDBL' (sikehls/fpx.cpp:86->sikehls/fpx.cpp:163->sikehls/ec_isogeny.cpp:23).
+INFO: [XFORM 203-603] Inlining function 'rdc_mont' into 'xDBL' (sikehls/fpx.cpp:86->sikehls/fpx.cpp:164->sikehls/ec_isogeny.cpp:23).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:04 ; elapsed = 00:00:55 . Memory (MB): peak = 171.668 ; gain = 80.285
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-23] sikehls/mult.cpp:23: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:04 ; elapsed = 00:00:55 . Memory (MB): peak = 176.656 ; gain = 85.273
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loopb22' (sikehls/mult.cpp:28) in function 'bc_mult_448' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'loopb21' (sikehls/mult.cpp:21) in function 'bc_mult_448' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'loopb23' (sikehls/mult.cpp:30) in function 'bc_mult_448' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'loop3_1' (sikehls/mult.cpp:42) in function 'bc_mult_448' completely with a factor of 7.
+INFO: [XFORM 203-101] Partitioning array 'ai.V' (sikehls/mult.cpp:9) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'bi.V' (sikehls/mult.cpp:10) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'sum.V' (sikehls/mult.cpp:11) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'partial_products.V' (sikehls/mult.cpp:8) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'partial_products.V' (sikehls/mult.cpp:8) in dimension 2 completely.
+INFO: [XFORM 203-11] Balancing expressions in function 'bc_mult_448' (sikehls/mult.cpp:23:29)...6 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:06 ; elapsed = 00:00:57 . Memory (MB): peak = 221.602 ; gain = 130.219
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:07 ; elapsed = 00:00:58 . Memory (MB): peak = 237.355 ; gain = 145.973
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'xDBL' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bc_mult_448' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loopb22'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 6.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 59.059 seconds; current allocated memory: 185.789 MB.
+INFO: [HLS 200-434] Only 1 loops out of a total 2 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.489 seconds; current allocated memory: 186.704 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mp_mul' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.648 seconds; current allocated memory: 186.802 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.166 seconds; current allocated memory: 186.841 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'xDBL' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.654 seconds; current allocated memory: 187.443 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Starting global binding ...
+INFO: [BIND 205-100] Starting global binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.064 seconds; current allocated memory: 188.377 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bc_mult_448' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'xDBL_mul_64ns_64ns_128_5_1' to 'xDBL_mul_64ns_64nbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_mul_64s_64s_64_5_1' to 'xDBL_mul_64s_64s_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_451ns_451ns_451_2_1' to 'xDBL_add_451ns_45dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_515ns_515ns_515_2_1' to 'xDBL_add_515ns_51eOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_579ns_579ns_579_2_1' to 'xDBL_add_579ns_57fYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_643ns_643ns_643_2_1' to 'xDBL_add_643ns_64g8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_707ns_707ns_707_2_1' to 'xDBL_add_707ns_70hbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_771ns_771ns_771_2_1' to 'xDBL_add_771ns_77ibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_835ns_835ns_835_2_1' to 'xDBL_add_835ns_83jbC' due to the length limit 20
+INFO: [RTGEN 206-104] Estimated max fanout for 'bc_mult_448' is 6626 from HDL expression: (1'b1 == ap_CS_fsm_state9)
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_451ns_45dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_515ns_51eOg': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_579ns_57fYi': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_643ns_64g8j': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_707ns_70hbi': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_771ns_77ibs': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_835ns_83jbC': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_mul_64ns_64nbkb': 6 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_mul_64s_64s_cud': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_mux_73_448_1_1': 7 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_mux_73_64_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bc_mult_448'.
+INFO: [HLS 200-111]  Elapsed time: 1.772 seconds; current allocated memory: 190.282 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'mp_mul' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'mp_mul'.
+INFO: [HLS 200-111]  Elapsed time: 2.01 seconds; current allocated memory: 190.730 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'xDBL' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'xDBL/P_X_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'xDBL/P_Z_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'xDBL/Q_X_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'xDBL/Q_Z_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'xDBL/A24plus_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'xDBL/C24_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'xDBL' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'xDBL_sub_448ns_448ns_448_2_1' to 'xDBL_sub_448ns_44kbM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_448ns_448ns_448_2_1' to 'xDBL_add_448ns_44lbW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_836ns_836ns_836_2_1' to 'xDBL_add_836ns_83mb6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_sub_836ns_836ns_836_2_1' to 'xDBL_sub_836ns_83ncg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_837ns_837s_837_2_1' to 'xDBL_add_837ns_83ocq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_448s_448s_448_2_1' to 'xDBL_add_448s_448pcA' due to the length limit 20
+INFO: [RTGEN 206-104] Estimated max fanout for 'xDBL' is 6808 from HDL expression: (1'b1 == ap_CS_fsm_state12)
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_448ns_44lbW': 16 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_448s_448pcA': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_836ns_83mb6': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_837ns_83ocq': 7 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_sub_448ns_44kbM': 6 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_sub_836ns_83ncg': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'xDBL'.
+INFO: [HLS 200-111]  Elapsed time: 0.923 seconds; current allocated memory: 192.734 MB.
+INFO: [RTMG 210-282] Generating pipelined core: 'xDBL_mul_64ns_64nbkb_MulnS_0'
+INFO: [RTMG 210-282] Generating pipelined core: 'xDBL_mul_64s_64s_cud_MulnS_1'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_451ns_45dEe_AddSubnS_0'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_515ns_51eOg_AddSubnS_1'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_579ns_57fYi_AddSubnS_2'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_643ns_64g8j_AddSubnS_3'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_707ns_70hbi_AddSubnS_4'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_771ns_77ibs_AddSubnS_5'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_835ns_83jbC_AddSubnS_6'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_sub_448ns_44kbM_AddSubnS_7'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_448ns_44lbW_AddSubnS_8'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_836ns_83mb6_AddSubnS_9'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_sub_836ns_83ncg_AddSubnS_10'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_837ns_83ocq_AddSubnS_11'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_448s_448pcA_AddSubnS_12'
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:18 ; elapsed = 00:01:16 . Memory (MB): peak = 262.266 ; gain = 170.883
+INFO: [VHDL 208-304] Generating VHDL RTL for xDBL.
+INFO: [VLOG 209-307] Generating Verilog RTL for xDBL.
+INFO: [HLS 200-112] Total elapsed time: 75.861 seconds; peak allocated memory: 192.734 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'sikehls/ec_isogeny.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'sikehls/fpx.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'sikehls/mult.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:03 ; elapsed = 00:01:01 . Memory (MB): peak = 170.699 ; gain = 79.320
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:03 ; elapsed = 00:01:01 . Memory (MB): peak = 170.699 ; gain = 79.320
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'mp_sub434_p2' into 'mp2_sub_p2' (sikehls/fpx.cpp:143).
+INFO: [XFORM 203-603] Inlining function 'mp_sub434_p2' into 'mp2_sub_p2' (sikehls/fpx.cpp:142).
+INFO: [XFORM 203-603] Inlining function 'mp2_sub_p2' into 'xDBL' (sikehls/ec_isogeny.cpp:26).
+INFO: [XFORM 203-603] Inlining function 'mp2_sub_p2' into 'xDBL' (sikehls/ec_isogeny.cpp:20).
+INFO: [XFORM 203-603] Inlining function 'mp2_add' into 'xDBL' (sikehls/ec_isogeny.cpp:28).
+INFO: [XFORM 203-603] Inlining function 'mp2_add' into 'xDBL' (sikehls/ec_isogeny.cpp:21).
+INFO: [XFORM 203-603] Inlining function 'mp_sub434_p4' into 'fp2sqr_mont' (sikehls/fpx.cpp:162).
+INFO: [XFORM 203-603] Inlining function 'fp2sqr_mont' into 'xDBL' (sikehls/ec_isogeny.cpp:22).
+INFO: [XFORM 203-603] Inlining function 'fp2sqr_mont' into 'xDBL' (sikehls/ec_isogeny.cpp:23).
+INFO: [XFORM 203-603] Inlining function 'fp2mul_mont' into 'xDBL' (sikehls/ec_isogeny.cpp:24).
+INFO: [XFORM 203-603] Inlining function 'fp2mul_mont' into 'xDBL' (sikehls/ec_isogeny.cpp:25).
+INFO: [XFORM 203-603] Inlining function 'fp2mul_mont' into 'xDBL' (sikehls/ec_isogeny.cpp:27).
+INFO: [XFORM 203-603] Inlining function 'fp2mul_mont' into 'xDBL' (sikehls/ec_isogeny.cpp:29).
+INFO: [XFORM 203-603] Inlining function 'fpmul_mont' into 'xDBL' (sikehls/fpx.cpp:164->sikehls/ec_isogeny.cpp:22).
+INFO: [XFORM 203-603] Inlining function 'fpmul_mont' into 'xDBL' (sikehls/fpx.cpp:165->sikehls/ec_isogeny.cpp:22).
+INFO: [XFORM 203-603] Inlining function 'fpmul_mont' into 'xDBL' (sikehls/fpx.cpp:164->sikehls/ec_isogeny.cpp:23).
+INFO: [XFORM 203-603] Inlining function 'fpmul_mont' into 'xDBL' (sikehls/fpx.cpp:165->sikehls/ec_isogeny.cpp:23).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:04 ; elapsed = 00:01:04 . Memory (MB): peak = 170.699 ; gain = 79.320
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-23] sikehls/mult.cpp:23: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:05 ; elapsed = 00:01:05 . Memory (MB): peak = 176.773 ; gain = 85.395
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loopb22' (sikehls/mult.cpp:28) in function 'bc_mult_448' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'loopb21' (sikehls/mult.cpp:21) in function 'bc_mult_448' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'loopb23' (sikehls/mult.cpp:30) in function 'bc_mult_448' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'loop3_1' (sikehls/mult.cpp:42) in function 'bc_mult_448' completely with a factor of 7.
+INFO: [XFORM 203-101] Partitioning array 'ai.V' (sikehls/mult.cpp:9) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'bi.V' (sikehls/mult.cpp:10) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'sum.V' (sikehls/mult.cpp:11) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'partial_products.V' (sikehls/mult.cpp:8) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'partial_products.V' (sikehls/mult.cpp:8) in dimension 2 completely.
+INFO: [XFORM 203-11] Balancing expressions in function 'bc_mult_448' (sikehls/mult.cpp:23:29)...6 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:07 ; elapsed = 00:01:07 . Memory (MB): peak = 220.734 ; gain = 129.355
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:08 ; elapsed = 00:01:08 . Memory (MB): peak = 244.578 ; gain = 153.199
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'xDBL' ...
+WARNING: [SYN 201-223] Checking resource limit in 'xDBL': cannot find any callsite of 'bc_mult_448'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bc_mult_448' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loopb22'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 6.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 68.88 seconds; current allocated memory: 194.291 MB.
+INFO: [HLS 200-434] Only 1 loops out of a total 2 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.61 seconds; current allocated memory: 195.206 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mp_mul' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.682 seconds; current allocated memory: 195.304 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.197 seconds; current allocated memory: 195.343 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'rdc_mont' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.311 seconds; current allocated memory: 195.392 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.231 seconds; current allocated memory: 195.457 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'xDBL' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.585 seconds; current allocated memory: 195.884 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Starting global binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.759 seconds; current allocated memory: 196.423 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bc_mult_448' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'xDBL_mul_64ns_64ns_128_5_1' to 'xDBL_mul_64ns_64nbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_mul_64s_64s_64_5_1' to 'xDBL_mul_64s_64s_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_451ns_451ns_451_2_1' to 'xDBL_add_451ns_45dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_515ns_515ns_515_2_1' to 'xDBL_add_515ns_51eOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_579ns_579ns_579_2_1' to 'xDBL_add_579ns_57fYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_643ns_643ns_643_2_1' to 'xDBL_add_643ns_64g8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_707ns_707ns_707_2_1' to 'xDBL_add_707ns_70hbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_771ns_771ns_771_2_1' to 'xDBL_add_771ns_77ibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_835ns_835ns_835_2_1' to 'xDBL_add_835ns_83jbC' due to the length limit 20
+INFO: [RTGEN 206-104] Estimated max fanout for 'bc_mult_448' is 6626 from HDL expression: (1'b1 == ap_CS_fsm_state9)
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_451ns_45dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_515ns_51eOg': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_579ns_57fYi': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_643ns_64g8j': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_707ns_70hbi': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_771ns_77ibs': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_835ns_83jbC': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_mul_64ns_64nbkb': 6 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_mul_64s_64s_cud': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_mux_73_448_1_1': 7 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_mux_73_64_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bc_mult_448'.
+INFO: [HLS 200-111]  Elapsed time: 2.451 seconds; current allocated memory: 198.292 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'mp_mul' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'mp_mul'.
+INFO: [HLS 200-111]  Elapsed time: 2.279 seconds; current allocated memory: 198.741 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'rdc_mont' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_837ns_837ns_837_2_1' to 'xDBL_add_837ns_83kbM' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_837ns_83kbM': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'rdc_mont'.
+INFO: [HLS 200-111]  Elapsed time: 0.455 seconds; current allocated memory: 199.019 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'xDBL' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'xDBL/P_X_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'xDBL/P_Z_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'xDBL/Q_X_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'xDBL/Q_Z_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'xDBL/A24plus_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'xDBL/C24_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'xDBL' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'xDBL_sub_448ns_448ns_448_2_1' to 'xDBL_sub_448ns_44lbW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_448ns_448ns_448_2_1' to 'xDBL_add_448ns_44mb6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_sub_836ns_836ns_836_2_1' to 'xDBL_sub_836ns_83ncg' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_448ns_44mb6': 19 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_sub_448ns_44lbW': 6 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_sub_836ns_83ncg': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'xDBL'.
+INFO: [HLS 200-111]  Elapsed time: 1.081 seconds; current allocated memory: 200.260 MB.
+INFO: [RTMG 210-282] Generating pipelined core: 'xDBL_mul_64ns_64nbkb_MulnS_0'
+INFO: [RTMG 210-282] Generating pipelined core: 'xDBL_mul_64s_64s_cud_MulnS_1'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_451ns_45dEe_AddSubnS_0'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_515ns_51eOg_AddSubnS_1'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_579ns_57fYi_AddSubnS_2'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_643ns_64g8j_AddSubnS_3'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_707ns_70hbi_AddSubnS_4'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_771ns_77ibs_AddSubnS_5'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_835ns_83jbC_AddSubnS_6'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_837ns_83kbM_AddSubnS_7'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_sub_448ns_44lbW_AddSubnS_8'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_448ns_44mb6_AddSubnS_9'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_sub_836ns_83ncg_AddSubnS_10'
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:20 ; elapsed = 00:01:28 . Memory (MB): peak = 267.711 ; gain = 176.332
+INFO: [VHDL 208-304] Generating VHDL RTL for xDBL.
+INFO: [VLOG 209-307] Generating Verilog RTL for xDBL.
+INFO: [HLS 200-112] Total elapsed time: 88.638 seconds; peak allocated memory: 200.260 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'sikehls/ec_isogeny.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'sikehls/fpx.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'sikehls/mult.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:04 ; elapsed = 00:01:00 . Memory (MB): peak = 170.949 ; gain = 79.664
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:04 ; elapsed = 00:01:00 . Memory (MB): peak = 170.949 ; gain = 79.664
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'mp_sub434_p2' into 'mp2_sub_p2' (sikehls/fpx.cpp:143).
+INFO: [XFORM 203-603] Inlining function 'mp_sub434_p2' into 'mp2_sub_p2' (sikehls/fpx.cpp:142).
+INFO: [XFORM 203-603] Inlining function 'mp2_sub_p2' into 'xDBL' (sikehls/ec_isogeny.cpp:26).
+INFO: [XFORM 203-603] Inlining function 'mp2_sub_p2' into 'xDBL' (sikehls/ec_isogeny.cpp:20).
+INFO: [XFORM 203-603] Inlining function 'mp2_add' into 'xDBL' (sikehls/ec_isogeny.cpp:28).
+INFO: [XFORM 203-603] Inlining function 'mp2_add' into 'xDBL' (sikehls/ec_isogeny.cpp:21).
+INFO: [XFORM 203-603] Inlining function 'mp_sub434_p4' into 'fp2sqr_mont' (sikehls/fpx.cpp:162).
+INFO: [XFORM 203-603] Inlining function 'fp2sqr_mont' into 'xDBL' (sikehls/ec_isogeny.cpp:22).
+INFO: [XFORM 203-603] Inlining function 'fp2sqr_mont' into 'xDBL' (sikehls/ec_isogeny.cpp:23).
+INFO: [XFORM 203-603] Inlining function 'fp2mul_mont' into 'xDBL' (sikehls/ec_isogeny.cpp:24).
+INFO: [XFORM 203-603] Inlining function 'fp2mul_mont' into 'xDBL' (sikehls/ec_isogeny.cpp:25).
+INFO: [XFORM 203-603] Inlining function 'fp2mul_mont' into 'xDBL' (sikehls/ec_isogeny.cpp:27).
+INFO: [XFORM 203-603] Inlining function 'fp2mul_mont' into 'xDBL' (sikehls/ec_isogeny.cpp:29).
+INFO: [XFORM 203-603] Inlining function 'fpmul_mont' into 'xDBL' (sikehls/fpx.cpp:164->sikehls/ec_isogeny.cpp:22).
+INFO: [XFORM 203-603] Inlining function 'fpmul_mont' into 'xDBL' (sikehls/fpx.cpp:165->sikehls/ec_isogeny.cpp:22).
+INFO: [XFORM 203-603] Inlining function 'fpmul_mont' into 'xDBL' (sikehls/fpx.cpp:164->sikehls/ec_isogeny.cpp:23).
+INFO: [XFORM 203-603] Inlining function 'fpmul_mont' into 'xDBL' (sikehls/fpx.cpp:165->sikehls/ec_isogeny.cpp:23).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:05 ; elapsed = 00:01:02 . Memory (MB): peak = 170.949 ; gain = 79.664
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-23] sikehls/mult.cpp:23: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:05 ; elapsed = 00:01:03 . Memory (MB): peak = 176.258 ; gain = 84.973
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loopb22' (sikehls/mult.cpp:28) in function 'bc_mult_448' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'loopb21' (sikehls/mult.cpp:21) in function 'bc_mult_448' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'loopb23' (sikehls/mult.cpp:30) in function 'bc_mult_448' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'loop3_1' (sikehls/mult.cpp:42) in function 'bc_mult_448' completely with a factor of 7.
+INFO: [XFORM 203-101] Partitioning array 'ai.V' (sikehls/mult.cpp:9) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'bi.V' (sikehls/mult.cpp:10) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'sum.V' (sikehls/mult.cpp:11) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'partial_products.V' (sikehls/mult.cpp:8) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'partial_products.V' (sikehls/mult.cpp:8) in dimension 2 completely.
+INFO: [XFORM 203-11] Balancing expressions in function 'bc_mult_448' (sikehls/mult.cpp:23:29)...6 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:07 ; elapsed = 00:01:05 . Memory (MB): peak = 220.816 ; gain = 129.531
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:08 ; elapsed = 00:01:06 . Memory (MB): peak = 245.086 ; gain = 153.801
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'xDBL' ...
+WARNING: [SYN 201-223] Checking resource limit in 'xDBL': cannot find any callsite of 'bc_mult_448'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bc_mult_448' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loopb22'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 6.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 66.79 seconds; current allocated memory: 194.291 MB.
+INFO: [HLS 200-434] Only 1 loops out of a total 2 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.488 seconds; current allocated memory: 195.206 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mp_mul' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.539 seconds; current allocated memory: 195.304 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 195.343 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'rdc_mont' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.253 seconds; current allocated memory: 195.392 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.204 seconds; current allocated memory: 195.457 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'xDBL' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.622 seconds; current allocated memory: 195.884 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Starting global binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.801 seconds; current allocated memory: 196.423 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bc_mult_448' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'xDBL_mul_64ns_64ns_128_5_1' to 'xDBL_mul_64ns_64nbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_mul_64s_64s_64_5_1' to 'xDBL_mul_64s_64s_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_451ns_451ns_451_2_1' to 'xDBL_add_451ns_45dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_515ns_515ns_515_2_1' to 'xDBL_add_515ns_51eOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_579ns_579ns_579_2_1' to 'xDBL_add_579ns_57fYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_643ns_643ns_643_2_1' to 'xDBL_add_643ns_64g8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_707ns_707ns_707_2_1' to 'xDBL_add_707ns_70hbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_771ns_771ns_771_2_1' to 'xDBL_add_771ns_77ibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_835ns_835ns_835_2_1' to 'xDBL_add_835ns_83jbC' due to the length limit 20
+INFO: [RTGEN 206-104] Estimated max fanout for 'bc_mult_448' is 6626 from HDL expression: (1'b1 == ap_CS_fsm_state9)
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_451ns_45dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_515ns_51eOg': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_579ns_57fYi': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_643ns_64g8j': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_707ns_70hbi': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_771ns_77ibs': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_835ns_83jbC': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_mul_64ns_64nbkb': 6 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_mul_64s_64s_cud': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_mux_73_448_1_1': 7 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_mux_73_64_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bc_mult_448'.
+INFO: [HLS 200-111]  Elapsed time: 1.85 seconds; current allocated memory: 198.292 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'mp_mul' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'mp_mul'.
+INFO: [HLS 200-111]  Elapsed time: 2.041 seconds; current allocated memory: 198.741 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'rdc_mont' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_837ns_837ns_837_2_1' to 'xDBL_add_837ns_83kbM' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_837ns_83kbM': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'rdc_mont'.
+INFO: [HLS 200-111]  Elapsed time: 0.398 seconds; current allocated memory: 199.019 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'xDBL' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'xDBL/P_X_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'xDBL/P_Z_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'xDBL/Q_X_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'xDBL/Q_Z_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'xDBL/A24plus_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'xDBL/C24_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'xDBL' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'xDBL_sub_448ns_448ns_448_2_1' to 'xDBL_sub_448ns_44lbW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_add_448ns_448ns_448_2_1' to 'xDBL_add_448ns_44mb6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xDBL_sub_836ns_836ns_836_2_1' to 'xDBL_sub_836ns_83ncg' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'xDBL_add_448ns_44mb6': 19 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_sub_448ns_44lbW': 6 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'xDBL_sub_836ns_83ncg': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'xDBL'.
+INFO: [HLS 200-111]  Elapsed time: 0.836 seconds; current allocated memory: 200.260 MB.
+INFO: [RTMG 210-282] Generating pipelined core: 'xDBL_mul_64ns_64nbkb_MulnS_0'
+INFO: [RTMG 210-282] Generating pipelined core: 'xDBL_mul_64s_64s_cud_MulnS_1'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_451ns_45dEe_AddSubnS_0'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_515ns_51eOg_AddSubnS_1'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_579ns_57fYi_AddSubnS_2'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_643ns_64g8j_AddSubnS_3'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_707ns_70hbi_AddSubnS_4'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_771ns_77ibs_AddSubnS_5'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_835ns_83jbC_AddSubnS_6'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_837ns_83kbM_AddSubnS_7'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_sub_448ns_44lbW_AddSubnS_8'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_448ns_44mb6_AddSubnS_9'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_sub_836ns_83ncg_AddSubnS_10'
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:19 ; elapsed = 00:01:25 . Memory (MB): peak = 267.754 ; gain = 176.469
+INFO: [VHDL 208-304] Generating VHDL RTL for xDBL.
+INFO: [VLOG 209-307] Generating Verilog RTL for xDBL.
+INFO: [HLS 200-112] Total elapsed time: 84.663 seconds; peak allocated memory: 200.260 MB.

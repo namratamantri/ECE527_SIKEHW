@@ -1,7 +1,7 @@
 # This script segment is generated automatically by AutoPilot
 
-set id 42
-set name rdc_mont_add_896nmb6
+set id 44
+set name xDBL_add_837ns_83kbM
 set corename simcore_add
 set op add
 set stage_num 2
@@ -11,13 +11,13 @@ set clk_width 1
 set clk_signed 0
 set reset_width 1
 set reset_signed 0
-set in0_width 896
+set in0_width 837
 set in0_signed 0
-set in1_width 896
+set in1_width 837
 set in1_signed 0
 set ce_width 1
 set ce_signed 0
-set out_width 896
+set out_width 837
 if {${::AESL::PGuard_simmodel_gen}} {
 if {[info proc ap_gen_simcore_add] == "ap_gen_simcore_add"} {
 eval "ap_gen_simcore_add { \
@@ -92,11 +92,10 @@ if {${::AESL::PGuard_autoexp_gen}} {
     AESL_LIB_XILADAPTER::native_axis_begin
 }
 
-set axilite_register_dict [dict create]
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 44 \
+    id 46 \
     name ma_V \
     type other \
     dir I \
@@ -104,22 +103,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_ma_V \
     op interface \
-    ports { ma_V { I 896 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 45 \
-    name mc_V \
-    type other \
-    dir O \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_mc_V \
-    op interface \
-    ports { mc_V { O 448 vector } mc_V_ap_vld { O 1 bit } } \
+    ports { ma_V { I 837 vector } } \
 } "
 }
 
@@ -137,6 +121,20 @@ eval "cg_default_interface_gen_dc { \
 } "
 }
 
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id -2 \
+    name ap_return \
+    type ap_return \
+    reset_level 1 \
+    sync_rst true \
+    corename ap_return \
+    op interface \
+    ports { ap_return { O 448 vector } } \
+} "
+}
+
 
 # Adapter definition:
 set PortName ap_clk
@@ -144,7 +142,7 @@ set DataWd 1
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc cg_default_interface_gen_clock] == "cg_default_interface_gen_clock"} {
 eval "cg_default_interface_gen_clock { \
-    id -2 \
+    id -3 \
     name ${PortName} \
     reset_level 1 \
     sync_rst true \
@@ -164,7 +162,7 @@ set DataWd 1
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc cg_default_interface_gen_reset] == "cg_default_interface_gen_reset"} {
 eval "cg_default_interface_gen_reset { \
-    id -3 \
+    id -4 \
     name ${PortName} \
     reset_level 1 \
     sync_rst true \

@@ -12,21 +12,20 @@
 #include "AESL_pkg.h"
 
 #include "bc_mult_448.h"
-#include "rdc_mont_add_896nmb6.h"
+#include "xDBL_add_837ns_83kbM.h"
 
 namespace ap_rtl {
 
 struct rdc_mont : public sc_module {
-    // Port declarations 9
+    // Port declarations 8
     sc_in_clk ap_clk;
     sc_in< sc_logic > ap_rst;
     sc_in< sc_logic > ap_start;
     sc_out< sc_logic > ap_done;
     sc_out< sc_logic > ap_idle;
     sc_out< sc_logic > ap_ready;
-    sc_in< sc_lv<896> > ma_V;
-    sc_out< sc_lv<448> > mc_V;
-    sc_out< sc_logic > mc_V_ap_vld;
+    sc_in< sc_lv<837> > ma_V;
+    sc_out< sc_lv<448> > ap_return;
 
 
     // Module declarations
@@ -37,31 +36,33 @@ struct rdc_mont : public sc_module {
 
     sc_trace_file* mVcdFile;
 
-    ofstream mHdltvinHandle;
-    ofstream mHdltvoutHandle;
-    bc_mult_448* grp_bc_mult_448_fu_47;
-    rdc_mont_add_896nmb6<1,2,896,896,896>* rdc_mont_add_896nmb6_U42;
+    bc_mult_448* grp_bc_mult_448_fu_30;
+    xDBL_add_837ns_83kbM<1,2,837,837,837>* xDBL_add_837ns_83kbM_U44;
     sc_signal< sc_lv<4> > ap_CS_fsm;
     sc_signal< sc_logic > ap_CS_fsm_state1;
-    sc_signal< sc_lv<448> > ma_trunc_V_fu_55_p1;
-    sc_signal< sc_lv<448> > ma_trunc_V_reg_102;
-    sc_signal< sc_lv<448> > m_V_fu_68_p3;
-    sc_signal< sc_lv<448> > m_V_reg_107;
+    sc_signal< sc_lv<837> > ma_V_read_reg_83;
+    sc_signal< sc_lv<448> > ma_trunc_V_fu_38_p1;
+    sc_signal< sc_lv<448> > ma_trunc_V_reg_88;
+    sc_signal< sc_lv<448> > m_V_fu_51_p3;
+    sc_signal< sc_lv<448> > m_V_reg_93;
     sc_signal< sc_logic > ap_CS_fsm_state2;
-    sc_signal< sc_logic > grp_bc_mult_448_fu_47_ap_ready;
-    sc_signal< sc_logic > grp_bc_mult_448_fu_47_ap_done;
+    sc_signal< sc_logic > grp_bc_mult_448_fu_30_ap_ready;
+    sc_signal< sc_logic > grp_bc_mult_448_fu_30_ap_done;
     sc_signal< sc_logic > ap_CS_fsm_state3;
-    sc_signal< sc_logic > grp_bc_mult_448_fu_47_ap_start;
-    sc_signal< sc_logic > grp_bc_mult_448_fu_47_ap_idle;
-    sc_signal< sc_lv<448> > grp_bc_mult_448_fu_47_a_V;
-    sc_signal< sc_lv<435> > grp_bc_mult_448_fu_47_b_V;
-    sc_signal< sc_lv<835> > grp_bc_mult_448_fu_47_ap_return;
-    sc_signal< sc_logic > grp_bc_mult_448_fu_47_ap_start_reg;
+    sc_signal< sc_logic > grp_bc_mult_448_fu_30_ap_start;
+    sc_signal< sc_logic > grp_bc_mult_448_fu_30_ap_idle;
+    sc_signal< sc_lv<448> > grp_bc_mult_448_fu_30_a_V;
+    sc_signal< sc_lv<448> > grp_bc_mult_448_fu_30_b_V;
+    sc_signal< sc_lv<835> > grp_bc_mult_448_fu_30_ap_return;
+    sc_signal< sc_logic > grp_bc_mult_448_fu_30_ap_start_reg;
+    sc_signal< sc_lv<1> > tmp_fu_43_p3;
+    sc_signal< sc_lv<837> > grp_fu_64_p0;
+    sc_signal< sc_lv<837> > grp_fu_64_p2;
     sc_signal< sc_logic > ap_CS_fsm_state4;
-    sc_signal< sc_lv<1> > tmp_fu_60_p3;
-    sc_signal< sc_lv<896> > grp_fu_81_p1;
-    sc_signal< sc_lv<896> > grp_fu_81_p2;
-    sc_signal< sc_logic > grp_fu_81_ce;
+    sc_signal< sc_lv<389> > tmp_1_fu_69_p4;
+    sc_signal< sc_logic > grp_fu_64_ce;
+    sc_signal< sc_lv<448> > sext_ln1503_fu_79_p1;
+    sc_signal< sc_lv<448> > ap_return_preg;
     sc_signal< sc_lv<4> > ap_NS_fsm;
     static const sc_logic ap_const_logic_1;
     static const sc_logic ap_const_logic_0;
@@ -72,13 +73,14 @@ struct rdc_mont : public sc_module {
     static const sc_lv<32> ap_const_lv32_0;
     static const sc_lv<32> ap_const_lv32_1;
     static const sc_lv<32> ap_const_lv32_2;
-    static const sc_lv<435> ap_const_lv435_lc_2;
-    static const sc_lv<435> ap_const_lv435_lc_3;
-    static const sc_lv<32> ap_const_lv32_3;
+    static const sc_lv<448> ap_const_lv448_lc_2;
+    static const sc_lv<448> ap_const_lv448_lc_3;
     static const sc_lv<32> ap_const_lv32_1BF;
     static const sc_lv<447> ap_const_lv447_lc_1;
     static const sc_lv<32> ap_const_lv32_1C0;
-    static const sc_lv<32> ap_const_lv32_37F;
+    static const sc_lv<32> ap_const_lv32_344;
+    static const sc_lv<32> ap_const_lv32_3;
+    static const sc_lv<448> ap_const_lv448_lc_1;
     static const bool ap_const_boolean_1;
     // Thread declarations
     void thread_ap_clk_no_reset_();
@@ -89,18 +91,17 @@ struct rdc_mont : public sc_module {
     void thread_ap_done();
     void thread_ap_idle();
     void thread_ap_ready();
-    void thread_grp_bc_mult_448_fu_47_a_V();
-    void thread_grp_bc_mult_448_fu_47_ap_start();
-    void thread_grp_bc_mult_448_fu_47_b_V();
-    void thread_grp_fu_81_ce();
-    void thread_grp_fu_81_p1();
-    void thread_m_V_fu_68_p3();
-    void thread_ma_trunc_V_fu_55_p1();
-    void thread_mc_V();
-    void thread_mc_V_ap_vld();
-    void thread_tmp_fu_60_p3();
+    void thread_grp_bc_mult_448_fu_30_a_V();
+    void thread_grp_bc_mult_448_fu_30_ap_start();
+    void thread_grp_bc_mult_448_fu_30_b_V();
+    void thread_grp_fu_64_ce();
+    void thread_grp_fu_64_p0();
+    void thread_m_V_fu_51_p3();
+    void thread_ma_trunc_V_fu_38_p1();
+    void thread_sext_ln1503_fu_79_p1();
+    void thread_tmp_1_fu_69_p4();
+    void thread_tmp_fu_43_p3();
     void thread_ap_NS_fsm();
-    void thread_hdltv_gen();
 };
 
 }
