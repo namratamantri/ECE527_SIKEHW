@@ -5,11 +5,11 @@
 ############################################################
 open_project sikehls
 set_top xDBL
-add_files sikehls/mult.cpp
-add_files sikehls/fpx.cpp
-add_files sikehls/fp.h
-add_files sikehls/ec_isogeny.cpp
 add_files sikehls/constants434.h
+add_files sikehls/ec_isogeny.cpp
+add_files sikehls/fp.h
+add_files sikehls/fpx.cpp
+add_files sikehls/mult.cpp
 open_solution "solution1"
 set_part {xc7z020-clg400-1} -tool vivado
 create_clock -period 10 -name default

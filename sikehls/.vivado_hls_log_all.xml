@@ -12,8 +12,8 @@
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [SYN 201-223] Checking resource limit in 'xDBL': cannot find any callsite of 'bc_mult_448'." projectName="sikehls" solutionName="solution1" date="2020-12-14T19:30:40.463-0600" type="Warning"/>
-        <logs message="WARNING: [SYNCHK 200-23] sikehls/mult.cpp:23: variable-indexed range selection may cause suboptimal QoR." projectName="sikehls" solutionName="solution1" date="2020-12-14T19:30:37.461-0600" type="Warning"/>
+        <logs message="WARNING: [SYN 201-223] Checking resource limit in 'xDBL': cannot find any callsite of 'bc_mult_448'." projectName="sikehls" solutionName="solution1" date="2020-12-14T20:27:02.737-0600" type="Warning"/>
+        <logs message="WARNING: [SYNCHK 200-23] sikehls/mult.cpp:23: variable-indexed range selection may cause suboptimal QoR." projectName="sikehls" solutionName="solution1" date="2020-12-14T20:27:00.112-0600" type="Warning"/>
       </synLog>
       <simLog/>
       <mgLog/>
