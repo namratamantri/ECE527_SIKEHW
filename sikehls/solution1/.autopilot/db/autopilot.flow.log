@@ -1,65 +1,65 @@
-INFO-FLOW: Workspace C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1 opened at Mon Dec 14 19:29:36 -0600 2020
+INFO-FLOW: Workspace C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1 opened at Mon Dec 14 20:26:12 -0600 2020
 Execute     config_clock -quiet -name default -period 10 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 Execute     open_platform DefaultPlatform 
-Execute     import_lib C:/Xilinx/Vivado/2019.1/common/technology/xilinx/zynq/zynq 
-Execute       source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.lib 
-Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.lib 
-Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.lib 
-Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.lib 
-Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.lib 
-Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.lib 
-Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.lib 
-Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.lib 
-Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.lib 
-Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.lib 
-Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.lib 
-Execute       source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
-Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
-Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
-Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
-Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
-Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
-Execute       source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/zynq/dsp48e1.hlp 
-Execute       source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
-Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
-Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
-Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
-Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
-Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
-Execute     source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/zynq/zynq.gen 
-Execute       source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.gen 
-Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.gen 
-Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.gen 
-Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.gen 
-Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/nativeAXI4.gen 
-Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.gen 
-Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.gen 
-Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
-Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
-Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
-Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
-Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
-Command         ap_source done; 0.174 sec.
-Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
-Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
-Command       ap_source done; 0.249 sec.
-Command     ap_source done; 0.25 sec.
+Execute     import_lib D:/Xilinx/Vivado/2019.1/common/technology/xilinx/zynq/zynq 
+Execute       source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.lib 
+Execute         source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.lib 
+Execute           source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.lib 
+Execute           source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.lib 
+Execute           source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.lib 
+Execute           source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.lib 
+Execute         source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.lib 
+Execute         source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.lib 
+Execute         source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.lib 
+Execute       source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute         source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute         source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute           source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute       source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute       source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute         source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute         source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute           source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute     source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/zynq/zynq.gen 
+Execute       source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.gen 
+Execute         source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.gen 
+Execute           source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.gen 
+Execute         source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
+Execute         source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
+Command         ap_source done; 0.146 sec.
+Execute         source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.21 sec.
+Command     ap_source done; 0.211 sec.
 Execute     open_platform DefaultPlatform 
-Execute     import_lib C:/Xilinx/Vivado/2019.1/common/technology/xilinx/zynq/zynq_fpv6 
-Execute       source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.lib 
-Execute       source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.hlp 
-Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
-Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
-Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
-Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
-Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
-Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
-Execute     source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
-Execute       source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     import_lib D:/Xilinx/Vivado/2019.1/common/technology/xilinx/zynq/zynq_fpv6 
+Execute       source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute       source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute         source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute           source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute           source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute             source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute     source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
 Execute     set_part xc7z020-clg400-1 
 Execute       ap_part_info -name xc7z020-clg400-1 -data single -quiet 
-Command       ap_part_info done; 1.053 sec.
+Command       ap_part_info done; 0.723 sec.
 Execute       ap_part_info -name xc7z020-clg400-1 -data info 
 Execute       add_library xilinx/zynq/zynq:xc7z020:-clg400:-1 
 Execute         get_default_platform 
@@ -77,7 +77,7 @@ Execute         get_default_platform
 INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
 Execute       ap_part_info -name xc7z020-clg400-1 -data info 
 Execute       get_default_platform 
-Command     set_part done; 1.221 sec.
+Command     set_part done; 1.104 sec.
 Execute     ap_part_info -data single -name xc7z020-clg400-1 
 Execute     ap_part_info -name xc7z020-clg400-1 -data resources 
 Execute     ap_part_info -name xc7z020-clg400-1 -data info 
@@ -85,7 +85,7 @@ Execute     ap_part_info -name xc7z020-clg400-1 -data info
 Execute     config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
 Execute     ap_part_info -name xc7z020-clg400-1 -data info 
 Execute     config_chip_info -quiet -speed slow 
-Command   open_solution done; 1.578 sec.
+Command   open_solution done; 1.4 sec.
 Execute   set_part xc7z020-clg400-1 -tool vivado 
 Execute     ap_part_info -name xc7z020-clg400-1 -data single -quiet 
 Execute     ap_part_info -name xc7z020-clg400-1 -data info 
@@ -104,7 +104,7 @@ Execute     add_library xilinx/zynq/zynq_fpv6
 Execute       get_default_platform 
 Execute     ap_part_info -name xc7z020-clg400-1 -data info 
 Execute     get_default_platform 
-Command   set_part done; 0.139 sec.
+Command   set_part done; 0.185 sec.
 Execute   create_clock -period 10 -name default 
 Execute   csynth_design 
 Execute     get_config_compile -dump_cfg 
@@ -121,105 +121,6 @@ Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0
 Execute       get_config_schedule -relax_ii_for_timing 
 INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
 Execute       get_config_schedule -suppress_dependence_error_break 
-INFO: [HLS 200-10] Analyzing design file 'sikehls/ec_isogeny.cpp' ... 
-INFO-FLOW: Compiling one TU...
-Execute       is_m_axi_addr64 
-INFO-FLOW: Handling sikehls/ec_isogeny.cpp as C++
-Execute       ap_part_info -name xc7z020-clg400-1 -data info 
-Execute       is_encrypted sikehls/ec_isogeny.cpp 
-Execute       ap_part_info -name xc7z020-clg400-1 -data info 
-INFO-FLOW: Running: GCC PP
-INFO-FLOW: Source preprocessing
-Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2019.1/msys" -hls  -fno-exceptions  -D__llvm__  -E "sikehls/ec_isogeny.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot" -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/ec_isogeny.pp.0.cpp" 
-INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.1/msys -hls -fno-exceptions -D__llvm__ -E sikehls/ec_isogeny.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/ec_isogeny.pp.0.cpp
-Command       clang done; 2.189 sec.
-Execute       tidy_31 xilinx-xfmat-array-geometry C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/ec_isogeny.pp.0.cpp std=gnu++98 
-INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/ec_isogeny.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 1.519 sec.
-INFO-FLOW: Syntax Checking before pre-processing...
-Execute       clang -syntaxcheck -src C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/ec_isogeny.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2019.1/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot" -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/ec_isogeny.pp.0.cpp"  -o "C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/useless.bc"  
-INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.1/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/ec_isogeny.pp.0.cpp -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/useless.bc
-Command       clang done; 2.587 sec.
-INFO-FLOW: Done: GCC PP time: 6.3 seconds per iteration
-Execute       source C:/Xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
-Execute       source C:/Xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
-Execute         source C:/Xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/try/try.tcl 
-Execute       list_core -type functional_unit 
-Execute       tidy_31 xilinx-systemc-detector C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/ec_isogeny.pp.0.cpp std=gnu++98 -directive=C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/.systemc_flag 
-INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/ec_isogeny.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.866 sec.
-INFO-FLOW: Running: tidy-3.1 CDT preprocess
-Execute       tidy_31 xilinx-directive2pragma C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/ec_isogeny.pp.0.cpp std=gnu++98 -directive=C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/all.directive.json 
-INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/all.directive.json -quiet -fix-errors C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/ec_isogeny.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.913 sec.
-Execute       get_config_dataflow -strict_mode 
-Execute       ap_eval exec -ignorestderr C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xilinx-dataflow-lawyer.ec_isogeny.pp.0.cpp.diag.yml C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/ec_isogeny.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xilinx-dataflow-lawyer.ec_isogeny.pp.0.cpp.out.log 2> C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xilinx-dataflow-lawyer.ec_isogeny.pp.0.cpp.err.log 
-Command       ap_eval done; 0.693 sec.
-Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/ec_isogeny.pp.0.cpp std=gnu++98 
-Execute         ap_eval exec -ignorestderr C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/tidy-3.1.ec_isogeny.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/ec_isogeny.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/tidy-3.1.ec_isogeny.pp.0.cpp.out.log 2> C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/tidy-3.1.ec_isogeny.pp.0.cpp.err.log 
-Command         ap_eval done; 2.88 sec.
-Execute         source C:/Xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
-Execute           source C:/Xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/cmdline/cmdline.tcl 
-Execute         ap_eval exec -ignorestderr C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/ec_isogeny.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xilinx-legacy-rewriter.ec_isogeny.pp.0.cpp.out.log 2> C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xilinx-legacy-rewriter.ec_isogeny.pp.0.cpp.err.log 
-Command         ap_eval done; 0.744 sec.
-Command       tidy_31 done; 3.696 sec.
-INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 5.3 seconds per iteration
-INFO-FLOW: Pragma Handling...
-Execute       tidy_31 xilinx-ssdm-intrinsics-arguments C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/ec_isogeny.pragma.1.cpp std=gnu++98 
-INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/ec_isogeny.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 1.216 sec.
-Execute       ap_part_info -name xc7z020-clg400-1 -data info 
-INFO-FLOW: Processing labels
-Execute       clang -src C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/ec_isogeny.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.1/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/ec_isogeny.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot" -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/ec_isogeny.bc" 
-INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.1/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/ec_isogeny.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/ec_isogeny.bc
-Command       clang done; 2.255 sec.
-INFO: [HLS 200-10] Analyzing design file 'sikehls/fpx.cpp' ... 
-INFO-FLOW: Compiling one TU...
-Execute       is_m_axi_addr64 
-INFO-FLOW: Handling sikehls/fpx.cpp as C++
-Execute       ap_part_info -name xc7z020-clg400-1 -data info 
-Execute       is_encrypted sikehls/fpx.cpp 
-Execute       ap_part_info -name xc7z020-clg400-1 -data info 
-INFO-FLOW: Running: GCC PP
-INFO-FLOW: Source preprocessing
-Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2019.1/msys" -hls  -fno-exceptions  -D__llvm__  -E "sikehls/fpx.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot" -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/fpx.pp.0.cpp" 
-INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.1/msys -hls -fno-exceptions -D__llvm__ -E sikehls/fpx.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/fpx.pp.0.cpp
-Command       clang done; 1.885 sec.
-Execute       tidy_31 xilinx-xfmat-array-geometry C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/fpx.pp.0.cpp std=gnu++98 
-INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/fpx.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 1.247 sec.
-INFO-FLOW: Syntax Checking before pre-processing...
-Execute       clang -syntaxcheck -src C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/fpx.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2019.1/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot" -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/fpx.pp.0.cpp"  -o "C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/useless.bc"  
-INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.1/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/fpx.pp.0.cpp -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/useless.bc
-Command       clang done; 2.373 sec.
-INFO-FLOW: Done: GCC PP time: 5.5 seconds per iteration
-Execute       list_core -type functional_unit 
-Execute       tidy_31 xilinx-systemc-detector C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/fpx.pp.0.cpp std=gnu++98 -directive=C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/.systemc_flag 
-INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/fpx.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 1.108 sec.
-INFO-FLOW: Running: tidy-3.1 CDT preprocess
-Execute       tidy_31 xilinx-directive2pragma C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/fpx.pp.0.cpp std=gnu++98 -directive=C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/all.directive.json 
-INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/all.directive.json -quiet -fix-errors C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/fpx.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 1.145 sec.
-Execute       get_config_dataflow -strict_mode 
-Execute       ap_eval exec -ignorestderr C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xilinx-dataflow-lawyer.fpx.pp.0.cpp.diag.yml C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/fpx.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xilinx-dataflow-lawyer.fpx.pp.0.cpp.out.log 2> C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xilinx-dataflow-lawyer.fpx.pp.0.cpp.err.log 
-Command       ap_eval done; 0.742 sec.
-Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/fpx.pp.0.cpp std=gnu++98 
-Execute         ap_eval exec -ignorestderr C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/tidy-3.1.fpx.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/fpx.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/tidy-3.1.fpx.pp.0.cpp.out.log 2> C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/tidy-3.1.fpx.pp.0.cpp.err.log 
-Command         ap_eval done; 2.213 sec.
-Execute         ap_eval exec -ignorestderr C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/fpx.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xilinx-legacy-rewriter.fpx.pp.0.cpp.out.log 2> C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xilinx-legacy-rewriter.fpx.pp.0.cpp.err.log 
-Command         ap_eval done; 1.037 sec.
-Command       tidy_31 done; 3.663 sec.
-INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 5.6 seconds per iteration
-INFO-FLOW: Pragma Handling...
-Execute       tidy_31 xilinx-ssdm-intrinsics-arguments C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/fpx.pragma.1.cpp std=gnu++98 
-INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/fpx.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 1.578 sec.
-Execute       ap_part_info -name xc7z020-clg400-1 -data info 
-INFO-FLOW: Processing labels
-Execute       clang -src C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/fpx.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.1/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/fpx.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot" -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/fpx.bc" 
-INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.1/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/fpx.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/fpx.bc
-Command       clang done; 2.489 sec.
 INFO: [HLS 200-10] Analyzing design file 'sikehls/mult.cpp' ... 
 INFO-FLOW: Compiling one TU...
 Execute       is_m_axi_addr64 
@@ -229,92 +130,191 @@ Execute       is_encrypted sikehls/mult.cpp
 Execute       ap_part_info -name xc7z020-clg400-1 -data info 
 INFO-FLOW: Running: GCC PP
 INFO-FLOW: Source preprocessing
-Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2019.1/msys" -hls  -fno-exceptions  -D__llvm__  -E "sikehls/mult.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot" -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/mult.pp.0.cpp" 
-INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.1/msys -hls -fno-exceptions -D__llvm__ -E sikehls/mult.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/mult.pp.0.cpp
-Command       clang done; 1.768 sec.
-Execute       tidy_31 xilinx-xfmat-array-geometry C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/mult.pp.0.cpp std=gnu++98 
-INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/mult.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 1.718 sec.
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "D:/Xilinx/Vivado/2019.1/msys" -hls  -fno-exceptions  -D__llvm__  -E "sikehls/mult.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2019.1/common/technology/autopilot" -I "D:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/mult.pp.0.cpp" 
+INFO-FLOW: exec D:/Xilinx/Vivado/2019.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2019.1/msys -hls -fno-exceptions -D__llvm__ -E sikehls/mult.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2019.1/common/technology/autopilot -I D:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/mult.pp.0.cpp
+Command       clang done; 1.935 sec.
+Execute       tidy_31 xilinx-xfmat-array-geometry C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/mult.pp.0.cpp std=gnu++98 
+INFO-FLOW: exec D:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/mult.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.584 sec.
 INFO-FLOW: Syntax Checking before pre-processing...
-Execute       clang -syntaxcheck -src C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/mult.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2019.1/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot" -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/mult.pp.0.cpp"  -o "C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/useless.bc"  
-INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.1/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/mult.pp.0.cpp -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/useless.bc
-Command       clang done; 2.622 sec.
-INFO-FLOW: Done: GCC PP time: 6.1 seconds per iteration
+Execute       clang -syntaxcheck -src C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/mult.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "D:/Xilinx/Vivado/2019.1/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2019.1/common/technology/autopilot" -I "D:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/mult.pp.0.cpp"  -o "C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec D:/Xilinx/Vivado/2019.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2019.1/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2019.1/common/technology/autopilot -I D:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/mult.pp.0.cpp -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/useless.bc
+Command       clang done; 2.095 sec.
+INFO-FLOW: Done: GCC PP time: 5.6 seconds per iteration
+Execute       source D:/Xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute       source D:/Xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute         source D:/Xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/try/try.tcl 
 Execute       list_core -type functional_unit 
-Execute       tidy_31 xilinx-systemc-detector C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/mult.pp.0.cpp std=gnu++98 -directive=C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/.systemc_flag 
-INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/mult.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 1.71 sec.
+Execute       tidy_31 xilinx-systemc-detector C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/mult.pp.0.cpp std=gnu++98 -directive=C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec D:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/mult.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.332 sec.
 INFO-FLOW: Running: tidy-3.1 CDT preprocess
-Execute       tidy_31 xilinx-directive2pragma C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/mult.pp.0.cpp std=gnu++98 -directive=C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/all.directive.json 
-INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/all.directive.json -quiet -fix-errors C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/mult.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 1.534 sec.
+Execute       tidy_31 xilinx-directive2pragma C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/mult.pp.0.cpp std=gnu++98 -directive=C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec D:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/all.directive.json -quiet -fix-errors C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/mult.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.287 sec.
 Execute       get_config_dataflow -strict_mode 
-Execute       ap_eval exec -ignorestderr C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xilinx-dataflow-lawyer.mult.pp.0.cpp.diag.yml C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/mult.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xilinx-dataflow-lawyer.mult.pp.0.cpp.out.log 2> C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xilinx-dataflow-lawyer.mult.pp.0.cpp.err.log 
-Command       ap_eval done; 1.023 sec.
-Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/mult.pp.0.cpp std=gnu++98 
-Execute         ap_eval exec -ignorestderr C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/tidy-3.1.mult.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/mult.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/tidy-3.1.mult.pp.0.cpp.out.log 2> C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/tidy-3.1.mult.pp.0.cpp.err.log 
-Command         ap_eval done; 1.917 sec.
-Execute         ap_eval exec -ignorestderr C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/mult.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xilinx-legacy-rewriter.mult.pp.0.cpp.out.log 2> C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xilinx-legacy-rewriter.mult.pp.0.cpp.err.log 
-Command         ap_eval done; 0.97 sec.
-Command       tidy_31 done; 2.901 sec.
-INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 5.5 seconds per iteration
+Execute       ap_eval exec -ignorestderr D:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xilinx-dataflow-lawyer.mult.pp.0.cpp.diag.yml C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/mult.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xilinx-dataflow-lawyer.mult.pp.0.cpp.out.log 2> C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xilinx-dataflow-lawyer.mult.pp.0.cpp.err.log 
+Command       ap_eval done; 0.852 sec.
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/mult.pp.0.cpp std=gnu++98 
+Execute         ap_eval exec -ignorestderr D:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/tidy-3.1.mult.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/mult.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/tidy-3.1.mult.pp.0.cpp.out.log 2> C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/tidy-3.1.mult.pp.0.cpp.err.log 
+Command         ap_eval done; 1.612 sec.
+Execute         ap_eval exec -ignorestderr D:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/mult.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xilinx-legacy-rewriter.mult.pp.0.cpp.out.log 2> C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xilinx-legacy-rewriter.mult.pp.0.cpp.err.log 
+Command         ap_eval done; 0.775 sec.
+Command       tidy_31 done; 2.395 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 4.5 seconds per iteration
 INFO-FLOW: Pragma Handling...
-Execute       tidy_31 xilinx-ssdm-intrinsics-arguments C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/mult.pragma.1.cpp std=gnu++98 
-INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/mult.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 3.574 sec.
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/mult.pragma.1.cpp std=gnu++98 
+INFO-FLOW: exec D:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/mult.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 3.422 sec.
 Execute       ap_part_info -name xc7z020-clg400-1 -data info 
 INFO-FLOW: Processing labels
-Execute       clang -src C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/mult.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.1/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/mult.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot" -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/mult.bc" 
-INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.1/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/mult.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/mult.bc
-Command       clang done; 2.648 sec.
+Execute       clang -src C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/mult.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2019.1/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/mult.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2019.1/common/technology/autopilot" -I "D:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/mult.bc" 
+INFO-FLOW: exec D:/Xilinx/Vivado/2019.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2019.1/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/mult.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2019.1/common/technology/autopilot -I D:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/mult.bc
+Command       clang done; 2.424 sec.
+INFO: [HLS 200-10] Analyzing design file 'sikehls/fpx.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling sikehls/fpx.cpp as C++
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       is_encrypted sikehls/fpx.cpp 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "D:/Xilinx/Vivado/2019.1/msys" -hls  -fno-exceptions  -D__llvm__  -E "sikehls/fpx.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2019.1/common/technology/autopilot" -I "D:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/fpx.pp.0.cpp" 
+INFO-FLOW: exec D:/Xilinx/Vivado/2019.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2019.1/msys -hls -fno-exceptions -D__llvm__ -E sikehls/fpx.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2019.1/common/technology/autopilot -I D:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/fpx.pp.0.cpp
+Command       clang done; 1.649 sec.
+Execute       tidy_31 xilinx-xfmat-array-geometry C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/fpx.pp.0.cpp std=gnu++98 
+INFO-FLOW: exec D:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/fpx.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.885 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang -syntaxcheck -src C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/fpx.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "D:/Xilinx/Vivado/2019.1/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2019.1/common/technology/autopilot" -I "D:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/fpx.pp.0.cpp"  -o "C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec D:/Xilinx/Vivado/2019.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2019.1/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2019.1/common/technology/autopilot -I D:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/fpx.pp.0.cpp -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/useless.bc
+Command       clang done; 1.951 sec.
+INFO-FLOW: Done: GCC PP time: 4.5 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/fpx.pp.0.cpp std=gnu++98 -directive=C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec D:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/fpx.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.964 sec.
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute       tidy_31 xilinx-directive2pragma C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/fpx.pp.0.cpp std=gnu++98 -directive=C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec D:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/all.directive.json -quiet -fix-errors C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/fpx.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.903 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr D:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xilinx-dataflow-lawyer.fpx.pp.0.cpp.diag.yml C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/fpx.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xilinx-dataflow-lawyer.fpx.pp.0.cpp.out.log 2> C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xilinx-dataflow-lawyer.fpx.pp.0.cpp.err.log 
+Command       ap_eval done; 0.538 sec.
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/fpx.pp.0.cpp std=gnu++98 
+Execute         ap_eval exec -ignorestderr D:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/tidy-3.1.fpx.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/fpx.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/tidy-3.1.fpx.pp.0.cpp.out.log 2> C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/tidy-3.1.fpx.pp.0.cpp.err.log 
+Command         ap_eval done; 1.786 sec.
+Execute         source D:/Xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Execute           source D:/Xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/cmdline/cmdline.tcl 
+Execute         ap_eval exec -ignorestderr D:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/fpx.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xilinx-legacy-rewriter.fpx.pp.0.cpp.out.log 2> C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xilinx-legacy-rewriter.fpx.pp.0.cpp.err.log 
+Command         ap_eval done; 0.571 sec.
+Command       tidy_31 done; 2.486 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 3.9 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/fpx.pragma.1.cpp std=gnu++98 
+INFO-FLOW: exec D:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/fpx.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.436 sec.
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: Processing labels
+Execute       clang -src C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/fpx.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2019.1/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/fpx.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2019.1/common/technology/autopilot" -I "D:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/fpx.bc" 
+INFO-FLOW: exec D:/Xilinx/Vivado/2019.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2019.1/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/fpx.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2019.1/common/technology/autopilot -I D:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/fpx.bc
+Command       clang done; 2.207 sec.
+INFO: [HLS 200-10] Analyzing design file 'sikehls/ec_isogeny.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling sikehls/ec_isogeny.cpp as C++
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       is_encrypted sikehls/ec_isogeny.cpp 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "D:/Xilinx/Vivado/2019.1/msys" -hls  -fno-exceptions  -D__llvm__  -E "sikehls/ec_isogeny.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2019.1/common/technology/autopilot" -I "D:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/ec_isogeny.pp.0.cpp" 
+INFO-FLOW: exec D:/Xilinx/Vivado/2019.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2019.1/msys -hls -fno-exceptions -D__llvm__ -E sikehls/ec_isogeny.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2019.1/common/technology/autopilot -I D:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/ec_isogeny.pp.0.cpp
+Command       clang done; 1.645 sec.
+Execute       tidy_31 xilinx-xfmat-array-geometry C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/ec_isogeny.pp.0.cpp std=gnu++98 
+INFO-FLOW: exec D:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/ec_isogeny.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.795 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang -syntaxcheck -src C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/ec_isogeny.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "D:/Xilinx/Vivado/2019.1/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2019.1/common/technology/autopilot" -I "D:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/ec_isogeny.pp.0.cpp"  -o "C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec D:/Xilinx/Vivado/2019.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2019.1/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2019.1/common/technology/autopilot -I D:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/ec_isogeny.pp.0.cpp -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/useless.bc
+Command       clang done; 2.118 sec.
+INFO-FLOW: Done: GCC PP time: 4.6 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/ec_isogeny.pp.0.cpp std=gnu++98 -directive=C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec D:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/ec_isogeny.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.694 sec.
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute       tidy_31 xilinx-directive2pragma C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/ec_isogeny.pp.0.cpp std=gnu++98 -directive=C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec D:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/all.directive.json -quiet -fix-errors C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/ec_isogeny.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.682 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr D:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xilinx-dataflow-lawyer.ec_isogeny.pp.0.cpp.diag.yml C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/ec_isogeny.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xilinx-dataflow-lawyer.ec_isogeny.pp.0.cpp.out.log 2> C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xilinx-dataflow-lawyer.ec_isogeny.pp.0.cpp.err.log 
+Command       ap_eval done; 0.431 sec.
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/ec_isogeny.pp.0.cpp std=gnu++98 
+Execute         ap_eval exec -ignorestderr D:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/tidy-3.1.ec_isogeny.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/ec_isogeny.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/tidy-3.1.ec_isogeny.pp.0.cpp.out.log 2> C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/tidy-3.1.ec_isogeny.pp.0.cpp.err.log 
+Command         ap_eval done; 1.367 sec.
+Execute         ap_eval exec -ignorestderr D:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/ec_isogeny.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xilinx-legacy-rewriter.ec_isogeny.pp.0.cpp.out.log 2> C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xilinx-legacy-rewriter.ec_isogeny.pp.0.cpp.err.log 
+Command         ap_eval done; 0.645 sec.
+Command       tidy_31 done; 2.037 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 3.2 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/ec_isogeny.pragma.1.cpp std=gnu++98 
+INFO-FLOW: exec D:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/ec_isogeny.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.761 sec.
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: Processing labels
+Execute       clang -src C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/ec_isogeny.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2019.1/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/ec_isogeny.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2019.1/common/technology/autopilot" -I "D:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/ec_isogeny.bc" 
+INFO-FLOW: exec D:/Xilinx/Vivado/2019.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2019.1/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/ec_isogeny.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2019.1/common/technology/autopilot -I D:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/ec_isogeny.bc
+Command       clang done; 2.32 sec.
 INFO-FLOW: Linking Debug ...
-Execute       llvm-ld C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/ec_isogeny.g.bc C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/fpx.g.bc C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/mult.g.bc -hls-opt -except-internalize xDBL -LC:/Xilinx/Vivado/2019.1/win64/lib -lhlsm -lhlsmc++ -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/a.g 
-Command       llvm-ld done; 3.238 sec.
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:04 ; elapsed = 00:01:00 . Memory (MB): peak = 170.949 ; gain = 79.664
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:04 ; elapsed = 00:01:00 . Memory (MB): peak = 170.949 ; gain = 79.664
+Execute       llvm-ld C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/mult.g.bc C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/fpx.g.bc C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/ec_isogeny.g.bc -hls-opt -except-internalize xDBL -LD:/Xilinx/Vivado/2019.1/win64/lib -lhlsm -lhlsmc++ -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/a.g 
+Command       llvm-ld done; 1.789 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:46 . Memory (MB): peak = 175.469 ; gain = 78.770
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:46 . Memory (MB): peak = 175.469 ; gain = 78.770
 Execute       get_config_sdx -target 
 Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
 Execute         cleanup_all_models 
 INFO: [HLS 200-10] Starting code transformations ...
-Execute         transform -promote-dbg-pointer C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/a.pp.bc -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/a.pp.0.bc -f 
-Command         transform done; 0.291 sec.
-Execute         llvm-ld C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/a.pp.0.bc -disable-opt -LC:/Xilinx/Vivado/2019.1/win64/lib -lfloatconversion -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/a.g.0 
-Command         llvm-ld done; 1.413 sec.
+Execute         transform -promote-dbg-pointer C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/a.pp.bc -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/a.pp.0.bc -f 
+Command         transform done; 0.134 sec.
+Execute         llvm-ld C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/a.pp.0.bc -disable-opt -LD:/Xilinx/Vivado/2019.1/win64/lib -lfloatconversion -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/a.g.0 
+Command         llvm-ld done; 0.995 sec.
 INFO-FLOW: Running Standard Transforms...
-Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top xDBL -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/a.g.0.bc -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top xDBL -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/a.g.0.bc -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
 INFO: [XFORM 203-603] Inlining function 'mp_sub434_p2' into 'mp2_sub_p2' (sikehls/fpx.cpp:143).
 INFO: [XFORM 203-603] Inlining function 'mp_sub434_p2' into 'mp2_sub_p2' (sikehls/fpx.cpp:142).
-INFO: [XFORM 203-603] Inlining function 'mp2_sub_p2' into 'xDBL' (sikehls/ec_isogeny.cpp:26).
-INFO: [XFORM 203-603] Inlining function 'mp2_sub_p2' into 'xDBL' (sikehls/ec_isogeny.cpp:20).
-INFO: [XFORM 203-603] Inlining function 'mp2_add' into 'xDBL' (sikehls/ec_isogeny.cpp:28).
-INFO: [XFORM 203-603] Inlining function 'mp2_add' into 'xDBL' (sikehls/ec_isogeny.cpp:21).
+INFO: [XFORM 203-603] Inlining function 'mp2_sub_p2' into 'xDBL' (sikehls/ec_isogeny.cpp:27).
+INFO: [XFORM 203-603] Inlining function 'mp2_sub_p2' into 'xDBL' (sikehls/ec_isogeny.cpp:21).
+INFO: [XFORM 203-603] Inlining function 'mp2_add' into 'xDBL' (sikehls/ec_isogeny.cpp:29).
+INFO: [XFORM 203-603] Inlining function 'mp2_add' into 'xDBL' (sikehls/ec_isogeny.cpp:22).
 INFO: [XFORM 203-603] Inlining function 'mp_sub434_p4' into 'fp2sqr_mont' (sikehls/fpx.cpp:162).
-INFO: [XFORM 203-603] Inlining function 'fp2sqr_mont' into 'xDBL' (sikehls/ec_isogeny.cpp:22).
 INFO: [XFORM 203-603] Inlining function 'fp2sqr_mont' into 'xDBL' (sikehls/ec_isogeny.cpp:23).
-INFO: [XFORM 203-603] Inlining function 'fp2mul_mont' into 'xDBL' (sikehls/ec_isogeny.cpp:24).
+INFO: [XFORM 203-603] Inlining function 'fp2sqr_mont' into 'xDBL' (sikehls/ec_isogeny.cpp:24).
 INFO: [XFORM 203-603] Inlining function 'fp2mul_mont' into 'xDBL' (sikehls/ec_isogeny.cpp:25).
-INFO: [XFORM 203-603] Inlining function 'fp2mul_mont' into 'xDBL' (sikehls/ec_isogeny.cpp:27).
-INFO: [XFORM 203-603] Inlining function 'fp2mul_mont' into 'xDBL' (sikehls/ec_isogeny.cpp:29).
-INFO: [XFORM 203-603] Inlining function 'fpmul_mont' into 'xDBL' (sikehls/fpx.cpp:164->sikehls/ec_isogeny.cpp:22).
-INFO: [XFORM 203-603] Inlining function 'fpmul_mont' into 'xDBL' (sikehls/fpx.cpp:165->sikehls/ec_isogeny.cpp:22).
+INFO: [XFORM 203-603] Inlining function 'fp2mul_mont' into 'xDBL' (sikehls/ec_isogeny.cpp:26).
+INFO: [XFORM 203-603] Inlining function 'fp2mul_mont' into 'xDBL' (sikehls/ec_isogeny.cpp:28).
+INFO: [XFORM 203-603] Inlining function 'fp2mul_mont' into 'xDBL' (sikehls/ec_isogeny.cpp:30).
 INFO: [XFORM 203-603] Inlining function 'fpmul_mont' into 'xDBL' (sikehls/fpx.cpp:164->sikehls/ec_isogeny.cpp:23).
 INFO: [XFORM 203-603] Inlining function 'fpmul_mont' into 'xDBL' (sikehls/fpx.cpp:165->sikehls/ec_isogeny.cpp:23).
-Command         transform done; 0.603 sec.
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:05 ; elapsed = 00:01:02 . Memory (MB): peak = 170.949 ; gain = 79.664
+INFO: [XFORM 203-603] Inlining function 'fpmul_mont' into 'xDBL' (sikehls/fpx.cpp:164->sikehls/ec_isogeny.cpp:24).
+INFO: [XFORM 203-603] Inlining function 'fpmul_mont' into 'xDBL' (sikehls/fpx.cpp:165->sikehls/ec_isogeny.cpp:24).
+Command         transform done; 0.461 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:48 . Memory (MB): peak = 175.469 ; gain = 78.770
 INFO: [HLS 200-10] Checking synthesizability ...
 INFO-FLOW: Checking Synthesizability 1/2..
-Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/a.g.1.bc -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/a.g.2.prechk.bc -f 
-Command         transform done; 0.482 sec.
+Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/a.g.1.bc -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+Command         transform done; 0.268 sec.
 INFO-FLOW: Checking Synthesizability 2/2..
-Execute         transform -syn-check C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/a.g.2.prechk.bc -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+Execute         transform -syn-check C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/a.g.2.prechk.bc -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
 WARNING: [SYNCHK 200-23] sikehls/mult.cpp:23: variable-indexed range selection may cause suboptimal QoR.
 INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
-Command         transform done; 0.245 sec.
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:05 ; elapsed = 00:01:03 . Memory (MB): peak = 176.258 ; gain = 84.973
+Command         transform done; 0.271 sec.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:03 ; elapsed = 00:00:49 . Memory (MB): peak = 180.859 ; gain = 84.160
 INFO-FLOW: Compiler optimizing ...
-INFO-FLOW: Share syncheck's 1.bc for syn flow: copy C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/a.g.1.bc to C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/a.g.1.bc to C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/a.o.1.bc
 INFO-FLOW: Presyn 1...
-Execute         transform -hls -tmp C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -function-inline -complex-op-raise -inst-simplify -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/a.o.1.bc -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+Execute         transform -hls -tmp C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -function-inline -complex-op-raise -inst-simplify -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/a.o.1.bc -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/a.o.1.tmp.bc -f 
 INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loopb22' (sikehls/mult.cpp:28) in function 'bc_mult_448' for pipelining.
 INFO: [HLS 200-489] Unrolling loop 'loopb21' (sikehls/mult.cpp:21) in function 'bc_mult_448' completely with a factor of 7.
 INFO: [HLS 200-489] Unrolling loop 'loopb23' (sikehls/mult.cpp:30) in function 'bc_mult_448' completely with a factor of 7.
@@ -324,19 +324,19 @@ INFO: [XFORM 203-101] Partitioning array 'bi.V' (sikehls/mult.cpp:10) in dimensi
 INFO: [XFORM 203-101] Partitioning array 'sum.V' (sikehls/mult.cpp:11) in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array 'partial_products.V' (sikehls/mult.cpp:8) in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array 'partial_products.V' (sikehls/mult.cpp:8) in dimension 2 completely.
-Command         transform done; 1.103 sec.
+Command         transform done; 1.426 sec.
 INFO-FLOW: Presyn 2...
-Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/a.o.1.tmp.bc -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/a.o.1.tmp.bc -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
 INFO: [XFORM 203-11] Balancing expressions in function 'bc_mult_448' (sikehls/mult.cpp:23:29)...6 expression(s) balanced.
-Command         transform done; 0.665 sec.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:07 ; elapsed = 00:01:05 . Memory (MB): peak = 220.816 ; gain = 129.531
+Command         transform done; 0.4 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:51 . Memory (MB): peak = 224.711 ; gain = 128.012
 INFO-FLOW: Building ssdm...
-Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -ptrLegalization -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/a.o.2.bc -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
-Command         transform done; 1.124 sec.
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:08 ; elapsed = 00:01:06 . Memory (MB): peak = 245.086 ; gain = 153.801
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -ptrLegalization -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/a.o.2.bc -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+Command         transform done; 0.626 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:00:51 . Memory (MB): peak = 249.008 ; gain = 152.309
 INFO-FLOW: Finish building internal data model.
-Command       opt_and_import_c done; 5.979 sec.
-Command     elaborate done; 62.334 sec.
+Command       opt_and_import_c done; 4.673 sec.
+Command     elaborate done; 48.978 sec.
 Execute     autosyn -from_csynth_design=1 
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO-FLOW: Synthesizing C/C++ design ...
@@ -389,13 +389,12 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'loopb22'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 6.
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 0.571 sec.
-INFO: [HLS 200-111]  Elapsed time: 66.79 seconds; current allocated memory: 194.291 MB.
-Execute       syn_report -verbosereport -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/bc_mult_448.verbose.sched.rpt 
+Command       schedule done; 0.285 sec.
+INFO: [HLS 200-111]  Elapsed time: 51.585 seconds; current allocated memory: 197.426 MB.
+Execute       syn_report -verbosereport -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/bc_mult_448.verbose.sched.rpt 
 INFO: [HLS 200-434] Only 1 loops out of a total 2 loops have been pipelined in this design.
-Command       syn_report done; 0.18 sec.
-Execute       db_write -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/bc_mult_448.sched.adb -f 
-Command       db_write done; 0.105 sec.
+Command       syn_report done; 0.109 sec.
+Execute       db_write -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/bc_mult_448.sched.adb -f 
 INFO-FLOW: Finish scheduling bc_mult_448.
 Execute       set_default_model bc_mult_448 
 Execute       bind -model bc_mult_448 
@@ -405,12 +404,11 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command       bind done; 0.102 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.488 seconds; current allocated memory: 195.206 MB.
-Execute       syn_report -verbosereport -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/bc_mult_448.verbose.bind.rpt 
-Command       syn_report done; 0.273 sec.
-Execute       db_write -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/bc_mult_448.bind.adb -f 
-Command       db_write done; 0.18 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.321 seconds; current allocated memory: 198.341 MB.
+Execute       syn_report -verbosereport -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/bc_mult_448.verbose.bind.rpt 
+Command       syn_report done; 0.317 sec.
+Execute       db_write -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/bc_mult_448.bind.adb -f 
+Command       db_write done; 0.779 sec.
 INFO-FLOW: Finish binding bc_mult_448.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'mp_mul' 
@@ -419,9 +417,9 @@ Execute       set_default_model mp_mul
 Execute       schedule -model mp_mul 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.539 seconds; current allocated memory: 195.304 MB.
-Execute       syn_report -verbosereport -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/mp_mul.verbose.sched.rpt 
-Execute       db_write -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/mp_mul.sched.adb -f 
+INFO: [HLS 200-111]  Elapsed time: 1.184 seconds; current allocated memory: 198.455 MB.
+Execute       syn_report -verbosereport -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/mp_mul.verbose.sched.rpt 
+Execute       db_write -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/mp_mul.sched.adb -f 
 INFO-FLOW: Finish scheduling mp_mul.
 Execute       set_default_model mp_mul 
 Execute       bind -model mp_mul 
@@ -431,10 +429,9 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 195.343 MB.
-Execute       syn_report -verbosereport -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/mp_mul.verbose.bind.rpt 
-Command       syn_report done; 0.133 sec.
-Execute       db_write -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/mp_mul.bind.adb -f 
+INFO: [HLS 200-111]  Elapsed time: 0.192 seconds; current allocated memory: 198.494 MB.
+Execute       syn_report -verbosereport -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/mp_mul.verbose.bind.rpt 
+Execute       db_write -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/mp_mul.bind.adb -f 
 INFO-FLOW: Finish binding mp_mul.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'rdc_mont' 
@@ -443,9 +440,9 @@ Execute       set_default_model rdc_mont
 Execute       schedule -model rdc_mont 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.253 seconds; current allocated memory: 195.392 MB.
-Execute       syn_report -verbosereport -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/rdc_mont.verbose.sched.rpt 
-Execute       db_write -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/rdc_mont.sched.adb -f 
+INFO: [HLS 200-111]  Elapsed time: 0.217 seconds; current allocated memory: 198.542 MB.
+Execute       syn_report -verbosereport -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/rdc_mont.verbose.sched.rpt 
+Execute       db_write -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/rdc_mont.sched.adb -f 
 INFO-FLOW: Finish scheduling rdc_mont.
 Execute       set_default_model rdc_mont 
 Execute       bind -model rdc_mont 
@@ -455,10 +452,10 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.204 seconds; current allocated memory: 195.457 MB.
-Execute       syn_report -verbosereport -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/rdc_mont.verbose.bind.rpt 
-Command       syn_report done; 0.192 sec.
-Execute       db_write -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/rdc_mont.bind.adb -f 
+INFO: [HLS 200-111]  Elapsed time: 0.153 seconds; current allocated memory: 198.607 MB.
+Execute       syn_report -verbosereport -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/rdc_mont.verbose.bind.rpt 
+Command       syn_report done; 0.2 sec.
+Execute       db_write -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/rdc_mont.bind.adb -f 
 INFO-FLOW: Finish binding rdc_mont.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'xDBL' 
@@ -467,11 +464,11 @@ Execute       set_default_model xDBL
 Execute       schedule -model xDBL 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 0.3 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.622 seconds; current allocated memory: 195.884 MB.
-Execute       syn_report -verbosereport -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xDBL.verbose.sched.rpt 
-Command       syn_report done; 0.162 sec.
-Execute       db_write -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xDBL.sched.adb -f 
+Command       schedule done; 0.149 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.465 seconds; current allocated memory: 199.034 MB.
+Execute       syn_report -verbosereport -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xDBL.verbose.sched.rpt 
+Command       syn_report done; 0.107 sec.
+Execute       db_write -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xDBL.sched.adb -f 
 INFO-FLOW: Finish scheduling xDBL.
 Execute       set_default_model xDBL 
 Execute       bind -model xDBL 
@@ -481,12 +478,13 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Starting global binding ...
+INFO: [BIND 205-100] Starting global binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command       bind done; 0.486 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.801 seconds; current allocated memory: 196.423 MB.
-Execute       syn_report -verbosereport -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xDBL.verbose.bind.rpt 
-Command       syn_report done; 1.069 sec.
-Execute       db_write -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xDBL.bind.adb -f 
+Command       bind done; 0.209 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.415 seconds; current allocated memory: 199.566 MB.
+Execute       syn_report -verbosereport -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xDBL.verbose.bind.rpt 
+Command       syn_report done; 0.566 sec.
+Execute       db_write -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xDBL.bind.adb -f 
 INFO-FLOW: Finish binding xDBL.
 Execute       get_model_list xDBL -filter all-wo-channel 
 INFO-FLOW: Preprocessing for RTLGen ...
@@ -500,7 +498,7 @@ INFO: [HLS 200-10] -- Generating RTL for module 'bc_mult_448'
 INFO: [HLS 200-10] ----------------------------------------------------------------
 Execute       get_config_rtl -module_prefix 
 Execute       get_config_rtl -module_auto_prefix 
-Execute       create_rtl_model bc_mult_448 -vendor xilinx -mg_file C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/bc_mult_448.compgen.tcl 
+Execute       create_rtl_model bc_mult_448 -vendor xilinx -mg_file C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/bc_mult_448.compgen.tcl 
 INFO: [SYN 201-210] Renamed object name 'xDBL_mul_64ns_64ns_128_5_1' to 'xDBL_mul_64ns_64nbkb' due to the length limit 20
 INFO: [SYN 201-210] Renamed object name 'xDBL_mul_64s_64s_64_5_1' to 'xDBL_mul_64s_64s_cud' due to the length limit 20
 INFO: [SYN 201-210] Renamed object name 'xDBL_add_451ns_451ns_451_2_1' to 'xDBL_add_451ns_45dEe' due to the length limit 20
@@ -523,64 +521,63 @@ INFO: [RTGEN 206-100] Generating core module 'xDBL_mul_64s_64s_cud': 1 instance(
 INFO: [RTGEN 206-100] Generating core module 'xDBL_mux_73_448_1_1': 7 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'xDBL_mux_73_64_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'bc_mult_448'.
-Command       create_rtl_model done; 0.586 sec.
-INFO: [HLS 200-111]  Elapsed time: 1.85 seconds; current allocated memory: 198.292 MB.
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xDBL.rtl_wrap.cfg.tcl 
-Execute       gen_rtl bc_mult_448 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/syn/systemc/bc_mult_448 -synmodules bc_mult_448 mp_mul rdc_mont xDBL 
-Execute       gen_rtl bc_mult_448 -style xilinx -f -lang vhdl -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/syn/vhdl/bc_mult_448 
-Execute       gen_rtl bc_mult_448 -style xilinx -f -lang vlog -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/syn/verilog/bc_mult_448 
-Execute       syn_report -csynth -model bc_mult_448 -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/syn/report/bc_mult_448_csynth.rpt 
-Command       syn_report done; 0.104 sec.
-Execute       syn_report -rtlxml -model bc_mult_448 -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/syn/report/bc_mult_448_csynth.xml 
-Execute       syn_report -verbosereport -model bc_mult_448 -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/bc_mult_448.verbose.rpt 
-Command       syn_report done; 0.365 sec.
-Execute       db_write -model bc_mult_448 -f -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/bc_mult_448.adb 
-Command       db_write done; 0.203 sec.
-Execute       gen_tb_info bc_mult_448 -p C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/bc_mult_448 
+Command       create_rtl_model done; 0.664 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.4 seconds; current allocated memory: 201.330 MB.
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xDBL.rtl_wrap.cfg.tcl 
+Execute       gen_rtl bc_mult_448 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/syn/systemc/bc_mult_448 -synmodules bc_mult_448 mp_mul rdc_mont xDBL 
+Execute       gen_rtl bc_mult_448 -style xilinx -f -lang vhdl -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/syn/vhdl/bc_mult_448 
+Execute       gen_rtl bc_mult_448 -style xilinx -f -lang vlog -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/syn/verilog/bc_mult_448 
+Execute       syn_report -csynth -model bc_mult_448 -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/syn/report/bc_mult_448_csynth.rpt 
+Execute       syn_report -rtlxml -model bc_mult_448 -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/syn/report/bc_mult_448_csynth.xml 
+Execute       syn_report -verbosereport -model bc_mult_448 -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/bc_mult_448.verbose.rpt 
+Command       syn_report done; 0.174 sec.
+Execute       db_write -model bc_mult_448 -f -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/bc_mult_448.adb 
+Command       db_write done; 0.217 sec.
+Execute       gen_tb_info bc_mult_448 -p C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/bc_mult_448 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'mp_mul' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 Execute       get_config_rtl -module_prefix 
 Execute       get_config_rtl -module_auto_prefix 
-Execute       create_rtl_model mp_mul -vendor xilinx -mg_file C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/mp_mul.compgen.tcl 
+Execute       create_rtl_model mp_mul -vendor xilinx -mg_file C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/mp_mul.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'mp_mul'.
-INFO: [HLS 200-111]  Elapsed time: 2.041 seconds; current allocated memory: 198.741 MB.
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xDBL.rtl_wrap.cfg.tcl 
-Execute       gen_rtl mp_mul -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/syn/systemc/mp_mul -synmodules bc_mult_448 mp_mul rdc_mont xDBL 
-Execute       gen_rtl mp_mul -style xilinx -f -lang vhdl -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/syn/vhdl/mp_mul 
-Execute       gen_rtl mp_mul -style xilinx -f -lang vlog -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/syn/verilog/mp_mul 
-Execute       syn_report -csynth -model mp_mul -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/syn/report/mp_mul_csynth.rpt 
-Execute       syn_report -rtlxml -model mp_mul -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/syn/report/mp_mul_csynth.xml 
-Execute       syn_report -verbosereport -model mp_mul -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/mp_mul.verbose.rpt 
-Command       syn_report done; 0.17 sec.
-Execute       db_write -model mp_mul -f -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/mp_mul.adb 
-Execute       gen_tb_info mp_mul -p C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/mp_mul 
+INFO: [HLS 200-111]  Elapsed time: 1.201 seconds; current allocated memory: 201.863 MB.
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xDBL.rtl_wrap.cfg.tcl 
+Execute       gen_rtl mp_mul -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/syn/systemc/mp_mul -synmodules bc_mult_448 mp_mul rdc_mont xDBL 
+Execute       gen_rtl mp_mul -style xilinx -f -lang vhdl -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/syn/vhdl/mp_mul 
+Execute       gen_rtl mp_mul -style xilinx -f -lang vlog -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/syn/verilog/mp_mul 
+Execute       syn_report -csynth -model mp_mul -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/syn/report/mp_mul_csynth.rpt 
+Execute       syn_report -rtlxml -model mp_mul -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/syn/report/mp_mul_csynth.xml 
+Execute       syn_report -verbosereport -model mp_mul -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/mp_mul.verbose.rpt 
+Command       syn_report done; 0.113 sec.
+Execute       db_write -model mp_mul -f -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/mp_mul.adb 
+Execute       gen_tb_info mp_mul -p C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/mp_mul 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'rdc_mont' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 Execute       get_config_rtl -module_prefix 
 Execute       get_config_rtl -module_auto_prefix 
-Execute       create_rtl_model rdc_mont -vendor xilinx -mg_file C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/rdc_mont.compgen.tcl 
+Execute       create_rtl_model rdc_mont -vendor xilinx -mg_file C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/rdc_mont.compgen.tcl 
 INFO: [SYN 201-210] Renamed object name 'xDBL_add_837ns_837ns_837_2_1' to 'xDBL_add_837ns_83kbM' due to the length limit 20
 INFO: [RTGEN 206-100] Generating core module 'xDBL_add_837ns_83kbM': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'rdc_mont'.
-INFO: [HLS 200-111]  Elapsed time: 0.398 seconds; current allocated memory: 199.019 MB.
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xDBL.rtl_wrap.cfg.tcl 
-Execute       gen_rtl rdc_mont -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/syn/systemc/rdc_mont -synmodules bc_mult_448 mp_mul rdc_mont xDBL 
-Execute       gen_rtl rdc_mont -style xilinx -f -lang vhdl -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/syn/vhdl/rdc_mont 
-Execute       gen_rtl rdc_mont -style xilinx -f -lang vlog -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/syn/verilog/rdc_mont 
-Execute       syn_report -csynth -model rdc_mont -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/syn/report/rdc_mont_csynth.rpt 
-Execute       syn_report -rtlxml -model rdc_mont -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/syn/report/rdc_mont_csynth.xml 
-Execute       syn_report -verbosereport -model rdc_mont -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/rdc_mont.verbose.rpt 
-Command       syn_report done; 0.187 sec.
-Execute       db_write -model rdc_mont -f -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/rdc_mont.adb 
-Execute       gen_tb_info rdc_mont -p C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/rdc_mont 
+INFO: [HLS 200-111]  Elapsed time: 0.391 seconds; current allocated memory: 202.105 MB.
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xDBL.rtl_wrap.cfg.tcl 
+Execute       gen_rtl rdc_mont -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/syn/systemc/rdc_mont -synmodules bc_mult_448 mp_mul rdc_mont xDBL 
+Execute       gen_rtl rdc_mont -style xilinx -f -lang vhdl -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/syn/vhdl/rdc_mont 
+Execute       gen_rtl rdc_mont -style xilinx -f -lang vlog -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/syn/verilog/rdc_mont 
+Execute       syn_report -csynth -model rdc_mont -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/syn/report/rdc_mont_csynth.rpt 
+Execute       syn_report -rtlxml -model rdc_mont -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/syn/report/rdc_mont_csynth.xml 
+Execute       syn_report -verbosereport -model rdc_mont -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/rdc_mont.verbose.rpt 
+Command       syn_report done; 0.103 sec.
+Execute       db_write -model rdc_mont -f -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/rdc_mont.adb 
+Execute       gen_tb_info rdc_mont -p C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/rdc_mont 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'xDBL' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 Execute       get_config_rtl -module_prefix 
 Execute       get_config_rtl -module_auto_prefix 
-Execute       create_rtl_model xDBL -vendor xilinx -mg_file C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xDBL.compgen.tcl 
+Execute       create_rtl_model xDBL -vendor xilinx -mg_file C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xDBL.compgen.tcl 
 INFO: [RTGEN 206-500] Setting interface mode on port 'xDBL/P_X_V' to 'ap_memory'.
 INFO: [RTGEN 206-500] Setting interface mode on port 'xDBL/P_Z_V' to 'ap_memory'.
 INFO: [RTGEN 206-500] Setting interface mode on port 'xDBL/Q_X_V' to 'ap_memory'.
@@ -595,32 +592,32 @@ INFO: [RTGEN 206-100] Generating core module 'xDBL_add_448ns_44mb6': 19 instance
 INFO: [RTGEN 206-100] Generating core module 'xDBL_sub_448ns_44lbW': 6 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'xDBL_sub_836ns_83ncg': 4 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'xDBL'.
-Command       create_rtl_model done; 0.351 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.836 seconds; current allocated memory: 200.260 MB.
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xDBL.rtl_wrap.cfg.tcl 
-Execute       gen_rtl xDBL -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/syn/systemc/xDBL -synmodules bc_mult_448 mp_mul rdc_mont xDBL 
-Execute       gen_rtl xDBL -istop -style xilinx -f -lang vhdl -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/syn/vhdl/xDBL 
-Execute       gen_rtl xDBL -istop -style xilinx -f -lang vlog -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/syn/verilog/xDBL 
-Execute       syn_report -csynth -model xDBL -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/syn/report/xDBL_csynth.rpt 
-Execute       syn_report -rtlxml -model xDBL -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/syn/report/xDBL_csynth.xml 
-Execute       syn_report -verbosereport -model xDBL -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xDBL.verbose.rpt 
-Command       syn_report done; 1.282 sec.
-Execute       db_write -model xDBL -f -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xDBL.adb 
-Command       db_write done; 0.464 sec.
-Execute       gen_tb_info xDBL -p C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xDBL 
-Execute       export_constraint_db -f -tool general -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xDBL.constraint.tcl 
-Execute       syn_report -designview -model xDBL -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xDBL.design.xml 
-Command       syn_report done; 0.401 sec.
+Command       create_rtl_model done; 0.268 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.617 seconds; current allocated memory: 203.341 MB.
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xDBL.rtl_wrap.cfg.tcl 
+Execute       gen_rtl xDBL -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/syn/systemc/xDBL -synmodules bc_mult_448 mp_mul rdc_mont xDBL 
+Execute       gen_rtl xDBL -istop -style xilinx -f -lang vhdl -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/syn/vhdl/xDBL 
+Execute       gen_rtl xDBL -istop -style xilinx -f -lang vlog -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/syn/verilog/xDBL 
+Execute       syn_report -csynth -model xDBL -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/syn/report/xDBL_csynth.rpt 
+Execute       syn_report -rtlxml -model xDBL -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/syn/report/xDBL_csynth.xml 
+Execute       syn_report -verbosereport -model xDBL -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xDBL.verbose.rpt 
+Command       syn_report done; 0.828 sec.
+Execute       db_write -model xDBL -f -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xDBL.adb 
+Command       db_write done; 0.184 sec.
+Execute       gen_tb_info xDBL -p C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xDBL 
+Execute       export_constraint_db -f -tool general -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xDBL.constraint.tcl 
+Execute       syn_report -designview -model xDBL -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xDBL.design.xml 
+Command       syn_report done; 0.317 sec.
 Execute       get_config_rtl -disable_wave_debug 
-Execute       syn_report -wcfg -model xDBL -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xDBL_dataflow_ana.wcfg 
-Execute       syn_report -protoinst -model xDBL -o C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xDBL.protoinst 
+Execute       syn_report -wcfg -model xDBL -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xDBL_dataflow_ana.wcfg 
+Execute       syn_report -protoinst -model xDBL -o C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xDBL.protoinst 
 Execute       get_config_debug -directory 
 Execute       sc_get_clocks xDBL 
 Execute       get_config_export -vivado_clock 
 Execute       sc_get_portdomain xDBL 
 INFO-FLOW: Model list for RTL component generation: bc_mult_448 mp_mul rdc_mont xDBL
 INFO-FLOW: Handling components in module [bc_mult_448] ... 
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/bc_mult_448.compgen.tcl 
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/bc_mult_448.compgen.tcl 
 INFO-FLOW: Found component xDBL_mux_73_64_1_1.
 INFO-FLOW: Append model xDBL_mux_73_64_1_1
 INFO-FLOW: Found component xDBL_mul_64ns_64nbkb.
@@ -644,13 +641,13 @@ INFO-FLOW: Append model xDBL_add_771ns_77ibs
 INFO-FLOW: Found component xDBL_add_835ns_83jbC.
 INFO-FLOW: Append model xDBL_add_835ns_83jbC
 INFO-FLOW: Handling components in module [mp_mul] ... 
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/mp_mul.compgen.tcl 
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/mp_mul.compgen.tcl 
 INFO-FLOW: Handling components in module [rdc_mont] ... 
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/rdc_mont.compgen.tcl 
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/rdc_mont.compgen.tcl 
 INFO-FLOW: Found component xDBL_add_837ns_83kbM.
 INFO-FLOW: Append model xDBL_add_837ns_83kbM
 INFO-FLOW: Handling components in module [xDBL] ... 
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xDBL.compgen.tcl 
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xDBL.compgen.tcl 
 INFO-FLOW: Found component xDBL_sub_448ns_44lbW.
 INFO-FLOW: Append model xDBL_sub_448ns_44lbW
 INFO-FLOW: Found component xDBL_add_448ns_44mb6.
@@ -689,43 +686,43 @@ INFO-FLOW: RTL Generation done.
 INFO-FLOW: CAS Generation done.
 INFO-FLOW: CBC Generation done.
 INFO-FLOW: DBG:CMD: auto_generate_csynth_design
-INFO-FLOW: DBG:CMD:     auto_generate --sim-model -phase csynth_design -d C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/global.setting.tcl 
-INFO-FLOW: DBG:CMD: read_platform_lib C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/global.setting.tcl
-Execute       source C:/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/common.gen 
-Execute         source C:/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/APCoreGen.gen 
-Execute       source C:/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/op.gen 
-Execute       source C:/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/op_simcore.gen 
-Execute       source C:/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/interface.gen 
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/global.setting.tcl 
-Execute       source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/zynq/zynq.gen 
-Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.gen 
-Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.gen 
-Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.gen 
-Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.gen 
-Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/nativeAXI4.gen 
-Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.gen 
-Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.gen 
-Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
-Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
-Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
-Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
-Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
-Command           ap_source done; 0.496 sec.
-Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
-Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
-Command         ap_source done; 0.766 sec.
-Command       ap_source done; 0.767 sec.
-Execute       source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
-Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:     auto_generate --sim-model -phase csynth_design -d C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/global.setting.tcl
+Execute       source D:/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/common.gen 
+Execute         source D:/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source D:/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/op.gen 
+Execute       source D:/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source D:/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/interface.gen 
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/zynq/zynq.gen 
+Execute         source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.gen 
+Execute           source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.gen 
+Execute           source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.gen 
+Execute           source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.gen 
+Execute           source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.gen 
+Execute             source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.gen 
+Execute           source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
+Execute           source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source done; 0.247 sec.
+Execute           source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
+Execute           source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.342 sec.
+Command       ap_source done; 0.342 sec.
+Execute       source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
 INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
 INFO-FLOW: DBG:CMD:       generate_ip_cores sim=1 export=0 expOnly=0 dstVlogDir=syn/verilog
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/global.setting.tcl 
 Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
 Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/global.setting.tcl 
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/global.setting.tcl 
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/bc_mult_448.compgen.tcl 
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/bc_mult_448.compgen.tcl 
 Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
 Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
 Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
@@ -761,13 +758,13 @@ INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_771ns_77i
 Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
 Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
 INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_835ns_83jbC_AddSubnS_6'
-Command       ap_source done; 0.994 sec.
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/mp_mul.compgen.tcl 
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/rdc_mont.compgen.tcl 
+Command       ap_source done; 1.061 sec.
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/mp_mul.compgen.tcl 
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/rdc_mont.compgen.tcl 
 Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
 Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
 INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_837ns_83kbM_AddSubnS_7'
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xDBL.compgen.tcl 
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xDBL.compgen.tcl 
 Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
 Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
 INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_sub_448ns_44lbW_AddSubnS_8'
@@ -777,65 +774,65 @@ INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_add_448ns_44m
 Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
 Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
 INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'xDBL_sub_836ns_83ncg_AddSubnS_10'
-Command       ap_source done; 0.207 sec.
-INFO-FLOW: DBG:CMD:     auto_generate -export -impltomg_flag -rtl both -tool Vivado -pcore_version 1.00.a -phase csynth_design -d C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/global.setting.tcl 
-INFO-FLOW: DBG:CMD: read_platform_lib C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/global.setting.tcl
-Execute       source C:/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/common.gen 
-Execute         source C:/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/APCoreGen.gen 
-Execute       source C:/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/op.gen 
-Execute       source C:/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/op_simcore.gen 
-Execute       source C:/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/interface.gen 
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/global.setting.tcl 
-Execute       source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/zynq/zynq.gen 
-Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.gen 
-Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.gen 
-Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.gen 
-Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.gen 
-Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/nativeAXI4.gen 
-Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.gen 
-Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.gen 
-Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
-Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
-Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
-Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
-Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
-Command           ap_source done; 0.247 sec.
-Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
-Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
-Command         ap_source done; 0.44 sec.
-Command       ap_source done; 0.441 sec.
-Execute       source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
-Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
+Command       ap_source done; 1.017 sec.
+INFO-FLOW: DBG:CMD:     auto_generate -export -impltomg_flag -rtl both -tool Vivado -pcore_version 1.00.a -phase csynth_design -d C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/global.setting.tcl
+Execute       source D:/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/common.gen 
+Execute         source D:/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source D:/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/op.gen 
+Execute       source D:/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source D:/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/interface.gen 
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/zynq/zynq.gen 
+Execute         source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.gen 
+Execute           source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.gen 
+Execute           source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.gen 
+Execute           source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.gen 
+Execute           source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.gen 
+Execute             source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.gen 
+Execute           source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
+Execute           source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source done; 0.18 sec.
+Execute           source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
+Execute           source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.314 sec.
+Command       ap_source done; 0.314 sec.
+Execute       source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source D:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
 INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=xDBL xml_exists=0
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xDBL.rtl_wrap.cfg.tcl 
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xDBL.rtl_wrap.cfg.tcl 
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xDBL.rtl_wrap.cfg.tcl 
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xDBL.tbgen.tcl 
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xDBL.tbgen.tcl 
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xDBL.rtl_wrap.cfg.tcl 
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xDBL.rtl_wrap.cfg.tcl 
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xDBL.rtl_wrap.cfg.tcl 
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xDBL.tbgen.tcl 
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xDBL.tbgen.tcl 
 INFO-FLOW: DBG:CMD:       export_impl_rtl
 INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/global.setting.tcl 
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/bc_mult_448.compgen.tcl 
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/mp_mul.compgen.tcl 
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/rdc_mont.compgen.tcl 
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xDBL.compgen.tcl 
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/bc_mult_448.compgen.tcl 
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/mp_mul.compgen.tcl 
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/rdc_mont.compgen.tcl 
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xDBL.compgen.tcl 
 INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/global.setting.tcl 
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/bc_mult_448.compgen.tcl 
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/mp_mul.compgen.tcl 
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/rdc_mont.compgen.tcl 
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xDBL.compgen.tcl 
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/bc_mult_448.compgen.tcl 
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/mp_mul.compgen.tcl 
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/rdc_mont.compgen.tcl 
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xDBL.compgen.tcl 
 Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
 Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
 Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
 Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Execute         source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xDBL.tbgen.tcl 
-Execute         source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xDBL.tbgen.tcl 
-Execute         source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xDBL.tbgen.tcl 
-Execute         source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xDBL.tbgen.tcl 
-Execute         source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xDBL.tbgen.tcl 
-Execute         source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xDBL.tbgen.tcl 
+Execute         source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xDBL.tbgen.tcl 
+Execute         source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xDBL.tbgen.tcl 
+Execute         source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xDBL.tbgen.tcl 
+Execute         source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xDBL.tbgen.tcl 
+Execute         source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xDBL.tbgen.tcl 
+Execute         source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xDBL.tbgen.tcl 
 Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
 Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
 Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
@@ -846,65 +843,64 @@ Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet
 Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
 Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
 Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Command       ap_source done; 0.375 sec.
+Command       ap_source done; 0.172 sec.
 Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
 Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
 INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/global.setting.tcl 
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/bc_mult_448.compgen.tcl 
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/mp_mul.compgen.tcl 
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/rdc_mont.compgen.tcl 
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xDBL.compgen.tcl 
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/bc_mult_448.compgen.tcl 
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/mp_mul.compgen.tcl 
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/rdc_mont.compgen.tcl 
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xDBL.compgen.tcl 
 Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
 Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
 Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
 Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/global.setting.tcl 
 Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
 Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xDBL.constraint.tcl 
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xDBL.tbgen.tcl 
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xDBL.constraint.tcl 
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xDBL.tbgen.tcl 
 INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=14
 INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=6
 INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=0 #modelList=19 #gSsdmPorts=14
-Execute       source C:/Xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/fileutil/fileutil.tcl 
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/global.setting.tcl 
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/Xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/fileutil/fileutil.tcl 
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/global.setting.tcl 
 Execute       get_config_export -xo 
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xDBL.tbgen.tcl 
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xDBL.tbgen.tcl 
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xDBL.tbgen.tcl 
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xDBL.tbgen.tcl 
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xDBL.tbgen.tcl 
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xDBL.tbgen.tcl 
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xDBL.tbgen.tcl 
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xDBL.tbgen.tcl 
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xDBL.tbgen.tcl 
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xDBL.tbgen.tcl 
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xDBL.tbgen.tcl 
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/global.setting.tcl 
 Execute       get_config_sdx -target 
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xDBL.rtl_wrap.cfg.tcl 
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xDBL.compgen.dataonly.tcl 
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xDBL.rtl_wrap.cfg.tcl 
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xDBL.compgen.dataonly.tcl 
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/global.setting.tcl 
 Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
 Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xDBL.constraint.tcl 
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xDBL.constraint.tcl 
 Execute       sc_get_clocks xDBL 
 Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
 Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/global.setting.tcl 
 Execute       get_config_debug -directory 
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/bc_mult_448.tbgen.tcl 
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/mp_mul.tbgen.tcl 
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/rdc_mont.tbgen.tcl 
-Execute       source C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/xDBL.tbgen.tcl 
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/bc_mult_448.tbgen.tcl 
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/mp_mul.tbgen.tcl 
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/rdc_mont.tbgen.tcl 
+Execute       source C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/xDBL.tbgen.tcl 
 Execute       get_config_sdx -target 
 Execute       get_config_sdx -profile 
 Execute       get_config_rtl -kernel_profile 
 Execute       get_config_rtl -stall_sig_gen 
 Execute       get_config_rtl -profile 
-INFO-FLOW: DBG:CMD: add_json_sdx_info kernel file does not exist, skipping opencl info: C:/Users/namra/Documents/Documents/ece527/project/sikehls/solution1/.autopilot/db/kernel.internal.xml
+INFO-FLOW: DBG:CMD: add_json_sdx_info kernel file does not exist, skipping opencl info: C:/Users/bmand/Desktop/ECE_527/ECE527_SIKEHW/sikehls/solution1/.autopilot/db/kernel.internal.xml
 INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:19 ; elapsed = 00:01:25 . Memory (MB): peak = 267.754 ; gain = 176.469
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:11 ; elapsed = 00:01:07 . Memory (MB): peak = 271.902 ; gain = 175.203
 INFO: [VHDL 208-304] Generating VHDL RTL for xDBL.
 INFO: [VLOG 209-307] Generating Verilog RTL for xDBL.
-Command     autosyn done; 18.436 sec.
-Command   csynth_design done; 80.791 sec.
-Command ap_source done; 82.565 sec.
+Command     autosyn done; 15.825 sec.
+Command   csynth_design done; 64.831 sec.
+Command ap_source done; 66.474 sec.
 Execute cleanup_all 

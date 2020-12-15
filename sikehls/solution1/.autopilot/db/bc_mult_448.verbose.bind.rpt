@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'bc_mult_448'
 ================================================================
-* Date:           Mon Dec 14 19:30:41 2020
+* Date:           Mon Dec 14 20:27:03 2020
 
 * Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
 * Project:        sikehls
@@ -176,7 +176,7 @@ ST_2 : Operation 87 [1/1] (1.13ns)   --->   "%icmp_ln28 = icmp eq i3 %i7_0, -1" 
 ST_2 : Operation 88 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 7, i64 7, i64 7)"   --->   Operation 88 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 89 [1/1] (1.65ns)   --->   "%i_1 = add i3 %i7_0, 1" [sikehls/mult.cpp:28]   --->   Operation 89 'add' 'i_1' <Predicate = true> <Delay = 1.65> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 90 [1/1] (0.00ns)   --->   "br i1 %icmp_ln28, label %.preheader.preheader, label %loopb22_begin" [sikehls/mult.cpp:28]   --->   Operation 90 'br' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 91 [1/1] (0.00ns)   --->   "%tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([8 x i8]* @p_str1241)" [sikehls/mult.cpp:28]   --->   Operation 91 'specregionbegin' 'tmp' <Predicate = (!icmp_ln28)> <Delay = 0.00>
+ST_2 : Operation 91 [1/1] (0.00ns)   --->   "%tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([8 x i8]* @p_str12)" [sikehls/mult.cpp:28]   --->   Operation 91 'specregionbegin' 'tmp' <Predicate = (!icmp_ln28)> <Delay = 0.00>
 ST_2 : Operation 92 [1/1] (2.40ns)   --->   "%tmp_1 = call i64 @_ssdm_op_Mux.ap_auto.7i64.i3(i64 %bi_0_V, i64 %bi_1_V, i64 %bi_2_V, i64 %bi_3_V, i64 %bi_4_V, i64 %bi_5_V, i64 %bi_6_V, i3 %i7_0)" [sikehls/mult.cpp:32]   --->   Operation 92 'mux' 'tmp_1' <Predicate = (!icmp_ln28)> <Delay = 2.40> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 2.40> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 93 [1/1] (1.30ns)   --->   "switch i3 %i7_0, label %branch48 [
     i3 0, label %loopb22_begin.loopb22_end_crit_edge
@@ -186,7 +186,7 @@ ST_2 : Operation 93 [1/1] (1.30ns)   --->   "switch i3 %i7_0, label %branch48 [
     i3 -4, label %branch46
     i3 -3, label %branch47
   ]" [sikehls/mult.cpp:33]   --->   Operation 93 'switch' <Predicate = (!icmp_ln28)> <Delay = 1.30>
-ST_2 : Operation 94 [1/1] (0.00ns)   --->   "%empty_10 = call i32 (...)* @_ssdm_op_SpecRegionEnd([8 x i8]* @p_str1241, i32 %tmp)" [sikehls/mult.cpp:38]   --->   Operation 94 'specregionend' 'empty_10' <Predicate = (!icmp_ln28)> <Delay = 0.00>
+ST_2 : Operation 94 [1/1] (0.00ns)   --->   "%empty_10 = call i32 (...)* @_ssdm_op_SpecRegionEnd([8 x i8]* @p_str12, i32 %tmp)" [sikehls/mult.cpp:38]   --->   Operation 94 'specregionend' 'empty_10' <Predicate = (!icmp_ln28)> <Delay = 0.00>
 ST_2 : Operation 95 [1/1] (0.00ns)   --->   "br label %.preheader397" [sikehls/mult.cpp:28]   --->   Operation 95 'br' <Predicate = (!icmp_ln28)> <Delay = 0.00>
 
 State 3 <SV = 2> <Delay = 6.97>
@@ -227,8 +227,8 @@ ST_6 : Operation 123 [2/5] (6.97ns)   --->   "%mul_ln1352_5 = mul i128 %zext_ln2
 ST_6 : Operation 124 [2/5] (6.97ns)   --->   "%mul_ln1503 = mul i64 %ai_6_V, %tmp_1" [sikehls/mult.cpp:33]   --->   Operation 124 'mul' 'mul_ln1503' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
 
 State 7 <SV = 6> <Delay = 6.97>
-ST_7 : Operation 125 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([8 x i8]* @p_str1241) nounwind" [sikehls/mult.cpp:28]   --->   Operation 125 'specloopname' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 126 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str938) nounwind" [sikehls/mult.cpp:29]   --->   Operation 126 'specpipeline' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 125 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([8 x i8]* @p_str12) nounwind" [sikehls/mult.cpp:28]   --->   Operation 125 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 126 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str9) nounwind" [sikehls/mult.cpp:29]   --->   Operation 126 'specpipeline' <Predicate = true> <Delay = 0.00>
 ST_7 : Operation 127 [1/5] (6.97ns)   --->   "%mul_ln1352 = mul i128 %zext_ln215, %zext_ln215_1" [sikehls/mult.cpp:32]   --->   Operation 127 'mul' 'mul_ln1352' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
 ST_7 : Operation 128 [1/1] (0.00ns)   --->   "%partial_products_0_s = zext i128 %mul_ln1352 to i448" [sikehls/mult.cpp:32]   --->   Operation 128 'zext' 'partial_products_0_s' <Predicate = true> <Delay = 0.00>
 ST_7 : Operation 129 [1/5] (6.97ns)   --->   "%mul_ln1352_1 = mul i128 %zext_ln215_2, %zext_ln215_1" [sikehls/mult.cpp:32]   --->   Operation 129 'mul' 'mul_ln1352_1' <Predicate = true> <Delay = 6.97> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
@@ -933,7 +933,7 @@ ret_ln55              (ret              ) [ 00000000000000]
 <pin id="47" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str1241"/></StgValue>
+<StgValue><ssdm name="p_str12"/></StgValue>
 </bind>
 </comp>
 
@@ -1032,7 +1032,7 @@ ret_ln55              (ret              ) [ 00000000000000]
 <pin id="69" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str938"/></StgValue>
+<StgValue><ssdm name="p_str9"/></StgValue>
 </bind>
 </comp>
 

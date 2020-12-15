@@ -77,9 +77,7 @@
             "arraySizes": ["2"],
             "multiInterfaceRef": [
               "Q_X_V_address0",
-              "Q_X_V_address1",
-              "Q_X_V_d0",
-              "Q_X_V_d1"
+              "Q_X_V_d0"
             ],
             "structImpl": "interface"
           },
@@ -135,7 +133,7 @@
     "ClockPeriod": "10",
     "IsCombLogic": "0",
     "II": "x",
-    "Latency": "589",
+    "Latency": "1000",
     "Uncertainty": "1.25"
   },
   "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
@@ -152,9 +150,9 @@
   },
   "Files": {
     "CSource": [
-      "..\/ec_isogeny.cpp",
+      "..\/mult.cpp",
       "..\/fpx.cpp",
-      "..\/mult.cpp"
+      "..\/ec_isogeny.cpp"
     ],
     "Vhdl": [
       "impl\/vhdl\/bc_mult_448.vhd",
@@ -199,18 +197,18 @@
       "impl\/verilog\/xDBL.v"
     ],
     "Misc": ["impl\/misc\/logo.png"],
-    "DesignXml": "C:\/Users\/namra\/Documents\/Documents\/ece527\/project\/sikehls\/solution1\/.autopilot\/db\/xDBL.design.xml",
-    "DebugDir": "C:\/Users\/namra\/Documents\/Documents\/ece527\/project\/sikehls\/solution1\/.debug",
+    "DesignXml": "C:\/Users\/bmand\/Desktop\/ECE_527\/ECE527_SIKEHW\/sikehls\/solution1\/.autopilot\/db\/xDBL.design.xml",
+    "DebugDir": "C:\/Users\/bmand\/Desktop\/ECE_527\/ECE527_SIKEHW\/sikehls\/solution1\/.debug",
     "ProtoInst": [
-      "C:\/Users\/namra\/Documents\/Documents\/ece527\/project\/sikehls\/solution1\/.debug\/bc_mult.protoinst",
-      "C:\/Users\/namra\/Documents\/Documents\/ece527\/project\/sikehls\/solution1\/.debug\/fpmul_mont.protoinst",
-      "C:\/Users\/namra\/Documents\/Documents\/ece527\/project\/sikehls\/solution1\/.debug\/koa_mult.protoinst",
-      "C:\/Users\/namra\/Documents\/Documents\/ece527\/project\/sikehls\/solution1\/.debug\/koa_mult_h.protoinst",
-      "C:\/Users\/namra\/Documents\/Documents\/ece527\/project\/sikehls\/solution1\/.debug\/koa_mult_h1.protoinst",
-      "C:\/Users\/namra\/Documents\/Documents\/ece527\/project\/sikehls\/solution1\/.debug\/mp_mul.protoinst",
-      "C:\/Users\/namra\/Documents\/Documents\/ece527\/project\/sikehls\/solution1\/.debug\/rdc_mont.protoinst",
-      "C:\/Users\/namra\/Documents\/Documents\/ece527\/project\/sikehls\/solution1\/.debug\/xDBL.protoinst",
-      "C:\/Users\/namra\/Documents\/Documents\/ece527\/project\/sikehls\/solution1\/.debug\/xDBLe.protoinst"
+      "C:\/Users\/bmand\/Desktop\/ECE_527\/ECE527_SIKEHW\/sikehls\/solution1\/.debug\/bc_mult.protoinst",
+      "C:\/Users\/bmand\/Desktop\/ECE_527\/ECE527_SIKEHW\/sikehls\/solution1\/.debug\/fpmul_mont.protoinst",
+      "C:\/Users\/bmand\/Desktop\/ECE_527\/ECE527_SIKEHW\/sikehls\/solution1\/.debug\/koa_mult.protoinst",
+      "C:\/Users\/bmand\/Desktop\/ECE_527\/ECE527_SIKEHW\/sikehls\/solution1\/.debug\/koa_mult_h.protoinst",
+      "C:\/Users\/bmand\/Desktop\/ECE_527\/ECE527_SIKEHW\/sikehls\/solution1\/.debug\/koa_mult_h1.protoinst",
+      "C:\/Users\/bmand\/Desktop\/ECE_527\/ECE527_SIKEHW\/sikehls\/solution1\/.debug\/mp_mul.protoinst",
+      "C:\/Users\/bmand\/Desktop\/ECE_527\/ECE527_SIKEHW\/sikehls\/solution1\/.debug\/rdc_mont.protoinst",
+      "C:\/Users\/bmand\/Desktop\/ECE_527\/ECE527_SIKEHW\/sikehls\/solution1\/.debug\/xDBL.protoinst",
+      "C:\/Users\/bmand\/Desktop\/ECE_527\/ECE527_SIKEHW\/sikehls\/solution1\/.debug\/xDBLe.protoinst"
     ]
   },
   "SubcoreInfo": {
@@ -386,17 +384,6 @@
       "bundle_name": "Q_X_V",
       "bundle_role": "address0"
     },
-    "Q_X_V_address1": {
-      "type": "data",
-      "dir": "out",
-      "width": "1",
-      "ctype": {"DATA": {
-          "Type": "null",
-          "Width": "1"
-        }},
-      "bundle_name": "Q_X_V",
-      "bundle_role": "address1"
-    },
     "Q_X_V_d0": {
       "type": "data",
       "dir": "out",
@@ -407,17 +394,6 @@
         }},
       "bundle_name": "Q_X_V",
       "bundle_role": "d0"
-    },
-    "Q_X_V_d1": {
-      "type": "data",
-      "dir": "out",
-      "width": "448",
-      "ctype": {"DATA": {
-          "Type": "integer unsigned",
-          "Width": "448"
-        }},
-      "bundle_name": "Q_X_V",
-      "bundle_role": "d1"
     },
     "Q_Z_V_address0": {
       "type": "data",
@@ -558,23 +534,6 @@
       "dir": "out",
       "width": "448"
     },
-    "Q_X_V_address1": {
-      "dir": "out",
-      "width": "1",
-      "isVector": "true"
-    },
-    "Q_X_V_ce1": {
-      "dir": "out",
-      "width": "1"
-    },
-    "Q_X_V_we1": {
-      "dir": "out",
-      "width": "1"
-    },
-    "Q_X_V_d1": {
-      "dir": "out",
-      "width": "448"
-    },
     "Q_Z_V_address0": {
       "dir": "out",
       "width": "1",
@@ -642,7 +601,7 @@
       "Instances": [
         {
           "ModuleName": "mp_mul",
-          "InstanceName": "grp_mp_mul_fu_203",
+          "InstanceName": "grp_mp_mul_fu_202",
           "Instances": [{
               "ModuleName": "bc_mult_448",
               "InstanceName": "grp_bc_mult_448_fu_20"
@@ -650,23 +609,7 @@
         },
         {
           "ModuleName": "rdc_mont",
-          "InstanceName": "grp_rdc_mont_fu_292",
-          "Instances": [{
-              "ModuleName": "bc_mult_448",
-              "InstanceName": "grp_bc_mult_448_fu_30"
-            }]
-        },
-        {
-          "ModuleName": "rdc_mont",
-          "InstanceName": "grp_rdc_mont_fu_298",
-          "Instances": [{
-              "ModuleName": "bc_mult_448",
-              "InstanceName": "grp_bc_mult_448_fu_30"
-            }]
-        },
-        {
-          "ModuleName": "rdc_mont",
-          "InstanceName": "grp_rdc_mont_fu_303",
+          "InstanceName": "grp_rdc_mont_fu_265",
           "Instances": [{
               "ModuleName": "bc_mult_448",
               "InstanceName": "grp_bc_mult_448_fu_30"
@@ -789,23 +732,23 @@
       },
       "xDBL": {
         "Latency": {
-          "LatencyBest": "589",
-          "LatencyAvg": "589",
-          "LatencyWorst": "589",
-          "PipelineII": "590",
+          "LatencyBest": "1000",
+          "LatencyAvg": "1000",
+          "LatencyWorst": "1000",
+          "PipelineII": "1001",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "1.25",
-          "Estimate": "8.429"
+          "Estimate": "8.374"
         },
         "Area": {
           "BRAM_18K": "0",
-          "DSP48E": "350",
-          "FF": "170893",
-          "LUT": "25271",
+          "DSP48E": "140",
+          "FF": "89979",
+          "LUT": "12606",
           "URAM": "0"
         }
       }
@@ -821,7 +764,7 @@
   },
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2020-12-14 19:30:58 -0600",
+    "Time": "2020-12-14 20:27:18 -0600",
     "ToolName": "vivado_hls",
     "ToolVersion": "2019.1"
   }

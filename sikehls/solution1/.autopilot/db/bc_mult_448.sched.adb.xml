@@ -1266,7 +1266,7 @@ arrayctor.loop4.preheader:71  br label %.preheader397
 
 <Node id="83" bw="32" op_0_bw="32" op_1_bw="0">
 <![CDATA[
-loopb22_begin:1  %tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([8 x i8]* @p_str1241)
+loopb22_begin:1  %tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([8 x i8]* @p_str12)
 
 ]]></Node>
 <StgValue><ssdm name="tmp"/></StgValue>
@@ -1321,7 +1321,7 @@ loopb22_begin:23  switch i3 %i7_0, label %branch48 [
 
 <Node id="170" bw="32" op_0_bw="32" op_1_bw="0" op_2_bw="32">
 <![CDATA[
-loopb22_end:0  %empty_10 = call i32 (...)* @_ssdm_op_SpecRegionEnd([8 x i8]* @p_str1241, i32 %tmp)
+loopb22_end:0  %empty_10 = call i32 (...)* @_ssdm_op_SpecRegionEnd([8 x i8]* @p_str12, i32 %tmp)
 
 ]]></Node>
 <StgValue><ssdm name="empty_10"/></StgValue>
@@ -1802,7 +1802,7 @@ loopb22_begin:21  %mul_ln1503 = mul i64 %ai_6_V, %tmp_1
 
 <Node id="82" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-loopb22_begin:0  call void (...)* @_ssdm_op_SpecLoopName([8 x i8]* @p_str1241) nounwind
+loopb22_begin:0  call void (...)* @_ssdm_op_SpecLoopName([8 x i8]* @p_str12) nounwind
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln28"/></StgValue>
@@ -1817,7 +1817,7 @@ loopb22_begin:0  call void (...)* @_ssdm_op_SpecLoopName([8 x i8]* @p_str1241) n
 
 <Node id="84" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0">
 <![CDATA[
-loopb22_begin:2  call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str938) nounwind
+loopb22_begin:2  call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str9) nounwind
 
 ]]></Node>
 <StgValue><ssdm name="specpipeline_ln29"/></StgValue>

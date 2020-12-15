@@ -9,9 +9,10 @@ void xDBL(const point_proj_t P, point_proj_t Q, const f2elm_t A24plus, const f2e
 { // Doubling of a Montgomery point in projective coordinates (X:Z).
   // Input: projective Montgomery x-coordinates P = (X1:Z1), where x1=X1/Z1 and Montgomery curve constants A+2C and 4C.
   // Output: projective Montgomery x-coordinates Q = 2*P = (X2:Z2).
-#pragma HLS inline region recursive
+#pragma HLS inline recursive
 #pragma HLS ALLOCATION instances=bc_mult_448 limit=2 function
-#pragma HLS ALLOCATION instances=mp_mul limit=2 function
+#pragma HLS ALLOCATION instances=mp_mul limit=1 function
+#pragma HLS ALLOCATION instances=rdc_mont limit=1 function
 #pragma HLS ALLOCATION instances=Mul limit=110 core
 #pragma HLS ALLOCATION instances=MulnS limit=110 core
 
