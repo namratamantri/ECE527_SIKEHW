@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'rdc_mont'" level="0">
-<item name = "Date">Tue Dec 15 15:56:14 2020
+<item name = "Date">Wed Dec 16 17:27:59 2020
 </item>
 <item name = "Version">2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)</item>
 <item name = "Project">sikehls</item>
@@ -24,14 +24,14 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">68, 68, 68, 68, none</column>
+<column name="">67, 67, 67, 67, none</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="7">Instance, Module, min, max, min, max, Type</keys>
-<column name="grp_bc_mult_448_fu_30">bc_mult_448, 32, 32, 32, 32, none</column>
+<column name="grp_bc_mult_448_fu_47">bc_mult_448, 32, 32, 32, 32, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -52,18 +52,18 @@
 <column name="FIFO">-, -, -, -, -</column>
 <column name="Instance">0, 70, 24253, 4199, -</column>
 <column name="Memory">-, -, -, -, -</column>
-<column name="Multiplexer">-, -, -, 66, -</column>
-<column name="Register">-, -, 2186, -, -</column>
+<column name="Multiplexer">-, -, -, 57, -</column>
+<column name="Register">-, -, 454, -, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
-<specialColumn name="Utilization (%)">0, 31, 24, 8, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 31, 23, 8, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
-<column name="grp_bc_mult_448_fu_30">bc_mult_448, 0, 70, 23673, 4067, 0</column>
-<column name="eval_4_isog_add_8mb6_U44">eval_4_isog_add_8mb6, 0, 0, 580, 132, 0</column>
+<column name="grp_bc_mult_448_fu_47">bc_mult_448, 0, 70, 23673, 4067, 0</column>
+<column name="rdc_mont_add_896nmb6_U42">rdc_mont_add_896nmb6, 0, 0, 580, 132, 0</column>
 </table>
 </item>
 <item name = "DSP48E"><table name="" hasTotal="0">
@@ -85,20 +85,16 @@
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
 <column name="ap_NS_fsm">27, 5, 1, 5</column>
-<column name="ap_return">9, 2, 448, 896</column>
-<column name="grp_bc_mult_448_fu_30_a_V">15, 3, 448, 1344</column>
-<column name="grp_bc_mult_448_fu_30_b_V">15, 3, 448, 1344</column>
+<column name="grp_bc_mult_448_fu_47_a_V">15, 3, 448, 1344</column>
+<column name="grp_bc_mult_448_fu_47_b_V">15, 3, 435, 1305</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
 <column name="ap_CS_fsm">4, 0, 4, 0</column>
-<column name="ap_return">448, 0, 448, 0</column>
-<column name="ap_return_preg">448, 0, 448, 0</column>
-<column name="grp_bc_mult_448_fu_30_ap_start_reg">1, 0, 1, 0</column>
-<column name="m_V_reg_97">1, 0, 448, 447</column>
-<column name="ma_V_read_reg_87">836, 0, 836, 0</column>
-<column name="ma_trunc_V_reg_92">448, 0, 448, 0</column>
+<column name="grp_bc_mult_448_fu_47_ap_start_reg">1, 0, 1, 0</column>
+<column name="m_V_reg_107">1, 0, 448, 447</column>
+<column name="ma_trunc_V_reg_102">448, 0, 448, 0</column>
 </table>
 </item>
 </section>
@@ -114,8 +110,9 @@
 <column name="ap_done">out, 1, ap_ctrl_hs, rdc_mont, return value</column>
 <column name="ap_idle">out, 1, ap_ctrl_hs, rdc_mont, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, rdc_mont, return value</column>
-<column name="ap_return">out, 448, ap_ctrl_hs, rdc_mont, return value</column>
-<column name="ma_V">in, 836, ap_none, ma_V, scalar</column>
+<column name="ma_V">in, 896, ap_none, ma_V, scalar</column>
+<column name="mc_V">out, 448, ap_vld, mc_V, pointer</column>
+<column name="mc_V_ap_vld">out, 1, ap_vld, mc_V, pointer</column>
 </table>
 </item>
 </section>

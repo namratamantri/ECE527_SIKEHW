@@ -6499,8 +6499,8 @@ _ssdm_Unroll(0,0,0, "");
  }
 
  loopb22: for(int i = 0;i<7;i++){
-
-  loopb23: for(int j =0; j<7;j++){
+_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
+ loopb23: for(int j =0; j<7;j++){
 _ssdm_Unroll(0,0,0, "");
  partial_products[j] = ai[j]*bi[i];
    sum[j] += (digit_h)partial_products[j]<<((i+j)*17);
@@ -6538,8 +6538,8 @@ _ssdm_Unroll(0,0,0, "");
  }
 
  loopb12: for(int i = 0;i<7;i++){
-
-  loopb13: for(int j =0; j<7;j++){
+_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
+ loopb13: for(int j =0; j<7;j++){
 _ssdm_Unroll(0,0,0, "");
  partial_products[j] = ai[j]*bi[i];
    sum[j] += (digit_h)partial_products[j]<<((i+j)*17);
@@ -6575,8 +6575,8 @@ _ssdm_Unroll(0,0,0, "");
  }
 
  loopb12: for(int i = 0;i<7;i++){
-
-  loopb13: for(int j =0; j<7;j++){
+_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
+ loopb13: for(int j =0; j<7;j++){
 _ssdm_Unroll(0,0,0, "");
  partial_products[j] = ai[j]*bi[i];
    sum[j] += (digit_h)partial_products[j]<<((i+j)*17);
@@ -6612,8 +6612,8 @@ _ssdm_Unroll(0,0,0, "");
  }
 
  loopb12: for(int i = 0;i<7;i++){
-
-  loopb13: for(int j =0; j<7;j++){
+_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
+ loopb13: for(int j =0; j<7;j++){
 _ssdm_Unroll(0,0,0, "");
  partial_products[j] = ai[j]*bi[i];
    sum[j] += (digit_h)partial_products[j]<<((i+j)*17);
@@ -6647,8 +6647,8 @@ _ssdm_Unroll(0,0,0, "");
  }
 
  loopb2: for(int i = 0;i<7;i++){
-
-  loopb3: for(int j =0; j<7;j++){
+_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
+ loopb3: for(int j =0; j<7;j++){
 _ssdm_Unroll(0,0,0, "");
  partial_products[j] = ai[j]*bi[i];
    sum[j] += (digit_h)partial_products[j]<<((i+j)*16);
@@ -6684,8 +6684,8 @@ _ssdm_Unroll(0,0,0, "");
  }
 
  loopb2: for(int i = 0;i<7;i++){
-
-  loopb3: for(int j =0; j<7;j++){
+_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
+ loopb3: for(int j =0; j<7;j++){
 _ssdm_Unroll(0,0,0, "");
  partial_products[j] = ai[j]*bi[i];
    sum[j] += (digit_h)partial_products[j]<<((i+j)*16);
@@ -6721,8 +6721,8 @@ _ssdm_Unroll(0,0,0, "");
  }
 
  loopb2: for(int i = 0;i<7;i++){
-
-  loopb3: for(int j =0; j<7;j++){
+_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
+ loopb3: for(int j =0; j<7;j++){
 _ssdm_Unroll(0,0,0, "");
  partial_products[j] = ai[j]*bi[i];
    sum[j] += (digit_h)partial_products[j]<<((i+j)*16);
@@ -6758,8 +6758,8 @@ _ssdm_Unroll(0,0,0, "");
  }
 
  loopb2: for(int i = 0;i<7;i++){
-
-  loopb3: for(int j =0; j<7;j++){
+_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
+ loopb3: for(int j =0; j<7;j++){
 _ssdm_Unroll(0,0,0, "");
  partial_products[j] = ai[j]*bi[i];
    sum[j] += (digit_h)partial_products[j]<<((i+j)*16);
@@ -6795,8 +6795,8 @@ _ssdm_Unroll(0,0,0, "");
  }
 
  loopb2: for(int i = 0;i<7;i++){
-
-  loopb3: for(int j =0; j<7;j++){
+_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
+ loopb3: for(int j =0; j<7;j++){
 _ssdm_Unroll(0,0,0, "");
  partial_products[j] = ai[j]*bi[i];
    sum[j] += (digit_h)partial_products[j]<<((i+j)*16);

@@ -11833,3 +11833,460 @@ INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:07 
 INFO: [VHDL 208-304] Generating VHDL RTL for eval_4_isog.
 INFO: [VLOG 209-307] Generating Verilog RTL for eval_4_isog.
 INFO: [HLS 200-112] Total elapsed time: 41.1 seconds; peak allocated memory: 211.173 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'sikehls/ec_isogeny.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'sikehls/fpx.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'sikehls/mult.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:04 ; elapsed = 00:01:18 . Memory (MB): peak = 170.820 ; gain = 79.445
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:04 ; elapsed = 00:01:18 . Memory (MB): peak = 170.820 ; gain = 79.445
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'koa_mult_h1' into 'koa_mult' (sikehls/mult.cpp:472).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:06 ; elapsed = 00:01:22 . Memory (MB): peak = 170.820 ; gain = 79.445
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'koa_mult_h' into 'koa_mult' (sikehls/mult.cpp:470) automatically.
+WARNING: [SYNCHK 200-23] sikehls/mult.cpp:74: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:07 ; elapsed = 00:01:23 . Memory (MB): peak = 180.129 ; gain = 88.754
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loopb22' (sikehls/mult.cpp:79) in function 'bc_mult_2' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loopb12' (sikehls/mult.cpp:118) in function 'bc_mult_1' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loopb2' (sikehls/mult.cpp:301) in function 'bc_mult1' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loopb2' (sikehls/mult.cpp:227) in function 'bc_mult' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loopb12' (sikehls/mult.cpp:155) in function 'bc2_mult_1' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loopb2' (sikehls/mult.cpp:264) in function 'bc2_mult' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loopb12' (sikehls/mult.cpp:192) in function 'bc1_mult_1' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loopb2' (sikehls/mult.cpp:338) in function 'bc1_mult1' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loopb2' (sikehls/mult.cpp:375) in function 'bc1_mult' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'loopb21' (sikehls/mult.cpp:72) in function 'bc_mult_2' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'loopb23' (sikehls/mult.cpp:81) in function 'bc_mult_2' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'loopb11' (sikehls/mult.cpp:111) in function 'bc_mult_1' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'loopb13' (sikehls/mult.cpp:120) in function 'bc_mult_1' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'loopb1' (sikehls/mult.cpp:294) in function 'bc_mult1' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'loopb3' (sikehls/mult.cpp:303) in function 'bc_mult1' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'loopb1' (sikehls/mult.cpp:220) in function 'bc_mult' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'loopb3' (sikehls/mult.cpp:229) in function 'bc_mult' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'loopb11' (sikehls/mult.cpp:148) in function 'bc2_mult_1' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'loopb13' (sikehls/mult.cpp:157) in function 'bc2_mult_1' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'loopb1' (sikehls/mult.cpp:257) in function 'bc2_mult' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'loopb3' (sikehls/mult.cpp:266) in function 'bc2_mult' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'loopb11' (sikehls/mult.cpp:185) in function 'bc1_mult_1' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'loopb13' (sikehls/mult.cpp:194) in function 'bc1_mult_1' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'loopb1' (sikehls/mult.cpp:331) in function 'bc1_mult1' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'loopb3' (sikehls/mult.cpp:340) in function 'bc1_mult1' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'loopb1' (sikehls/mult.cpp:368) in function 'bc1_mult' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'loopb3' (sikehls/mult.cpp:377) in function 'bc1_mult' completely with a factor of 7.
+INFO: [XFORM 203-101] Partitioning array 'ai.V' (sikehls/mult.cpp:64) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'bi.V' (sikehls/mult.cpp:65) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'sum.V' (sikehls/mult.cpp:66) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ai.V' (sikehls/mult.cpp:103) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'bi.V' (sikehls/mult.cpp:104) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'sum.V' (sikehls/mult.cpp:105) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ai.V' (sikehls/mult.cpp:287) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'bi.V' (sikehls/mult.cpp:288) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'sum.V' (sikehls/mult.cpp:289) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ai.V' (sikehls/mult.cpp:213) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'bi.V' (sikehls/mult.cpp:214) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'sum.V' (sikehls/mult.cpp:215) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ai.V' (sikehls/mult.cpp:140) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'bi.V' (sikehls/mult.cpp:141) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'sum.V' (sikehls/mult.cpp:142) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ai.V' (sikehls/mult.cpp:250) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'bi.V' (sikehls/mult.cpp:251) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'sum.V' (sikehls/mult.cpp:252) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ai.V' (sikehls/mult.cpp:177) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'bi.V' (sikehls/mult.cpp:178) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'sum.V' (sikehls/mult.cpp:179) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ai.V' (sikehls/mult.cpp:324) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'bi.V' (sikehls/mult.cpp:325) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'sum.V' (sikehls/mult.cpp:326) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ai.V' (sikehls/mult.cpp:361) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'bi.V' (sikehls/mult.cpp:362) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'sum.V' (sikehls/mult.cpp:363) in dimension 1 completely.
+INFO: [XFORM 203-602] Inlining function 'koa_mult_h' into 'koa_mult' (sikehls/mult.cpp:470) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'bc_mult_2' (sikehls/mult.cpp:74:29)...6 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'bc_mult_1' (sikehls/mult.cpp:113:29)...6 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'bc_mult1' (sikehls/mult.cpp:296:28)...6 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'bc_mult' (sikehls/mult.cpp:222:28)...6 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'bc2_mult_1' (sikehls/mult.cpp:150:29)...6 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'bc2_mult' (sikehls/mult.cpp:259:28)...6 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'bc1_mult_1' (sikehls/mult.cpp:187:29)...6 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'bc1_mult1' (sikehls/mult.cpp:333:28)...6 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'bc1_mult' (sikehls/mult.cpp:370:28)...6 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:11 ; elapsed = 00:01:28 . Memory (MB): peak = 227.297 ; gain = 135.922
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:12 ; elapsed = 00:01:29 . Memory (MB): peak = 321.148 ; gain = 229.773
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'koa_mult' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bc_mult' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loopb2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 89.662 seconds; current allocated memory: 268.365 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.188 seconds; current allocated memory: 268.723 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bc_mult1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loopb2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.409 seconds; current allocated memory: 269.051 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.197 seconds; current allocated memory: 269.402 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bc_mult_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loopb12'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.372 seconds; current allocated memory: 269.688 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.184 seconds; current allocated memory: 270.046 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bc1_mult' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loopb2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.332 seconds; current allocated memory: 270.342 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.171 seconds; current allocated memory: 270.694 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bc1_mult1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loopb2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.346 seconds; current allocated memory: 270.990 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.184 seconds; current allocated memory: 271.342 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bc1_mult_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loopb12'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.387 seconds; current allocated memory: 271.642 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.205 seconds; current allocated memory: 272.000 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'koa_mult_h_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.259 seconds; current allocated memory: 272.108 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.341 seconds; current allocated memory: 272.240 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bc2_mult' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loopb2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.455 seconds; current allocated memory: 272.604 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.23 seconds; current allocated memory: 272.955 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bc2_mult_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loopb12'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.443 seconds; current allocated memory: 273.256 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.253 seconds; current allocated memory: 273.614 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bc_mult_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loopb22'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.448 seconds; current allocated memory: 273.901 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.249 seconds; current allocated memory: 274.261 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'koa_mult' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.475 seconds; current allocated memory: 274.463 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.924 seconds; current allocated memory: 275.074 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bc_mult' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'koa_mult_mux_73_16_1_1' to 'koa_mult_mux_73_1bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'koa_mult_mul_mul_16ns_16ns_32_1_1' to 'koa_mult_mul_mul_cud' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'koa_mult_mul_mul_cud': 7 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'koa_mult_mux_73_1bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bc_mult'.
+INFO: [HLS 200-111]  Elapsed time: 1.662 seconds; current allocated memory: 276.101 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bc_mult1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'koa_mult_mul_mul_cud': 7 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'koa_mult_mux_73_1bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bc_mult1'.
+INFO: [HLS 200-111]  Elapsed time: 1.356 seconds; current allocated memory: 276.979 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bc_mult_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'koa_mult_mux_73_17_1_1' to 'koa_mult_mux_73_1dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'koa_mult_mul_mul_17ns_17ns_34_1_1' to 'koa_mult_mul_mul_eOg' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'koa_mult_mul_mul_eOg': 7 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'koa_mult_mux_73_1dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bc_mult_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.922 seconds; current allocated memory: 277.858 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bc1_mult' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'koa_mult_mul_mul_cud': 7 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'koa_mult_mux_73_1bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bc1_mult'.
+INFO: [HLS 200-111]  Elapsed time: 1.185 seconds; current allocated memory: 278.737 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bc1_mult1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'koa_mult_mul_mul_cud': 7 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'koa_mult_mux_73_1bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bc1_mult1'.
+INFO: [HLS 200-111]  Elapsed time: 1.209 seconds; current allocated memory: 279.616 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bc1_mult_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'koa_mult_mul_mul_eOg': 7 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'koa_mult_mux_73_1dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bc1_mult_1'.
+INFO: [HLS 200-111]  Elapsed time: 1.149 seconds; current allocated memory: 280.544 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'koa_mult_h_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'koa_mult_add_448ns_448s_448_2_1' to 'koa_mult_add_448nfYi' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'koa_mult_add_448nfYi': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'koa_mult_h_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.924 seconds; current allocated memory: 280.978 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bc2_mult' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'koa_mult_mul_mul_cud': 7 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'koa_mult_mux_73_1bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bc2_mult'.
+INFO: [HLS 200-111]  Elapsed time: 0.594 seconds; current allocated memory: 281.817 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bc2_mult_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'koa_mult_mul_mul_eOg': 7 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'koa_mult_mux_73_1dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bc2_mult_1'.
+INFO: [HLS 200-111]  Elapsed time: 1.019 seconds; current allocated memory: 282.693 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bc_mult_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'koa_mult_mul_mul_eOg': 7 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'koa_mult_mux_73_1dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bc_mult_2'.
+INFO: [HLS 200-111]  Elapsed time: 1.018 seconds; current allocated memory: 283.588 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'koa_mult' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'koa_mult/a_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'koa_mult/b_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'koa_mult/c_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'koa_mult' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'koa_mult_add_339ns_339s_339_2_1' to 'koa_mult_add_339ng8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'koa_mult_add_342ns_342s_342_2_1' to 'koa_mult_add_342nhbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'koa_mult_add_448s_448ns_448_2_1' to 'koa_mult_add_448sibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'koa_mult_add_450s_450ns_450_2_1' to 'koa_mult_add_450sjbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'koa_mult_sub_451ns_451ns_451_2_1' to 'koa_mult_sub_451nkbM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'koa_mult_add_896ns_896s_896_2_1' to 'koa_mult_add_896nlbW' due to the length limit 20
+WARNING: [RTGEN 206-101] Port 'koa_mult/b_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Generating core module 'koa_mult_add_339ng8j': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'koa_mult_add_342nhbi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'koa_mult_add_448sibs': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'koa_mult_add_450sjbC': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'koa_mult_add_896nlbW': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'koa_mult_sub_451nkbM': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'koa_mult'.
+INFO: [HLS 200-111]  Elapsed time: 1.114 seconds; current allocated memory: 284.471 MB.
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'koa_mult_add_448nfYi_AddSubnS_0'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'koa_mult_add_339ng8j_AddSubnS_1'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'koa_mult_add_342nhbi_AddSubnS_2'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'koa_mult_add_448sibs_AddSubnS_3'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'koa_mult_add_450sjbC_AddSubnS_4'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'koa_mult_sub_451nkbM_AddSubnS_5'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'koa_mult_add_896nlbW_AddSubnS_6'
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:30 ; elapsed = 00:01:56 . Memory (MB): peak = 363.719 ; gain = 272.344
+INFO: [VHDL 208-304] Generating VHDL RTL for koa_mult.
+INFO: [VLOG 209-307] Generating Verilog RTL for koa_mult.
+INFO: [HLS 200-112] Total elapsed time: 115.75 seconds; peak allocated memory: 284.471 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'sikehls/ec_isogeny.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'sikehls/fpx.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'sikehls/mult.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:53 . Memory (MB): peak = 170.508 ; gain = 104.320
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:53 . Memory (MB): peak = 170.508 ; gain = 104.320
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:03 ; elapsed = 00:00:55 . Memory (MB): peak = 170.508 ; gain = 104.320
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-23] sikehls/mult.cpp:23: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:03 ; elapsed = 00:00:56 . Memory (MB): peak = 173.363 ; gain = 107.176
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loopb22' (sikehls/mult.cpp:28) in function 'bc_mult_448' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'loopb21' (sikehls/mult.cpp:21) in function 'bc_mult_448' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'loopb23' (sikehls/mult.cpp:30) in function 'bc_mult_448' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'loop3_1' (sikehls/mult.cpp:42) in function 'bc_mult_448' completely with a factor of 7.
+INFO: [XFORM 203-101] Partitioning array 'ai.V' (sikehls/mult.cpp:9) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'bi.V' (sikehls/mult.cpp:10) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'sum.V' (sikehls/mult.cpp:11) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'partial_products.V' (sikehls/mult.cpp:8) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'partial_products.V' (sikehls/mult.cpp:8) in dimension 2 completely.
+INFO: [XFORM 203-11] Balancing expressions in function 'bc_mult_448' (sikehls/mult.cpp:23:29)...6 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:56 . Memory (MB): peak = 217.551 ; gain = 151.363
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:57 . Memory (MB): peak = 224.879 ; gain = 158.691
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'rdc_mont' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bc_mult_448' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loopb22'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 6.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 57.264 seconds; current allocated memory: 173.552 MB.
+INFO: [HLS 200-434] Only 1 loops out of a total 2 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.299 seconds; current allocated memory: 174.486 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'rdc_mont' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.302 seconds; current allocated memory: 174.590 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.12 seconds; current allocated memory: 174.662 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bc_mult_448' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_mux_73_64_1_1' to 'rdc_mont_mux_73_6bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_mul_64ns_64ns_128_5_1' to 'rdc_mont_mul_64nscud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_mul_64s_64s_64_5_1' to 'rdc_mont_mul_64s_dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_mux_73_448_1_1' to 'rdc_mont_mux_73_4eOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_451ns_451ns_451_2_1' to 'rdc_mont_add_451nfYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_515ns_515ns_515_2_1' to 'rdc_mont_add_515ng8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_579ns_579ns_579_2_1' to 'rdc_mont_add_579nhbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_643ns_643ns_643_2_1' to 'rdc_mont_add_643nibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_707ns_707ns_707_2_1' to 'rdc_mont_add_707njbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_771ns_771ns_771_2_1' to 'rdc_mont_add_771nkbM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_835ns_835ns_835_2_1' to 'rdc_mont_add_835nlbW' due to the length limit 20
+INFO: [RTGEN 206-104] Estimated max fanout for 'bc_mult_448' is 6626 from HDL expression: (1'b1 == ap_CS_fsm_state9)
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_451nfYi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_515ng8j': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_579nhbi': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_643nibs': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_707njbC': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_771nkbM': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_835nlbW': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_mul_64nscud': 6 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_mul_64s_dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_mux_73_4eOg': 7 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_mux_73_6bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bc_mult_448'.
+INFO: [HLS 200-111]  Elapsed time: 0.576 seconds; current allocated memory: 176.346 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'rdc_mont' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'rdc_mont/ma_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'rdc_mont/mc_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'rdc_mont' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'rdc_mont_add_896ns_896ns_896_2_1' to 'rdc_mont_add_896nmb6' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'rdc_mont_add_896nmb6': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'rdc_mont'.
+INFO: [HLS 200-111]  Elapsed time: 1.307 seconds; current allocated memory: 176.901 MB.
+INFO: [RTMG 210-282] Generating pipelined core: 'rdc_mont_mul_64nscud_MulnS_0'
+INFO: [RTMG 210-282] Generating pipelined core: 'rdc_mont_mul_64s_dEe_MulnS_1'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_451nfYi_AddSubnS_0'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_515ng8j_AddSubnS_1'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_579nhbi_AddSubnS_2'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_643nibs_AddSubnS_3'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_707njbC_AddSubnS_4'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_771nkbM_AddSubnS_5'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_835nlbW_AddSubnS_6'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'rdc_mont_add_896nmb6_AddSubnS_7'
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:07 ; elapsed = 00:01:03 . Memory (MB): peak = 239.746 ; gain = 173.559
+INFO: [VHDL 208-304] Generating VHDL RTL for rdc_mont.
+INFO: [VLOG 209-307] Generating Verilog RTL for rdc_mont.
+INFO: [HLS 200-112] Total elapsed time: 62.592 seconds; peak allocated memory: 176.901 MB.

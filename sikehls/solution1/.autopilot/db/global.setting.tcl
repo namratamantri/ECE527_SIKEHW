@@ -1,5 +1,5 @@
 
-set TopModule "eval_4_isog"
+set TopModule "rdc_mont"
 set ClockPeriod 10
 set ClockList ap_clk
 set HasVivadoClockPeriod 0

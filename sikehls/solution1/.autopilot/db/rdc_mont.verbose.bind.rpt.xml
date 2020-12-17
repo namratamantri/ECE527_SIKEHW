@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'rdc_mont'" level="0">
-<item name = "Date">Tue Dec 15 15:56:12 2020
+<item name = "Date">Wed Dec 16 17:27:57 2020
 </item>
 <item name = "Version">2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)</item>
 <item name = "Project">sikehls</item>
@@ -31,7 +31,7 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="7">Instance, Module, min, max, min, max, Type</keys>
-<column name="grp_bc_mult_448_fu_30">bc_mult_448, 32, 32, 32, 32, none</column>
+<column name="grp_bc_mult_448_fu_47">bc_mult_448, 32, 32, 32, 32, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

@@ -6499,8 +6499,8 @@ void bc_mult_2(digit_q2 ta,digit_q2 tb, ap_int<228>* c){
  }
 
  loopb22: for(int i = 0;i<7;i++){
-
-  loopb23: for(int j =0; j<7;j++){
+#pragma HLS pipeline
+ loopb23: for(int j =0; j<7;j++){
 #pragma HLS unroll
  partial_products[j] = ai[j]*bi[i];
    sum[j] += (digit_h)partial_products[j]<<((i+j)*17);
@@ -6538,8 +6538,8 @@ void bc_mult_1(const digit_q1 ta,const digit_q1 tb, digit_h2* c){
  }
 
  loopb12: for(int i = 0;i<7;i++){
-
-  loopb13: for(int j =0; j<7;j++){
+#pragma HLS pipeline
+ loopb13: for(int j =0; j<7;j++){
 #pragma HLS unroll
  partial_products[j] = ai[j]*bi[i];
    sum[j] += (digit_h)partial_products[j]<<((i+j)*17);
@@ -6575,8 +6575,8 @@ void bc2_mult_1(const digit_q1 ta,const digit_q1 tb, digit_h2* c){
  }
 
  loopb12: for(int i = 0;i<7;i++){
-
-  loopb13: for(int j =0; j<7;j++){
+#pragma HLS pipeline
+ loopb13: for(int j =0; j<7;j++){
 #pragma HLS unroll
  partial_products[j] = ai[j]*bi[i];
    sum[j] += (digit_h)partial_products[j]<<((i+j)*17);
@@ -6612,8 +6612,8 @@ void bc1_mult_1(const digit_q1 ta,const digit_q1 tb, digit_h2* c){
  }
 
  loopb12: for(int i = 0;i<7;i++){
-
-  loopb13: for(int j =0; j<7;j++){
+#pragma HLS pipeline
+ loopb13: for(int j =0; j<7;j++){
 #pragma HLS unroll
  partial_products[j] = ai[j]*bi[i];
    sum[j] += (digit_h)partial_products[j]<<((i+j)*17);
@@ -6647,8 +6647,8 @@ void bc_mult(const digit_q a,const digit_q b, digit_h* c){
  }
 
  loopb2: for(int i = 0;i<7;i++){
-
-  loopb3: for(int j =0; j<7;j++){
+#pragma HLS pipeline
+ loopb3: for(int j =0; j<7;j++){
 #pragma HLS unroll
  partial_products[j] = ai[j]*bi[i];
    sum[j] += (digit_h)partial_products[j]<<((i+j)*16);
@@ -6684,8 +6684,8 @@ void bc2_mult(const digit_q a,const digit_q b, digit_h* c){
  }
 
  loopb2: for(int i = 0;i<7;i++){
-
-  loopb3: for(int j =0; j<7;j++){
+#pragma HLS pipeline
+ loopb3: for(int j =0; j<7;j++){
 #pragma HLS unroll
  partial_products[j] = ai[j]*bi[i];
    sum[j] += (digit_h)partial_products[j]<<((i+j)*16);
@@ -6721,8 +6721,8 @@ void bc_mult1(const digit_q a,const digit_q b, digit_h* c){
  }
 
  loopb2: for(int i = 0;i<7;i++){
-
-  loopb3: for(int j =0; j<7;j++){
+#pragma HLS pipeline
+ loopb3: for(int j =0; j<7;j++){
 #pragma HLS unroll
  partial_products[j] = ai[j]*bi[i];
    sum[j] += (digit_h)partial_products[j]<<((i+j)*16);
@@ -6758,8 +6758,8 @@ void bc1_mult1(const digit_q a,const digit_q b, digit_h* c){
  }
 
  loopb2: for(int i = 0;i<7;i++){
-
-  loopb3: for(int j =0; j<7;j++){
+#pragma HLS pipeline
+ loopb3: for(int j =0; j<7;j++){
 #pragma HLS unroll
  partial_products[j] = ai[j]*bi[i];
    sum[j] += (digit_h)partial_products[j]<<((i+j)*16);
@@ -6795,8 +6795,8 @@ void bc1_mult(const digit_q a,const digit_q b, digit_h* c){
  }
 
  loopb2: for(int i = 0;i<7;i++){
-
-  loopb3: for(int j =0; j<7;j++){
+#pragma HLS pipeline
+ loopb3: for(int j =0; j<7;j++){
 #pragma HLS unroll
  partial_products[j] = ai[j]*bi[i];
    sum[j] += (digit_h)partial_products[j]<<((i+j)*16);

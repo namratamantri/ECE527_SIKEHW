@@ -15,11 +15,11 @@ set C_modelName {bc_mult_448}
 set C_modelType { int 835 }
 set C_modelArgList {
 	{ a_V int 448 regular  }
-	{ b_V int 448 regular  }
+	{ b_V int 435 regular  }
 }
 set C_modelArgMapList {[ 
 	{ "Name" : "a_V", "interface" : "wire", "bitwidth" : 448, "direction" : "READONLY"} , 
- 	{ "Name" : "b_V", "interface" : "wire", "bitwidth" : 448, "direction" : "READONLY"} , 
+ 	{ "Name" : "b_V", "interface" : "wire", "bitwidth" : 435, "direction" : "READONLY"} , 
  	{ "Name" : "ap_return", "interface" : "wire", "bitwidth" : 835} ]}
 # RTL Port declarations: 
 set portNum 9
@@ -31,7 +31,7 @@ set portList {
 	{ ap_idle sc_out sc_logic 1 done -1 } 
 	{ ap_ready sc_out sc_logic 1 ready -1 } 
 	{ a_V sc_in sc_lv 448 signal 0 } 
-	{ b_V sc_in sc_lv 448 signal 1 } 
+	{ b_V sc_in sc_lv 435 signal 1 } 
 	{ ap_return sc_out sc_lv 835 signal -1 } 
 }
 set NewPortList {[ 
@@ -42,7 +42,7 @@ set NewPortList {[
  	{ "name": "ap_idle", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "done", "bundle":{"name": "ap_idle", "role": "default" }} , 
  	{ "name": "ap_ready", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "ready", "bundle":{"name": "ap_ready", "role": "default" }} , 
  	{ "name": "a_V", "direction": "in", "datatype": "sc_lv", "bitwidth":448, "type": "signal", "bundle":{"name": "a_V", "role": "default" }} , 
- 	{ "name": "b_V", "direction": "in", "datatype": "sc_lv", "bitwidth":448, "type": "signal", "bundle":{"name": "b_V", "role": "default" }} , 
+ 	{ "name": "b_V", "direction": "in", "datatype": "sc_lv", "bitwidth":435, "type": "signal", "bundle":{"name": "b_V", "role": "default" }} , 
  	{ "name": "ap_return", "direction": "out", "datatype": "sc_lv", "bitwidth":835, "type": "signal", "bundle":{"name": "ap_return", "role": "default" }}  ]}
 
 set RtlHierarchyInfo {[
@@ -62,34 +62,34 @@ set RtlHierarchyInfo {[
 		"Port" : [
 			{"Name" : "a_V", "Type" : "None", "Direction" : "I"},
 			{"Name" : "b_V", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.eval_4_isog_mux_7bkb_U1", "Parent" : "0"},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.eval_4_isog_mul_6cud_U2", "Parent" : "0"},
-	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.eval_4_isog_mul_6cud_U3", "Parent" : "0"},
-	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.eval_4_isog_mul_6cud_U4", "Parent" : "0"},
-	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.eval_4_isog_mul_6cud_U5", "Parent" : "0"},
-	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.eval_4_isog_mul_6cud_U6", "Parent" : "0"},
-	{"ID" : "7", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.eval_4_isog_mul_6cud_U7", "Parent" : "0"},
-	{"ID" : "8", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.eval_4_isog_mul_6dEe_U8", "Parent" : "0"},
-	{"ID" : "9", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.eval_4_isog_mux_7eOg_U9", "Parent" : "0"},
-	{"ID" : "10", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.eval_4_isog_add_4fYi_U10", "Parent" : "0"},
-	{"ID" : "11", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.eval_4_isog_mux_7eOg_U11", "Parent" : "0"},
-	{"ID" : "12", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.eval_4_isog_add_5g8j_U12", "Parent" : "0"},
-	{"ID" : "13", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.eval_4_isog_mux_7eOg_U13", "Parent" : "0"},
-	{"ID" : "14", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.eval_4_isog_add_5hbi_U14", "Parent" : "0"},
-	{"ID" : "15", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.eval_4_isog_mux_7eOg_U15", "Parent" : "0"},
-	{"ID" : "16", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.eval_4_isog_add_6ibs_U16", "Parent" : "0"},
-	{"ID" : "17", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.eval_4_isog_mux_7eOg_U17", "Parent" : "0"},
-	{"ID" : "18", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.eval_4_isog_add_7jbC_U18", "Parent" : "0"},
-	{"ID" : "19", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.eval_4_isog_mux_7eOg_U19", "Parent" : "0"},
-	{"ID" : "20", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.eval_4_isog_add_7kbM_U20", "Parent" : "0"},
-	{"ID" : "21", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.eval_4_isog_mux_7eOg_U21", "Parent" : "0"},
-	{"ID" : "22", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.eval_4_isog_add_8lbW_U22", "Parent" : "0"},
-	{"ID" : "23", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.eval_4_isog_add_5hbi_U23", "Parent" : "0"},
-	{"ID" : "24", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.eval_4_isog_add_7jbC_U24", "Parent" : "0"},
-	{"ID" : "25", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.eval_4_isog_add_8lbW_U25", "Parent" : "0"},
-	{"ID" : "26", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.eval_4_isog_add_5hbi_U26", "Parent" : "0"},
-	{"ID" : "27", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.eval_4_isog_add_8lbW_U27", "Parent" : "0"},
-	{"ID" : "28", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.eval_4_isog_add_8lbW_U28", "Parent" : "0"}]}
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.rdc_mont_mux_73_6bkb_U1", "Parent" : "0"},
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.rdc_mont_mul_64nscud_U2", "Parent" : "0"},
+	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.rdc_mont_mul_64nscud_U3", "Parent" : "0"},
+	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.rdc_mont_mul_64nscud_U4", "Parent" : "0"},
+	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.rdc_mont_mul_64nscud_U5", "Parent" : "0"},
+	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.rdc_mont_mul_64nscud_U6", "Parent" : "0"},
+	{"ID" : "7", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.rdc_mont_mul_64nscud_U7", "Parent" : "0"},
+	{"ID" : "8", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.rdc_mont_mul_64s_dEe_U8", "Parent" : "0"},
+	{"ID" : "9", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.rdc_mont_mux_73_4eOg_U9", "Parent" : "0"},
+	{"ID" : "10", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.rdc_mont_add_451nfYi_U10", "Parent" : "0"},
+	{"ID" : "11", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.rdc_mont_mux_73_4eOg_U11", "Parent" : "0"},
+	{"ID" : "12", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.rdc_mont_add_515ng8j_U12", "Parent" : "0"},
+	{"ID" : "13", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.rdc_mont_mux_73_4eOg_U13", "Parent" : "0"},
+	{"ID" : "14", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.rdc_mont_add_579nhbi_U14", "Parent" : "0"},
+	{"ID" : "15", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.rdc_mont_mux_73_4eOg_U15", "Parent" : "0"},
+	{"ID" : "16", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.rdc_mont_add_643nibs_U16", "Parent" : "0"},
+	{"ID" : "17", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.rdc_mont_mux_73_4eOg_U17", "Parent" : "0"},
+	{"ID" : "18", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.rdc_mont_add_707njbC_U18", "Parent" : "0"},
+	{"ID" : "19", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.rdc_mont_mux_73_4eOg_U19", "Parent" : "0"},
+	{"ID" : "20", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.rdc_mont_add_771nkbM_U20", "Parent" : "0"},
+	{"ID" : "21", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.rdc_mont_mux_73_4eOg_U21", "Parent" : "0"},
+	{"ID" : "22", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.rdc_mont_add_835nlbW_U22", "Parent" : "0"},
+	{"ID" : "23", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.rdc_mont_add_579nhbi_U23", "Parent" : "0"},
+	{"ID" : "24", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.rdc_mont_add_707njbC_U24", "Parent" : "0"},
+	{"ID" : "25", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.rdc_mont_add_835nlbW_U25", "Parent" : "0"},
+	{"ID" : "26", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.rdc_mont_add_579nhbi_U26", "Parent" : "0"},
+	{"ID" : "27", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.rdc_mont_add_835nlbW_U27", "Parent" : "0"},
+	{"ID" : "28", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.rdc_mont_add_835nlbW_U28", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {
@@ -110,5 +110,5 @@ set PipelineEnableSignalInfo {[
 
 set Spec2ImplPortList { 
 	a_V { ap_none {  { a_V in_data 0 448 } } }
-	b_V { ap_none {  { b_V in_data 0 448 } } }
+	b_V { ap_none {  { b_V in_data 0 435 } } }
 }
