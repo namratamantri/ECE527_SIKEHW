@@ -1,5 +1,6 @@
 Supersingular Isogeny Key Encapsulation: SIKEp434
 Optimized implementation written in portable C
+Modified to be run in Pynq version 2.6.0 for the Pynq-z2 Board
 =======================================================================
     
 Simply do:
@@ -14,13 +15,4 @@ Or execute the following to run the KATs:
 
 $ ./sike/PQCtestKAT_kem
 
-By default, x64 is the targeted architecture, and compilation is performed with 
-GNU GCC.
 
-
-ADDITIONAL OPTIONS
-------------------
-
-make CC=[gcc/clang] ARCH=[x64/x86/ARM/ARM64] SET=EXTENDED
-
-Setting "SET=EXTENDED" adds the flags -fwrapv -fomit-frame-pointer -march=native.
