@@ -3,19 +3,19 @@
 
 <trans_list>
 
-<trans id="22" from="1" to="2">
+<trans id="17" from="1" to="2">
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="23" from="2" to="3">
+<trans id="18" from="2" to="3">
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="24" from="3" to="4">
+<trans id="19" from="3" to="4">
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
@@ -35,9 +35,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="6" bw="896" op_0_bw="896" op_1_bw="896">
+<Node id="2" bw="896" op_0_bw="896" op_1_bw="896">
 <![CDATA[
-_ZlsILi896ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit:3  %ma_V_read = call i896 @_ssdm_op_Read.ap_auto.i896(i896 %ma_V)
+_ZlsILi896ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit:0  %ma_V_read = call i896 @_ssdm_op_Read.ap_auto.i896(i896 %ma_V)
 
 ]]></Node>
 <StgValue><ssdm name="ma_V_read"/></StgValue>
@@ -50,9 +50,9 @@ _ZlsILi896ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit:3  %
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="7" bw="448" op_0_bw="896">
+<Node id="3" bw="448" op_0_bw="896">
 <![CDATA[
-_ZlsILi896ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit:4  %ma_trunc_V = trunc i896 %ma_V_read to i448
+_ZlsILi896ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit:1  %ma_trunc_V = trunc i896 %ma_V_read to i448
 
 ]]></Node>
 <StgValue><ssdm name="ma_trunc_V"/></StgValue>
@@ -65,9 +65,9 @@ _ZlsILi896ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit:4  %
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="8" bw="835" op_0_bw="835" op_1_bw="448" op_2_bw="435">
+<Node id="4" bw="896" op_0_bw="896" op_1_bw="448" op_2_bw="448">
 <![CDATA[
-_ZlsILi896ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit:5  %mult_V_2 = call fastcc i835 @bc_mult_448(i448 %ma_trunc_V, i435 24439423661345221551909145011457493619085780243761596511325807336205221239331976725970216671828618445898719026692884939342314733568)
+_ZlsILi896ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit:2  %mult_V_2 = call fastcc i896 @bc_mult_448(i448 %ma_trunc_V, i448 24439423661345221551909145011457493619085780243761596511325807336205221239331976725970216671828618445898719026692884939342314733568)
 
 ]]></Node>
 <StgValue><ssdm name="mult_V_2"/></StgValue>
@@ -83,9 +83,9 @@ _ZlsILi896ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit:5  %
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="8" bw="835" op_0_bw="835" op_1_bw="448" op_2_bw="435">
+<Node id="4" bw="896" op_0_bw="896" op_1_bw="448" op_2_bw="448">
 <![CDATA[
-_ZlsILi896ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit:5  %mult_V_2 = call fastcc i835 @bc_mult_448(i448 %ma_trunc_V, i435 24439423661345221551909145011457493619085780243761596511325807336205221239331976725970216671828618445898719026692884939342314733568)
+_ZlsILi896ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit:2  %mult_V_2 = call fastcc i896 @bc_mult_448(i448 %ma_trunc_V, i448 24439423661345221551909145011457493619085780243761596511325807336205221239331976725970216671828618445898719026692884939342314733568)
 
 ]]></Node>
 <StgValue><ssdm name="mult_V_2"/></StgValue>
@@ -98,9 +98,9 @@ _ZlsILi896ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit:5  %
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="9" bw="1" op_0_bw="1" op_1_bw="835" op_2_bw="32">
+<Node id="5" bw="1" op_0_bw="1" op_1_bw="896" op_2_bw="32">
 <![CDATA[
-_ZlsILi896ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit:6  %tmp = call i1 @_ssdm_op_BitSelect.i1.i835.i32(i835 %mult_V_2, i32 447)
+_ZlsILi896ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit:3  %tmp = call i1 @_ssdm_op_BitSelect.i1.i896.i32(i896 %mult_V_2, i32 447)
 
 ]]></Node>
 <StgValue><ssdm name="tmp"/></StgValue>
@@ -113,9 +113,9 @@ _ZlsILi896ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit:6  %
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="10" bw="448" op_0_bw="448" op_1_bw="1" op_2_bw="447">
+<Node id="6" bw="448" op_0_bw="448" op_1_bw="1" op_2_bw="447">
 <![CDATA[
-_ZlsILi896ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit:7  %m_V = call i448 @_ssdm_op_BitConcatenate.i448.i1.i447(i1 %tmp, i447 0)
+_ZlsILi896ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit:4  %m_V = call i448 @_ssdm_op_BitConcatenate.i448.i1.i447(i1 %tmp, i447 0)
 
 ]]></Node>
 <StgValue><ssdm name="m_V"/></StgValue>
@@ -128,9 +128,9 @@ _ZlsILi896ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit:7  %
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="11" bw="835" op_0_bw="835" op_1_bw="448" op_2_bw="435">
+<Node id="7" bw="896" op_0_bw="896" op_1_bw="448" op_2_bw="448">
 <![CDATA[
-_ZlsILi896ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit:8  %mult_V = call fastcc i835 @bc_mult_448(i448 %m_V, i435 24439423661345221551909145011457493619085780243761596511325807336205221239331976725970216671828618445898719026692884939342314733567)
+_ZlsILi896ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit:5  %mult_V = call fastcc i896 @bc_mult_448(i448 %m_V, i448 24439423661345221551909145011457493619085780243761596511325807336205221239331976725970216671828618445898719026692884939342314733567)
 
 ]]></Node>
 <StgValue><ssdm name="mult_V"/></StgValue>
@@ -146,39 +146,24 @@ _ZlsILi896ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit:8  %
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="11" bw="835" op_0_bw="835" op_1_bw="448" op_2_bw="435">
+<Node id="7" bw="896" op_0_bw="896" op_1_bw="448" op_2_bw="448">
 <![CDATA[
-_ZlsILi896ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit:8  %mult_V = call fastcc i835 @bc_mult_448(i448 %m_V, i435 24439423661345221551909145011457493619085780243761596511325807336205221239331976725970216671828618445898719026692884939342314733567)
+_ZlsILi896ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit:5  %mult_V = call fastcc i896 @bc_mult_448(i448 %m_V, i448 24439423661345221551909145011457493619085780243761596511325807336205221239331976725970216671828618445898719026692884939342314733567)
 
 ]]></Node>
 <StgValue><ssdm name="mult_V"/></StgValue>
 </operation>
 
-<operation id="13" st_id="3" stage="1" lat="1">
-<core>NULL</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="12" bw="896" op_0_bw="835">
-<![CDATA[
-_ZlsILi896ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit:9  %zext_ln209 = zext i835 %mult_V to i896
-
-]]></Node>
-<StgValue><ssdm name="zext_ln209"/></StgValue>
-</operation>
-
-<operation id="14" st_id="3" stage="2" lat="2">
+<operation id="13" st_id="3" stage="2" lat="2">
 <core>AddSubnS</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="13" bw="896" op_0_bw="896" op_1_bw="896">
+<Node id="8" bw="896" op_0_bw="896" op_1_bw="896">
 <![CDATA[
-_ZlsILi896ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit:10  %sum_V = add i896 %ma_V_read, %zext_ln209
+_ZlsILi896ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit:6  %sum_V = add i896 %ma_V_read, %mult_V
 
 ]]></Node>
 <StgValue><ssdm name="sum_V"/></StgValue>
@@ -187,6 +172,21 @@ _ZlsILi896ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit:10  
 
 <state id="4" st_id="4">
 
+<operation id="14" st_id="4" stage="1" lat="2">
+<core>AddSubnS</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="896" op_0_bw="896" op_1_bw="896">
+<![CDATA[
+_ZlsILi896ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit:6  %sum_V = add i896 %ma_V_read, %mult_V
+
+]]></Node>
+<StgValue><ssdm name="sum_V"/></StgValue>
+</operation>
+
 <operation id="15" st_id="4" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
@@ -194,12 +194,12 @@ _ZlsILi896ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit:10  
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="3" bw="0" op_0_bw="0" op_1_bw="896">
+<Node id="9" bw="448" op_0_bw="448" op_1_bw="896" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-_ZlsILi896ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit:0  call void (...)* @_ssdm_op_SpecBitsMap(i896 %ma_V), !map !343
+_ZlsILi896ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit:7  %ssdm_int_V_write_ass = call i448 @_ssdm_op_PartSelect.i448.i896.i32.i32(i896 %sum_V, i32 448, i32 895)
 
 ]]></Node>
-<StgValue><ssdm name="specbitsmap_ln0"/></StgValue>
+<StgValue><ssdm name="ssdm_int_V_write_ass"/></StgValue>
 </operation>
 
 <operation id="16" st_id="4" stage="1" lat="1">
@@ -209,84 +209,9 @@ _ZlsILi896ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit:0  c
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="4" bw="0" op_0_bw="0" op_1_bw="448">
+<Node id="10" bw="0" op_0_bw="448">
 <![CDATA[
-_ZlsILi896ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit:1  call void (...)* @_ssdm_op_SpecBitsMap(i448* %mc_V), !map !349
-
-]]></Node>
-<StgValue><ssdm name="specbitsmap_ln0"/></StgValue>
-</operation>
-
-<operation id="17" st_id="4" stage="1" lat="1">
-<core>NULL</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="5" bw="0" op_0_bw="0" op_1_bw="0">
-<![CDATA[
-_ZlsILi896ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit:2  call void (...)* @_ssdm_op_SpecTopModule([9 x i8]* @rdc_mont_str) nounwind
-
-]]></Node>
-<StgValue><ssdm name="spectopmodule_ln0"/></StgValue>
-</operation>
-
-<operation id="18" st_id="4" stage="1" lat="2">
-<core>AddSubnS</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="13" bw="896" op_0_bw="896" op_1_bw="896">
-<![CDATA[
-_ZlsILi896ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit:10  %sum_V = add i896 %ma_V_read, %zext_ln209
-
-]]></Node>
-<StgValue><ssdm name="sum_V"/></StgValue>
-</operation>
-
-<operation id="19" st_id="4" stage="1" lat="1">
-<core>NULL</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="14" bw="448" op_0_bw="448" op_1_bw="896" op_2_bw="32" op_3_bw="32">
-<![CDATA[
-_ZlsILi896ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit:11  %trunc_ln = call i448 @_ssdm_op_PartSelect.i448.i896.i32.i32(i896 %sum_V, i32 448, i32 895)
-
-]]></Node>
-<StgValue><ssdm name="trunc_ln"/></StgValue>
-</operation>
-
-<operation id="20" st_id="4" stage="1" lat="1">
-<core>NULL</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="15" bw="0" op_0_bw="0" op_1_bw="448" op_2_bw="448">
-<![CDATA[
-_ZlsILi896ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit:12  call void @_ssdm_op_Write.ap_auto.i448P(i448* %mc_V, i448 %trunc_ln)
-
-]]></Node>
-<StgValue><ssdm name="write_ln78"/></StgValue>
-</operation>
-
-<operation id="21" st_id="4" stage="1" lat="1">
-<core>NULL</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="16" bw="0">
-<![CDATA[
-_ZlsILi896ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit:13  ret void
+_ZlsILi896ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit:8  ret i448 %ssdm_int_V_write_ass
 
 ]]></Node>
 <StgValue><ssdm name="ret_ln79"/></StgValue>

@@ -1,0 +1,127 @@
+
+
+================================================================
+== Vivado HLS Report for 'mp2_add'
+================================================================
+* Date:           Tue Dec 22 16:34:15 2020
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        sikehls
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     5.763|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    1|    1|    1|    1|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.44>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%b_1_V_read_1 = call i448 @_ssdm_op_Read.ap_auto.i448(i448 %b_1_V_read)" [sikehls/fpx.cpp:135]   --->   Operation 3 'read' 'b_1_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%b_0_V_read_1 = call i448 @_ssdm_op_Read.ap_auto.i448(i448 %b_0_V_read)" [sikehls/fpx.cpp:135]   --->   Operation 4 'read' 'b_0_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%a_1_V_read_1 = call i448 @_ssdm_op_Read.ap_auto.i448(i448 %a_1_V_read)" [sikehls/fpx.cpp:135]   --->   Operation 5 'read' 'a_1_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%a_0_V_read_1 = call i448 @_ssdm_op_Read.ap_auto.i448(i448 %a_0_V_read)" [sikehls/fpx.cpp:135]   --->   Operation 6 'read' 'a_0_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [2/2] (3.44ns)   --->   "%add_ln209 = add i448 %b_0_V_read_1, %a_0_V_read_1" [sikehls/fpx.cpp:135]   --->   Operation 7 'add' 'add_ln209' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 8 [2/2] (3.44ns)   --->   "%add_ln209_1 = add i448 %b_1_V_read_1, %a_1_V_read_1" [sikehls/fpx.cpp:136]   --->   Operation 8 'add' 'add_ln209_1' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 5.76>
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "%c_V_addr = getelementptr [2 x i448]* %c_V, i64 0, i64 0" [sikehls/fpx.cpp:135]   --->   Operation 9 'getelementptr' 'c_V_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "%c_V_addr_1 = getelementptr [2 x i448]* %c_V, i64 0, i64 1" [sikehls/fpx.cpp:136]   --->   Operation 10 'getelementptr' 'c_V_addr_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 11 [1/2] (3.44ns)   --->   "%add_ln209 = add i448 %b_0_V_read_1, %a_0_V_read_1" [sikehls/fpx.cpp:135]   --->   Operation 11 'add' 'add_ln209' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 12 [1/1] (2.32ns)   --->   "store i448 %add_ln209, i448* %c_V_addr, align 8" [sikehls/fpx.cpp:135]   --->   Operation 12 'store' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 448> <Depth = 2> <RAM>
+ST_2 : Operation 13 [1/2] (3.44ns)   --->   "%add_ln209_1 = add i448 %b_1_V_read_1, %a_1_V_read_1" [sikehls/fpx.cpp:136]   --->   Operation 13 'add' 'add_ln209_1' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 14 [1/1] (2.32ns)   --->   "store i448 %add_ln209_1, i448* %c_V_addr_1, align 8" [sikehls/fpx.cpp:136]   --->   Operation 14 'store' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 448> <Depth = 2> <RAM>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "ret void" [sikehls/fpx.cpp:137]   --->   Operation 15 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 3.44ns
+The critical path consists of the following:
+	wire read on port 'b_1_V_read' (sikehls/fpx.cpp:135) [6]  (0 ns)
+	'add' operation ('add_ln209_1', sikehls/fpx.cpp:136) [14]  (3.44 ns)
+
+ <State 2>: 5.76ns
+The critical path consists of the following:
+	'add' operation ('add_ln209', sikehls/fpx.cpp:135) [12]  (3.44 ns)
+	'store' operation ('store_ln135', sikehls/fpx.cpp:135) of variable 'add_ln209', sikehls/fpx.cpp:135 on array 'c_V' [13]  (2.32 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

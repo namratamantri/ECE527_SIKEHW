@@ -12,7 +12,8 @@
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [SYNCHK 200-23] sikehls/mult.cpp:23: variable-indexed range selection may cause suboptimal QoR." projectName="sikehls" solutionName="solution1" date="2020-12-16T17:27:54.798-0600" type="Warning"/>
+        <logs message="WARNING: [SYNCHK 200-23] sikehls/mult.cpp:23: variable-indexed range selection may cause suboptimal QoR." projectName="sikehls" solutionName="solution1" date="2020-12-22T16:34:07.980-0600" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-604] Allocation directive (sikehls/fpx.cpp:160) on function 'fpmul_mont'' (sikehls/fpx.cpp:83) will be discarded since the function is inlined." projectName="sikehls" solutionName="solution1" date="2020-12-22T16:34:07.089-0600" type="Warning"/>
       </synLog>
       <simLog/>
       <mgLog/>

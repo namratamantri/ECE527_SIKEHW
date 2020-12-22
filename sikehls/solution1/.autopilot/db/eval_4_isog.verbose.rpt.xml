@@ -1,0 +1,230 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'eval_4_isog'" level="0">
+<item name = "Date">Tue Dec 22 16:34:21 2020
+</item>
+<item name = "Version">2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)</item>
+<item name = "Project">sikehls</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 8.625, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">1379, 1379, 1379, 1379, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_mp_mul_fu_163">mp_mul, 33, 33, 33, 33, none</column>
+<column name="grp_rdc_mont_fu_246">rdc_mont, 68, 68, 68, 68, none</column>
+<column name="grp_mp2_add_fu_307">mp2_add, 1, 1, 1, 1, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 4, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, 160, 77933, 13029, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 660, -</column>
+<column name="Register">-, -, 20640, -, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 72, 92, 25, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<column name="eval_4_isog_add_4fYi_U51">eval_4_isog_add_4fYi, 0, 0, 580, 132, 0</column>
+<column name="eval_4_isog_add_4fYi_U52">eval_4_isog_add_4fYi, 0, 0, 580, 132, 0</column>
+<column name="eval_4_isog_add_4fYi_U53">eval_4_isog_add_4fYi, 0, 0, 580, 132, 0</column>
+<column name="eval_4_isog_add_4fYi_U57">eval_4_isog_add_4fYi, 0, 0, 580, 132, 0</column>
+<column name="eval_4_isog_add_4fYi_U58">eval_4_isog_add_4fYi, 0, 0, 580, 132, 0</column>
+<column name="eval_4_isog_add_4fYi_U59">eval_4_isog_add_4fYi, 0, 0, 580, 132, 0</column>
+<column name="eval_4_isog_add_4fYi_U60">eval_4_isog_add_4fYi, 0, 0, 580, 132, 0</column>
+<column name="eval_4_isog_add_4fYi_U61">eval_4_isog_add_4fYi, 0, 0, 580, 132, 0</column>
+<column name="eval_4_isog_add_4fYi_U62">eval_4_isog_add_4fYi, 0, 0, 580, 132, 0</column>
+<column name="eval_4_isog_add_4fYi_U66">eval_4_isog_add_4fYi, 0, 0, 580, 132, 0</column>
+<column name="eval_4_isog_add_4fYi_U67">eval_4_isog_add_4fYi, 0, 0, 580, 132, 0</column>
+<column name="eval_4_isog_add_4fYi_U69">eval_4_isog_add_4fYi, 0, 0, 580, 132, 0</column>
+<column name="eval_4_isog_add_4fYi_U70">eval_4_isog_add_4fYi, 0, 0, 580, 132, 0</column>
+<column name="eval_4_isog_add_4fYi_U71">eval_4_isog_add_4fYi, 0, 0, 580, 132, 0</column>
+<column name="eval_4_isog_add_4fYi_U72">eval_4_isog_add_4fYi, 0, 0, 580, 132, 0</column>
+<column name="eval_4_isog_add_4fYi_U75">eval_4_isog_add_4fYi, 0, 0, 580, 132, 0</column>
+<column name="eval_4_isog_add_4fYi_U76">eval_4_isog_add_4fYi, 0, 0, 580, 132, 0</column>
+<column name="eval_4_isog_add_4fYi_U78">eval_4_isog_add_4fYi, 0, 0, 580, 132, 0</column>
+<column name="eval_4_isog_add_4fYi_U79">eval_4_isog_add_4fYi, 0, 0, 580, 132, 0</column>
+<column name="eval_4_isog_sub_4hbi_U55">eval_4_isog_sub_4hbi, 0, 0, 580, 132, 0</column>
+<column name="eval_4_isog_sub_4hbi_U56">eval_4_isog_sub_4hbi, 0, 0, 580, 132, 0</column>
+<column name="eval_4_isog_sub_4hbi_U63">eval_4_isog_sub_4hbi, 0, 0, 580, 132, 0</column>
+<column name="eval_4_isog_sub_4hbi_U64">eval_4_isog_sub_4hbi, 0, 0, 580, 132, 0</column>
+<column name="eval_4_isog_sub_4hbi_U65">eval_4_isog_sub_4hbi, 0, 0, 580, 132, 0</column>
+<column name="eval_4_isog_sub_4hbi_U68">eval_4_isog_sub_4hbi, 0, 0, 580, 132, 0</column>
+<column name="eval_4_isog_sub_4hbi_U73">eval_4_isog_sub_4hbi, 0, 0, 580, 132, 0</column>
+<column name="eval_4_isog_sub_4hbi_U74">eval_4_isog_sub_4hbi, 0, 0, 580, 132, 0</column>
+<column name="eval_4_isog_sub_8g8j_U54">eval_4_isog_sub_8g8j, 0, 0, 580, 132, 0</column>
+<column name="eval_4_isog_sub_8g8j_U77">eval_4_isog_sub_8g8j, 0, 0, 580, 132, 0</column>
+<column name="grp_mp2_add_fu_307">mp2_add, 0, 0, 1162, 279, 0</column>
+<column name="grp_mp_mul_fu_163">mp_mul, 0, 80, 29908, 4374, 0</column>
+<column name="grp_rdc_mont_fu_246">rdc_mont, 0, 80, 30043, 4548, 0</column>
+</table>
+</item>
+<item name = "DSP48E"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="ap_block_state11_on_subcall_done">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state25_on_subcall_done">or, 0, 0, 2, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="P_X_V_address0">27, 5, 1, 5</column>
+<column name="P_X_V_address1">21, 4, 1, 4</column>
+<column name="P_X_V_ce0">15, 3, 1, 3</column>
+<column name="P_X_V_ce1">15, 3, 1, 3</column>
+<column name="P_X_V_d0">21, 4, 448, 1792</column>
+<column name="P_X_V_d1">21, 4, 448, 1792</column>
+<column name="P_X_V_we0">15, 3, 1, 3</column>
+<column name="P_X_V_we1">15, 3, 1, 3</column>
+<column name="P_Z_V_address0">21, 4, 1, 4</column>
+<column name="P_Z_V_address1">15, 3, 1, 3</column>
+<column name="P_Z_V_d0">21, 4, 448, 1792</column>
+<column name="P_Z_V_d1">21, 4, 448, 1792</column>
+<column name="ap_NS_fsm">149, 33, 1, 33</column>
+<column name="coeff_V_address0">38, 7, 3, 21</column>
+<column name="grp_mp_mul_fu_163_a_V">97, 20, 448, 8960</column>
+<column name="grp_mp_mul_fu_163_b_V">97, 20, 448, 8960</column>
+<column name="grp_rdc_mont_fu_246_ma_V">33, 6, 896, 5376</column>
+<column name="reg_353">9, 2, 448, 896</column>
+<column name="reg_367">9, 2, 448, 896</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="P_X_V_load_3_reg_845">448, 0, 448, 0</column>
+<column name="add_ln214_4_reg_798">448, 0, 448, 0</column>
+<column name="add_ln214_5_reg_778">448, 0, 448, 0</column>
+<column name="ap_CS_fsm">32, 0, 32, 0</column>
+<column name="call_ret_i1_reg_705">448, 0, 448, 0</column>
+<column name="grp_mp2_add_fu_307_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_mp_mul_fu_163_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_rdc_mont_fu_246_ap_start_reg">1, 0, 1, 0</column>
+<column name="reg_353">448, 0, 448, 0</column>
+<column name="reg_361">448, 0, 448, 0</column>
+<column name="reg_367">448, 0, 448, 0</column>
+<column name="reg_378">448, 0, 448, 0</column>
+<column name="reg_384">448, 0, 448, 0</column>
+<column name="reg_390">896, 0, 896, 0</column>
+<column name="reg_395">896, 0, 896, 0</column>
+<column name="reg_400">448, 0, 448, 0</column>
+<column name="reg_407">448, 0, 448, 0</column>
+<column name="reg_414">448, 0, 448, 0</column>
+<column name="reg_434">448, 0, 448, 0</column>
+<column name="reg_440">896, 0, 896, 0</column>
+<column name="sub_ln214_2_reg_755">448, 0, 448, 0</column>
+<column name="sub_ln214_reg_747">448, 0, 448, 0</column>
+<column name="t0_0_V_3_reg_824">448, 0, 448, 0</column>
+<column name="t0_0_V_reg_643">448, 0, 448, 0</column>
+<column name="t0_1_V_1_reg_717">448, 0, 448, 0</column>
+<column name="t0_1_V_3_reg_818">448, 0, 448, 0</column>
+<column name="t0_1_V_reg_649">448, 0, 448, 0</column>
+<column name="t1_0_V_1_reg_733">448, 0, 448, 0</column>
+<column name="t1_0_V_reg_655">448, 0, 448, 0</column>
+<column name="t1_1_V_1_reg_740">448, 0, 448, 0</column>
+<column name="t1_1_V_reg_667">448, 0, 448, 0</column>
+<column name="t1_V_3_reg_793">448, 0, 448, 0</column>
+<column name="t1_V_4_reg_773">448, 0, 448, 0</column>
+<column name="t1_V_5_reg_851">448, 0, 448, 0</column>
+<column name="t1_V_6_reg_830">448, 0, 448, 0</column>
+<column name="t1_V_7_reg_694">448, 0, 448, 0</column>
+<column name="t1_V_reg_689">448, 0, 448, 0</column>
+<column name="t2_V_1_reg_679">448, 0, 448, 0</column>
+<column name="t2_V_3_reg_803">447, 0, 448, 1</column>
+<column name="t2_V_4_reg_856">448, 0, 448, 0</column>
+<column name="t2_V_5_reg_835">448, 0, 448, 0</column>
+<column name="t3_V_1_reg_768">447, 0, 448, 1</column>
+<column name="t3_V_reg_788">447, 0, 448, 1</column>
+<column name="tt3_V_1_reg_684">896, 0, 896, 0</column>
+<column name="tt3_V_5_reg_840">896, 0, 896, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, eval_4_isog, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, eval_4_isog, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, eval_4_isog, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, eval_4_isog, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, eval_4_isog, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, eval_4_isog, return value</column>
+<column name="P_X_V_address0">out, 1, ap_memory, P_X_V, array</column>
+<column name="P_X_V_ce0">out, 1, ap_memory, P_X_V, array</column>
+<column name="P_X_V_we0">out, 1, ap_memory, P_X_V, array</column>
+<column name="P_X_V_d0">out, 448, ap_memory, P_X_V, array</column>
+<column name="P_X_V_q0">in, 448, ap_memory, P_X_V, array</column>
+<column name="P_X_V_address1">out, 1, ap_memory, P_X_V, array</column>
+<column name="P_X_V_ce1">out, 1, ap_memory, P_X_V, array</column>
+<column name="P_X_V_we1">out, 1, ap_memory, P_X_V, array</column>
+<column name="P_X_V_d1">out, 448, ap_memory, P_X_V, array</column>
+<column name="P_X_V_q1">in, 448, ap_memory, P_X_V, array</column>
+<column name="P_Z_V_address0">out, 1, ap_memory, P_Z_V, array</column>
+<column name="P_Z_V_ce0">out, 1, ap_memory, P_Z_V, array</column>
+<column name="P_Z_V_we0">out, 1, ap_memory, P_Z_V, array</column>
+<column name="P_Z_V_d0">out, 448, ap_memory, P_Z_V, array</column>
+<column name="P_Z_V_q0">in, 448, ap_memory, P_Z_V, array</column>
+<column name="P_Z_V_address1">out, 1, ap_memory, P_Z_V, array</column>
+<column name="P_Z_V_ce1">out, 1, ap_memory, P_Z_V, array</column>
+<column name="P_Z_V_we1">out, 1, ap_memory, P_Z_V, array</column>
+<column name="P_Z_V_d1">out, 448, ap_memory, P_Z_V, array</column>
+<column name="P_Z_V_q1">in, 448, ap_memory, P_Z_V, array</column>
+<column name="coeff_V_address0">out, 3, ap_memory, coeff_V, array</column>
+<column name="coeff_V_ce0">out, 1, ap_memory, coeff_V, array</column>
+<column name="coeff_V_q0">in, 448, ap_memory, coeff_V, array</column>
+</table>
+</item>
+</section>
+</profile>

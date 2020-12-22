@@ -1,0 +1,40 @@
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user 'bmand' on host 'laptop-4apnsik5' (Windows NT_amd64 version 6.2) on Tue Dec 22 16:37:43 -0600 2020
+INFO: [HLS 200-10] In directory 'C:/Users/bmand/OneDrive/Desktop/ECE_527_git/ECE527_SIKEHW'
+Sourcing Tcl script 'C:/Users/bmand/OneDrive/Desktop/ECE_527_git/ECE527_SIKEHW/sikehls/solution1/csim.tcl'
+INFO: [HLS 200-10] Opening project 'C:/Users/bmand/OneDrive/Desktop/ECE_527_git/ECE527_SIKEHW/sikehls'.
+INFO: [HLS 200-10] Opening solution 'C:/Users/bmand/OneDrive/Desktop/ECE_527_git/ECE527_SIKEHW/sikehls/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+   Compiling ../../../testbench.cpp in debug mode
+   Generating csim.exe
+In file included from D:/Xilinx/Vivado/2019.1/include/floating_point_v7_0_bitacc_cmodel.h:143:0,
+                 from D:/Xilinx/Vivado/2019.1/include/hls_fpo.h:186,
+                 from D:/Xilinx/Vivado/2019.1/include/hls_half.h:44,
+                 from D:/Xilinx/Vivado/2019.1/include/etc/ap_private.h:90,
+                 from D:/Xilinx/Vivado/2019.1/include/ap_common.h:641,
+                 from D:/Xilinx/Vivado/2019.1/include/ap_int.h:54,
+                 from ../../../constants434.h:1,
+                 from ../../../fp.h:1,
+                 from ../../../testbench.cpp:5:
+D:/Xilinx/Vivado/2019.1/include/gmp.h:62:0: warning: "__GMP_LIBGMP_DLL" redefined
+ #define __GMP_LIBGMP_DLL  0
+ 
+In file included from D:/Xilinx/Vivado/2019.1/include/hls_fpo.h:186:0,
+                 from D:/Xilinx/Vivado/2019.1/include/hls_half.h:44,
+                 from D:/Xilinx/Vivado/2019.1/include/etc/ap_private.h:90,
+                 from D:/Xilinx/Vivado/2019.1/include/ap_common.h:641,
+                 from D:/Xilinx/Vivado/2019.1/include/ap_int.h:54,
+                 from ../../../constants434.h:1,
+                 from ../../../fp.h:1,
+                 from ../../../testbench.cpp:5:
+D:/Xilinx/Vivado/2019.1/include/floating_point_v7_0_bitacc_cmodel.h:135:0: note: this is the location of the previous definition
+ #define __GMP_LIBGMP_DLL 1
+ 
+Wide Multiply Succeeded!
+Montgomery Reduction Succeeded!
+tests successful :D
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************

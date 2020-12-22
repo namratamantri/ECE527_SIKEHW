@@ -1,16 +1,26 @@
 <InterfaceSummary>
 <RtlPorts>
-<name>ma_V</name>
+<name>P_X_V</name>
 <CType>
-<TypeName>ap_uint 896</TypeName>
-<TypeWidth>896</TypeWidth>
-<PhysicalWidth>896</PhysicalWidth>
+<TypeName>ap_uint 448</TypeName>
+<TypeWidth>448</TypeWidth>
+<PhysicalWidth>448</PhysicalWidth>
 </CType>
 <CFractionWidth>0</CFractionWidth>
 <InvalidType>0</InvalidType>
 </RtlPorts>
 <RtlPorts>
-<name>mc_V</name>
+<name>P_Z_V</name>
+<CType>
+<TypeName>ap_uint 448</TypeName>
+<TypeWidth>448</TypeWidth>
+<PhysicalWidth>448</PhysicalWidth>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>coeff_V</name>
 <CType>
 <TypeName>ap_uint 448</TypeName>
 <TypeWidth>448</TypeWidth>

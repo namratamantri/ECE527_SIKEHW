@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'bc_mult_448'" level="0">
-<item name = "Date">Wed Dec 16 17:27:56 2020
+<item name = "Date">Tue Dec 22 16:34:12 2020
 </item>
 <item name = "Version">2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)</item>
 <item name = "Project">sikehls</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00, 6.978, 1.25</column>
+<column name="ap_clk">10.00, 8.625, 1.25</column>
 </table>
 </item>
 </section>
@@ -35,8 +35,8 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- loopb22">11, 11, 6, 1, 1, 7, yes</column>
-<column name="- loop3">14, 14, 2, -, -, 7, no</column>
+<column name="- loopb22">9, 9, 3, 1, 1, 8, yes</column>
+<column name="- loop3">16, 16, 2, -, -, 8, no</column>
 </table>
 </item>
 </section>

@@ -17,7 +17,7 @@
 <PipelineType>none</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>6.978</EstimatedClockPeriod>
+<EstimatedClockPeriod>8.625</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
@@ -29,14 +29,14 @@
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <loopb22>
-<TripCount>7</TripCount>
-<Latency>11</Latency>
+<TripCount>8</TripCount>
+<Latency>9</Latency>
 <PipelineII>1</PipelineII>
-<PipelineDepth>6</PipelineDepth>
+<PipelineDepth>3</PipelineDepth>
 </loopb22>
 <loop3>
-<TripCount>7</TripCount>
-<Latency>14</Latency>
+<TripCount>8</TripCount>
+<Latency>16</Latency>
 <IterationLatency>2</IterationLatency>
 </loop3>
 </SummaryOfLoopLatency>
@@ -44,10 +44,10 @@
 
 <AreaEstimates>
 <Resources>
+<DSP48E>80</DSP48E>
+<FF>27217</FF>
+<LUT>4350</LUT>
 <BRAM_18K>0</BRAM_18K>
-<DSP48E>70</DSP48E>
-<FF>23673</FF>
-<LUT>4067</LUT>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>
@@ -134,7 +134,7 @@
 <IOProtocol>ap_ctrl_hs</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>out</Dir>
-<Bits>835</Bits>
+<Bits>896</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -156,7 +156,7 @@
 <IOProtocol>ap_none</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>435</Bits>
+<Bits>448</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 </InterfaceSummary>
