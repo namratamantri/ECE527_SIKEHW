@@ -11,8 +11,4 @@ And then execute the following to run the tests:
 
 $ ./sike/test_KEM
 
-Or execute the following to run the KATs:
-
-$ ./sike/PQCtestKAT_kem
-
 
